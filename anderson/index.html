@@ -1,0 +1,361 @@
+<meta charset="utf-8">
+<title>Redesenho Anderson Nascimento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Karla:wght@300;400;600&display=swap">
+
+<style>
+  /* Portfolio de fotografia: a pagina se compromete com um mundo escuro em
+     qualquer tema, para a foto ser a unica fonte de luz. */
+  :root,
+  :root[data-theme="light"],
+  :root[data-theme="dark"] {
+    --fundo: #0e0d0c;
+    --fundo-2: #171512;
+    --linha: #2a2622;
+    --texto: #f3eee7;
+    --texto-2: #9d958a;
+    --acento: #6d9295;
+    --aviso: #d9a441;
+    --aviso-fundo: #241b0c;
+
+    --titulo: "Fraunces", Georgia, "Times New Roman", serif;
+    --corpo: "Karla", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: var(--corpo);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* height:auto e obrigatorio aqui: as imagens carregam width/height no HTML
+     para reservar espaco, e sem isso o atributo vence o aspect-ratio e a foto
+     estica. Regras abaixo que fixam altura sobrescrevem de proposito. */
+  img { max-width: 100%; height: auto; display: block; }
+
+  .tarja {
+    background: var(--aviso-fundo);
+    border-bottom: 1px solid var(--aviso);
+    color: var(--aviso);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    padding: 12px 20px;
+    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+    text-align: center;
+  }
+  .tarja b { font-weight: 600; }
+  .tarja a { color: var(--aviso); }
+
+  .env { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+  .estreito { max-width: 640px; }
+
+  h1, h2, h3 { font-family: var(--titulo); font-weight: 300; margin: 0; text-wrap: balance; }
+
+  .rotulo {
+    font-family: var(--corpo);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--acento);
+  }
+
+  /* Heroi */
+  .heroi { position: relative; }
+  .heroi img { width: 100%; height: clamp(420px, 72vh, 680px); object-fit: cover; }
+  /* A foto de casamento e quase sempre clara e estourada no alto. O veu
+     precisa ser pesado onde o texto cai, ou o titulo some no ceu. */
+  .heroi .veu {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(14,13,12,.15) 0%,
+      rgba(14,13,12,.45) 38%,
+      rgba(14,13,12,.82) 66%,
+      rgba(14,13,12,.97) 100%
+    );
+  }
+  .heroi .texto {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding-block: 28px 34px;
+  }
+  .heroi h1 {
+    font-size: clamp(2.1rem, 6.6vw, 3.9rem);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    max-width: 16em;
+    text-shadow: 0 2px 24px rgba(14,13,12,.55);
+  }
+  .heroi h1 em { font-style: italic; color: var(--acento); }
+  .heroi .sob {
+    margin: 14px 0 0;
+    color: var(--texto-2);
+    max-width: 30em;
+    font-size: 1.02rem;
+    text-shadow: 0 1px 14px rgba(14,13,12,.6);
+  }
+
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .botao {
+    font-family: var(--corpo);
+    font-weight: 600;
+    font-size: 0.86rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 22px;
+    border: 1px solid var(--acento);
+    color: var(--fundo);
+    background: var(--acento);
+  }
+  .botao.vazio { background: transparent; color: var(--texto); border-color: var(--linha); }
+  .botao:hover { filter: brightness(1.12); }
+  .botao:focus-visible { outline: 2px solid var(--aviso); outline-offset: 3px; }
+
+  section { padding-block: 62px; }
+  section + section { border-top: 1px solid var(--linha); }
+
+  .intro p { font-size: 1.12rem; color: var(--texto-2); }
+  .intro p + p { margin-top: 16px; }
+  .intro strong { color: var(--texto); font-weight: 400; }
+
+  h2 { font-size: clamp(1.7rem, 4.6vw, 2.5rem); line-height: 1.12; margin-block: 10px 26px; }
+
+  .galeria { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .galeria figure { margin: 0; position: relative; }
+  .galeria img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3 / 2; }
+  .galeria .alta { grid-column: 1 / -1; }
+  .galeria .alta img { aspect-ratio: 16 / 7; }
+  .galeria figcaption {
+    position: absolute; left: 0; bottom: 0; right: 0;
+    padding: 10px 12px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--texto);
+    background: linear-gradient(180deg, transparent, rgba(14,13,12,.85));
+  }
+
+  .depos { display: grid; gap: 26px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .depo { border-top: 1px solid var(--linha); padding-top: 18px; }
+  .depo blockquote {
+    margin: 0 0 14px;
+    font-family: var(--titulo);
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.45;
+  }
+  .depo cite { font-style: normal; font-size: 0.85rem; color: var(--texto-2); }
+  .nota-google {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 30px; color: var(--texto-2); font-size: 0.92rem;
+  }
+  .nota-google b { font-family: var(--titulo); font-size: 2.1rem; color: var(--texto); font-weight: 500; }
+
+  /* Reserva com Pix: painel sangrado para fora da coluna de texto, senao o
+     fundo encosta na palavra e parece erro de layout. */
+  .reserva {
+    background: var(--fundo-2);
+    padding-inline: clamp(20px, 4vw, 44px);
+    margin-inline: calc(clamp(20px, 4vw, 44px) * -1);
+  }
+  .pacotes { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: 6px; }
+  .pac { border: 1px solid var(--linha); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+  .pac.escolhido { border-color: var(--acento); }
+  .pac h3 { font-size: 1.25rem; }
+  .pac ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 0.93rem; color: var(--texto-2); }
+  .pac li::before { content: "· "; color: var(--acento); }
+  .pac .sinal { margin-top: auto; padding-top: 12px; font-size: 0.88rem; color: var(--texto-2); }
+  .pac .sinal b { display: block; font-family: var(--titulo); font-size: 1.6rem; color: var(--texto); font-weight: 500; line-height: 1.2; }
+
+  .exemplo {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aviso);
+    border: 1px solid var(--aviso);
+    padding: 3px 9px;
+    margin-bottom: 18px;
+  }
+
+  .fluxo { display: grid; gap: 14px; margin-top: 30px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .fluxo div { border-top: 1px solid var(--linha); padding-top: 12px; font-size: 0.93rem; color: var(--texto-2); }
+  .fluxo b { display: block; color: var(--texto); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+
+  .contato { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+  .contato .retrato { width: 190px; flex: 0 0 auto; }
+  .contato .retrato img { aspect-ratio: 2 / 3; object-fit: cover; }
+  .contato .dados { flex: 1 1 280px; }
+
+  footer {
+    border-top: 1px solid var(--linha);
+    padding-block: 26px 44px;
+    font-size: 0.78rem;
+    color: var(--texto-2);
+    display: grid;
+    gap: 6px;
+  }
+
+  @media (max-width: 560px) {
+    .galeria { grid-template-columns: 1fr; }
+    .galeria .alta img { aspect-ratio: 3 / 2; }
+    section { padding-block: 46px; }
+  }
+</style>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada.</b> Esta página não é o site oficial e não foi
+  feita pelo Anderson. O site real é
+  <a href="https://www.andersonfotografo.com.br/">andersonfotografo.com.br</a>.
+  Conteúdo e fotos são dele, usados aqui só para mostrar como ficaria.
+</div>
+
+<div class="heroi">
+  <img src="img/grecia.webp" alt="Casamento na Grécia com vista para o mar, ao entardecer" width="1800" height="1200">
+  <div class="veu"></div>
+  <div class="texto env">
+    <p class="rotulo">Anderson Nascimento · São Paulo</p>
+    <h1>Casamentos fotografados do jeito que <em>aconteceram</em>.</h1>
+    <p class="sob">
+      Vinte anos registrando histórias reais, com foto, vídeo cinematográfico e drone.
+      Da capital ao litoral, do mini wedding ao destination na Grécia.
+    </p>
+    <div class="acoes">
+      <a class="botao" href="#reserva">Reservar minha data</a>
+      <a class="botao vazio" href="#galeria">Ver o trabalho</a>
+    </div>
+  </div>
+</div>
+
+<div class="env">
+
+  <section class="intro estreito">
+    <p class="rotulo">O estilo</p>
+    <p>
+      Meu nome é Anderson Nascimento e eu fotografo casamento em São Paulo há mais de
+      vinte anos. <strong>Meu estilo é natural, leve e focado no que é espontâneo</strong>,
+      porque o que emociona depois não é a pose, é o momento.
+    </p>
+    <p>
+      Atendo a capital, o interior e o litoral, incluindo casamento no campo, na praia,
+      mini wedding e destination wedding. A cobertura é completa: fotografia, vídeo
+      cinematográfico e imagens aéreas com drone.
+    </p>
+  </section>
+
+  <section id="galeria">
+    <p class="rotulo">Galeria</p>
+    <h2>Centenas de casamentos, no Brasil e fora dele.</h2>
+    <div class="galeria">
+      <figure class="alta">
+        <img src="img/campo.webp" alt="Casamento no campo durante o dia" width="1400" height="933" loading="lazy">
+        <figcaption>Casamento no campo durante o dia</figcaption>
+      </figure>
+      <figure>
+        <img src="img/villaggio.webp" alt="Casamento no Villaggio Europeo, Mooca" width="1400" height="933" loading="lazy">
+        <figcaption>Villaggio Europeo · Mooca</figcaption>
+      </figure>
+      <figure>
+        <img src="img/drone.webp" alt="Filmagem de casamento com drone" width="1400" height="1050" loading="lazy">
+        <figcaption>Filmagem com drone</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <p class="rotulo">Depoimentos</p>
+    <div class="nota-google">
+      <b>5,0</b>
+      <span>de 5 em 41 avaliações · Casamentos Awards 2025</span>
+    </div>
+    <div class="depos">
+      <div class="depo">
+        <blockquote>Indico de olhos fechados. Desde o início foi muito solícito.</blockquote>
+        <cite>Jéssica · casou em 11/11/2025</cite>
+      </div>
+      <div class="depo">
+        <blockquote>Trabalham com amor. Você consegue viver de novo o dia ao ver os retratos.</blockquote>
+        <cite>Isabele · casou em 10/05/2025</cite>
+      </div>
+      <div class="depo">
+        <blockquote>Quase um ano depois, revisitar os registros ainda é nosso prazer.</blockquote>
+        <cite>Raphael · casou em 11/01/2025</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserva" id="reserva">
+    <p class="rotulo">Reserva</p>
+    <h2>Trave a sua data agora, pelo Pix.</h2>
+    <span class="exemplo">Valores de exemplo · você define os seus</span>
+    <div class="pacotes">
+      <div class="pac">
+        <h3>Ensaio</h3>
+        <ul>
+          <li>Pré-wedding ou casal</li>
+          <li>2 horas de cobertura</li>
+          <li>60 fotos tratadas</li>
+        </ul>
+        <p class="sinal">Sinal de reserva<b>R$ 300</b></p>
+      </div>
+      <div class="pac escolhido">
+        <h3>Casamento</h3>
+        <ul>
+          <li>Cobertura completa do dia</li>
+          <li>Foto e vídeo cinematográfico</li>
+          <li>Galeria online entregue</li>
+        </ul>
+        <p class="sinal">Sinal de reserva<b>R$ 800</b></p>
+      </div>
+      <div class="pac">
+        <h3>Destination</h3>
+        <ul>
+          <li>Casamento fora de São Paulo</li>
+          <li>Foto, vídeo e drone</li>
+          <li>Deslocamento incluso</li>
+        </ul>
+        <p class="sinal">Sinal de reserva<b>R$ 1.500</b></p>
+      </div>
+    </div>
+
+    <div class="fluxo">
+      <div><b>1 · Escolhe</b> O casal seleciona o pacote e informa a data do casamento.</div>
+      <div><b>2 · Paga o sinal</b> Um QR Pix aparece na hora, sem sair do site e sem cadastro.</div>
+      <div><b>3 · Data travada</b> Você recebe a confirmação assim que o Pix cai, em segundos.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contato">
+      <div class="retrato">
+        <img src="img/retrato.webp" alt="Anderson Nascimento, fotógrafo" width="900" height="1350" loading="lazy">
+      </div>
+      <div class="dados">
+        <p class="rotulo">Contato</p>
+        <h2>Me conta sobre o seu casamento.</h2>
+        <p style="color:var(--texto-2)">
+          Data, local e o que você imagina para o dia. Respondo com disponibilidade
+          e os pacotes completos.
+        </p>
+        <div class="acoes">
+          <a class="botao" href="https://www.andersonfotografo.com.br/">Ir para o site oficial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Proposta de redesenho feita pelo <a href="https://refeito.github.io" style="color:var(--acento)">Refeito</a>. Não afiliada ao Anderson Nascimento.</span>
+    <span>Fotos, depoimentos e textos pertencem a Anderson Nascimento Foto e Filme.</span>
+  </footer>
+
+</div>
