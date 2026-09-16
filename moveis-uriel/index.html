@@ -1,0 +1,195 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marcenaria Uriel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Libre+Franklin:wght@300;400;600&display=swap">
+<style>
+  :root {
+    --fundo:#ffffff; --fundo2:#f6f3ee; --linha:#e6e0d6;
+    --tinta:#1a1713; --tinta2:#6b645a;
+    --acento:#3f6b4a; --acento-tinta:#ffffff;
+    --titulo:"Archivo", Georgia, serif;
+    --corpo:"Libre Franklin", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--fundo); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.02em; }
+  p { margin:0; }
+
+  .env { max-width:1120px; margin:0 auto; padding-inline:22px; }
+  .col { max-width:640px; }
+
+  .tarja { background:var(--fundo2); border-bottom:1px solid var(--linha); color:var(--tinta2);
+           font-size:0.78rem; line-height:1.5; text-align:center;
+           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top, 0px)); }
+  .tarja b { color:var(--tinta); }
+  .tarja a { color:var(--acento); }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:18px;
+          padding-block:20px; flex-wrap:wrap; }
+  .marca { font-family:var(--titulo); font-weight:700; font-size:1.18rem; letter-spacing:-0.03em; }
+  .marca span { display:block; font-family:var(--corpo); font-weight:600; font-size:0.64rem;
+                letter-spacing:0.18em; text-transform:uppercase; color:var(--tinta2); margin-top:2px; }
+  .nav { display:flex; gap:22px; align-items:center; font-size:0.9rem; font-weight:600; color:var(--tinta2); }
+  .nav a { text-decoration:none; }
+  .nav a:hover { color:var(--acento); }
+
+  .btn { display:inline-block; font-family:var(--corpo); font-weight:600; font-size:0.92rem;
+         text-decoration:none; background:var(--acento); color:var(--acento-tinta);
+         padding:14px 24px; border-radius:8px; }
+  .btn:hover { filter:brightness(1.08); }
+  .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
+  .btn.vazio { background:transparent; color:var(--tinta); border:1px solid var(--linha); }
+
+  .heroi { padding-block:52px 60px; }
+  .heroi .grade { display:grid; gap:40px; align-items:center; }
+  .heroi.lado .grade { grid-template-columns:1.05fr 0.95fr; }
+  .heroi.invertido .grade { grid-template-columns:0.95fr 1.05fr; }
+  .heroi.invertido .texto { order:2; }
+  .heroi h1 { font-size:clamp(2.2rem,5.6vw,3.5rem); line-height:1.04; font-weight:700; }
+  .heroi .sub { margin-top:18px; font-size:1.12rem; color:var(--tinta2); max-width:30em; }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .heroi .foto img { border-radius:14px; aspect-ratio:4/3; object-fit:cover; width:100%; }
+
+  .heroi.cheio { padding-block:0 0; }
+  .heroi.cheio .capa { position:relative; }
+  .heroi.cheio .capa img { width:100%; height:clamp(380px,58vh,540px); object-fit:cover; border-radius:0; }
+  .heroi.cheio .veu { position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.52) 58%, rgba(0,0,0,.84) 100%); }
+  .heroi.cheio .texto { position:absolute; left:0; right:0; bottom:0; padding-block:0 36px; color:#fff; }
+  .heroi.cheio .texto h1 { color:#fff; text-shadow:0 2px 22px rgba(0,0,0,.5); }
+  .heroi.cheio .texto .sub { color:rgba(255,255,255,.86); text-shadow:0 1px 14px rgba(0,0,0,.6); }
+  .heroi.cheio .btn.vazio { color:#fff; border-color:rgba(255,255,255,.45); }
+
+  .provas { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:22px;
+            padding-block:30px; border-block:1px solid var(--linha); }
+  .provas div b { display:block; font-family:var(--titulo); font-weight:700; font-size:1.9rem; line-height:1.1; }
+  .provas div span { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.12em;
+                     text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
+
+  section { padding-block:64px; }
+  .rotulo { font-size:0.7rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+            color:var(--acento); margin-bottom:12px; }
+  h2 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.15; font-weight:700; margin-bottom:18px; }
+  .apoio { color:var(--tinta2); font-size:1.05rem; }
+
+  .cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:30px; }
+  .card { border:1px solid var(--linha); border-radius:14px; overflow:hidden; background:var(--fundo); }
+  .card .capa { aspect-ratio:16/10; }
+  .card .capa img { width:100%; height:100%; object-fit:cover; }
+  .card .txt { padding:18px 20px 22px; }
+  .card h3 { font-size:1.1rem; font-weight:700; margin-bottom:6px; }
+  .card p { font-size:0.96rem; color:var(--tinta2); }
+
+  .passos { display:grid; gap:2px; margin-top:26px; }
+  .passos div { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
+                border-top:1px solid var(--linha); }
+  .passos div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
+                        font-family:var(--titulo); font-weight:700; font-size:0.86rem; color:var(--acento); padding-top:3px; }
+  .passos { counter-reset:passo; }
+  .passos h3 { font-size:1.04rem; font-weight:700; margin-bottom:3px; }
+  .passos p { font-size:0.98rem; color:var(--tinta2); }
+
+  .faixa { background:var(--fundo2); border-radius:16px; padding:clamp(26px,4vw,44px); }
+  .faixa h2 { margin-bottom:12px; }
+  .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+  .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
+  .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
+                text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
+  .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
+
+  footer { border-top:1px solid var(--linha); padding-block:28px 46px; color:var(--tinta2); font-size:0.82rem;
+           display:grid; gap:6px; }
+
+  @media (max-width:820px) {
+    .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
+    .heroi.invertido .texto { order:0; }
+    section { padding-block:48px; }
+    .nav { display:none; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Marcenaria Uriel e não foi feita por eles.
+  O site real é <a href="https://moveisplanejadosuriel.com.br">moveisplanejadosuriel.com.br</a>. Conteúdo e informações são deles.
+  Feita pelo <a href="https://refeito.github.io">Refeito</a>.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <div class="marca">Marcenaria Uriel<span>Móveis planejados</span></div>
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+</div>
+
+<div class="heroi cheio">
+    <div class="capa">
+      <img src="img/capa.webp" alt="" width="1600" height="900">
+      <div class="veu"></div>
+      <div class="env texto">
+        <h1>Quarenta e cinco anos fazendo móvel que dura.</h1>
+        <p class="sub">Cozinhas, guarda-roupas e móveis planejados sob medida, com a experiência de quem atravessou quatro décadas de marcenaria.</p>
+        <div class="acoes">
+        <a class="btn" href="#contato">Pedir orçamento</a>
+        <a class="btn vazio" href="#servicos">Ver serviços</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="env">
+  <div class="provas"><div><b>45 anos</b><span>de experiência</span></div><div><b>Sob medida</b><span>cada peça</span></div><div><b>São Paulo</b><span>atendimento</span></div></div>
+
+  <section id="servicos">
+    <p class="rotulo">Serviços</p>
+    <h2>O que fazemos melhor.</h2>
+    <p class="apoio col">Quatro décadas ensinam onde o móvel falha. É por isso que o nosso não falha ali.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="capa"><img src="img/s1.webp" alt="" width="800" height="500"></div>
+        <div class="txt"><h3>Cozinha planejada</h3><p>Marcenaria que aguenta calor, umidade e uso diário por anos.</p></div>
+      </article>
+      <article class="card">
+        <div class="capa"><img src="img/s2.webp" alt="" width="800" height="500"></div>
+        <div class="txt"><h3>Guarda-roupa</h3><p>Interno organizado de acordo com o que você realmente guarda.</p></div>
+      </article>
+      <article class="card">
+        <div class="capa"><img src="img/s3.webp" alt="" width="800" height="500"></div>
+        <div class="txt"><h3>Sob medida</h3><p>Espaços difíceis, pé-direito alto e recortes que móvel pronto não resolve.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="como">
+    <p class="rotulo">Como funciona</p>
+    <h2>Do desenho à sua casa.</h2>
+    <div class="passos col">
+      <div><div><h3>Conversa e medição</h3><p>Entendemos a rotina da casa antes de propor qualquer layout.</p></div></div>
+      <div><div><h3>Projeto e material</h3><p>Você escolhe acabamento e ferragem, com o preço fechado na frente.</p></div></div>
+      <div><div><h3>Fabricação e montagem</h3><p>Produzimos e montamos, deixando o ambiente limpo ao sair.</p></div></div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="faixa">
+      <p class="rotulo">Contato</p>
+      <h2>Conta o que você quer planejar.</h2>
+      <p class="apoio col">Mande a medida ou a foto do espaço. O orçamento é sem compromisso.</p>
+      <div class="contatos"><div><b>Telefone</b><span>(11) 94331-5404</span></div><div><b>WhatsApp</b><span>(11) 98047-1798</span></div><div><b>Atendimento</b><span>São Paulo</span></div></div>
+      <div class="acoes"><a class="btn" href="#contato">Pedir orçamento</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Marcenaria Uriel · São Paulo</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Marcenaria Uriel.</span>
+  </footer>
+</div>

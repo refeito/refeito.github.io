@@ -238,6 +238,21 @@
     display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
   }
 
+
+  /* Portfolio */
+  .obras { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); margin-top:28px; }
+  .obra { border:1px solid var(--linha); border-radius:12px; overflow:hidden; text-decoration:none;
+          display:block; background:var(--papel); transition:border-color .15s; }
+  .obra:hover { border-color:var(--azul); }
+  .obra:focus-visible { outline:3px solid var(--azul); outline-offset:3px; }
+  .obra .capa { aspect-ratio:16/10; overflow:hidden; background:var(--papel-2); }
+  .obra .capa img { width:100%; height:100%; object-fit:cover; display:block; }
+  .obra .txt { padding:14px 16px 17px; }
+  .obra b { font-family:var(--display); font-weight:700; font-size:1rem; display:block; letter-spacing:-0.02em; }
+  .obra span { display:block; font-size:0.88rem; color:var(--tinta-2); margin-top:3px; }
+  .obra em { display:block; font-family:var(--display); font-style:normal; font-weight:600;
+             font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--azul); margin-top:8px; }
+
   /* ---------- Secoes ---------- */
   section { padding-block: 62px; border-top: 1px solid var(--linha); }
   .rotulo[id] { scroll-margin-top: 24px; }
@@ -478,6 +493,28 @@
   </section>
 
   <section>
+    <p class="rotulo" id="portfolio">Sites refeitos</p>
+    <h2>Doze negócios, refeitos e no ar.</h2>
+    <div class="col">
+      <p>Cada um foi medido, refeito e publicado antes de qualquer conversa. Abra e compare com o site atual deles.</p>
+    </div>
+    <div class="obras">
+      <a class="obra" href="anderson/"><div class="capa"><img src="anderson/img/grecia.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Anderson Nascimento</b><span>Fotógrafo de casamento, São Paulo</span><em>706 ms → 54 ms</em></div></a>
+      <a class="obra" href="lopes-serralheria/"><div class="capa"><img src="lopes-serralheria/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Lopes Serralheria</b><span>Portões de ferro, Ribeirão Preto</span><em>696 ms → 55 ms</em></div></a>
+      <a class="obra" href="marmoraria-ddi/"><div class="capa"><img src="marmoraria-ddi/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Marmoraria DDI</b><span>Mármore e granito, São Paulo</span><em>2,0 s → 55 ms</em></div></a>
+      <a class="obra" href="gs-marcenaria/"><div class="capa"><img src="gs-marcenaria/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>GS Marcenaria</b><span>Móveis planejados, Guarulhos</span><em>11,5 MB → 0,3 MB</em></div></a>
+      <a class="obra" href="mobles-marcenaria/"><div class="capa"><img src="mobles-marcenaria/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Mobles Marcenaria</b><span>Marcenaria corporativa, São Paulo</span><em>747 ms → 55 ms</em></div></a>
+      <a class="obra" href="moveis-uriel/"><div class="capa"><img src="moveis-uriel/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Marcenaria Uriel</b><span>Móveis planejados, São Paulo</span><em>840 ms → 55 ms</em></div></a>
+      <a class="obra" href="a-marcenaria-sp/"><div class="capa"><img src="a-marcenaria-sp/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>A Marcenaria SP</b><span>Móveis planejados, Mauá</span><em>3,7 MB → 0,3 MB</em></div></a>
+      <a class="obra" href="unica-vidracaria/"><div class="capa"><img src="unica-vidracaria/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Única Vidraçaria</b><span>Box e espelhos, Campinas</span><em>2,5 MB → 0,3 MB</em></div></a>
+      <a class="obra" href="dedetizadora-samurai/"><div class="capa"><img src="dedetizadora-samurai/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Dedetizadora Samurai</b><span>Controle de pragas, São Paulo</span><em>4,1 MB → 0,3 MB</em></div></a>
+      <a class="obra" href="biosp/"><div class="capa"><img src="biosp/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>BioSP</b><span>Controle de pragas, São Paulo</span><em>2,6 s → 55 ms</em></div></a>
+      <a class="obra" href="dedetiza-bem/"><div class="capa"><img src="dedetiza-bem/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Dedetiza Bem</b><span>Dedetização, São Paulo</span><em>7,9 MB → 0,3 MB</em></div></a>
+      <a class="obra" href="delta-dedetizacao/"><div class="capa"><img src="delta-dedetizacao/img/capa.webp" alt="" width="1500" height="1000"></div><div class="txt"><b>Delta Dedetização</b><span>Dedetização 24h, São Paulo</span><em>948 ms → 55 ms</em></div></a>
+    </div>
+  </section>
+
+  <section>
     <p class="rotulo" id="como-funciona">Como funciona</p>
     <h2>Sem reunião, sem briefing, sem orçamento.</h2>
     <ol class="passos">
@@ -574,7 +611,9 @@
         <ul>
           <li><a href="#como-funciona">Como funciona</a></li>
           <li><a href="#o-que-vem">O que vem junto</a></li>
+          <li><a href="#portfolio">Sites refeitos</a></li>
           <li><a href="#preco">Preço</a></li>
+          <li><a href="#portfolio">Sites refeitos</a></li>
         </ul>
       </div>
     </div>
