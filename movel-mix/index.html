@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Móvel Mix Marcenaria — Móveis Planejados em São Paulo</title>
-<meta name="description" content="Móveis planejados em São Paulo: cozinhas, dormitórios, home theaters e banheiros completos, sob medida, fabricados pela Móvel Mix Marcenaria em Sapopemba, Zona Leste.">
+<title>Móvel Mix Marcenaria — Móveis Sob Medida em São Paulo</title>
+<meta name="description" content="Fábrica de móveis planejados em São Paulo: cozinhas, dormitórios, home theaters, gabinetes e armários, móveis para áreas externas e móveis para lavanderia. Móvel Mix Marcenaria, Jd. Sapopemba.">
 <link rel="icon" type="image/webp" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,296 +13,444 @@
 <style>
   /* Paleta lida do site atual: branco e cinza claro f1f1f1, com marrom amadeirado 736759. */
   :root {
-    --papel:#ffffff; --papel2:#f1f1f1; --linha:#e2e0dc;
-    --tinta:#211d18; --tinta2:#655e55;
+    --fundo:#ffffff; --fundo2:#f1f1f1; --borda:#e2e0dc;
+    --grafia:#211d18; --grafia2:#655e55;
     --marrom:#736759; --marrom2:#564d42;
-    --titulo:"Fraunces","Georgia",serif;
-    --corpo:"Mulish",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --serifa:"Fraunces","Georgia",serif;
+    --sans:"Mulish",-apple-system,"Helvetica Neue",Arial,sans-serif;
   }
   * { box-sizing:border-box; min-width:0; }
-  html { -webkit-text-size-adjust:100%; }
-  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+  html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body { margin:0; background:var(--fundo); color:var(--grafia); font-family:var(--sans);
          font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   img { max-width:100%; height:auto; display:block; }
   a { color:inherit; }
-  h1,h2,h3 { margin:0; font-family:var(--titulo); font-weight:600; text-wrap:balance; letter-spacing:-0.01em; }
+  h1,h2,h3 { margin:0; font-family:var(--serifa); font-weight:600; text-wrap:balance; letter-spacing:-0.01em; }
   p { margin:0; }
 
-  .env { max-width:1120px; margin:0 auto; padding-inline:22px; }
-  .col { max-width:640px; }
+  .caixa { max-width:1120px; margin:0 auto; padding-inline:22px; }
+  .estreita { max-width:660px; }
 
-  .tarja { background:var(--marrom); border-bottom:1px solid var(--linha); color:rgba(255,255,255,.86);
+  .aviso { background:var(--marrom); color:rgba(255,255,255,.86);
            font-size:0.76rem; line-height:1.5; text-align:center;
            padding:11px 18px; padding-top:calc(11px + env(safe-area-inset-top,0px)); }
-  .tarja b { color:#fff; } .tarja a { color:#fff; text-decoration:underline; }
+  .aviso b { color:#fff; } .aviso a { color:#fff; text-decoration:underline; }
 
-  .topo { display:flex; align-items:center; justify-content:space-between; gap:18px;
-          padding-block:18px; flex-wrap:wrap; }
-  .topo .marca img { height:38px; width:auto; }
-  .topo nav { display:flex; gap:20px; font-size:0.87rem; font-weight:700; flex-wrap:wrap; }
-  .topo nav a { text-decoration:none; color:var(--tinta2); }
-  .topo nav a:hover { color:var(--marrom); }
+  /* O site deles abre com uma faixa de telefone e horario acima do menu.
+     Vale manter: para marcenaria com loja, horario e informacao de compra. */
+  .utilidade { background:var(--fundo2); border-bottom:1px solid var(--borda); font-size:0.8rem; }
+  .utilidade .dentro { display:flex; flex-wrap:wrap; gap:6px 28px; justify-content:space-between;
+                       padding-block:9px; color:var(--grafia2); }
+  .utilidade a { text-decoration:none; font-weight:700; color:var(--grafia); }
+  .utilidade a:hover { color:var(--marrom); }
 
-  .btn { display:inline-block; font-family:var(--corpo); font-weight:700; font-size:0.9rem;
+  .barra { display:flex; align-items:center; justify-content:space-between; gap:18px;
+           padding-block:16px; flex-wrap:wrap; }
+  .barra .logo img { height:40px; width:auto; }
+  .barra nav { display:flex; gap:20px; font-size:0.87rem; font-weight:700; flex-wrap:wrap; }
+  .barra nav a { text-decoration:none; color:var(--grafia2); }
+  .barra nav a:hover { color:var(--marrom); }
+
+  .cta { display:inline-block; font-family:var(--sans); font-weight:700; font-size:0.9rem;
          text-decoration:none; background:var(--marrom); color:#fff; padding:14px 24px; border-radius:6px;
          border:1px solid var(--marrom); }
-  .btn:hover { background:var(--marrom2); border-color:var(--marrom2); }
-  .btn:focus-visible { outline:3px solid var(--marrom); outline-offset:3px; }
-  .btn.vazio { background:transparent; color:var(--tinta); border:1px solid var(--linha); }
-  .btn.vazio:hover { border-color:var(--marrom); color:var(--marrom); }
+  .cta:hover { background:var(--marrom2); border-color:var(--marrom2); }
+  .cta:focus-visible { outline:3px solid var(--marrom); outline-offset:3px; }
+  .cta.contorno { background:transparent; color:var(--grafia); border-color:var(--borda); }
+  .cta.contorno:hover { border-color:var(--marrom); color:var(--marrom); }
 
-  .heroi { padding-block:40px 46px; }
-  .heroi .grade { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; }
-  .kicker { font-size:0.9rem; font-weight:700; color:var(--marrom); margin-bottom:6px;
+  .capa { padding-block:38px 44px; }
+  .capa .duas { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; }
+  .chapeu { font-size:0.9rem; font-weight:700; color:var(--marrom); margin-bottom:6px;
             text-transform:uppercase; letter-spacing:0.08em; }
-  .heroi h1 { font-size:clamp(2rem,4.6vw,2.9rem); line-height:1.08; }
-  .heroi .sub { margin-top:16px; color:var(--tinta2); font-size:1.04rem; }
-  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .capa h1 { font-size:clamp(1.9rem,4.4vw,2.8rem); line-height:1.08; }
+  .capa .resumo { margin-top:16px; color:var(--grafia2); font-size:1.04rem; }
+  .capa .botoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .capa .arte img { width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:10px; background:var(--fundo2); }
 
-  /* As fotos do acervo tem marca d'agua no canto inferior. Um degrade solido na
-     mesma cor do cartao cobre a faixa de baixo, onde ela sempre esta. */
-  .heroi .foto, #design .design-fotos figure, .fotos .ph {
-    position:relative; overflow:hidden; border-radius:10px; background:var(--papel2);
-  }
-  .heroi .foto img, #design .design-fotos img, .fotos .ph img {
-    width:100%; height:100%; aspect-ratio:4/3; object-fit:cover;
-  }
-  .heroi .foto::after, #design .design-fotos figure::after, .fotos .ph::after {
-    content:""; position:absolute; left:0; right:0; bottom:0; height:30%;
-    background:linear-gradient(to top, var(--papel2) 0%, var(--papel2) 50%, transparent 100%);
-    pointer-events:none;
-  }
-
-  section { padding-block:52px; border-top:1px solid var(--linha); }
-  .rotulo { font-size:0.7rem; font-weight:800; letter-spacing:0.15em; text-transform:uppercase;
-            color:var(--marrom); margin-bottom:10px; font-family:var(--corpo); }
+  .secao { padding-block:50px; border-top:1px solid var(--borda); }
+  .marcador { font-size:0.7rem; font-weight:800; letter-spacing:0.15em; text-transform:uppercase;
+              color:var(--marrom); margin-bottom:10px; font-family:var(--sans); }
   h2 { font-size:clamp(1.45rem,3.4vw,1.95rem); line-height:1.16; margin-bottom:14px; }
-  .apoio { color:var(--tinta2); font-size:1.01rem; }
+  .corpo { color:var(--grafia2); font-size:1.01rem; }
+  .corpo + .corpo { margin-top:12px; }
 
-  #design .design-fotos { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:24px; }
-  #design .design-fotos figure { margin:0; }
+  /* Promocao anunciada na home deles. O texto estava queimado dentro da
+     imagem do banner; aqui ele volta a ser texto. */
+  .promo { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+           gap:16px 28px; background:var(--marrom); color:#fff; border-radius:12px;
+           padding:22px clamp(22px,3vw,34px); }
+  .promo h2 { color:#fff; margin:0; font-size:clamp(1.25rem,2.6vw,1.6rem); }
+  .promo p { color:rgba(255,255,255,.86); font-size:0.95rem; margin-top:4px; }
+  .promo .cta { background:#fff; color:var(--marrom2); border-color:#fff; }
+  .promo .cta:hover { background:#efe9e2; }
 
-  /* Ambiente por ambiente: cabecalho com o texto deles + grade de fotos daquele comodo. */
-  .ambiente .cab { max-width:660px; margin-bottom:24px; }
-  .fotos { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; }
-  .fotos figure { margin:0; }
-  .fotos figcaption { font-size:0.8rem; color:var(--tinta2); padding:8px 2px 0; }
+  /* Uma ficha por linha de produto, na ordem do menu deles. Seis linhas:
+     as duas ultimas nao existiam na versao anterior desta pagina. */
+  .ficha { padding-block:34px; border-top:1px dashed var(--borda); scroll-margin-top:16px; }
+  .ficha:first-of-type { border-top:0; padding-top:10px; }
+  .ficha-topo { display:grid; grid-template-columns:54px minmax(0,1fr) 240px; gap:10px 24px; align-items:start; }
+  .num { font-family:var(--serifa); font-size:1.6rem; font-weight:700; color:var(--marrom);
+         line-height:1; padding-top:4px; }
+  .ficha h3 { font-size:1.3rem; }
+  .ficha .corpo { margin-top:8px; font-size:0.98rem; }
+  .link-cta { justify-self:stretch; text-align:center; text-decoration:none; font-weight:700;
+              font-size:0.86rem; color:var(--marrom); border:1px solid var(--borda); border-radius:6px;
+              padding:11px 14px; display:block; }
+  .link-cta:hover { border-color:var(--marrom); background:var(--fundo2); }
 
-  .faixa { background:var(--papel2); border-radius:14px; padding:clamp(26px,4vw,42px); }
-  .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
-  .faixa p + p { margin-top:12px; }
+  /* Altura igual e largura livre: cada movel aparece inteiro. Recortar tudo
+     num quadro de 4/3 cortava justamente a lateral do armario, que e o que
+     o visitante quer ver. */
+  .ficha-fotos { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+  .ficha-fotos img { height:175px; width:auto; max-width:100%; border-radius:8px; background:var(--fundo2); }
 
-  .chipwrap { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
-  .chip { border:1px solid var(--linha); background:var(--papel2); color:var(--tinta);
-          border-radius:99px; padding:8px 16px; font-size:0.88rem; font-weight:600; white-space:nowrap; }
+  /* Etapas: cada passo carrega uma frase que eles mesmos publicam. */
+  .passos { counter-reset:passo; display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:26px; margin-top:28px; }
+  .passo { counter-increment:passo; border-top:3px solid var(--marrom); padding-top:14px; }
+  .passo h3::before { content:counter(passo,decimal-leading-zero) " · "; color:var(--marrom); font-weight:700; }
+  .passo h3 { font-size:1.05rem; }
+  .passo p { color:var(--grafia2); font-size:0.93rem; margin-top:7px; }
 
-  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
-            gap:22px 28px; margin-top:26px; }
-  .canais > * { text-decoration:none; }
-  .canais b { display:block; font-size:0.68rem; font-weight:800; letter-spacing:0.12em;
-              text-transform:uppercase; color:var(--tinta2); margin-bottom:5px; }
-  .canais span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.06rem;
-                 overflow-wrap:anywhere; line-height:1.35; }
-  .canais a:hover span { color:var(--marrom); }
-  .canais .mapa { font-family:var(--corpo); font-weight:700; font-size:0.85rem; color:var(--marrom); margin-top:4px; }
-  .contato-acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+  /* O formulario deles tem um campo "Assunto" com treze opcoes. Aqui cada
+     opcao abre o WhatsApp ja com o assunto escrito. */
+  .assuntos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+              gap:10px; margin-top:24px; }
+  .assunto { display:block; text-decoration:none; font-size:0.9rem; font-weight:600;
+             border:1px solid var(--borda); border-radius:6px; padding:13px 16px;
+             background:var(--fundo); overflow-wrap:anywhere; }
+  .assunto:hover { border-color:var(--marrom); color:var(--marrom); background:var(--fundo2); }
 
-  footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
-           font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
+  .regioes { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+  .regiao { border:1px solid var(--borda); background:var(--fundo2); color:var(--grafia);
+            border-radius:99px; padding:8px 16px; font-size:0.88rem; font-weight:600; }
+
+  /* Contato em cartao unico com duas colunas: dados a esquerda, horario e
+     acao a direita. */
+  .balcao { background:var(--fundo2); border-radius:14px; padding:clamp(26px,4vw,42px);
+            display:grid; grid-template-columns:1.25fr 1fr; gap:34px; }
+  .dados { display:grid; gap:18px; }
+  .dados .campo b { display:block; font-size:0.68rem; font-weight:800; letter-spacing:0.12em;
+                    text-transform:uppercase; color:var(--grafia2); margin-bottom:4px; }
+  .dados .campo a, .dados .campo span { font-family:var(--serifa); font-weight:700; font-size:1.04rem;
+                                        overflow-wrap:anywhere; line-height:1.35; text-decoration:none; display:block; }
+  .dados .campo a:hover { color:var(--marrom); }
+  .dados .rota { font-family:var(--sans); font-weight:700; font-size:0.85rem; color:var(--marrom); margin-top:4px; }
+  .expediente { background:var(--fundo); border-radius:10px; padding:22px; align-self:start; }
+  .expediente b { display:block; font-size:0.68rem; font-weight:800; letter-spacing:0.12em;
+                  text-transform:uppercase; color:var(--grafia2); margin-bottom:8px; }
+  .expediente p { font-size:0.96rem; }
+  .expediente .cta { margin-top:18px; width:100%; text-align:center; }
+
+  .pe { border-top:1px solid var(--borda); padding-block:26px 46px; color:var(--grafia2);
+        font-size:0.8rem; display:grid; gap:8px; overflow-wrap:anywhere; }
+  .pe .sociais { display:flex; gap:16px; flex-wrap:wrap; font-weight:700; }
+  .pe .sociais a { color:var(--marrom); text-decoration:none; }
 
   @media (max-width:860px) {
-    .heroi .grade { grid-template-columns:1fr; gap:24px; }
-    section { padding-block:40px; }
-    .topo nav { display:none; }
+    .capa .duas { grid-template-columns:1fr; gap:24px; }
+    .secao { padding-block:40px; }
+    .barra nav { display:none; }
+    .ficha-topo { grid-template-columns:1fr; gap:8px; }
+    .link-cta { justify-self:start; display:inline-block; }
+    .num { padding-top:0; font-size:1.2rem; }
+    .balcao { grid-template-columns:1fr; gap:24px; }
+    /* No celular a largura livre esticaria uma foto paisagem alem da tela. */
+    .ficha-fotos { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .ficha-fotos img { height:130px; width:100%; object-fit:cover; }
   }
 </style>
 </head>
 <body>
 
-<div class="tarja" id="topo">
+<div class="aviso" id="topo">
   <b>Proposta de redesenho não solicitada, feita por Refeito.</b> Não é o site oficial da Móvel Mix Marcenaria.
   O site oficial é <a href="https://movelmixmarcenaria.com.br/">movelmixmarcenaria.com.br</a>.
   Todas as fotos, textos e informações são deles.
 </div>
 
-<div class="env">
-  <header class="topo">
-    <a class="marca" href="#topo"><img src="img/logo.webp" alt="Móvel Mix Marcenaria" width="300" height="120"></a>
+<div class="utilidade">
+  <div class="caixa dentro">
+    <span>Fale conosco: <a href="tel:+551120124903">(11) 2012-4903</a> · <a href="https://wa.me/5511989694962">(11) 98969-4962</a> · <a href="mailto:movelmix@movelmixmarcenaria.com.br">movelmix@movelmixmarcenaria.com.br</a></span>
+    <span>Seg. a sex., 8h às 18h · Sáb., 8h às 12h</span>
+  </div>
+</div>
+
+<div class="caixa">
+  <header class="barra">
+    <a class="logo" href="#topo"><img src="img/logo.webp" alt="Móvel Mix Marcenaria" width="300" height="120"></a>
     <nav>
-      <a href="#cozinhas">Cozinhas</a>
-      <a href="#dormitorios">Dormitórios</a>
-      <a href="#hometheater">Home theaters</a>
-      <a href="#banheiros">Banheiros</a>
+      <a href="#linhas">Nossos móveis</a>
+      <a href="#etapas">Como é feito</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#regioes">Regiões atendidas</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="btn" href="https://wa.me/5511989694962">Orçamento</a>
+    <a class="cta" href="https://wa.me/5511989694962">Orçamento</a>
   </header>
 
-  <div class="heroi">
-    <div class="grade">
+  <div class="capa">
+    <div class="duas">
       <div>
-        <p class="kicker">Marcenaria em São Paulo</p>
-        <h1>Móvel Mix Marcenaria</h1>
-        <p class="sub">
+        <p class="chapeu">Marcenaria em São Paulo</p>
+        <h1>Móvel Mix Marcenaria: móveis sob medida em São Paulo</h1>
+        <p class="resumo">
           A Móvel Mix Marcenaria é uma fábrica de móveis planejados. Nossas criações são baseadas em
           conceitos inovadores, com design arrojado, que combinam cores e texturas e deixam o seu
           ambiente muito mais sofisticado e elegante.
         </p>
-        <div class="acoes">
-          <a class="btn" href="https://wa.me/5511989694962">Pedir orçamento no WhatsApp</a>
-          <a class="btn vazio" href="#cozinhas">Ver ambientes</a>
+        <div class="botoes">
+          <a class="cta" href="https://wa.me/5511989694962">Falar com o projetista</a>
+          <a class="cta contorno" href="#linhas">Ver as seis linhas</a>
         </div>
       </div>
-      <div class="foto">
-        <img src="img/f10.webp" alt="Bancada em pedra com duas cubas de apoio douradas e gavetas planejadas" width="900" height="506">
+      <div class="arte">
+        <img src="img/f14.webp" alt="Cozinha planejada com armários aéreos, torre para forno e bancada" width="900" height="506">
       </div>
     </div>
   </div>
 </div>
 
-<section id="design">
-  <div class="env">
-    <p class="rotulo">Design inovador</p>
-    <h2>Desenvolvemos o seu projeto de móveis planejados</h2>
-    <p class="apoio col">Tenha em sua casa móveis com design moderno e inovador. Venha conhecer nosso conceito sobre móveis sob medida.</p>
-    <div class="design-fotos">
-      <figure><img src="img/f12.webp" alt="Aparador planejado com tampo claro e frentes em duas cores" width="899" height="500"></figure>
-      <figure><img src="img/f08.webp" alt="Painel de TV planejado com bancada branca suspensa" width="900" height="500"></figure>
+<section class="secao" id="promocao">
+  <div class="caixa">
+    <div class="promo">
+      <div>
+        <h2>Desconto especial</h2>
+        <p>Para múltiplos ambientes. Promoção anunciada pela Móvel Mix Marcenaria na página inicial.</p>
+      </div>
+      <a class="cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Vi%20o%20desconto%20especial%20para%20m%C3%BAltiplos%20ambientes%20e%20queria%20saber%20mais.">Perguntar sobre o desconto</a>
     </div>
   </div>
 </section>
 
-<section id="cozinhas" class="ambiente">
-  <div class="env">
-    <div class="cab">
-      <p class="rotulo">Ambiente</p>
-      <h2>Cozinhas e mesa de jantar</h2>
-      <p class="apoio">Temos uma linha completa de móveis planejados para cozinha, e também fabricamos mesas de jantar completas.</p>
-    </div>
-    <div class="fotos">
-      <figure><div class="ph"><img src="img/f14.webp" alt="Cozinha planejada com armários aéreos e torre para forno" width="900" height="506"></div><figcaption>Cozinha planejada</figcaption></figure>
-      <figure><div class="ph"><img src="img/f11.webp" alt="Bancada preta com armários planejados em branco" width="900" height="511"></div><figcaption>Bancada e armários</figcaption></figure>
-      <figure><div class="ph"><img src="img/f03.webp" alt="Mesa de jantar com tampo de vidro e cadeiras estofadas" width="899" height="510"></div><figcaption>Mesa de jantar</figcaption></figure>
-    </div>
-  </div>
-</section>
+<section class="secao" id="linhas">
+  <div class="caixa">
+    <p class="marcador">Nossos móveis</p>
+    <h2>Seis linhas de móveis planejados</h2>
+    <p class="corpo estreita">
+      Desenvolvemos o seu projeto de móveis planejados, tenha em sua casa móveis com design moderno
+      e inovador. Venha conhecer nosso conceito sobre móveis sob medida.
+    </p>
 
-<section id="dormitorios" class="ambiente">
-  <div class="env">
-    <div class="cab">
-      <p class="rotulo">Ambiente</p>
-      <h2>Dormitório completo</h2>
-      <p class="apoio">Montamos dormitórios completos, de casal, solteiro ou infantil, com cama, closets, painéis, criados-mudos, mesas de estudo e muito mais.</p>
-    </div>
-    <div class="fotos">
-      <figure><div class="ph"><img src="img/f01.webp" alt="Painel de TV planejado em madeira, com prateleiras e nichos" width="900" height="511"></div><figcaption>Painel de TV com prateleiras</figcaption></figure>
-      <figure><div class="ph"><img src="img/f04.webp" alt="Estante planejada para quarto infantil, com nichos e espaço para televisão" width="900" height="686"></div><figcaption>Quarto infantil</figcaption></figure>
-      <figure><div class="ph"><img src="img/f06.webp" alt="Cômoda e criado-mudo planejados para dormitório" width="910" height="694"></div><figcaption>Móveis de dormitório</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section id="hometheater" class="ambiente">
-  <div class="env">
-    <div class="cab">
-      <p class="rotulo">Ambiente</p>
-      <h2>Home theaters planejados em SP</h2>
-    </div>
-    <div class="fotos">
-      <figure><div class="ph"><img src="img/f09.webp" alt="Painel de TV planejado em tom escuro, com rack suspenso" width="600" height="800"></div><figcaption>Painel de TV escuro</figcaption></figure>
-      <figure><div class="ph"><img src="img/f13.webp" alt="Rack de TV planejado em madeira, com nichos abertos" width="600" height="800"></div><figcaption>Rack de TV</figcaption></figure>
-      <figure><div class="ph"><img src="img/f16.webp" alt="Painel de TV planejado com bancada baixa" width="500" height="889"></div><figcaption>Painel com bancada baixa</figcaption></figure>
-      
-    </div>
-  </div>
-</section>
-
-<section id="banheiros" class="ambiente">
-  <div class="env">
-    <div class="cab">
-      <p class="rotulo">Ambiente</p>
-      <h2>Banheiro completo</h2>
-      <p class="apoio">Na Móvel Mix Marcenaria montamos o seu banheiro completo, desde a fabricação de gabinetes e armários planejados até a colocação da pedra de mármore ou granito.</p>
-    </div>
-    <div class="fotos">
-      <figure><div class="ph"><img src="img/f05.webp" alt="Gabinete de banheiro planejado com cuba de apoio e espelho" width="500" height="895"></div><figcaption>Gabinete de banheiro</figcaption></figure>
-      <figure><div class="ph"><img src="img/f17.webp" alt="Gabinete de banheiro planejado com cuba de apoio quadrada" width="899" height="510"></div><figcaption>Gabinete com cuba de apoio</figcaption></figure>
-      <figure><div class="ph"><img src="img/f18.webp" alt="Bancada em pedra com cubas douradas, vista do conjunto" width="501" height="890"></div><figcaption>Bancada em pedra</figcaption></figure>
-      <figure><div class="ph"><img src="img/f19.webp" alt="Gabinete de banheiro suspenso, com cuba de apoio" width="900" height="506"></div><figcaption>Gabinete suspenso</figcaption></figure>
-      
-      
-    </div>
-  </div>
-</section>
-
-<section id="como-funciona">
-  <div class="env">
-    <p class="rotulo">Como funciona</p>
-    <h2>Criações próprias, sob medida</h2>
-    <div class="col">
-      <p class="apoio">
-        Cada móvel planejado, fabricado pela Móvel Mix Marcenaria, é uma criação única. Os projetos
-        são desenhados por nossos projetistas, que desenvolvem o modelo baseado no espaço e na
-        necessidade de cada cliente.
-      </p>
-      <p class="apoio" style="margin-top:14px">
-        Cada móvel que sai da nossa marcenaria possui uma identidade própria, pois carrega a
-        assinatura Móvel Mix Marcenaria. Prezamos por atuar como uma marcenaria moderna — esse
-        conceito está impresso em nossas criações, através de um design inovador e arrojado.
-      </p>
-      <p class="apoio" style="margin-top:14px">
-        Entre em contato com a Móvel Mix Marcenaria e conte com a assessoria profissional do nosso
-        projetista para desenvolver o seu móvel planejado.
-      </p>
-    </div>
-    <div class="acoes" style="margin-top:24px">
-      <a class="btn" href="https://wa.me/5511989694962">Falar com o projetista</a>
-    </div>
-  </div>
-</section>
-
-<section id="regiao">
-  <div class="env">
-    <p class="rotulo">Região atendida</p>
-    <h2>Onde atendemos</h2>
-    <div class="chipwrap">
-      <span class="chip">São Paulo (capital)</span><span class="chip">Zona Leste</span>
-      <span class="chip">Zona Sul</span><span class="chip">Zona Norte</span>
-      <span class="chip">Zona Oeste</span><span class="chip">Centro de SP</span>
-      <span class="chip">Grande São Paulo</span><span class="chip">Santo André</span>
-      <span class="chip">São Caetano do Sul</span><span class="chip">São Bernardo do Campo</span>
-    </div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="env">
-    <div class="faixa">
-      <p class="rotulo">Contato</p>
-      <h2>Fale com a Móvel Mix Marcenaria</h2>
-      <p class="apoio col">Deseja um orçamento de móveis planejados? Entre em contato e tire suas dúvidas sobre preço, projetos e prazos.</p>
-      <div class="canais">
-        <a href="tel:+551120124903"><b>Telefone fixo</b><span>(11) 2012-4903</span></a>
-        <a href="https://wa.me/5511989694962"><b>Celular / WhatsApp</b><span>(11) 98969-4962</span></a>
-        <a href="mailto:movelmix@movelmixmarcenaria.com.br"><b>E-mail</b><span>movelmix@movelmixmarcenaria.com.br</span></a>
+    <article class="ficha" id="cozinhas">
+      <div class="ficha-topo">
+        <span class="num">01</span>
         <div>
-          <b>Endereço</b>
-          <span>R. Ângelo Bunioto, 203 — Jd. Sapopemba, São Paulo / SP</span>
-          <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=R.+%C3%82ngelo+Bunioto%2C+203%2C+Jardim+Sapopemba%2C+S%C3%A3o+Paulo+-+SP">Ver no mapa →</a>
+          <h3>Cozinhas Sob Medida em SP</h3>
+          <p class="corpo">Temos uma linha completa de móveis planejados para cozinha, e também fabricamos mesas de jantar completas, venha conhecer.</p>
         </div>
-        <div><b>Horário</b><span style="font-size:0.98rem">Seg. a sex., 8h às 18h<br>Sábado, 8h às 12h</span></div>
+        <a class="link-cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Cozinha%20Sob%20Medida.">Orçamento de cozinha&nbsp;→</a>
       </div>
-      <div class="contato-acoes">
-        <a class="btn" href="https://wa.me/5511989694962">Chamar no WhatsApp</a>
-        <a class="btn vazio" href="tel:+551120124903">Ligar (11) 2012-4903</a>
+      <div class="ficha-fotos">
+        <img src="img/f11.webp" alt="Bancada preta com armários planejados em branco" width="899" height="510">
+        <img src="img/f20.webp" alt="Balcão de cozinha com tampo de granito preto e frentes claras" width="900" height="506">
+        <img src="img/f03.webp" alt="Mesa de jantar com tampo de vidro e cadeiras estofadas" width="900" height="511">
+        <img src="img/f02.webp" alt="Cristaleira planejada branca com tampo de vidro" width="900" height="506">
+        <img src="img/f12.webp" alt="Aparador planejado com tampo de vidro e frentes em duas cores" width="900" height="500">
+      </div>
+    </article>
+
+    <article class="ficha" id="dormitorios">
+      <div class="ficha-topo">
+        <span class="num">02</span>
+        <div>
+          <h3>Dormitórios Planejados em SP</h3>
+          <p class="corpo">Montamos dormitórios completos, de casal, solteiro ou infantil, com cama, closets, painéis, criados-mudos, mesas de estudo e muito mais, confira.</p>
+        </div>
+        <a class="link-cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Dormit%C3%B3rio%20de%20Casal%20Sob%20Medida.">Orçamento de dormitório&nbsp;→</a>
+      </div>
+      <div class="ficha-fotos">
+        <img src="img/f01.webp" alt="Painel de TV planejado em madeira, com prateleiras e nichos" width="900" height="511">
+        <img src="img/f04.webp" alt="Estante planejada para quarto infantil, com nichos e espaço para televisão" width="900" height="686">
+        <img src="img/f06.webp" alt="Cômoda e criado-mudo planejados para dormitório" width="910" height="694">
+      </div>
+    </article>
+
+    <article class="ficha" id="hometheaters">
+      <div class="ficha-topo">
+        <span class="num">03</span>
+        <div>
+          <h3>Home Theaters Planejados em SP</h3>
+          <p class="corpo">A Móvel Mix Marcenaria realiza desde o desenho do projeto até a fabricação de home theater planejado.</p>
+          <p class="corpo">Nossos móveis são todos sob medida, e sendo assim não importa o tamanho de sua sala: o seu home theater será fabricado de forma a valorizar e aproveitar bem o seu espaço.</p>
+        </div>
+        <a class="link-cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Home%20Theater%20Sob%20Medida.">Orçamento de home theater&nbsp;→</a>
+      </div>
+      <div class="ficha-fotos">
+        <img src="img/ht-a.webp" alt="Home theater com painel amadeirado, rack suspenso e prateleiras" width="486" height="384">
+        <img src="img/ht-b.webp" alt="Home theater com painel claro entre colunas escuras e rack baixo" width="483" height="384">
+        <img src="img/f09.webp" alt="Painel de TV planejado em tom escuro, com rack suspenso" width="600" height="800">
+        <img src="img/f13.webp" alt="Rack de TV planejado em madeira, com nichos abertos" width="500" height="889">
+        <img src="img/f16.webp" alt="Painel de TV planejado com bancada baixa" width="501" height="890">
+      </div>
+    </article>
+
+    <article class="ficha" id="gabinetes">
+      <div class="ficha-topo">
+        <span class="num">04</span>
+        <div>
+          <h3>Gabinetes e Armários Planejados em SP</h3>
+          <p class="corpo">Os gabinetes e armários planejados são os móveis mais solicitados entre os móveis planejados, por serem essenciais dentro de casa, devido principalmente à sua funcionalidade.</p>
+          <p class="corpo">Na Móvel Mix Marcenaria montamos o seu banheiro completo, desde a fabricação de gabinetes e armários planejados até a colocação da pedra de mármore ou granito.</p>
+        </div>
+        <a class="link-cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Gabinete%20de%20Banheiro%20Sob%20Medida.">Orçamento de gabinete&nbsp;→</a>
+      </div>
+      <div class="ficha-fotos">
+        <img src="img/f05.webp" alt="Gabinete de banheiro planejado com cuba de apoio e espelho" width="500" height="895">
+        <img src="img/f17.webp" alt="Gabinete de banheiro planejado com cuba de apoio quadrada" width="900" height="506">
+        <img src="img/f18.webp" alt="Bancada em pedra com duas cubas de apoio douradas e gabinetes claros" width="900" height="506">
+        <img src="img/f19.webp" alt="Gabinete de banheiro suspenso, com cuba de apoio" width="910" height="512">
+      </div>
+    </article>
+
+    <article class="ficha" id="areas-externas">
+      <div class="ficha-topo">
+        <span class="num">05</span>
+        <div>
+          <h3>Móveis para Áreas Externas</h3>
+          <p class="corpo">Fabricação de móveis para áreas externas em São Paulo e Grande São Paulo. A arquitetura moderna tem contribuído muito para a alavancagem destes móveis planejados, uma vez que os projetos de residências e de apartamentos cada vez mais têm valorizado a criação de áreas externas e de lazer, como sacadas, varandas e churrasqueiras.</p>
+          <p class="corpo">E como os demais ambientes da casa, as áreas externas e de lazer merecem o mesmo cuidado dedicado aos demais cômodos, e sendo assim precisam de móveis planejados de qualidade que mobiliem e decorem o espaço.</p>
+        </div>
+        <a class="link-cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20M%C3%B3veis%20para%20%C3%81reas%20Externas.">Orçamento de área externa&nbsp;→</a>
+      </div>
+      <div class="ficha-fotos">
+        <img src="img/ext-a.webp" alt="Painel amadeirado sobre bancada preta, entre revestimento de ladrilho colorido" width="686" height="384">
+        <img src="img/ext-b.webp" alt="Armários amadeirados e bancada de granito ao lado de churrasqueira de tijolo" width="307" height="384">
+      </div>
+    </article>
+
+    <article class="ficha" id="lavanderia">
+      <div class="ficha-topo">
+        <span class="num">06</span>
+        <div>
+          <h3>Móveis para Lavanderia em SP</h3>
+          <p class="corpo">Quem mora em apartamento sabe o quanto são necessários os móveis para lavanderia, pois conta com espaços menores e por isso precisa se esforçar mais para manter o local organizado, já que na maioria dos casos é na lavanderia que ficam reunidos os produtos de limpeza, além dos itens comuns a esta área da casa.</p>
+          <p class="corpo">Mas isso não significa que a mesma questão não seja enfrentada por quem mora em residências, pois também deseja uma boa solução no que diz respeito a organização e decoração. Nós da Móvel Mix Marcenaria temos o projeto certo de móveis planejados para a sua lavanderia.</p>
+        </div>
+        <a class="link-cta" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20M%C3%B3veis%20para%20Lavanderia.">Orçamento de lavanderia&nbsp;→</a>
+      </div>
+      <div class="ficha-fotos">
+        <img src="img/lav-a.webp" alt="Bancada de lavanderia planejada com gavetas e armário baixo" width="217" height="384">
+        <img src="img/lav-b.webp" alt="Bancada de lavanderia com tábua de passar embutida e rebatível" width="217" height="384">
+        <img src="img/lav-c.webp" alt="Armário de lavanderia com cestos aramados deslizantes" width="289" height="384">
+        <img src="img/lav-d.webp" alt="Armário alto e prateleiras planejadas sobre a máquina de lavar" width="238" height="384">
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="secao" id="etapas">
+  <div class="caixa">
+    <p class="marcador">Como é feito</p>
+    <h2>Do contato ao móvel montado</h2>
+    <p class="corpo estreita">
+      Cada móvel planejado fabricado pela Móvel Mix Marcenaria é uma criação única, e carrega a
+      assinatura Móvel Mix Marcenaria.
+    </p>
+    <div class="passos">
+      <div class="passo">
+        <h3>Você conta o ambiente</h3>
+        <p>Mande uma foto do seu ambiente para que possamos avaliar melhor o tamanho o espaço e qual projeto podemos lhe apresentar.</p>
+      </div>
+      <div class="passo">
+        <h3>O projetista desenha</h3>
+        <p>Os projetos são desenhados por nossos projetistas, que desenvolvem o modelo baseado no espaço e na necessidade de cada cliente.</p>
+      </div>
+      <div class="passo">
+        <h3>A fábrica executa</h3>
+        <p>A Móvel Mix Marcenaria é uma fábrica de móveis planejados, e realiza desde o desenho do projeto até a fabricação.</p>
+      </div>
+      <div class="passo">
+        <h3>A gente monta</h3>
+        <p>Montamos o ambiente completo — no banheiro, desde a fabricação dos gabinetes e armários até a colocação da pedra de mármore ou granito.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="env">
-  <footer>
-    <span>Móvel Mix Marcenaria · R. Ângelo Bunioto, 203 — Jd. Sapopemba, São Paulo, SP</span>
+<section class="secao" id="orcamento">
+  <div class="caixa">
+    <p class="marcador">Orçamento</p>
+    <h2>Sobre o que é o seu orçamento?</h2>
+    <p class="corpo estreita">
+      Entre em contato hoje mesmo com a Móvel Mix Marcenaria e tenha mais informações sobre nossos
+      móveis planejados. Teremos prazer em esclarecer suas dúvidas sobre preço de móveis planejados,
+      projetos, e muito mais. Escolha o assunto e o WhatsApp já abre com ele escrito.
+    </p>
+    <div class="assuntos">
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Cozinha%20Sob%20Medida.">Orçamento de Cozinha Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Dormit%C3%B3rio%20de%20Casal%20Sob%20Medida.">Orçamento de Dormitório de Casal Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Dormit%C3%B3rio%20de%20Solteiro%20Sob%20Medida.">Orçamento de Dormitório de Solteiro Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Closet%20Sob%20Medida.">Orçamento de Closet Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Arm%C3%A1rio%20Sob%20Medida.">Orçamento de Armário Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Gabinete%20de%20Banheiro%20Sob%20Medida.">Orçamento de Gabinete de Banheiro Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Home%20Theater%20Sob%20Medida.">Orçamento de Home Theater Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20M%C3%B3veis%20de%20Escrit%C3%B3rio%20Sob%20Medida.">Orçamento de Móveis de Escritório Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20M%C3%B3veis%20para%20Loja%20Sob%20Medida.">Orçamento de Móveis para Loja Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20Bancadas%20Sob%20Medida.">Orçamento de Bancadas Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Or%C3%A7amento%20de%20outros%20M%C3%B3veis%20Sob%20Medida.">Orçamento de outros Móveis Sob Medida</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Outras%20Informa%C3%A7%C3%B5es%20ou%20Solicita%C3%A7%C3%B5es.">Outras Informações ou Solicitações</a>
+        <a class="assunto" href="https://wa.me/5511989694962?text=Ol%C3%A1%21%20Assunto%3A%20Enviar%20Depoimento%20ou%20Elogio.">Enviar Depoimento ou Elogio</a>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="regioes">
+  <div class="caixa">
+    <p class="marcador">Regiões atendidas</p>
+    <h2>A Móvel Mix Marcenaria atende a projetos dentro de São Paulo e Grande São Paulo</h2>
+    <div class="regioes">
+      <span class="regiao">São Paulo</span><span class="regiao">Zona Leste SP</span>
+      <span class="regiao">Zona Sul SP</span><span class="regiao">Zona Norte SP</span>
+      <span class="regiao">Zona Oeste SP</span><span class="regiao">Centro de SP</span>
+      <span class="regiao">Grande SP</span><span class="regiao">Santo André</span>
+      <span class="regiao">São Caetano do Sul</span><span class="regiao">São Bernardo do Campo</span>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="contato">
+  <div class="caixa">
+    <p class="marcador">Fale conosco e localização</p>
+    <h2>Traga-nos o seu projeto de móveis sob medida</h2>
+    <div class="balcao">
+      <div class="dados">
+        <div class="campo">
+          <b>Telefone</b>
+          <a href="tel:+551120124903">(11) 2012-4903</a>
+        </div>
+        <div class="campo">
+          <b>Celular e WhatsApp</b>
+          <a href="https://wa.me/5511989694962">(11) 98969-4962</a>
+        </div>
+        <div class="campo">
+          <b>E-mail</b>
+          <a href="mailto:movelmix@movelmixmarcenaria.com.br">movelmix@movelmixmarcenaria.com.br</a>
+        </div>
+        <div class="campo">
+          <b>Marcenaria</b>
+          <span>R. Ângelo Bunioto, 203 — Jd. Sapopemba, São Paulo / SP</span>
+          <a class="rota" href="https://www.google.com/maps/search/?api=1&amp;query=R.+%C3%82ngelo+Bunioto%2C+203%2C+Jardim+Sapopemba%2C+S%C3%A3o+Paulo+-+SP">Traçar rota&nbsp;→</a>
+        </div>
+      </div>
+      <div class="expediente">
+        <b>Horário de funcionamento</b>
+        <p>De segunda a sexta, das 8h às 18h</p>
+        <p>Sábado, das 8h às 12h</p>
+        <a class="cta" href="https://wa.me/5511989694962">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="caixa">
+  <footer class="pe">
+    <div class="sociais">
+      <a href="https://www.facebook.com/M%C3%B3vel-Mix-Marcenaria-1245159422191461">Facebook</a>
+      <a href="https://www.instagram.com/movel_mix/">Instagram @movel_mix</a>
+    </div>
+    <span>Móvel Mix Marcenaria · R. Ângelo Bunioto, 203 — Jd. Sapopemba, São Paulo, SP · (11) 2012-4903</span>
     <span>Proposta de redesenho feita pelo <a href="https://refeito.github.io">Refeito</a>. Não afiliada à Móvel Mix Marcenaria. Fotos e textos são deles.</span>
   </footer>
 </div>
