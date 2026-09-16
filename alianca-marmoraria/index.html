@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aliança Granitos — Mármores, Granitos e Pedras em Belo Horizonte</title>
+<meta name="description" content="Soluções em mármore, granito e quartzo em Belo Horizonte. A Aliança Marmoraria oferece qualidade, design e acabamento perfeito para sua casa ou empresa.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap">
+<style>
+  /* Paleta lida do site atual: branco dominante, azul-marinho 0c2553 e cinza efefef. */
+  :root {
+    --papel:#ffffff; --papel2:#efefef; --linha:#dfe2e6;
+    --tinta:#12181f; --tinta2:#5c6673;
+    --azul:#0c2553; --azul2:#1a3f80;
+    --titulo:"Archivo",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --corpo:"Work Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3,h4 { margin:0; font-family:var(--titulo); font-weight:700; text-wrap:balance; letter-spacing:-0.01em; }
+  p { margin:0; }
+  ul { margin:0; padding:0; }
+
+  .env { max-width:1180px; margin:0 auto; padding-inline:22px; }
+  .col { max-width:660px; }
+
+  .tarja { background:var(--azul); border-bottom:1px solid var(--linha); color:rgba(255,255,255,.82);
+           font-size:0.76rem; line-height:1.5; text-align:center;
+           padding:11px 18px; padding-top:calc(11px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:#fff; } .tarja a { color:#fff; text-decoration:underline; }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:18px;
+          padding-block:18px; flex-wrap:wrap; }
+  .topo .marca { display:flex; align-items:center; }
+  .topo .marca img { height:34px; width:auto; }
+  .topo nav { display:flex; gap:22px; font-size:0.88rem; font-weight:600; flex-wrap:wrap; }
+  .topo nav a { text-decoration:none; color:var(--tinta2); }
+  .topo nav a:hover { color:var(--azul); }
+
+  .btn { display:inline-block; font-family:var(--corpo); font-weight:700; font-size:0.9rem;
+         text-decoration:none; background:var(--azul); color:#fff; padding:14px 24px; border-radius:6px;
+         border:1px solid var(--azul); }
+  .btn:hover { background:var(--azul2); border-color:var(--azul2); }
+  .btn:focus-visible { outline:3px solid var(--azul); outline-offset:3px; }
+  .btn.vazio { background:transparent; color:var(--tinta); border:1px solid var(--linha); }
+  .btn.vazio:hover { border-color:var(--azul); color:var(--azul); }
+
+  .heroi { padding-block:40px 8px; }
+  .heroi .grade { display:grid; grid-template-columns:1.05fr 0.95fr; gap:44px; align-items:center; }
+  .kicker { font-size:0.98rem; font-weight:600; color:var(--azul); margin-bottom:6px; }
+  .heroi h1 { font-size:clamp(2.1rem,5vw,3.2rem); line-height:1.05; }
+  .heroi .sub { margin-top:16px; color:var(--tinta2); font-size:1.06rem; }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .heroi .foto img { border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%; }
+  .intro2 { padding-block:22px 46px; color:var(--tinta2); font-size:1rem; }
+
+  section { padding-block:56px; border-top:1px solid var(--linha); }
+  .rotulo { font-family:var(--titulo); font-size:0.7rem; font-weight:700; letter-spacing:0.15em;
+            text-transform:uppercase; color:var(--azul); margin-bottom:10px; }
+  h2 { font-size:clamp(1.5rem,3.6vw,2.05rem); line-height:1.18; margin-bottom:14px; }
+  .apoio { color:var(--tinta2); font-size:1.02rem; }
+
+  /* Catalogo de pedras: chips por familia, nomeados exatamente como no site deles. */
+  .grupo-pedra { margin-top:30px; }
+  .grupo-pedra h3 { font-size:1.1rem; color:var(--azul); }
+  .grupo-pedra .desc { color:var(--tinta2); font-size:0.92rem; margin-top:3px; }
+  .chipwrap { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .chip { border:1px solid var(--linha); background:var(--papel2); color:var(--tinta);
+          border-radius:99px; padding:7px 14px; font-size:0.85rem; font-weight:500; white-space:nowrap; }
+
+  .ambientes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px; margin-top:28px; }
+  .ambiente-card { border-left:3px solid var(--azul); padding:2px 0 2px 16px; }
+  .ambiente-card h3 { font-size:1.16rem; }
+  .ambiente-card p { color:var(--tinta2); font-size:0.95rem; margin-top:4px; }
+
+  .galeria { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:28px; }
+  .galeria figure { margin:0; border-radius:8px; overflow:hidden; background:var(--papel2); }
+  .galeria img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .galeria figcaption { font-size:0.8rem; color:var(--tinta2); padding:8px 2px 0; }
+
+  .depoimentos { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; margin-top:26px; }
+  .dep { border-top:3px solid var(--azul); padding-top:14px; }
+  .dep p { font-size:0.97rem; }
+  .dep cite { display:block; margin-top:12px; font-weight:700; font-style:normal; font-size:0.82rem; color:var(--tinta2); }
+
+  .faixa-cta { background:var(--azul); color:#fff; border-radius:16px; padding:clamp(28px,4.5vw,46px); }
+  .faixa-cta .rotulo { color:#a9c0e6; }
+  .faixa-cta h2 { color:#fff; }
+  .faixa-cta p { color:rgba(255,255,255,.84); }
+  .faixa-cta .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+  .faixa-cta .btn { background:#fff; color:var(--azul); border-color:#fff; }
+  .faixa-cta .btn:hover { background:#e7edf7; }
+  .faixa-cta .btn.vazio { background:transparent; color:#fff; border-color:rgba(255,255,255,.6); }
+  .faixa-cta .btn.vazio:hover { background:rgba(255,255,255,.12); border-color:#fff; }
+
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:22px 28px; margin-top:26px; }
+  .canais > * { text-decoration:none; }
+  .canais b { display:block; font-size:0.68rem; font-weight:700; letter-spacing:0.13em;
+              text-transform:uppercase; color:var(--tinta2); margin-bottom:5px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.08rem;
+                 overflow-wrap:anywhere; line-height:1.35; }
+  .canais a:hover span { color:var(--azul); }
+  .canais .mapa { font-family:var(--corpo); font-weight:600; font-size:0.86rem; color:var(--azul); margin-top:4px; }
+
+  footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
+
+  @media (max-width:860px) {
+    .heroi .grade { grid-template-columns:1fr; gap:26px; }
+    section { padding-block:42px; }
+    .topo nav { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja" id="topo">
+  <b>Proposta de redesenho não solicitada, feita por Refeito.</b> Não é o site oficial da Aliança Granitos.
+  O site oficial é <a href="https://www.aliancamarmoraria.com.br/">aliancamarmoraria.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <a class="marca" href="#topo"><img src="img/logo.webp" alt="Aliança Granitos" width="399" height="100"></a>
+    <nav>
+      <a href="#pedras">Pedras</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#obras">Obras</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5531988770493">Orçamento</a>
+  </header>
+
+  <div class="heroi">
+    <div class="grade">
+      <div>
+        <p class="kicker">Bem-vindo à</p>
+        <h1>Aliança Granitos</h1>
+        <p class="sub">
+          Transformamos a beleza natural das pedras em projetos únicos e sofisticados. Nossa missão
+          é oferecer soluções em mármores e granitos que unem durabilidade, elegância e personalidade,
+          valorizando cada ambiente com excelência e inovação.
+        </p>
+        <div class="acoes">
+          <a class="btn" href="https://wa.me/5531988770493">Pedir orçamento no WhatsApp</a>
+          <a class="btn vazio" href="#obras">Ver obras instaladas</a>
+        </div>
+      </div>
+      <div class="foto">
+        <img src="img/f10.webp" alt="Ilha de cozinha em granito preto instalada pela Aliança Granitos" width="922" height="1024">
+      </div>
+    </div>
+  </div>
+
+  <div class="intro2 col">
+    <p>
+      Somos especialistas em granitos, com anos de experiência no mercado e um portfólio que atende
+      desde residências até grandes empreendimentos. Trabalhamos com materiais de alta qualidade,
+      equipe qualificada e tecnologia de ponta, garantindo acabamentos impecáveis e resultados que
+      superam expectativas.
+    </p>
+  </div>
+</div>
+
+<section id="pedras">
+  <div class="env">
+    <p class="rotulo">Catálogo</p>
+    <h2>Pedras com que trabalhamos</h2>
+    <p class="apoio col">
+      Trabalhamos com pedras naturais e sintéticas, nacionais e importadas. Oferecemos uma ampla
+      variedade de pedras naturais e superfícies premium, com cores, padrões e acabamentos que
+      transformam qualquer espaço. Ideais para cozinhas, banheiros, áreas externas e ambientes
+      sofisticados, nossas soluções combinam elegância atemporal e durabilidade incomparável.
+    </p>
+
+    <div class="grupo-pedra">
+      <h3>Granitos</h3>
+      <div class="chipwrap">
+        <span class="chip">Amarelo Icaraí</span><span class="chip">Branco Ceará</span><span class="chip">Branco Dallas</span>
+        <span class="chip">Preto Indiano</span><span class="chip">Branco Marfim</span><span class="chip">Branco Fortaleza</span>
+        <span class="chip">Preto São Gabriel</span><span class="chip">Ocre Itabira</span><span class="chip">Granito Arabesco</span>
+        <span class="chip">Amarelo Vitória</span><span class="chip">Branco Piracema</span><span class="chip">Vermelho Brasília</span>
+        <span class="chip">Café Imperial</span><span class="chip">Amarelo Ornamental</span><span class="chip">Amarelo Florença</span>
+        <span class="chip">Preto Absoluto</span><span class="chip">Cinza Andorinha</span><span class="chip">Rosa Raíssa</span>
+        <span class="chip">Branco Nepal</span><span class="chip">Marrom Tabaco</span><span class="chip">Preto Via Láctea</span>
+        <span class="chip">Marrom Absoluto</span><span class="chip">Cinza Absoluto</span><span class="chip">Branco Pitaya</span>
+        <span class="chip">Branco Itaúnas</span><span class="chip">Branco Siena</span><span class="chip">Verde Ubatuba</span>
+      </div>
+    </div>
+
+    <div class="grupo-pedra">
+      <h3>Mármores</h3>
+      <div class="chipwrap">
+        <span class="chip">Bege Bahia</span><span class="chip">Travertino Romano</span><span class="chip">Marrom Emperador</span>
+        <span class="chip">Crema Marfil</span><span class="chip">Branco Extra</span><span class="chip">Carrarinha</span>
+        <span class="chip">Champagne</span><span class="chip">Branco Moura</span><span class="chip">Verde Guatemala</span>
+        <span class="chip">Bronze Armani</span><span class="chip">Arabescato</span><span class="chip">Branco Paraná</span>
+      </div>
+    </div>
+
+    <div class="grupo-pedra">
+      <h3>Pedras sintéticas</h3>
+      <p class="desc">Supernano, quartzos e ultracompactos.</p>
+      <div class="chipwrap">
+        <span class="chip">NanoGlass · Quartzo Branco</span><span class="chip">NanoPrime · Quartzo Branco</span>
+        <span class="chip">Quartzo Cinza</span><span class="chip">Lâmina Ultracompacta</span>
+        <span class="chip">Quartzo Bege</span><span class="chip">Quartzo Calacatta</span>
+      </div>
+    </div>
+
+    <div class="grupo-pedra">
+      <h3>Pedras naturais</h3>
+      <p class="desc">Quartzitos, mármores dolomíticos, mármores e granitos nacionais e importados, travertinos, limestone e pedra sabão.</p>
+      <div class="chipwrap">
+        <span class="chip">Taj Mahal</span><span class="chip">Montblanc</span><span class="chip">Dakar</span>
+        <span class="chip">Kalahari</span><span class="chip">Bianco Superiore</span><span class="chip">Kouros</span>
+        <span class="chip">Verde Gaia</span><span class="chip">Onix</span><span class="chip">Nero Marquina</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ambientes">
+  <div class="env">
+    <p class="rotulo">Onde aplicamos</p>
+    <h2>Granitos de alta qualidade para transformar cada ambiente do seu projeto</h2>
+    <div class="ambientes-grid">
+      <div class="ambiente-card">
+        <h3>Cozinhas</h3>
+        <p>Bancadas, pias e ilhas centrais.</p>
+      </div>
+      <div class="ambiente-card">
+        <h3>Banheiros</h3>
+        <p>Lavatórios, nichos, bancadas e revestimentos.</p>
+      </div>
+      <div class="ambiente-card">
+        <h3>Áreas externas</h3>
+        <p>Churrasqueiras, varandas gourmet, jardins e pisos antiderrapantes.</p>
+      </div>
+      <div class="ambiente-card">
+        <h3>Salas e halls</h3>
+        <p>Pisos, escadas, soleiras e revestimento de paredes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="obras">
+  <div class="env">
+    <p class="rotulo">Galeria de fotos</p>
+    <h2>Obras instaladas</h2>
+    <p class="apoio col">Atendimento rápido e personalizado para o seu projeto em pedras naturais e sintéticas.</p>
+    <div class="galeria">
+      <figure><img src="img/f04.webp" alt="Bancada em granito preto com cooktop e forno, cozinha" width="810" height="1080"><figcaption>Cozinha em granito preto</figcaption></figure>
+      <figure><img src="img/f20.webp" alt="Cozinha completa com bancada preta e piso em granito claro" width="607" height="1080"><figcaption>Cozinha completa</figcaption></figure>
+      <figure><img src="img/f03.webp" alt="Bancada branca com cooktop e pia em inox, cozinha" width="1280" height="960"><figcaption>Bancada de cozinha</figcaption></figure>
+      <figure><img src="img/f14.webp" alt="Bancada em granito cinza com pia dupla em inox" width="1280" height="960"><figcaption>Cozinha externa</figcaption></figure>
+      <figure><img src="img/f08.webp" alt="Bancada em granito bege speckled com pia" width="1280" height="960"><figcaption>Bancada de área gourmet</figcaption></figure>
+      <figure><img src="img/f12.webp" alt="Bancada em granito verde com cadeiras, área de jantar" width="1280" height="960"><figcaption>Bancada em granito verde</figcaption></figure>
+      <figure><img src="img/f13.webp" alt="Bancada em granito verde, outro ângulo" width="1280" height="960"><figcaption>Área de jantar em granito</figcaption></figure>
+      <figure><img src="img/f15.webp" alt="Escada revestida em granito bege com corrimão de inox" width="810" height="1080"><figcaption>Escada em granito</figcaption></figure>
+      <figure><img src="img/f01.webp" alt="Bancada branca com nicho de madeira, banheiro" width="607" height="1080"><figcaption>Banheiro</figcaption></figure>
+      <figure><img src="img/f02.webp" alt="Bancada com cuba esculpida e torneira de parede, banheiro" width="607" height="1080"><figcaption>Banheiro</figcaption></figure>
+      <figure><img src="img/f06.webp" alt="Bancada bege com cuba esculpida, banheiro" width="607" height="1080"><figcaption>Lavatório em pedra</figcaption></figure>
+      <figure><img src="img/f07.webp" alt="Bancada em pedra com pia branca, banheiro" width="768" height="1024"><figcaption>Banheiro</figcaption></figure>
+      <figure><img src="img/f09.webp" alt="Bancada bege com cuba esculpida e espelho, banheiro" width="810" height="1080"><figcaption>Banheiro com box</figcaption></figure>
+      <figure><img src="img/f11.webp" alt="Bancada branca com cuba esculpida, banheiro pequeno" width="768" height="1024"><figcaption>Lavabo</figcaption></figure>
+      <figure><img src="img/f16.webp" alt="Bancada bege com cuba esculpida, banheiro" width="1280" height="960"><figcaption>Banheiro</figcaption></figure>
+      <figure><img src="img/f17.webp" alt="Banheiro completo com bancada em mármore" width="607" height="1080"><figcaption>Banheiro completo</figcaption></figure>
+      <figure><img src="img/f18.webp" alt="Bancada em granito branco pontilhado, banheiro" width="607" height="1080"><figcaption>Banheiro</figcaption></figure>
+      <figure><img src="img/f19.webp" alt="Bancada em granito bege pontilhado, banheiro" width="607" height="1080"><figcaption>Banheiro</figcaption></figure>
+      <figure><img src="img/f05.webp" alt="Bancada em mármore branco com cuba redonda embutida" width="810" height="1080"><figcaption>Bancada em mármore</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="env">
+    <p class="rotulo">Depoimentos</p>
+    <h2>O que os clientes dizem</h2>
+    <div class="depoimentos">
+      <div class="dep"><p>"Cordialidade, pontualidade e trabalho impecável. Super recomendo!"</p><cite>Aparecida Paiva</cite></div>
+      <div class="dep"><p>"Entrega antes prazo, bancada perfeita. Eu indico."</p><cite>Maisa Augusta</cite></div>
+      <div class="dep"><p>"A bancada da cozinha ficou do jeito que queríamos. Ótimo atendimento!"</p><cite>Lorena Piramo</cite></div>
+      <div class="dep"><p>"Pronto atendimento, produtos de qualidade e preços competitivos, mais de 10 anos de parceria e clientes satisfeitos."</p><cite>Alfredo Aureliano</cite></div>
+      <div class="dep"><p>"Melhor atendimento impossível. Adquirir uma peça feita por esses profissionais é investir em obra de arte. São, com certeza, muito bons no que fazem."</p><cite>Rose Reis</cite></div>
+      <div class="dep"><p>"Excelente atendimento. Foram rápidos para realizar o orçamento, entregaram dentro do prazo e com qualidade. Recomendo!"</p><cite>Isamara Santos</cite></div>
+    </div>
+  </div>
+</section>
+
+<section id="orcamento">
+  <div class="env">
+    <div class="faixa-cta">
+      <p class="rotulo">Orçamento</p>
+      <h2>Peça seu orçamento</h2>
+      <p class="col">Atendimento rápido e personalizado para o seu projeto em pedras naturais e sintéticas.</p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5531988770493">Chamar no WhatsApp</a>
+        <a class="btn vazio" href="tel:+553134767473">Ligar (31) 3476-7473</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Fale com a Aliança Granitos</h2>
+    <div class="canais">
+      <a href="tel:+553134767473"><b>Telefone fixo</b><span>(31) 3476-7473</span></a>
+      <a href="https://wa.me/5531988770493"><b>Celular / WhatsApp</b><span>(31) 98877-0493</span></a>
+      <a href="mailto:vendas.aliancamarmores@gmail.com"><b>E-mail</b><span>vendas.aliancamarmores@gmail.com</span></a>
+      <div>
+        <b>Endereço</b>
+        <span>Av. Pres. Tancredo Neves, 1820 - Jardim Alvorada, Belo Horizonte / MG</span>
+        <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Pres.+Tancredo+Neves%2C+1820%2C+Jardim+Alvorada%2C+Belo+Horizonte+-+MG">Ver no mapa →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="env">
+  <footer>
+    <span>Aliança Granitos · Av. Pres. Tancredo Neves, 1820 - Jardim Alvorada · Belo Horizonte / MG</span>
+    <span>Proposta de redesenho feita pelo <a href="https://refeito.github.io">Refeito</a>. Não afiliada à Aliança Granitos. Fotos e textos são deles.</span>
+  </footer>
+</div>
+
+</body>
+</html>

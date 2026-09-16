@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vidraçaria Tecno Temper — Box, Vidros e Espelhos em Niterói</title>
+<meta name="description" content="Vidraçaria em Niterói com mais de 35 anos de experiência. Box para banheiro, vidro temperado, portas de vidro, tampos, espelhos e ferragens. Atendimento personalizado e orçamento grátis.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  /* Paleta lida do site atual: azul-marinho #19315d e vermelho #b40f1f sobre branco. */
+  :root {
+    --papel:#ffffff; --papel2:#eef1f7; --linha:#dbe1ea;
+    --tinta:#12203a; --tinta2:#57667c;
+    --marinho:#19315d; --marinho2:#0f2040;
+    --vermelho:#b40f1f; --vermelho2:#8c0c18;
+    --titulo:"Space Grotesk",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --corpo:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.01em; }
+  p { margin:0; }
+  ul { margin:0; padding:0; list-style:none; }
+
+  .env { max-width:1140px; margin:0 auto; padding-inline:20px; }
+  .col { max-width:660px; }
+
+  .tarja { background:var(--marinho); border-bottom:1px solid var(--marinho2); color:#e6eaf3;
+           font-size:0.78rem; line-height:1.5; text-align:center;
+           padding:11px 18px; padding-top:calc(11px + env(safe-area-inset-top,0px)); overflow-wrap:anywhere; }
+  .tarja b { color:#fff; } .tarja a { color:#ffd7da; text-decoration:underline; }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:16px;
+          padding-block:18px; flex-wrap:wrap; }
+  .topo .logo img { width:170px; height:auto; }
+  .nav { display:flex; gap:18px; align-items:center; font-size:0.86rem; font-weight:600; color:var(--tinta2); flex-wrap:wrap; }
+  .nav a { text-decoration:none; }
+  .nav a:hover { color:var(--vermelho); }
+
+  .btn { display:inline-block; font-family:var(--corpo); font-weight:700; font-size:0.92rem;
+         text-decoration:none; background:var(--vermelho); color:#fff;
+         padding:14px 24px; border-radius:6px; border:1px solid var(--vermelho); }
+  .btn:hover { background:var(--vermelho2); }
+  .btn:focus-visible { outline:3px solid var(--marinho); outline-offset:3px; }
+  .btn.vazio { background:transparent; color:var(--marinho); border:1px solid var(--linha); }
+  .btn.vazio:hover { border-color:var(--marinho); }
+
+  .heroi { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-block:26px 54px; }
+  .heroi h1 { font-size:clamp(1.9rem,4.6vw,2.7rem); line-height:1.08; font-weight:700; color:var(--marinho); }
+  .heroi .sub { margin-top:16px; font-size:1.05rem; color:var(--tinta2); }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+  .heroi .foto img { border-radius:10px; aspect-ratio:4/5; object-fit:cover; width:100%; }
+
+  section { padding-block:54px; border-top:1px solid var(--linha); }
+  .rotulo { font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase;
+            color:var(--vermelho); margin-bottom:10px; }
+  h2 { font-size:clamp(1.5rem,3.6vw,2.05rem); line-height:1.16; font-weight:700; color:var(--marinho); }
+  h3 { font-size:1.08rem; font-weight:700; color:var(--marinho); }
+  .apoio { color:var(--tinta2); font-size:1.02rem; margin-top:10px; }
+
+  /* Produtos: blocos com foto para os que temos, lista compacta para os demais. */
+  .blocos-produto { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px; margin-top:30px; }
+  .bloco-produto { border:1px solid var(--linha); border-radius:12px; overflow:hidden; }
+  .bloco-produto .capa { aspect-ratio:4/3; background:var(--papel2); }
+  .bloco-produto .capa img { width:100%; height:100%; object-fit:cover; }
+  .bloco-produto .txt { padding:16px 18px 20px; }
+  .bloco-produto h3 { margin-bottom:6px; }
+  .bloco-produto p { font-size:0.95rem; color:var(--tinta2); }
+
+  .tambem-fabricamos { margin-top:34px; padding-top:28px; border-top:1px solid var(--linha); }
+  .lista-compacta { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:16px; }
+  .lista-compacta h4 { margin:0 0 4px; font-family:var(--titulo); font-weight:700; font-size:0.98rem; color:var(--tinta); }
+  .lista-compacta p { font-size:0.92rem; color:var(--tinta2); }
+
+  /* Obras: acervo recuperado em tamanho grande — era miniatura no site atual. */
+  .grade-obras { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:28px; }
+  .grade-obras figure { margin:0; border-radius:10px; overflow:hidden; background:var(--papel2); }
+  .grade-obras img { width:100%; height:100%; aspect-ratio:3/4; object-fit:cover; }
+  .grade-obras figcaption { font-size:0.82rem; color:var(--tinta2); padding:8px 2px 0; }
+
+  /* Vidro temperado: explicação lado a lado com o vidro comum, para mostrar a diferença. */
+  .comparativo { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px; }
+  .comparativo > div { padding:20px 22px; border-radius:12px; }
+  .comparativo .comum { background:var(--papel2); }
+  .comparativo .temperado { background:var(--marinho); color:#fff; }
+  .comparativo .temperado h3 { color:#fff; }
+  .comparativo .temperado p { color:#d7deeb; }
+  .comparativo p { font-size:0.96rem; color:var(--tinta2); margin-top:6px; }
+  .outros-vidros { margin-top:26px; display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  .outros-vidros h4 { margin:0 0 4px; font-family:var(--titulo); font-weight:700; font-size:0.95rem; }
+  .outros-vidros p { font-size:0.9rem; color:var(--tinta2); }
+
+  .faixa { background:var(--papel2); border-radius:14px; padding:clamp(24px,4vw,40px); }
+  .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
+
+  .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));
+              gap:20px 26px; margin-top:24px; }
+  .contatos > * { min-width:0; text-decoration:none; }
+  .contatos b { display:block; font-family:var(--titulo); font-size:0.66rem; font-weight:700;
+                letter-spacing:0.13em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .contatos span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.03rem;
+                   overflow-wrap:anywhere; line-height:1.35; color:var(--tinta); }
+  .contatos a:hover span { color:var(--vermelho); }
+
+  footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
+
+  @media (max-width:820px) {
+    .heroi { grid-template-columns:1fr; gap:24px; padding-block:20px 38px; }
+    .heroi .foto { order:-1; }
+    .heroi .foto img { aspect-ratio:16/10; }
+    .comparativo { grid-template-columns:1fr; }
+    section { padding-block:40px; }
+    .nav { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada,</b> feita por Refeito. Não é o site oficial da Vidraçaria Tecno Temper.
+  O site oficial é <a href="https://vidracariatecnotemper.com.br/">vidracariatecnotemper.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <a class="logo" href="/tecno-temper/"><img src="img/logo.webp" alt="Tecno Temper Vidraçaria" width="170" height="84"></a>
+    <nav class="nav">
+      <a href="#produtos">Produtos</a>
+      <a href="#obras">Obras</a>
+      <a href="#vidro-temperado">Vidro temperado</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">WhatsApp</a>
+  </header>
+
+  <section class="heroi" style="border-top:none; padding-top:6px">
+    <div class="texto">
+      <h1>Vidraçaria em Niterói há mais de 35 anos.</h1>
+      <p class="sub">
+        A Tecno Temper trabalha com produtos de primeira qualidade para que os clientes tenham
+        segurança e conforto. Os sócios têm experiência de mais de 35 anos no ramo de vidros e espelhos.
+      </p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir cotação no WhatsApp</a>
+        <a class="btn vazio" href="#produtos">Ver produtos</a>
+      </div>
+    </div>
+    <div class="foto">
+      <img src="img/f06.webp" alt="Box de vidro instalado pela Tecno Temper" width="780" height="1040" fetchpriority="high">
+    </div>
+  </section>
+
+  <section id="produtos">
+    <p class="rotulo">Produtos</p>
+    <h2>Produtos em vidros e acabamentos</h2>
+    <p class="apoio col">
+      A Tecno Temper é reconhecida em todo o Rio de Janeiro por garantir as melhores soluções que
+      uma vidraçaria pode oferecer, com produtos de grande qualidade, segurança e desempenho.
+    </p>
+    <div class="blocos-produto">
+      <article class="bloco-produto">
+        <div class="capa"><img src="img/f16.webp" alt="Box de banheiro instalado pela Tecno Temper" width="390" height="701" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <h3>Box</h3>
+          <p>Delimita a área seca e úmida do banheiro, com fácil limpeza e manuseio prático.
+             Modelos: Sistema Versatik, de Abrir, de Canto, Frontal e sobre Banheira.</p>
+        </div>
+      </article>
+      <article class="bloco-produto">
+        <div class="capa"><img src="img/f02.webp" alt="Porta de vidro instalada pela Tecno Temper" width="516" height="376" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <h3>Portas de Vidro</h3>
+          <p>Deixam o ambiente com um toque a mais de elegância, além de fáceis de limpar e com
+             grande durabilidade.</p>
+        </div>
+      </article>
+      <article class="bloco-produto">
+        <div class="capa"><img src="img/f20.webp" alt="Espelho e box instalados pela Tecno Temper" width="1080" height="1080" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <h3>Espelho</h3>
+          <p>Todo tipo de espelho para decoração residencial ou comercial, em diversos estilos e
+             acabamentos. Também ajuda a aumentar a claridade do ambiente.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="tambem-fabricamos">
+      <h3>Também fabricamos</h3>
+      <div class="lista-compacta">
+        <div>
+          <h4>Tampos para Mesa</h4>
+          <p>Projetos de tampos de vidro para mesas, com profissionais qualificados e alta precisão de medidas.</p>
+        </div>
+        <div>
+          <h4>Ferragem</h4>
+          <p>Trincos, fechaduras, dobradiças, puxadores e outros acessórios para box e portas de vidro.</p>
+        </div>
+        <div>
+          <h4>Vidros em geral</h4>
+          <p>Comum, temperado, laminado, refletivo e aramado — cada um indicado para um uso. Veja o vidro temperado abaixo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="obras">
+    <p class="rotulo">Obras</p>
+    <h2>Obras executadas pela Tecno Temper</h2>
+    <p class="apoio col">Fotos reais de boxes, portas e espelhos instalados pela equipe.</p>
+    <div class="grade-obras">
+      <figure><img src="img/f04.webp" alt="Box sobre banheira instalado pela Tecno Temper" width="907" height="907" loading="lazy" decoding="async"><figcaption>Box sobre banheira</figcaption></figure>
+      <figure><img src="img/f05.webp" alt="Box para banheiro instalado pela Tecno Temper" width="780" height="1040" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+      <figure><img src="img/f07.webp" alt="Box para banheiro instalado pela Tecno Temper" width="780" height="1040" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+      <figure><img src="img/f08.webp" alt="Box para banheiro instalado pela Tecno Temper" width="780" height="1040" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+      <figure><img src="img/f09.webp" alt="Box para banheiro com porta de abrir" width="295" height="580" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+      <figure><img src="img/f13.webp" alt="Box de canto instalado pela Tecno Temper" width="1080" height="1240" loading="lazy" decoding="async"><figcaption>Box de canto</figcaption></figure>
+      <figure><img src="img/f14.webp" alt="Box para banheiro com revestimento em mosaico" width="1080" height="918" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+      <figure><img src="img/f19.webp" alt="Box deslizante instalado pela Tecno Temper" width="515" height="1020" loading="lazy" decoding="async"><figcaption>Box deslizante</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="vidro-temperado">
+    <p class="rotulo">Vidro temperado</p>
+    <h2>O que é vidro temperado, e por que ele importa</h2>
+    <div class="comparativo">
+      <div class="comum">
+        <h3>Vidro comum</h3>
+        <p>Quebra em estilhaços pontiagudos e perigosamente cortantes, e não resiste ao
+           transpassamento. Tem resistência mecânica pequena, pode ser cortado e tem baixo custo.</p>
+      </div>
+      <div class="temperado">
+        <h3>Vidro temperado</h3>
+        <p>Passa por um processo de têmpera — aquecido e resfriado rapidamente — que o torna mais
+           resistente que o comum. Caso quebre, se fragmenta em pedaços pequenos que não machucam.
+           Indicado para fachadas, portas, janelas, divisórias, boxes de banheiro e tampos de mesa,
+           por ser fortemente resistente a impactos.</p>
+      </div>
+    </div>
+    <div class="outros-vidros">
+      <div>
+        <h4>Vidro laminado</h4>
+        <p>Duas ou mais lâminas de vidro com película plástica entre elas. Ao quebrar, os cacos
+           ficam presos na película, o que impede a passagem de pessoas e objetos.</p>
+      </div>
+      <div>
+        <h4>Vidro refletivo</h4>
+        <p>Camada metálica espelhada que reflete os raios solares e reduz a passagem de calor,
+           sem prejudicar a visão de dentro para fora.</p>
+      </div>
+      <div>
+        <h4>Vidro aramado</h4>
+        <p>Estrutura de tela de arame que impede que os cacos se soltem ao quebrar. Mais barato que
+           os vidros especiais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="atendimento">
+    <div class="faixa">
+      <p class="rotulo">Atendimento</p>
+      <h2>Atendimento personalizado da Tecno Temper</h2>
+      <p class="apoio col">
+        Para seus projetos em vidro, chame a Tecno Temper e garanta receber o melhor atendimento.
+        Orçamento rápido e gratuito.
+      </p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir orçamento grátis</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <p class="rotulo">Contato</p>
+    <h2>Fale com a Tecno Temper</h2>
+    <div class="contatos">
+      <a href="tel:2139525623"><b>Telefone</b><span>(21) 3952-5623</span></a>
+      <a href="tel:2126220015"><b>Telefone</b><span>(21) 2622-0015</span></a>
+      <a href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o"><b>WhatsApp</b><span>(21) 98556-1708</span></a>
+      <a href="mailto:vidros@vidracariatecnotemper.com.br"><b>E-mail</b><span>vidros@vidracariatecnotemper.com.br</span></a>
+      <div><b>Endereço</b><span>R. Barão do Amazonas, 337 — Centro, Niterói — RJ, 24030-111</span></div>
+    </div>
+    <div class="acoes" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+      <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Chamar no WhatsApp</a>
+      <a class="btn vazio" href="tel:2139525623">Ligar agora</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Vidraçaria Tecno Temper · R. Barão do Amazonas, 337 — Centro, Niterói — RJ</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Vidraçaria Tecno Temper. Fotos e textos são deles.</span>
+  </footer>
+</div>
+
+</body>
+</html>

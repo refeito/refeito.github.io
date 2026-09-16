@@ -70,12 +70,13 @@
   .categorias span { display:inline-block; font-family:var(--titulo); font-weight:500; font-size:0.74rem;
     letter-spacing:0.03em; text-transform:uppercase; color:var(--vermelho2); background:var(--papel2);
     border:1px solid var(--linha); border-radius:99px; padding:7px 13px; }
+  .cores-nota { margin: 0 0 20px; max-width: 62ch; color: var(--tinta2, #5a6270); font-size: .95rem; line-height: 1.6; }
 
-  .produtos { display:grid; grid-template-columns:repeat(auto-fill,minmax(128px,1fr)); gap:14px; }
+  .produtos { display:grid; grid-template-columns:repeat(auto-fill,minmax(164px,1fr)); gap:16px; }
   .produto { border:1px solid var(--linha); border-radius:10px; overflow:hidden; background:var(--papel); }
-  .produto .foto { aspect-ratio:242/374; background:var(--papel2); display:flex; align-items:center;
+  .produto .foto { aspect-ratio:1; background:var(--papel2); display:flex; align-items:center;
                     justify-content:center; overflow:hidden; }
-  .produto .foto img { width:86%; height:86%; object-fit:contain; }
+  .produto .foto img { width:92%; height:92%; object-fit:contain; }
   .produto .dados { padding:9px 11px 13px; }
   .produto h3 { font-size:0.86rem; font-weight:600; text-transform:uppercase; letter-spacing:0.01em; line-height:1.25; }
   .produto .detalhe { font-size:0.74rem; color:var(--tinta2); margin-top:2px; }
@@ -204,51 +205,56 @@
       <li><span>Uniformes para Empresas</span></li>
     </ul>
 
-    <div class="produtos">
-      <article class="produto">
-        <div class="foto"><img src="img/p1.webp" alt="Camisa social Fortebrim, com algodão" width="242" height="374"></div>
-        <div class="dados"><h3>Camisa Social</h3><p class="detalhe">Com algodão</p><span class="preco">R$ 49,00</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p2.webp" alt="Camisa brim Fortebrim, 100% algodão" width="242" height="374"></div>
-        <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">100% algodão</p><span class="preco">R$ 41,99</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p3.webp" alt="Calça brim Fortebrim, com faixa refletiva" width="242" height="374"></div>
-        <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 52,90</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p4.webp" alt="Calça jeans Fortebrim, tradicional operacional" width="242" height="374"></div>
-        <div class="dados"><h3>Calça Jeans</h3><p class="detalhe">Tradicional</p><span class="preco">R$ 63,90</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p5.webp" alt="Camisa em malha Fortebrim, com capuz" width="242" height="374"></div>
-        <div class="dados"><h3>Camisa em Malha</h3><p class="detalhe">Com capuz</p><span class="preco">R$ 15,90</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p6.webp" alt="Camisa brim Fortebrim, com faixa refletiva" width="242" height="374"></div>
-        <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 59,90</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p7.webp" alt="Calça oxford Fortebrim, operacional" width="242" height="374"></div>
-        <div class="dados"><h3>Calça Oxford</h3><p class="detalhe">Operacional, elástico e cordão</p><span class="preco">R$ 24,00</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p8.webp" alt="Camisa polo Fortebrim" width="242" height="374"></div>
-        <div class="dados"><h3>Camisa Polo</h3><p class="detalhe">Piquet tradicional</p><span class="preco">R$ 46,90</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p9.webp" alt="Camisa básica Fortebrim" width="242" height="374"></div>
-        <div class="dados"><h3>Camisa Básica</h3><p class="detalhe">Promocional</p></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p10.webp" alt="Calça brim Fortebrim, profissional" width="242" height="374"></div>
-        <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Profissional</p><span class="preco">R$ 31,90</span></div>
-      </article>
-      <article class="produto">
-        <div class="foto"><img src="img/p11.webp" alt="Calça jeans operacional Fortebrim, elástico e cordão" width="242" height="374"></div>
-        <div class="dados"><h3>Calça Jeans Operacional</h3><p class="detalhe">Elástico e cordão</p><span class="preco">R$ 41,99</span></div>
-      </article>
+    <p class="cores-nota">Todas as peças saem com a sua logomarca, e as fotos do site da Fortebrim indicam mais cores disponíveis em cada modelo.</p>
+      <div class="produtos">
+        <article class="produto">
+          <div class="foto"><img src="img/p1.webp" alt="Camisa Social Fortebrim, com algodão" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camisa Social</h3><p class="detalhe">Com algodão</p><span class="preco">R$ 49,00</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p2.webp" alt="Camisa Brim Fortebrim, 100% algodão" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">100% algodão</p><span class="preco">R$ 41,99</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p3.webp" alt="Calça Brim Fortebrim, com faixa refletiva" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 52,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p4.webp" alt="Calça Jeans Fortebrim, tradicional" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Calça Jeans</h3><p class="detalhe">Tradicional</p><span class="preco">R$ 63,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p5.webp" alt="Camisa em Malha Fortebrim, com capuz" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camisa em Malha</h3><p class="detalhe">Com capuz</p><span class="preco">R$ 31,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p6.webp" alt="Camisa Brim Fortebrim, com faixa refletiva" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 59,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p7.webp" alt="Calça Oxford Operacional Fortebrim, elástico e cordão" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Calça Oxford Operacional</h3><p class="detalhe">Elástico e cordão</p><span class="preco">R$ 24,00</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p8.webp" alt="Camisa Polo Fortebrim, piquet tradicional" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camisa Polo</h3><p class="detalhe">Piquet tradicional</p><span class="preco">R$ 33,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p9.webp" alt="Camisa Cacharrel Fortebrim, manga longa" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camisa Cacharrel</h3><p class="detalhe">Manga longa</p><span class="preco">R$ 15,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p10.webp" alt="Calça Brim Fortebrim, profissional" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Profissional</p><span class="preco">R$ 41,99</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p11.webp" alt="Calça Jeans Operacional Fortebrim, elástico e cordão" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Calça Jeans Operacional</h3><p class="detalhe">Elástico e cordão</p><span class="preco">R$ 46,90</span></div>
+        </article>
+        <article class="produto">
+          <div class="foto"><img src="img/p12.webp" alt="Camiseta Cacharrel Fortebrim, manga curta" width="560" height="560" loading="lazy"></div>
+          <div class="dados"><h3>Camiseta Cacharrel</h3><p class="detalhe">Manga curta</p><span class="preco">R$ 10,99</span></div>
+        </article>
     </div>
     <p class="aviso">Todas as imagens acima são meramente ilustrativas. Consulte condições comerciais. Preços à
       vista, no pix, depósito ou transferência.</p>
