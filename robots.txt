@@ -1,0 +1,13 @@
+# As propostas em /<cliente>/ sao paginas com a marca, a logo e as fotos de
+# empresas reais, publicadas sem que elas tenham pedido. Elas nao podem
+# aparecer na busca nem competir com o site do proprio cliente.
+#
+# Quem tira elas do indice e a meta robots "noindex, nofollow" dentro de cada
+# pagina, e nao um Disallow aqui: pagina bloqueada por robots.txt nunca chega
+# a ser lida, entao o noindex dela nunca e visto e a URL pode aparecer na
+# busca mesmo assim. Por isso o rastreio fica liberado de proposito.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://refeito.github.io/sitemap.xml
