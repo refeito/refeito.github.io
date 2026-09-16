@@ -104,6 +104,11 @@
   .faixa h2 { margin-bottom:12px; }
   .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
+  /* Item de flex nasce com min-width:auto e se recusa a encolher abaixo do
+     proprio conteudo. Um e-mail longo nao tem espaco para quebrar, entao
+     empurra a caixa para fora da tela em 375px. */
+  .contatos > * { min-width:0; }
+  .contatos span, .contatos a { overflow-wrap:anywhere; }
   .contatos a { text-decoration:none; }
   .contatos a:hover span { color:var(--acento); }
   .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;

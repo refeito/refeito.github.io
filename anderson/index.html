@@ -222,6 +222,11 @@
     .galeria .alta img { aspect-ratio: 3 / 2; }
     section { padding-block: 46px; }
   }
+  /* Botao de pagamento desligado: continua mostrando como o checkout ficaria,
+     sem poder receber dinheiro em nome de outra pessoa. */
+  .pagar.desativado { display:block; text-align:center; cursor:not-allowed; opacity:0.55; }
+  .acoes { display:flex; flex-wrap:wrap; gap:10px; }
+  .acoes > * { min-width:0; overflow-wrap:anywhere; }
 </style>
 
 <div class="tarja">
@@ -308,7 +313,7 @@
   <section class="reserva" id="reserva">
     <p class="rotulo">Reserva</p>
     <h2>Trave a sua data agora, pelo Pix.</h2>
-    <span class="exemplo">Checkout de teste · valores de exemplo, você define os seus</span>
+    <span class="exemplo">Demonstração do checkout · os botões não recebem pagamento</span>
     <div class="pacotes">
       <div class="pac">
         <h3>Ensaio</h3>
@@ -318,7 +323,7 @@
           <li>60 fotos tratadas</li>
         </ul>
         <p class="sinal">Sinal de reserva<b>R$ 300</b></p>
-        <a class="pagar" href="https://pay.depixapp.com/refeito/demo-sinal-ensaio" rel="nofollow">Pagar o sinal por Pix</a>
+        <span class="pagar desativado" aria-disabled="true">Pagar o sinal por Pix</span>
       </div>
       <div class="pac escolhido">
         <h3>Casamento</h3>
@@ -328,7 +333,7 @@
           <li>Galeria online entregue</li>
         </ul>
         <p class="sinal">Sinal de reserva<b>R$ 800</b></p>
-        <a class="pagar" href="https://pay.depixapp.com/refeito/demo-sinal-casamento" rel="nofollow">Pagar o sinal por Pix</a>
+        <span class="pagar desativado" aria-disabled="true">Pagar o sinal por Pix</span>
       </div>
       <div class="pac">
         <h3>Destination</h3>
@@ -338,13 +343,13 @@
           <li>Deslocamento incluso</li>
         </ul>
         <p class="sinal">Sinal de reserva<b>R$ 1.500</b></p>
-        <a class="pagar" href="https://pay.depixapp.com/refeito" rel="nofollow">Pagar o sinal por Pix</a>
+        <span class="pagar desativado" aria-disabled="true">Pagar o sinal por Pix</span>
       </div>
     </div>
 
     <div class="fluxo">
       <div><b>1 · Escolhe</b> O casal seleciona o pacote e informa a data do casamento.</div>
-      <div><b>2 · Paga o sinal</b> Um QR Pix aparece na hora, sem cadastro. Os botões acima já funcionam, em modo de teste.</div>
+      <div><b>2 · Paga o sinal</b> Um QR Pix apareceria na hora, sem cadastro. Nesta demonstração os botões estão desligados, e a conta que receberia seria a sua.</div>
       <div><b>3 · Data travada</b> Você recebe a confirmação assim que o Pix cai, em segundos.</div>
     </div>
   </section>
@@ -362,8 +367,15 @@
           e os pacotes completos.
         </p>
         <div class="acoes">
-          <a class="botao" href="https://www.andersonfotografo.com.br/">Ir para o site oficial</a>
+          <a class="botao" href="https://wa.me/5511999443386">WhatsApp (11) 99944-3386</a>
+          <a class="botao" href="mailto:contato@andersonfotografo.com.br">contato@andersonfotografo.com.br</a>
+          <a class="botao" href="tel:+5511999443386">Ligar</a>
         </div>
+        <p style="color:var(--texto-2);font-size:0.92rem;margin-top:14px">
+          Contatos publicados em
+          <a href="https://www.andersonfotografo.com.br/" style="color:inherit">andersonfotografo.com.br</a>,
+          que continua sendo o site oficial.
+        </p>
       </div>
     </div>
   </section>
