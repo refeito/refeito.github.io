@@ -3,203 +3,273 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mobles Marcenaria</title>
-<meta name="description" content="Móveis corporativos, balcões e ambientes comerciais com acabamento de alto padrão e prazo cumprido.">
+<title>Mobles Marcenaria — Móveis corporativos sob medida em São Paulo</title>
+<meta name="description" content="Marcenaria para empresas em São Paulo desde 2009. Mesas de reunião, balcões de recepção, estações de trabalho, painéis ripados e portas sob medida, com Router CNC e acabamento de alta qualidade.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Libre+Franklin:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:wght@400;500&display=swap">
 <style>
+  /* Paleta lida do site atual da Mobles: verde 8cbf3f sobre branco e preto. */
   :root {
-    --fundo:#15110d; --fundo2:#1f1913; --linha:#33291f;
-    --tinta:#f2ece3; --tinta2:#a3948180;
-    --acento:#c98b4b; --acento-tinta:#15110d;
-    --titulo:"Fraunces", Georgia, serif;
-    --corpo:"Libre Franklin", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --papel:#ffffff; --papel2:#f5f7f1; --linha:#e2e6dc;
+    --tinta:#1b1f18; --tinta2:#666d61;
+    --verde:#8cbf3f; --verde2:#6e9a2c;
+    --titulo:"Manrope",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --corpo:"Lora",Georgia,serif;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--fundo); color:var(--tinta); font-family:var(--corpo);
-         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; height:auto; display:block; }
   a { color:inherit; }
-  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.02em; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); font-weight:800; text-wrap:balance; letter-spacing:-0.03em; }
   p { margin:0; }
 
-  .env { max-width:1120px; margin:0 auto; padding-inline:22px; }
-  .col { max-width:640px; }
+  .env { max-width:1180px; margin:0 auto; padding-inline:22px; }
+  .col { max-width:660px; }
 
-  .tarja { background:var(--fundo2); border-bottom:1px solid var(--linha); color:var(--tinta2);
+  .tarja { background:var(--papel2); border-bottom:1px solid var(--linha); color:var(--tinta2);
            font-size:0.78rem; line-height:1.5; text-align:center;
-           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top, 0px)); }
-  .tarja b { color:var(--tinta); }
-  .tarja a { color:var(--acento); }
+           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:var(--tinta); } .tarja a { color:var(--verde2); }
 
-  .topo { display:flex; align-items:center; justify-content:space-between; gap:18px;
-          padding-block:20px; flex-wrap:wrap; }
-  .marca { font-family:var(--titulo); font-weight:700; font-size:1.18rem; letter-spacing:-0.03em; }
-  .marca span { display:block; font-family:var(--corpo); font-weight:600; font-size:0.64rem;
-                letter-spacing:0.18em; text-transform:uppercase; color:var(--tinta2); margin-top:2px; }
-  .nav { display:flex; gap:22px; align-items:center; font-size:0.9rem; font-weight:600; color:var(--tinta2); }
-  .nav a { text-decoration:none; }
-  .nav a:hover { color:var(--acento); }
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:20px;
+          padding-block:18px; flex-wrap:wrap; }
+  .topo .logo img { width:160px; border-radius:4px; }
+  .topo nav { display:flex; gap:24px; font-family:var(--titulo); font-size:0.9rem; font-weight:600; flex-wrap:wrap; }
+  .topo nav a { text-decoration:none; color:var(--tinta2); }
+  .topo nav a:hover { color:var(--verde2); }
 
-  .btn { display:inline-block; font-family:var(--corpo); font-weight:600; font-size:0.92rem;
-         text-decoration:none; background:var(--acento); color:var(--acento-tinta);
-         padding:14px 24px; border-radius:8px; }
-  .btn:hover { filter:brightness(1.08); }
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.92rem;
+         text-decoration:none; background:var(--verde); color:#12210a; padding:15px 26px; border-radius:8px; }
+  .btn:hover { background:var(--verde2); color:#fff; }
   .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
   .btn.vazio { background:transparent; color:var(--tinta); border:1px solid var(--linha); }
 
-  .heroi { padding-block:52px 60px; }
-  .heroi .grade { display:grid; gap:40px; align-items:center; }
-  .heroi.lado .grade { grid-template-columns:1.05fr 0.95fr; }
-  .heroi.invertido .grade { grid-template-columns:0.95fr 1.05fr; }
-  .heroi.invertido .texto { order:2; }
-  .heroi h1 { font-size:clamp(2.2rem,5.6vw,3.5rem); line-height:1.04; font-weight:700; }
-  .heroi .sub { margin-top:18px; font-size:1.12rem; color:var(--tinta2); max-width:30em; }
+  .heroi { padding-block:48px 10px; }
+  .heroi h1 { font-size:clamp(2.2rem,5.4vw,3.5rem); line-height:1.03; max-width:16em; }
+  .heroi .sub { margin-top:18px; color:var(--tinta2); font-size:1.1rem; max-width:34em; }
   .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
-  .heroi .foto img { border-radius:14px; aspect-ratio:4/3; object-fit:cover; width:100%; }
 
-  .heroi.cheio { padding-block:0 0; }
-  .heroi.cheio .capa { position:relative; }
-  .heroi.cheio .capa img { width:100%; height:clamp(380px,58vh,540px); object-fit:cover; border-radius:0; }
-  .heroi.cheio .veu { position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.52) 58%, rgba(0,0,0,.84) 100%); }
-  .heroi.cheio .texto { position:absolute; left:0; right:0; bottom:0; padding-block:0 36px; color:#fff; }
-  .heroi.cheio .texto h1 { color:#fff; text-shadow:0 2px 22px rgba(0,0,0,.5); }
-  .heroi.cheio .texto .sub { color:rgba(255,255,255,.86); text-shadow:0 1px 14px rgba(0,0,0,.6); }
-  .heroi.cheio .btn.vazio { color:#fff; border-color:rgba(255,255,255,.45); }
+  /* Catalogo visual como secao principal: movel corporativo se compra olhando. */
+  .mosaico { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding-block:34px; }
+  .mosaico figure { margin:0; border-radius:10px; overflow:hidden; position:relative; }
+  .mosaico img { width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; }
+  .mosaico figure.larga { grid-column:span 2; }
+  .mosaico figure.larga img { aspect-ratio:2/1; }
+  .mosaico figcaption { position:absolute; left:0; right:0; bottom:0; padding:9px 12px;
+    font-family:var(--titulo); font-weight:600; font-size:0.78rem; color:#fff;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.78)); }
 
-  .provas { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:22px;
-            padding-block:30px; border-block:1px solid var(--linha); }
-  .provas div b { display:block; font-family:var(--titulo); font-weight:700; font-size:1.9rem; line-height:1.1; }
-  .provas div span { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.12em;
-                     text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
+  .numeros { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:26px;
+             padding-block:28px; border-block:1px solid var(--linha); }
+  .numeros b { display:block; font-family:var(--titulo); font-weight:800; font-size:2rem;
+               line-height:1.1; color:var(--verde2); }
+  .numeros span { display:block; font-family:var(--titulo); font-size:0.68rem; font-weight:600;
+                  letter-spacing:0.13em; text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
 
-  section { padding-block:64px; }
-  .rotulo { font-size:0.7rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
-            color:var(--acento); margin-bottom:12px; }
-  h2 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.15; font-weight:700; margin-bottom:18px; }
-  .apoio { color:var(--tinta2); font-size:1.05rem; }
+  section { padding-block:60px; }
+  .rotulo { font-family:var(--titulo); font-weight:700; font-size:0.68rem; letter-spacing:0.16em;
+            text-transform:uppercase; color:var(--verde2); margin-bottom:12px; }
+  h2 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.15; margin-bottom:16px; }
+  .apoio { color:var(--tinta2); }
 
-  .cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:30px; }
-  .card { border:1px solid var(--linha); border-radius:14px; overflow:hidden; background:var(--fundo); }
-  .card .capa { aspect-ratio:16/10; }
-  .card .capa img { width:100%; height:100%; object-fit:cover; }
-  .card .txt { padding:18px 20px 22px; }
-  .card h3 { font-size:1.1rem; font-weight:700; margin-bottom:6px; }
-  .card p { font-size:0.96rem; color:var(--tinta2); }
+  .catalogo { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; list-style:none; padding:0; }
+  .catalogo li { border:1px solid var(--linha); border-radius:8px; padding:10px 16px;
+                 font-family:var(--titulo); font-weight:500; font-size:0.92rem; background:var(--papel2); }
 
-  .passos { display:grid; gap:2px; margin-top:26px; }
-  .passos > div { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
-                  border-top:1px solid var(--linha); }
-  .passos > div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
-                          font-family:var(--titulo); font-weight:700; font-size:0.86rem;
-                          color:var(--acento); padding-top:3px; }
-  .passos { counter-reset:passo; }
-  .passos h3 { font-size:1.04rem; font-weight:700; margin-bottom:3px; }
-  .passos p { font-size:0.98rem; color:var(--tinta2); }
+  .cnc { background:var(--papel2); border-radius:12px; padding:clamp(26px,4vw,42px);
+         border-left:5px solid var(--verde); }
 
-  .faixa { background:var(--fundo2); border-radius:16px; padding:clamp(26px,4vw,44px); }
-  .faixa h2 { margin-bottom:12px; }
-  .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
-  .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
-  .contatos a { text-decoration:none; }
-  .contatos a:hover span { color:var(--acento); }
-  .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
-                text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
-  .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
+  .avaliacoes { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; margin-top:24px; }
+  .av { border-top:3px solid var(--verde); padding-top:15px; }
+  .av .estrelas { color:var(--verde2); font-family:var(--titulo); font-weight:700; letter-spacing:2px; }
+  .av p { font-size:0.99rem; margin-top:6px; }
+  .av cite { display:block; font-style:normal; font-family:var(--titulo); font-weight:700;
+             font-size:0.8rem; color:var(--tinta2); margin-top:10px; }
 
-  footer { border-top:1px solid var(--linha); padding-block:28px 46px; color:var(--tinta2); font-size:0.82rem;
-           display:grid; gap:6px; }
+  .contato { background:var(--papel2); border-radius:12px; padding:clamp(26px,4vw,42px); }
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:20px 28px; margin-top:24px; }
+  .canais > * { min-width:0; text-decoration:none; }
+  .canais b { display:block; font-family:var(--titulo); font-size:0.66rem; font-weight:700;
+              letter-spacing:0.14em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.05rem;
+                 overflow-wrap:anywhere; line-height:1.35; }
+  .canais a:hover span { color:var(--verde2); }
 
-  @media (max-width:820px) {
-    .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
-    .heroi.invertido .texto { order:0; }
-    section { padding-block:48px; }
-    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
+  footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:6px; }
+
+  @media (max-width:900px) { .mosaico { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:860px) {
+    section { padding-block:44px; }
+    .topo nav { display:none; }
+    .heroi { padding-block:32px 4px; }
   }
-  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</style>
 </head>
 <body>
 
 <div class="tarja">
-  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Mobles Marcenaria e não foi feita por eles.
-  O site real é <a href="https://moblesmarcenaria.com.br">moblesmarcenaria.com.br</a>. Conteúdo e informações são deles.
-  Feita pelo <a href="https://refeito.github.io">Refeito</a>.
+  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial da Mobles Marcenaria e não foi feita por eles.
+  O site real é <a href="https://moblesmarcenaria.com.br/">moblesmarcenaria.com.br</a>.
+  Todas as fotos, textos e informações são deles. Feita pelo <a href="https://refeito.github.io">Refeito</a>.
 </div>
 
 <div class="env">
   <header class="topo">
-    <div class="marca">Mobles Marcenaria<span>Marcenaria para empresas</span></div>
-    <nav class="nav">
-      <a href="#servicos">Serviços</a>
-      <a href="#como">Como funciona</a>
+    <a class="logo" href="/mobles-marcenaria/"><img src="img/logo.webp" alt="Mobles Marcenaria" width="160" height="99"></a>
+    <nav>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#processo">Como fazemos</a>
       <a href="#contato">Contato</a>
     </nav>
+    <a class="btn" href="https://wa.me/5511947985546">Orçamento grátis</a>
   </header>
+
+  <div class="heroi">
+    <h1>Sua obra de marcenaria sob medida.</h1>
+    <p class="sub">
+      A Mobles é especializada na fabricação de móveis corporativos personalizados, com
+      projetos executados em São Paulo e outras capitais. Alta qualidade e excelente
+      acabamento para o seu negócio, seguindo rigorosamente as especificações do projeto.
+    </p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5511947985546">Solicitar orçamento grátis</a>
+      <a class="btn vazio" href="#trabalhos">Ver trabalhos</a>
+    </div>
+  </div>
 </div>
 
-<div class="env"><div class="heroi invertido">
-    <div class="grade">
-      <div class="texto">
-        <h1>Marcenaria para empresas, desde 2009 em São Paulo.</h1>
-        <p class="sub">Móveis corporativos, balcões e ambientes comerciais com acabamento de alto padrão e prazo cumprido.</p>
-        <div class="acoes">
-        <a class="btn" href="#contato">Pedir orçamento</a>
-        <a class="btn vazio" href="#servicos">Ver serviços</a>
-      </div>
-      </div>
-      <div class="foto"><img src="img/capa.webp" alt="Marcenaria para empresas" width="1600" height="1200"></div>
-    </div>
-  </div></div>
-
 <div class="env">
-  <div class="provas"><div><b>2009</b><span>desde</span></div><div><b>Corporativo</b><span>especialidade</span></div><div><b>Mandaqui</b><span>fábrica em SP</span></div></div>
+  <div class="mosaico" id="trabalhos">
+    <figure class="larga"><img src="img/capa.webp" alt="Mesa de reunião fabricada pela Mobles" width="1400" height="700"><figcaption>Mesas para reunião</figcaption></figure>
+    <figure><img src="img/p1.webp" alt="Balcão de recepção sob medida" width="900" height="900"><figcaption>Balcão para recepção</figcaption></figure>
+    <figure><img src="img/p2.webp" alt="Estações de trabalho em marcenaria" width="900" height="900"><figcaption>Estações de trabalho</figcaption></figure>
+    <figure><img src="img/p3.webp" alt="Arquibancada interna em madeira" width="900" height="900"><figcaption>Arquibancada</figcaption></figure>
+    <figure><img src="img/p4.webp" alt="Divisórias e painéis ripados" width="900" height="900"><figcaption>Painéis ripados</figcaption></figure>
+    <figure><img src="img/p5.webp" alt="Expositores em madeira" width="900" height="900"><figcaption>Expositores</figcaption></figure>
+    <figure><img src="img/p6.webp" alt="Armários para copa" width="900" height="900"><figcaption>Armários para copa</figcaption></figure>
+  </div>
 
-  <section id="servicos">
-    <p class="rotulo">Serviços</p>
-    <h2>Ambiente comercial pede outro padrão.</h2>
-    <p class="apoio col">Uso intenso, prazo apertado e obra em funcionamento. É o que fazemos há mais de quinze anos.</p>
-    <div class="cards">
-      <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="Escritório" width="800" height="500"></div>
-        <div class="txt"><h3>Escritório</h3><p>Estações, armários e recepção com cabeamento previsto no projeto.</p></div>
-      </article>
-      <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="Loja e balcão" width="800" height="500"></div>
-        <div class="txt"><h3>Loja e balcão</h3><p>Vitrine, expositor e balcão de atendimento sob medida.</p></div>
-      </article>
-      <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="Residencial" width="800" height="500"></div>
-        <div class="txt"><h3>Residencial</h3><p>Também atendemos apartamento e casa, com o mesmo acabamento.</p></div>
-      </article>
+  <div class="numeros">
+    <div><b>2009</b><span>desde</span></div>
+    <div><b>Router CNC</b><span>corte de precisão</span></div>
+    <div><b>Corporativo</b><span>especialidade</span></div>
+    <div><b>Mandaqui</b><span>fábrica em são paulo</span></div>
+  </div>
+
+  <section id="catalogo">
+    <p class="rotulo">Catálogo</p>
+    <h2>O que fabricamos para empresas.</h2>
+    <p class="apoio col">
+      Móveis sob medida para comércios e obras corporativas, painéis ripados e lisos e
+      portas completas.
+    </p>
+    <ul class="catalogo">
+      <li>Portas sob medida e personalizadas</li>
+      <li>Mesas para reunião</li>
+      <li>Balcão para recepção</li>
+      <li>Estações de trabalho</li>
+      <li>Arquibancada</li>
+      <li>Aparador para sala de reunião</li>
+      <li>Hub</li>
+      <li>Bancada phone booth</li>
+      <li>Divisórias ou painéis ripados</li>
+      <li>Expositores</li>
+      <li>Bancada ilha café</li>
+      <li>Apoio café</li>
+      <li>Armários para copa</li>
+      <li>Estantes decorativas</li>
+    </ul>
+  </section>
+
+  <section id="processo">
+    <div class="cnc">
+      <p class="rotulo">Como fabricamos</p>
+      <h2>Você cria e nós desenvolvemos de forma automatizada.</h2>
+      <div class="col">
+        <p class="apoio">
+          Para garantir maior precisão e agilidade, contamos com equipamentos de última
+          geração, como a Router CNC, uma máquina comandada por computador que realiza
+          cortes precisos em chapa, aumentando a produtividade e permitindo a produção de
+          móveis diferenciados e personalizados de acordo com cada projeto.
+        </p>
+        <p class="apoio" style="margin-top:14px">
+          Contamos com uma equipe de profissionais altamente especializados e treinados
+          para a fabricação e instalação de móveis sob medida, garantindo a excelência em
+          cada projeto.
+        </p>
+      </div>
+      <div class="acoes" style="margin-top:24px">
+        <a class="btn" href="https://wa.me/5511947985546">Falar sobre o meu projeto</a>
+      </div>
     </div>
   </section>
 
-  <section id="como">
-    <p class="rotulo">Como funciona</p>
-    <h2>Como conduzimos o projeto.</h2>
-    <div class="passos col">
-      <div><div><h3>Briefing e medição</h3><p>Entendemos o uso do espaço antes de desenhar qualquer móvel.</p></div></div>
-      <div><div><h3>Projeto e aprovação</h3><p>Detalhamento técnico, materiais e cronograma aprovados por você.</p></div></div>
-      <div><div><h3>Produção e montagem</h3><p>Fabricamos e montamos com o mínimo de interferência na rotina.</p></div></div>
+  <section>
+    <p class="rotulo">Detalhe</p>
+    <h2>Portas sob medida e painéis ripados.</h2>
+    <div class="col">
+      <p class="apoio">
+        <strong>Portas:</strong> feitas sob encomenda, na cor de preferência do cliente,
+        em MDF madeirado ou lisa. Acompanha ferragens, batente e guarnição.
+      </p>
+      <p class="apoio" style="margin-top:14px">
+        <strong>Painéis ripados:</strong> ripas piso-teto decorando o ambiente, como
+        revestimento de parede com efeito de painel, ou para dividir ambientes com
+        espaçamento vazado entre ripas. Espessura e espaçamento de acordo com cada projeto.
+      </p>
+      <p class="apoio" style="margin-top:14px">
+        <strong>Mesas de reunião:</strong> dependendo da sala, são necessárias mesas sob
+        medida para comportar a quantidade de cadeiras e o tom de madeira de preferência.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <p class="rotulo">Avaliações</p>
+    <h2>O que dizem no Google.</h2>
+    <div class="avaliacoes">
+      <div class="av"><div class="estrelas">★★★★★</div>
+        <p>Montador Fabiano, ótimo profissional, ótimo acabamento, perfeição em detalhes e deixa tudo limpo no final, super recomendo.</p>
+        <cite>Daniel Garroti Neves</cite></div>
+      <div class="av"><div class="estrelas">★★★★★</div>
+        <p>Excelente atendimento, super indico.</p>
+        <cite>Marli Traldi</cite></div>
+      <div class="av"><div class="estrelas">★★★★★</div>
+        <p>Cliente avaliou com cinco estrelas.</p>
+        <cite>Patricia Ferraz</cite></div>
     </div>
   </section>
 
   <section id="contato">
-    <div class="faixa">
+    <div class="contato">
       <p class="rotulo">Contato</p>
-      <h2>Vamos falar do seu projeto.</h2>
-      <p class="apoio col">Descreva o ambiente e o prazo. Respondemos com proposta e cronograma.</p>
-      <div class="contatos"><div><b>Telefone</b><a href="tel:11947985546"><span>(11) 94798-5546</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511947985546"><span>(11) 94798-5546</span></a></div><div><b>E-mail</b><a href="mailto:contato@moblesmarcenaria.com.br"><span>contato@moblesmarcenaria.com.br</span></a></div><div><b>Atendimento</b><span>São Paulo</span></div></div>
-      <div class="acoes"><a class="btn" href="https://wa.me/5511947985546">Chamar no WhatsApp</a><a class="btn vazio" href="tel:11947985546">Ligar agora</a></div>
+      <h2>A Mobles quer ouvir suas ideias.</h2>
+      <p class="apoio col">
+        Desde 2009 fornecendo móveis de alta qualidade e excelente acabamento para
+        empresas e indústrias. Conte o seu projeto e o prazo.
+      </p>
+      <div class="canais">
+        <a href="https://wa.me/5511947985546"><b>WhatsApp</b><span>(11) 94798-5546</span></a>
+        <a href="mailto:contato@moblesmarcenaria.com.br"><b>E-mail</b><span>contato@moblesmarcenaria.com.br</span></a>
+        <div><b>Endereço</b><span>R. Alberto Costa, 14 — Mandaqui, São Paulo</span></div>
+        <div><b>Horário</b><span>Segunda a quinta, 8h às 18h · Sexta, 8h às 17h</span></div>
+      </div>
+      <div class="acoes" style="margin-top:26px">
+        <a class="btn" href="https://wa.me/5511947985546">Solicitar orçamento grátis</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <span>Mobles Marcenaria · São Paulo</span>
-    <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Mobles Marcenaria.</span>
+    <span>Mobles Marcenaria · R. Alberto Costa, 14 — Mandaqui, São Paulo, SP</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Mobles Marcenaria. Fotos e textos são deles.</span>
   </footer>
 </div>
+
 </body>
 </html>
