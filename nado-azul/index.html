@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nado Azul Piscinas — Piscinas em Santo André, SP</title>
+<meta name="description" content="Reforma, manutenção e construção de piscinas. Loja física de produtos para piscina em Santo André, SP. Nado Azul Piscinas, desde 1997.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --papel:#ffffff; --papel2:#f7f7f5; --linha:#e6e6e3;
+    --tinta:#111111; --tinta2:#5a5a58;
+    --preto:#0b0b0b; --preto2:#191917;
+    --amarelo:#ffb600; --amarelo-tinta:#111111;
+    --titulo:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.01em; }
+  p { margin:0; }
+  ul { margin:0; padding:0; list-style:none; }
+
+  .env { max-width:1120px; margin:0 auto; padding-inline:20px; }
+  .col { max-width:620px; }
+
+  .tarja { background:var(--preto); color:#f2f2f0; font-size:0.78rem; line-height:1.5;
+           text-align:center; padding:11px 18px; padding-top:calc(11px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:var(--amarelo); } .tarja a { color:#ffd680; }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:16px;
+          padding-block:18px; flex-wrap:wrap; }
+  .marca img { width:172px; height:60px; object-fit:contain; object-position:left center; }
+  .nav { display:flex; gap:20px; align-items:center; font-size:0.88rem; font-weight:600; flex-wrap:wrap; }
+  .nav a { text-decoration:none; color:var(--tinta2); }
+  .nav a:hover { color:var(--tinta); }
+
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.92rem;
+         text-decoration:none; background:var(--amarelo); color:var(--amarelo-tinta); padding:13px 22px; border-radius:8px; }
+  .btn:hover { filter:brightness(0.94); }
+  .btn:focus-visible { outline:3px solid var(--preto); outline-offset:3px; }
+  .btn.vazio { background:transparent; color:var(--tinta); border:1.5px solid var(--tinta); }
+  .btn.escuro { background:var(--preto); color:#fff; }
+  .btn.escuro:hover { background:var(--preto2); }
+
+  .heroi { padding-block:26px 40px; }
+  .heroi .selo { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.68rem;
+                 letter-spacing:0.12em; text-transform:uppercase; color:var(--amarelo-tinta); background:var(--amarelo);
+                 padding:6px 12px; border-radius:99px; margin-bottom:16px; }
+  .heroi h1 { font-size:clamp(2rem,5.6vw,2.9rem); font-weight:700; line-height:1.08; }
+  .heroi .sub { margin-top:10px; font-size:1.05rem; font-weight:600; color:var(--tinta2); }
+  .heroi .txt { margin-top:16px; color:var(--tinta2); font-size:1.02rem; }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+
+  .numeros { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px;
+             padding-top:28px; border-top:1px solid var(--linha); }
+  .numeros b { display:block; font-family:var(--titulo); font-weight:700; font-size:clamp(1.5rem,4vw,2.1rem); line-height:1.1; }
+  .numeros span { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.08em;
+                  text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
+
+  .porque { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:22px; }
+  .porque li { font-size:0.92rem; font-weight:500; display:flex; align-items:center; gap:7px; }
+  .porque li::before { content:"✓"; color:var(--preto); background:var(--amarelo); font-weight:700;
+                        width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center;
+                        justify-content:center; font-size:0.68rem; flex:none; }
+
+  section { padding-block:46px; border-top:1px solid var(--linha); }
+  .rotulo { font-size:0.7rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+            color:var(--tinta2); margin-bottom:10px; }
+  h2 { font-size:clamp(1.5rem,3.8vw,2rem); line-height:1.15; font-weight:700; margin-bottom:14px; }
+  .apoio { color:var(--tinta2); font-size:1.02rem; }
+
+  .servicos-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+                     gap:10px; margin-top:24px; }
+  .servicos-grade li { background:var(--papel2); border:1px solid var(--linha); border-radius:10px;
+                        padding:14px 16px; font-size:0.94rem; font-weight:500; }
+
+  .produtos-cats { margin-top:22px; font-size:0.96rem; color:var(--tinta2); display:grid; gap:6px; }
+  .produtos-cats b { color:var(--tinta); font-weight:600; }
+
+  .produtos-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
+                     gap:14px; margin-top:26px; }
+  .prod { border:1px solid var(--linha); border-radius:12px; overflow:hidden; background:#fff; }
+  .prod .capa { aspect-ratio:1; background:#fafaf8; display:flex; align-items:center; justify-content:center; padding:10px; }
+  .prod .capa img { width:100%; height:100%; object-fit:contain; }
+  .prod p { padding:10px 12px 14px; font-size:0.86rem; font-weight:600; text-align:center; }
+  .prod.linha { grid-column:1/-1; }
+  .prod.linha .capa { aspect-ratio:16/5; padding:16px; }
+
+  .marcas { margin-top:22px; font-size:0.92rem; color:var(--tinta2); }
+  .marcas b { color:var(--tinta); }
+
+  .loja { background:var(--preto); color:#f2f2f0; }
+  .loja .rotulo { color:var(--amarelo); }
+  .loja h2 { color:#fff; }
+  .loja-grade { display:grid; grid-template-columns:1.1fr 1fr; gap:32px; margin-top:24px; }
+  .loja-info b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
+                 letter-spacing:0.12em; text-transform:uppercase; color:#a8a8a4; margin-bottom:5px; }
+  .loja-info p { font-size:1.05rem; overflow-wrap:anywhere; }
+  .loja-info .bloco { margin-bottom:18px; }
+  .loja-info a.mapa { display:inline-block; margin-top:6px; color:var(--amarelo); font-weight:600;
+                       text-decoration:underline; font-size:0.94rem; }
+  .regioes p { font-size:0.94rem; color:#c9c9c5; }
+  .regioes b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
+               letter-spacing:0.12em; text-transform:uppercase; color:#a8a8a4; margin-bottom:8px; }
+
+  .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:20px 26px; margin-top:24px; }
+  .contatos > * { text-decoration:none; }
+  .contatos b { display:block; font-size:0.66rem; font-weight:700; letter-spacing:0.12em;
+                text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .contatos span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.05rem;
+                   color:var(--tinta); overflow-wrap:anywhere; line-height:1.3; }
+  .contatos a:hover span { color:var(--amarelo-tinta); text-decoration:underline; }
+
+  footer { border-top:1px solid var(--linha); padding-block:26px 44px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
+  footer a { color:var(--tinta); }
+
+  @media (max-width:760px) {
+    .numeros { grid-template-columns:1fr 1fr; }
+    .numeros > div:last-child { grid-column:1/-1; }
+    .loja-grade { grid-template-columns:1fr; gap:26px; }
+    section { padding-block:36px; }
+    .nav { gap:14px; font-size:0.84rem; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada, feita por Refeito.</b> Não é o site oficial da Nado Azul Piscinas.
+  O site oficial é <a href="https://www.nadoazulpiscinas.com.br/">nadoazulpiscinas.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <a class="marca" href="#"><img src="img/logo.webp" alt="Nado Azul Piscinas" width="344" height="120"></a>
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#loja">Loja física</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div class="heroi">
+    <span class="selo">Desde 1997</span>
+    <h1>28 anos de experiência em piscinas.</h1>
+    <p class="sub">Credibilidade, compromisso e excelência.</p>
+    <p class="txt col">A Nado Azul Piscinas é especialista em venda, instalação e manutenção de piscinas,
+      equipamentos e acessórios, atendendo com excelência o ABC Paulista, São Paulo Capital, Interior e
+      Litoral Paulista. Trabalhamos com as melhores marcas e oferecemos soluções completas para sua área de lazer.</p>
+    <ul class="porque">
+      <li>Atendimento rápido e personalizado</li>
+      <li>Equipe qualificada e treinada</li>
+      <li>Produtos originais e com garantia</li>
+      <li>Serviço completo do início ao fim</li>
+    </ul>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/551144555753">Pedir orçamento no WhatsApp</a>
+      <a class="btn vazio" href="tel:1144555753">Ligar agora</a>
+    </div>
+    <div class="numeros">
+      <div><b>28</b><span>Anos de experiência</span></div>
+      <div><b>1.459</b><span>Clientes ativos</span></div>
+      <div><b>4.279</b><span>Serviços executados</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="env">
+    <p class="rotulo">Serviços</p>
+    <h2>Reforma e manutenção de piscinas</h2>
+    <p class="apoio col">Atuamos no mercado de construção e manutenção de piscinas e derivados desde 1997,
+      com equipe própria de profissionais treinados e capacitados.</p>
+    <ul class="servicos-grade">
+      <li>Manutenção preventiva e corretiva</li>
+      <li>Reforma e troca de vinil</li>
+      <li>Impermeabilização de piscinas</li>
+      <li>Limpeza e tratamento de água</li>
+      <li>Manutenção de bombas de piscinas</li>
+      <li>Construção de piscinas em alvenaria e vinil</li>
+      <li>Instalação de aquecimento solar, elétrico e a gás</li>
+      <li>Instalação de iluminação em LED subaquática</li>
+      <li>Montagem de cascatas modernas e personalizadas</li>
+      <li>Deck de piscina — instalação, manutenção e pintura</li>
+      <li>Construção de hidromassagem</li>
+      <li>Construção de sauna</li>
+      <li>Consultoria para novos projetos</li>
+    </ul>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="env">
+    <p class="rotulo">Produtos</p>
+    <h2>Produtos para piscina</h2>
+    <p class="apoio col">Se você está procurando produtos para piscina, está no lugar certo.</p>
+    <div class="produtos-cats">
+      <p><b>Química e tratamento:</b> cloro (HTH Tradicional, HTH 10 em 1, Cris Água Tradicional, Cris Água 3 em 1,
+        Genco 3 em 1, em 1kg, 2,5kg e 10kg, e cloro líquido), algicida, clarificante, redutor e elevador de pH.</p>
+      <p><b>Equipamentos:</b> filtros e bombas, aquecedores (solar, elétrico e a gás), iluminação LED subaquática,
+        escadas inox e acessórios.</p>
+      <p><b>Limpeza:</b> kit limpeza (aspiradores, peneiras, mangueiras), robôs aspiradores automáticos, capas de
+        proteção e segurança.</p>
+      <p><b>Lazer:</b> cascatas e fontes.</p>
+    </div>
+
+    <div class="produtos-grade">
+      <div class="prod"><div class="capa"><img src="img/produto-genco.webp" alt="Cloro granulado Genco 3 em 1, balde de 10kg" width="1085" height="1085" loading="lazy"></div><p>Cloro Genco 3 em 1</p></div>
+      <div class="prod"><div class="capa"><img src="img/produto-domclor.webp" alt="Domclor tricloro, desinfetante para piscinas" width="1000" height="1000" loading="lazy"></div><p>Domclor Tricloro</p></div>
+      <div class="prod"><div class="capa"><img src="img/produto-domclor-familia.webp" alt="Domclor cloro granulado, balde de 10kg" width="1000" height="1000" loading="lazy"></div><p>Domclor cloro granulado</p></div>
+      <div class="prod"><div class="capa"><img src="img/produto-hth-tradicional.webp" alt="HTH Tradicional, cloro granulado concentrado" width="604" height="553" loading="lazy"></div><p>HTH Tradicional</p></div>
+      <div class="prod linha"><div class="capa"><img src="img/produto-hth-linha.webp" alt="Linha completa de produtos HTH para piscina" width="985" height="312" loading="lazy"></div><p>Linha completa HTH</p></div>
+    </div>
+
+    <p class="marcas"><b>Trabalhamos com as melhores marcas:</b> HidroAll, Genco, Veico, Tholz, Fluidra, Sibrape, Albacete.</p>
+  </div>
+</section>
+
+<section id="loja" class="loja">
+  <div class="env">
+    <p class="rotulo">Loja física</p>
+    <h2>Visite nossa loja em Santo André</h2>
+    <p class="apoio col" style="color:#c9c9c5">Além de atender em obra, a Nado Azul tem loja física de produtos
+      para piscina, com equipe pronta para tirar dúvidas na hora.</p>
+    <div class="loja-grade">
+      <div class="loja-info">
+        <div class="bloco">
+          <b>Endereço</b>
+          <p>Av. Dom Pedro I, Nº 465 — Vila América, Santo André - SP · CEP 09110-001</p>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Dom+Pedro+I%2C+465+-+Vila+Am%C3%A9rica%2C+Santo+Andr%C3%A9+-+SP%2C+09110-001">Ver no mapa ↗</a>
+        </div>
+        <div class="bloco">
+          <b>Horário</b>
+          <p>Segunda a sexta: 09:00 às 18:00<br>Sábados: 09:00 às 13:00</p>
+        </div>
+      </div>
+      <div class="regioes">
+        <b>Regiões atendidas</b>
+        <p>Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá, Ribeirão Pires e Rio Grande
+           da Serra, além de Suzano, Mogi das Cruzes e as zonas Leste, Sul, Norte e Oeste de São Paulo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Peça seu orçamento sem compromisso</h2>
+    <p class="apoio col">Atendemos residências, clubes, academias, hotéis e muito mais.</p>
+    <div class="contatos">
+      <a href="https://wa.me/551144555753"><b>WhatsApp</b><span>(11) 4455-5753</span></a>
+      <a href="tel:1144555753"><b>Telefone</b><span>(11) 4455-5753</span></a>
+      <a href="mailto:nadoazul.piscinas@gmail.com"><b>E-mail</b><span>nadoazul.piscinas@gmail.com</span></a>
+      <div><b>Endereço</b><span>Av. Dom Pedro I, Nº465 — Santo André, SP</span></div>
+    </div>
+    <div class="acoes" style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn escuro" href="https://wa.me/551144555753">Pedir orçamento no WhatsApp</a>
+      <a class="btn vazio" href="tel:1144555753">Ligar agora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <span>Nado Azul Piscinas · Av. Dom Pedro I, Nº465 — Vila América, Santo André - SP</span>
+    <span>Proposta de redesenho não solicitada, feita pelo <a href="https://refeito.github.io">Refeito</a>.
+      Não afiliada à Nado Azul Piscinas. Fotos, textos e informações são deles.</span>
+  </div>
+</footer>
+
+</body>
+</html>
