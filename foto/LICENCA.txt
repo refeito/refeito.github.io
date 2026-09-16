@@ -6,3 +6,7 @@ c2.webp                      -> unsplash.com/photos/c2deDdEO8hc
 
 Usadas apenas na maquete ilustrativa "Bianchi Serralheria", que e um negocio
 ficticio. Nao representam trabalho de nenhum cliente real.
+
+velho-*.jpg sao as mesmas fotos degradadas de proposito (recorte torto,
+saturacao forcada, JPEG apertado) para representar como um site antigo
+maltrata a propria foto.
