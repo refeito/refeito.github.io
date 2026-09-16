@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Fortebrim Uniformes — uniformes profissionais em Salvador desde 2002</title>
-<meta name="description" content="Fábrica de uniformes profissionais em Salvador desde 2002: uniformes de obra, sociais, scrubs, polos e mais. Personalizados com sua logomarca. Envio para todo o Brasil.">
+<title>Fortebrim Uniformes — Preço Baixo é Aqui!</title>
+<meta name="description" content="Fábrica atacadista de uniformes profissionais em Salvador desde 2002. Pronta entrega e encomenda, catálogo de referências, tabela de cores de brim e oxford. Enviamos para todo o Brasil.">
 <link rel="icon" type="image/webp" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
     --papel:#ffffff; --papel2:#faf6f5; --linha:#ece2e1;
     --tinta:#262220; --tinta2:#726863;
     --vermelho:#c8333a; --vermelho2:#9e262c;
+    --amarelo:#f5a623; --amarelo2:#fff7e8;
     --titulo:"Oswald","Arial Narrow",Arial,sans-serif;
     --corpo:"Work Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
   }
@@ -23,22 +24,21 @@
          font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; height:auto; display:block; }
   a { color:inherit; }
-  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; }
+  h1,h2,h3,h4 { margin:0; font-family:var(--titulo); text-wrap:balance; }
   p { margin:0; }
 
   .env { max-width:1180px; margin:0 auto; padding-inline:18px; }
   .col { max-width:62ch; }
 
   .tarja { background:#fdf3f3; border-bottom:1px solid #f3d9da; color:#6f2f32;
-           font-size:0.76rem; line-height:1.5; text-align:center;
+           font-size:0.76rem; line-height:1.5; text-align:center; overflow-wrap:anywhere;
            padding:10px 16px; padding-top:calc(10px + env(safe-area-inset-top,0px)); }
   .tarja b { color:var(--vermelho2); } .tarja a { color:var(--vermelho); }
 
   .topo { display:flex; align-items:center; justify-content:space-between; gap:16px;
           padding-block:14px; flex-wrap:wrap; border-bottom:3px solid var(--vermelho); }
-  .topo .logo { display:block; }
   .topo .logo img { height:46px; width:auto; }
-  .nav { display:flex; gap:18px; align-items:center; font-size:0.86rem; font-weight:500; flex-wrap:wrap; }
+  .nav { display:flex; gap:16px; align-items:center; font-size:0.85rem; font-weight:500; flex-wrap:wrap; }
   .nav a { text-decoration:none; color:var(--tinta2); }
   .nav a:hover { color:var(--vermelho); }
   .ligar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
@@ -49,9 +49,11 @@
 
   .btn { display:inline-block; font-family:var(--titulo); font-weight:600; font-size:0.9rem;
          text-decoration:none; background:var(--vermelho); color:#fff; padding:13px 22px;
-         border-radius:4px; letter-spacing:0.01em; white-space:nowrap; }
+         border-radius:4px; letter-spacing:0.01em; }
   .btn:hover { background:var(--vermelho2); }
   .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+  .btn.vazio { background:transparent; color:var(--vermelho2); border:1px solid var(--linha); }
+  .btn.vazio:hover { border-color:var(--vermelho); }
 
   .intro { background:var(--papel2); border-bottom:1px solid var(--linha); padding-block:38px; }
   .rotulo { font-family:var(--titulo); font-weight:600; font-size:0.72rem; letter-spacing:0.16em;
@@ -59,60 +61,115 @@
   .intro h1 { font-weight:700; font-size:clamp(1.7rem,5.6vw,2.5rem); line-height:1.1;
               text-transform:uppercase; letter-spacing:-0.005em; max-width:17ch; }
   .intro .sub { margin-top:14px; color:var(--tinta2); font-size:1rem; max-width:58ch; }
-  .intro .acoes { margin-top:22px; }
+  .intro .acoes { margin-top:22px; display:flex; gap:12px; flex-wrap:wrap; }
+  .desde { margin-top:20px; font-family:var(--titulo); font-weight:600; font-size:0.86rem;
+           letter-spacing:0.02em; color:var(--tinta); }
 
   section { padding-block:50px; }
   h2 { font-size:clamp(1.4rem,4.2vw,1.9rem); line-height:1.18; font-weight:700; margin-bottom:8px;
        text-transform:uppercase; letter-spacing:-0.005em; }
+  h3 { font-weight:600; }
   .apoio { color:var(--tinta2); font-size:1rem; }
+  .aviso { margin-top:18px; font-size:0.78rem; color:var(--tinta2); }
 
-  .categorias { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0 32px; padding:0; list-style:none; }
+  /* Dois fluxos: pronta entrega e encomenda tem prazos e destinos diferentes no site atual. */
+  .fluxos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:20px; margin-top:26px; }
+  .fluxo { border:1px solid var(--linha); border-radius:12px; overflow:hidden; display:grid;
+           grid-template-columns:132px 1fr; align-items:stretch; }
+  .fluxo .foto { background:var(--papel2); }
+  .fluxo .foto img { width:100%; height:100%; object-fit:cover; }
+  .fluxo .txt { padding:18px 20px; display:grid; align-content:start; gap:8px; }
+  .fluxo h3 { font-size:1.08rem; text-transform:uppercase; }
+  .fluxo p { font-size:0.92rem; color:var(--tinta2); }
+  .fluxo a { font-family:var(--titulo); font-weight:600; font-size:0.84rem; color:var(--vermelho);
+             text-decoration:none; }
+  .fluxo a:hover { text-decoration:underline; }
+
+  /* Kit economico: oferta com preco que o site atual anuncia em banner. */
+  .kit { background:var(--amarelo2); border:1px solid #f4dfb4; border-radius:14px;
+         padding:clamp(22px,4vw,34px); display:grid; gap:14px; }
+  .kit .chamada { font-family:var(--titulo); font-weight:700; text-transform:uppercase;
+                  font-size:clamp(1.5rem,5vw,2.1rem); line-height:1.05; color:#8a5a00; }
+  .kit .preco { font-family:var(--titulo); font-weight:700; font-size:clamp(2rem,7vw,2.9rem);
+                line-height:1; color:var(--vermelho); }
+  .kit .preco small { display:block; font-family:var(--corpo); font-weight:500; font-size:0.72rem;
+                      letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .kit p { font-size:0.96rem; color:var(--tinta); }
+  .kit .acoes { margin-top:4px; }
+
+  .categorias { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0; padding:0; list-style:none; }
   .categorias span { display:inline-block; font-family:var(--titulo); font-weight:500; font-size:0.74rem;
     letter-spacing:0.03em; text-transform:uppercase; color:var(--vermelho2); background:var(--papel2);
     border:1px solid var(--linha); border-radius:99px; padding:7px 13px; }
-  .cores-nota { margin: 0 0 20px; max-width: 62ch; color: var(--tinta2, #5a6270); font-size: .95rem; line-height: 1.6; }
 
-  .produtos { display:grid; grid-template-columns:repeat(auto-fill,minmax(164px,1fr)); gap:16px; }
+  /* Catalogo: a foto do site deles nasce em 242x374, entao a caixa nao passa disso. */
+  .produtos { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,196px),242px));
+              gap:18px; justify-content:start; margin-top:28px; }
   .produto { border:1px solid var(--linha); border-radius:10px; overflow:hidden; background:var(--papel); }
-  .produto .foto { aspect-ratio:1; background:var(--papel2); display:flex; align-items:center;
-                    justify-content:center; overflow:hidden; }
-  .produto .foto img { width:92%; height:92%; object-fit:contain; }
-  .produto .dados { padding:9px 11px 13px; }
-  .produto h3 { font-size:0.86rem; font-weight:600; text-transform:uppercase; letter-spacing:0.01em; line-height:1.25; }
-  .produto .detalhe { font-size:0.74rem; color:var(--tinta2); margin-top:2px; }
+  .produto .foto { background:var(--papel); }
+  .produto .foto img { width:100%; max-width:242px; }
+  .produto .dados { padding:10px 12px 14px; border-top:1px solid var(--linha); }
+  .produto h3 { font-size:0.88rem; font-weight:600; text-transform:uppercase; letter-spacing:0.01em; line-height:1.25; }
+  .produto .detalhe { font-size:0.76rem; color:var(--tinta2); margin-top:2px; }
   .produto .preco { display:block; margin-top:6px; font-family:var(--titulo); font-weight:600;
-                     color:var(--vermelho); font-size:0.98rem; }
-  .aviso { margin-top:20px; font-size:0.78rem; color:var(--tinta2); }
+                     color:var(--vermelho); font-size:1.05rem; }
+  .produto .forma { display:block; font-size:0.7rem; color:var(--tinta2); margin-top:1px; }
 
-  .depoimentos { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); margin-top:22px; }
+  .pagamento { margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+               gap:16px; }
+  .pagamento div { border-left:3px solid var(--vermelho); padding:2px 0 2px 14px; }
+  .pagamento h3 { font-size:0.94rem; text-transform:uppercase; }
+  .pagamento p { font-size:0.9rem; color:var(--tinta2); }
+
+  /* Referencias de modelo: o catalogo de /uniformes_profissionais.html. */
+  .refs { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,130px),1fr)); gap:16px; margin-top:26px; }
+  .ref { text-align:center; }
+  .ref .caixa { height:180px; display:flex; align-items:flex-end; justify-content:center; background:var(--papel2);
+                border:1px solid var(--linha); border-radius:8px; padding:8px; }
+  .ref .caixa img { max-height:100%; width:auto; object-fit:contain; }
+  .ref b { display:block; font-family:var(--titulo); font-weight:600; font-size:0.78rem;
+           letter-spacing:0.04em; color:var(--tinta2); margin-top:7px; }
+
+  /* Tabela de cores: as sete tiras de amostra que eles publicam. */
+  .cores { display:grid; gap:12px; margin-top:24px; max-width:760px; }
+  .cores img { width:100%; border:1px solid var(--linha); border-radius:6px; }
+
+  .logomarca-bloco { display:grid; grid-template-columns:245px 1fr; gap:30px; align-items:center; margin-top:24px; }
+  .logomarca-bloco img { border-radius:10px; width:100%; }
+  .logomarca-bloco p { color:var(--tinta2); font-size:1rem; }
+
+  .depoimentos { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); margin-top:22px; }
   .depoimento { border-top:3px solid var(--vermelho); padding-top:12px; }
   .depoimento p { font-size:0.92rem; }
   .depoimento cite { display:block; margin-top:9px; font-style:normal; font-family:var(--titulo);
     font-weight:600; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--tinta2); }
 
-  .grade-segmentos { display:grid; grid-template-columns:200px 1fr; gap:26px; align-items:center; margin-top:22px; }
-  .grade-segmentos .foto-segmentos img { border-radius:10px; width:100%; }
-  .tags { display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:0; list-style:none; }
+  .numeros { background:var(--papel2); border-radius:14px; padding:clamp(22px,4vw,34px); }
+  .numeros .lema { font-family:var(--titulo); font-weight:700; text-transform:uppercase;
+                   font-size:clamp(1.3rem,4.4vw,1.8rem); line-height:1.1; }
+  .numeros ul { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));
+                gap:18px; margin:22px 0 0; padding:0; list-style:none; }
+  .numeros li { font-family:var(--titulo); font-weight:600; font-size:1.1rem; color:var(--vermelho2); }
+  .numeros li small { display:block; font-family:var(--corpo); font-weight:400; font-size:0.84rem;
+                      color:var(--tinta2); letter-spacing:0; text-transform:none; }
+
+  .grade-segmentos { display:flex; flex-wrap:wrap; gap:24px; margin-top:22px; align-items:flex-end; }
+  .grade-segmentos img { width:auto; max-width:100%; max-height:150px; }
+  .tags { display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:22px 0 0; list-style:none; }
   .tags span { display:inline-block; font-size:0.76rem; font-weight:500; color:var(--tinta2);
     background:var(--papel2); border:1px solid var(--linha); border-radius:99px; padding:6px 12px; }
 
-  .passos { display:grid; gap:2px; margin-top:24px; }
-  .passos > div { display:grid; grid-template-columns:38px 1fr; gap:14px; padding-block:18px;
-                  border-top:1px solid var(--linha); }
-  .passos > div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
-                          font-family:var(--titulo); font-weight:700; font-size:0.86rem;
-                          color:var(--vermelho); padding-top:2px; }
-  .passos { counter-reset:passo; }
-  .passos h3 { font-size:1rem; font-weight:600; margin-bottom:3px; text-transform:none; }
-  .passos p { font-size:0.94rem; color:var(--tinta2); }
-
-  .regioes { display:grid; gap:10px; margin-top:22px; list-style:none; padding:0; max-width:62ch; }
-  .regioes li { display:grid; grid-template-columns:16px 1fr; gap:10px; font-size:0.96rem; }
+  /* O marcador e o texto sao dois itens de grade. Sem o span, o texto solto
+     vira item anonimo e cai na coluna de 16px do marcador. */
+  .regioes { display:grid; gap:10px; margin-top:22px; list-style:none; padding:0; max-width:64ch; }
+  .regioes li { display:grid; grid-template-columns:16px minmax(0,1fr); gap:10px; font-size:0.96rem; }
   .regioes li::before { content:"›"; color:var(--vermelho); font-family:var(--titulo); font-weight:700; }
   .regioes b { font-weight:600; }
-  .estados { display:flex; flex-wrap:wrap; gap:6px; margin-top:22px; padding:0; list-style:none; }
-  .estados span { font-size:0.72rem; color:var(--tinta2); background:var(--papel2); border:1px solid var(--linha);
-                   border-radius:99px; padding:5px 10px; }
+  .listas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:26px; margin-top:26px; }
+  .listas h3 { font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:10px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; padding:0; margin:0; list-style:none; }
+  .chips span { font-size:0.74rem; color:var(--tinta2); background:var(--papel2); border:1px solid var(--linha);
+                border-radius:99px; padding:5px 11px; }
 
   .faixa { background:var(--papel2); border-radius:14px; padding:clamp(24px,4vw,40px); }
   .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
@@ -123,16 +180,16 @@
   .canais span { display:block; font-family:var(--titulo); font-weight:600; font-size:1rem;
                  overflow-wrap:anywhere; line-height:1.35; }
   .canais a:hover span { color:var(--vermelho); }
-  .faixa .acoes { margin-top:24px; }
+  .faixa .acoes { margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
 
   footer { border-top:1px solid var(--linha); padding-block:24px 42px; color:var(--tinta2);
-           font-size:0.8rem; display:grid; gap:5px; }
+           font-size:0.8rem; display:grid; gap:5px; overflow-wrap:anywhere; }
 
   @media (max-width:680px) {
-    .grade-segmentos { grid-template-columns:1fr; }
-    .grade-segmentos .foto-segmentos { max-width:220px; }
     section { padding-block:38px; }
-    .passos > div { grid-template-columns:30px 1fr; }
+    .logomarca-bloco { grid-template-columns:1fr; gap:20px; }
+    .logomarca-bloco .foto { max-width:245px; }
+    .fluxo { grid-template-columns:110px 1fr; }
   }
 </style>
 </head>
@@ -146,11 +203,12 @@
 
 <div class="env">
   <header class="topo">
-    <a class="logo" href="/fortebrim/"><img src="img/logo.webp" alt="Fortebrim Uniformes" width="209" height="120"></a>
+    <a class="logo" href="#"><img src="img/logo.webp" alt="Fortebrim Uniformes" width="209" height="120"></a>
     <nav class="nav">
+      <a href="#fluxos">Como comprar</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#segmentos">Segmentos</a>
-      <a href="#pedir">Como pedir</a>
+      <a href="#referencias">Referências</a>
+      <a href="#cores">Cores</a>
       <a href="#regiao">Região</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -163,21 +221,64 @@
 
 <div class="intro">
   <div class="env">
-    <p class="rotulo">Desde 2002 · Salvador, Bahia</p>
-    <h1>Uniformes profissionais direto da fábrica, pelo menor preço.</h1>
-    <p class="sub">Somos fábrica atacadista de uniformes profissionais, com ampla variedade de modelos tanto na
-      pronta entrega como sob encomenda. Fabricamos em Salvador e enviamos para todo o Brasil — são mais de 20
-      anos vestindo profissionais em todo o país.</p>
-    <div class="acoes"><a class="btn" href="https://wa.me/5571981775407">Solicitar orçamento pelo WhatsApp</a></div>
+    <p class="rotulo">Preço Baixo é Aqui!</p>
+    <h1>Somos fábrica atacadista de uniformes profissionais</h1>
+    <p class="sub">Fabricamos uniformes profissionais em Salvador e enviamos para todo o Brasil, sempre pelo menor
+      preço para a sua empresa ou evento, desde 2002, sendo sinônimo de experiência e qualidade! Contamos com ampla
+      variedade de modelos para fardamento, tanto na pronta entrega como sob encomenda, sendo personalizados com a
+      sua logomarca corporativa.</p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5571981775407">Solicitar orçamento pelo WhatsApp</a>
+      <a class="btn vazio" href="#catalogo">Ver catálogo e preços</a>
+    </div>
+    <p class="desde">Desde 2002 · Fabricando uniformes pelo menor preço! · Receba o seu uniforme na sua empresa.</p>
   </div>
 </div>
 
 <div class="env">
+  <section id="fluxos">
+    <p class="rotulo">Como comprar</p>
+    <h2>Dois caminhos: pronta entrega e encomenda</h2>
+    <p class="apoio col">No site da Fortebrim cada um tem o seu próprio caminho. Escolha pelo que a sua equipe
+      precisa agora.</p>
+    <div class="fluxos">
+      <article class="fluxo">
+        <div class="foto"><img src="img/fl-pronta.webp" alt="Pilha de camisas azuis dobradas no estoque da Fortebrim" width="165" height="177" loading="lazy"></div>
+        <div class="txt">
+          <h3>Pedidos na Pronta Entrega</h3>
+          <p>Ampla variedade de modelos para fardamento na pronta entrega, com o preço do catálogo.</p>
+          <a href="https://wa.me/5571981775407">Pedir pronta entrega no WhatsApp →</a>
+        </div>
+      </article>
+      <article class="fluxo">
+        <div class="foto"><img src="img/fl-encomenda.webp" alt="Costura de peça verde em máquina industrial da Fortebrim" width="170" height="177" loading="lazy"></div>
+        <div class="txt">
+          <h3>Pedidos por Encomenda</h3>
+          <p>Modelos sob encomenda, escolhidos pela referência do catálogo e pela tabela de cores de brim e
+            oxford.</p>
+          <a href="#referencias">Ver as referências de modelo →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="kit">
+    <div class="kit">
+      <p class="rotulo" style="margin-bottom:0">Economize já</p>
+      <p class="chamada">Kit Econômico</p>
+      <p class="preco"><small>Apenas</small>R$ 38,90</p>
+      <p>Para todas as regiões do Brasil! Uniformize a sua equipe gastando menos.</p>
+      <div class="acoes"><a class="btn" href="https://wa.me/5571981775407">Pedir o Kit Econômico</a></div>
+    </div>
+  </section>
+
   <section id="catalogo">
     <p class="rotulo">Catálogo</p>
-    <h2>23 linhas de uniforme, tudo sob a sua logomarca</h2>
-    <p class="apoio col">Do fardamento de obra ao jaleco hospitalar, a Fortebrim fabrica para praticamente todo
-      setor profissional:</p>
+    <h2>22 linhas de uniforme, com preço na tela</h2>
+    <p class="apoio col">Na Fortebrim você encontra tudo aquilo que você precisa em uniformização para os seus
+      colaboradores, por um preço reduzido e com alto padrão de qualidade — afinal são mais de 20 anos vestindo
+      profissionais de todo o Brasil. Não perca tempo, faça uma cotação conosco e compare com a proposta do seu
+      atual fornecedor.</p>
 
     <ul class="categorias">
       <li><span>Uniformes Profissionais</span></li>
@@ -194,7 +295,6 @@
       <li><span>Calças Jeans para Trabalho</span></li>
       <li><span>Calças em Oxford Profissionais</span></li>
       <li><span>Camisas UV Proteção Solar</span></li>
-      <li><span>Fábrica de Uniformes Profissionais</span></li>
       <li><span>Calça em Tactel</span></li>
       <li><span>Camisas Básicas Promocionais</span></li>
       <li><span>Uniformes para Cozinha</span></li>
@@ -205,176 +305,263 @@
       <li><span>Uniformes para Empresas</span></li>
     </ul>
 
-    <p class="cores-nota">Todas as peças saem com a sua logomarca, e as fotos do site da Fortebrim indicam mais cores disponíveis em cada modelo.</p>
-      <div class="produtos">
-        <article class="produto">
-          <div class="foto"><img src="img/p1.webp" alt="Camisa Social Fortebrim, com algodão" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camisa Social</h3><p class="detalhe">Com algodão</p><span class="preco">R$ 49,00</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p2.webp" alt="Camisa Brim Fortebrim, 100% algodão" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">100% algodão</p><span class="preco">R$ 41,99</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p3.webp" alt="Calça Brim Fortebrim, com faixa refletiva" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 52,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p4.webp" alt="Calça Jeans Fortebrim, tradicional" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Calça Jeans</h3><p class="detalhe">Tradicional</p><span class="preco">R$ 63,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p5.webp" alt="Camisa em Malha Fortebrim, com capuz" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camisa em Malha</h3><p class="detalhe">Com capuz</p><span class="preco">R$ 31,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p6.webp" alt="Camisa Brim Fortebrim, com faixa refletiva" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 59,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p7.webp" alt="Calça Oxford Operacional Fortebrim, elástico e cordão" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Calça Oxford Operacional</h3><p class="detalhe">Elástico e cordão</p><span class="preco">R$ 24,00</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p8.webp" alt="Camisa Polo Fortebrim, piquet tradicional" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camisa Polo</h3><p class="detalhe">Piquet tradicional</p><span class="preco">R$ 33,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p9.webp" alt="Camisa Cacharrel Fortebrim, manga longa" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camisa Cacharrel</h3><p class="detalhe">Manga longa</p><span class="preco">R$ 15,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p10.webp" alt="Calça Brim Fortebrim, profissional" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Profissional</p><span class="preco">R$ 41,99</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p11.webp" alt="Calça Jeans Operacional Fortebrim, elástico e cordão" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Calça Jeans Operacional</h3><p class="detalhe">Elástico e cordão</p><span class="preco">R$ 46,90</span></div>
-        </article>
-        <article class="produto">
-          <div class="foto"><img src="img/p12.webp" alt="Camiseta Cacharrel Fortebrim, manga curta" width="560" height="560" loading="lazy"></div>
-          <div class="dados"><h3>Camiseta Cacharrel</h3><p class="detalhe">Manga curta</p><span class="preco">R$ 10,99</span></div>
-        </article>
+    <div class="produtos">
+      <article class="produto">
+        <div class="foto"><img src="img/p01.webp" alt="Camisa cacharrel verde de manga longa" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camisa Cacharrel</h3><p class="detalhe">Manga longa</p>
+          <span class="preco">R$ 15,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p02.webp" alt="Camisa em malha azul de manga longa com capuz" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camisa em Malha</h3><p class="detalhe">Com capuz</p>
+          <span class="preco">R$ 31,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p03.webp" alt="Calça de brim azul-royal profissional" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Profissional</p>
+          <span class="preco">R$ 41,99</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p04.webp" alt="Calça operacional escura com elástico e cordão" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Calça Jeans Operacional</h3><p class="detalhe">Elástico e cordão</p>
+          <span class="preco">R$ 46,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p05.webp" alt="Camisa polo amarela em piquet" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camisa Polo</h3><p class="detalhe">Piquet tradicional</p>
+          <span class="preco">R$ 33,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p06.webp" alt="Camiseta branca de manga curta" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camiseta Cacharrel</h3><p class="detalhe">Manga curta</p>
+          <span class="preco">R$ 10,99</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p07.webp" alt="Calça em oxford cinza-clara com elástico e cordão" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Calça Oxford Operacional</h3><p class="detalhe">Elástico e cordão</p>
+          <span class="preco">R$ 24,00</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p08.webp" alt="Camisa de brim azul de manga longa com faixa refletiva amarela no peito e nas mangas" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">Com faixa refletiva</p>
+          <span class="preco">R$ 59,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p09.webp" alt="Calça jeans tradicional" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Calça Jeans</h3><p class="detalhe">Tradicional</p>
+          <span class="preco">R$ 63,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p10.webp" alt="Calça de brim cinza com faixa refletiva na barra" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Com faixa refletiva</p>
+          <span class="preco">R$ 52,90</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p11.webp" alt="Camisa Brim 100% algodão — na foto do catálogo, uma peça cinza de gola V e manga curta, com bolso no peito" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">100% algodão</p>
+          <span class="preco">R$ 41,99</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p12.webp" alt="Camisa social azul-clara de manga curta" width="242" height="374" loading="lazy"></div>
+        <div class="dados"><h3>Camisa Social</h3><p class="detalhe">Com algodão</p>
+          <span class="preco">R$ 49,00</span><span class="forma">No pix, depósito ou transferência</span></div>
+      </article>
     </div>
-    <p class="aviso">Todas as imagens acima são meramente ilustrativas. Consulte condições comerciais. Preços à
-      vista, no pix, depósito ou transferência.</p>
+
+    <div class="pagamento">
+      <div>
+        <h3>No pix, depósito ou transferência</h3>
+        <p>A forma de pagamento que acompanha cada preço do catálogo.</p>
+      </div>
+      <div>
+        <h3>Pague no crédito</h3>
+        <p>Além do pix, do depósito e da transferência.</p>
+      </div>
+      <div>
+        <h3>Mais cores disponíveis</h3>
+        <p>Cada modelo sai em mais cores do que a foto mostra. Veja a tabela de cores de brim e oxford.</p>
+      </div>
+    </div>
+    <p class="aviso">Todas as imagens acima são meramente ilustrativas. * Consulte condições comerciais.</p>
+  </section>
+
+  <section id="referencias">
+    <p class="rotulo">Referências de modelo</p>
+    <h2>Modelos para encomenda</h2>
+    <p class="apoio col">Disponibilizamos alguns modelos de uniformes para visualização, caso a sua empresa ainda não
+      tenha um padrão ou queira mudar o formato já existente. Peça pela referência.</p>
+    <div class="refs">
+      <div class="ref"><div class="caixa"><img src="img/r001.webp" alt="Conjunto verde de manga curta com calça" width="199" height="300" loading="lazy"></div><b>Ref. 001</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r002.webp" alt="Conjunto azul de camisa de manga curta e bermuda" width="187" height="300" loading="lazy"></div><b>Ref. 002</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r003.webp" alt="Jaleco bege de manga longa com luvas" width="199" height="300" loading="lazy"></div><b>Ref. 003</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r004.webp" alt="Jaleco cinza de manga longa abotoado" width="218" height="292" loading="lazy"></div><b>Ref. 004</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r005.webp" alt="Camisa de manga curta marrom com calça bege" width="199" height="300" loading="lazy"></div><b>Ref. 005</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r006.webp" alt="Dupla com conjuntos bege e marrom, modelos feminino e masculino com boné" width="199" height="300" loading="lazy"></div><b>Ref. 006</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r007.webp" alt="Calça azul-royal profissional" width="120" height="255" loading="lazy"></div><b>Ref. 007</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r008.webp" alt="Conjunto bege e marrom com boné e luvas de proteção" width="199" height="300" loading="lazy"></div><b>Ref. 008</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r009.webp" alt="Jaleco azul-marinho de manga curta" width="260" height="300" loading="lazy"></div><b>Ref. 009</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r010.webp" alt="Camisa bege de manga curta com calça" width="97" height="146" loading="lazy"></div><b>Ref. 010</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r011.webp" alt="Conjunto azul de manga longa" width="145" height="300" loading="lazy"></div><b>Ref. 011</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r012.webp" alt="Conjunto cinza de manga longa" width="237" height="300" loading="lazy"></div><b>Ref. 012</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r013.webp" alt="Conjunto cinza de gola V e manga longa" width="160" height="300" loading="lazy"></div><b>Ref. 013</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r014.webp" alt="Conjunto laranja de gola V" width="175" height="300" loading="lazy"></div><b>Ref. 014</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r015.webp" alt="Blusão azul com faixa refletiva no peito e nas mangas" width="133" height="153" loading="lazy"></div><b>Ref. 015</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r016.webp" alt="Conjunto azul de camisa e bermuda com boné" width="200" height="300" loading="lazy"></div><b>Ref. 016</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r017.webp" alt="Camisa vermelha com gola azul, capacete e luvas" width="199" height="300" loading="lazy"></div><b>Ref. 017</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r018.webp" alt="Camisa amarela de manga curta com capacete" width="91" height="137" loading="lazy"></div><b>Ref. 018</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r019.webp" alt="Conjunto cinza-esverdeado de camisa e bermuda" width="213" height="299" loading="lazy"></div><b>Ref. 019</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r020.webp" alt="Camisa polo branca com detalhe, capacete e luvas" width="199" height="300" loading="lazy"></div><b>Ref. 020</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r088.webp" alt="Camisa azul-clara com avental preto e touca" width="133" height="300" loading="lazy"></div><b>Ref. 088</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r089.webp" alt="Conjunto azul de gola V com bermuda" width="165" height="300" loading="lazy"></div><b>Ref. 089</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r091.webp" alt="Camisa branca de manga curta com touca" width="200" height="300" loading="lazy"></div><b>Ref. 091</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r092.webp" alt="Camisa branca com bolsos e touca" width="192" height="300" loading="lazy"></div><b>Ref. 092</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r230.webp" alt="Calça cinza com faixa refletiva na barra" width="158" height="300" loading="lazy"></div><b>Ref. 230</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r232.webp" alt="Conjunto bege de gola V e manga curta com detalhes laranja" width="114" height="300" loading="lazy"></div><b>Ref. 232</b></div>
+      <div class="ref"><div class="caixa"><img src="img/r233.webp" alt="Jaleco bege com detalhes verdes na gola e nos bolsos" width="270" height="300" loading="lazy"></div><b>Ref. 233</b></div>
+    </div>
+    <p class="aviso">Todas as imagens acima são meramente ilustrativas. Por se tratar de ilustrações virtuais, as
+      imagens poderão não retratar fielmente os modelos físicos.</p>
+  </section>
+
+  <section id="cores">
+    <p class="rotulo">Cores</p>
+    <h2>Tabela de cores ilustrativas — brim e oxford</h2>
+    <p class="apoio col">As amostras de tecido com o código de cada cor, como publicadas pela Fortebrim.</p>
+    <div class="cores">
+      <img src="img/c1.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 1" width="700" height="179" loading="lazy">
+      <img src="img/c2.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 2" width="700" height="169" loading="lazy">
+      <img src="img/c3.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 3" width="700" height="187" loading="lazy">
+      <img src="img/c4.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 4" width="700" height="179" loading="lazy">
+      <img src="img/c5.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 5" width="700" height="172" loading="lazy">
+      <img src="img/c6.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 6" width="700" height="176" loading="lazy">
+      <img src="img/c7.webp" alt="Amostras de brim e oxford com códigos de cor, faixa 7" width="700" height="229" loading="lazy">
+    </div>
+    <p class="aviso">Obs.: as cores podem sofrer variações de acordo com a configuração do monitor.</p>
+  </section>
+
+  <section id="logomarca">
+    <p class="rotulo">Personalização</p>
+    <h2>Coloque sua logomarca</h2>
+    <div class="logomarca-bloco">
+      <div class="foto"><img src="img/logomarca.webp" alt="Camiseta verde com estampa sendo prensada na produção da Fortebrim" width="245" height="250" loading="lazy"></div>
+      <p>Os uniformes são personalizados com a sua logomarca corporativa. Peça a cotação com o modelo, a cor e a
+        quantidade e receba o seu uniforme na sua empresa.</p>
+    </div>
   </section>
 
   <section id="parceiros">
-    <p class="rotulo">Quem já compra da Fortebrim</p>
-    <h2>Parceiros que recomendam</h2>
+    <p class="rotulo">Parceiros</p>
+    <h2>Quem já compra da Fortebrim</h2>
     <div class="depoimentos">
       <div class="depoimento">
-        <p>"Nossa parceira há muitos anos. Sei que podemos contar sempre com a Fortebrim."</p>
+        <p>"Nossa parceira há muitos anos. Sei que podemos contar sempre com a Fortebrim"</p>
         <cite>Luciane Aguiar — Leopold Construções</cite>
       </div>
       <div class="depoimento">
-        <p>"Tem preço e qualidade. Compramos nossos fardamentos para obra e escritório por um preço justo."</p>
+        <p>"Tem preço e qualidade. Compramos nossos fardamentos para obra e escritório por um preço justo"</p>
         <cite>Henrique Saiko Jr. — Subasi Engenharia</cite>
       </div>
       <div class="depoimento">
-        <p>"Bom atendimento e uniformes na pronta entrega. Recomendo."</p>
+        <p>"Bom atendimento e uniformes na pronta entrega. Recomendo"</p>
         <cite>Paulo B. Guimarães — RP Facilities</cite>
       </div>
+    </div>
+  </section>
+
+  <section id="numeros">
+    <div class="numeros">
+      <p class="rotulo">Qualidade</p>
+      <p class="lema">Fabricamos uniformes. Fortalecemos futuros.</p>
+      <ul>
+        <li>+ de 22 anos<small>no mercado</small></li>
+        <li>+ de 4.000<small>empresas atendidas</small></li>
+        <li>+ de 600 mil<small>peças produzidas</small></li>
+        <li>Desde 2002<small>experiência</small></li>
+      </ul>
     </div>
   </section>
 
   <section id="segmentos">
     <p class="rotulo">Segmentos</p>
     <h2>Quem já veste Fortebrim</h2>
-    <p class="apoio col">Uniformizamos equipes de indústria, comércio, saúde e serviços:</p>
+    <p class="apoio col">Uniformes para diversos segmentos profissionais, do fardamento industrial ao social de
+      escritório.</p>
     <div class="grade-segmentos">
-      <div class="foto-segmentos">
-        <img src="img/seg.webp" alt="Perfis atendidos pela Fortebrim: escritório, indústria, obra e saúde" width="364" height="149" loading="lazy">
-      </div>
-      <ul class="tags">
-        <li><span>Indústria</span></li>
-        <li><span>Geral</span></li>
-        <li><span>Cozinha</span></li>
-        <li><span>Atendimento</span></li>
-        <li><span>Recepção</span></li>
-        <li><span>Logística</span></li>
-        <li><span>Automação</span></li>
-        <li><span>Manutenção</span></li>
-        <li><span>Serviços</span></li>
-        <li><span>Facilities</span></li>
-        <li><span>Comunicação Visual</span></li>
-        <li><span>Escolas</span></li>
-        <li><span>Universidades</span></li>
-        <li><span>Cursos</span></li>
-        <li><span>Oficinas Mecânicas</span></li>
-        <li><span>Transportes</span></li>
-        <li><span>Mercados</span></li>
-        <li><span>Açougues</span></li>
-        <li><span>Padarias</span></li>
-        <li><span>Clínicas</span></li>
-        <li><span>Hospitais</span></li>
-      </ul>
+      <img src="img/seg1.webp" alt="Modelos com uniformes operacionais, privativo hospitalar e macacão" width="322" height="151" loading="lazy">
+      <img src="img/seg2.webp" alt="Modelos femininas com camiseta e blazer" width="188" height="146" loading="lazy">
+      <img src="img/seg3.webp" alt="Modelos com camisas polo, camisa social e jaleco" width="364" height="149" loading="lazy">
     </div>
-  </section>
-
-  <section id="pedir">
-    <p class="rotulo">Como pedir</p>
-    <h2>Personalizado com a sua logomarca</h2>
-    <div class="passos col">
-      <div><div>
-        <h3>1. Escolha as peças</h3>
-        <p>Ampla variedade de modelos para fardamento, tanto na pronta entrega como sob encomenda.</p>
-      </div></div>
-      <div><div>
-        <h3>2. Envie sua logomarca</h3>
-        <p>As peças saem personalizadas com a logomarca corporativa da sua empresa.</p>
-      </div></div>
-      <div><div>
-        <h3>3. Peça o orçamento pelo WhatsApp</h3>
-        <p>Não perca tempo: faça uma cotação conosco e compare com a proposta do seu fornecedor atual.</p>
-      </div></div>
-    </div>
-    <div class="acoes" style="margin-top:24px">
-      <a class="btn" href="https://wa.me/5571981775407">Solicitar orçamento pelo WhatsApp</a>
-    </div>
+    <ul class="tags">
+      <li><span>Construção civil</span></li><li><span>Indústria</span></li><li><span>Geral</span></li>
+      <li><span>Cozinha</span></li><li><span>Atendimento</span></li><li><span>Recepção</span></li>
+      <li><span>Logística</span></li><li><span>Automação</span></li><li><span>Manutenção</span></li>
+      <li><span>Serviços</span></li><li><span>Facilities</span></li><li><span>Comunicação visual</span></li>
+      <li><span>Escolas</span></li><li><span>Universidades</span></li><li><span>Cursos</span></li>
+      <li><span>Oficinas mecânicas</span></li><li><span>Transportes</span></li><li><span>Mercados</span></li>
+      <li><span>Açougues</span></li><li><span>Padarias</span></li><li><span>Clínicas</span></li>
+      <li><span>Hospitais</span></li>
+    </ul>
   </section>
 
   <section id="regiao">
     <p class="rotulo">Região atendida</p>
-    <h2>Salvador, Camaçari, Lauro de Freitas, Simões Filho — e todo o Brasil</h2>
+    <h2>Atendemos todos os estados</h2>
     <ul class="regioes">
-      <li><b>Salvador</b> — fábrica própria, uniformes personalizados com a sua logomarca corporativa.</li>
-      <li><b>Camaçari e outros polos fabris</b> — ampla linha em materiais resistentes e tecidos de alta
-        qualidade, voltados para o fardamento industrial.</li>
-      <li><b>Lauro de Freitas e Simões Filho</b> — uniformes em tecidos leves e respiráveis, para o setor de
-        serviços e facilities.</li>
-      <li><b>Todo o Brasil</b> — atendemos pedidos e enviamos para qualquer estado.</li>
+      <li><span><b>Salvador</b> — fabricamos uniformes profissionais aqui, na Estrada de Campinas, em São Caetano.</span></li>
+      <li><span><b>Camaçari e outros polos fabris</b> — ampla linha de modelos em materiais resistentes e tecidos de
+        alta qualidade, voltados para o fardamento industrial.</span></li>
+      <li><span><b>Lauro de Freitas e Simões Filho</b> — confecção de uniformes para o setor de serviços e
+        facilities, com tecidos leves e respiráveis.</span></li>
+      <li><span><b>Todo o Brasil</b> — atendemos pedidos em todos os estados e enviamos o uniforme até a sua
+        empresa.</span></li>
     </ul>
-    <ul class="estados">
-      <li><span>Rio de Janeiro</span></li><li><span>Ceará</span></li><li><span>Sudeste</span></li>
-      <li><span>Sul</span></li><li><span>Centro-Oeste</span></li><li><span>Norte</span></li>
-      <li><span>Nordeste</span></li><li><span>Rio Grande do Sul</span></li><li><span>Paraná</span></li>
-      <li><span>Mato Grosso do Sul</span></li><li><span>Paraíba</span></li><li><span>Goiás</span></li>
-      <li><span>Amazonas</span></li><li><span>Tocantins</span></li><li><span>Piauí</span></li>
-      <li><span>Amapá</span></li><li><span>Roraima</span></li><li><span>Acre</span></li>
-      <li><span>Rondônia</span></li>
-    </ul>
+    <div class="listas">
+      <div>
+        <h3>Cidades que atendemos</h3>
+        <ul class="chips">
+          <li><span>Salvador</span></li><li><span>Camaçari</span></li><li><span>Lauro de Freitas</span></li>
+          <li><span>Simões Filho</span></li><li><span>Vitória da Conquista</span></li><li><span>Juazeiro</span></li>
+          <li><span>Alagoinhas</span></li><li><span>Barreiras</span></li><li><span>Maceió</span></li>
+          <li><span>Recife</span></li><li><span>João Pessoa</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Estados e regiões</h3>
+        <ul class="chips">
+          <li><span>Rio de Janeiro</span></li><li><span>Ceará</span></li><li><span>Sudeste</span></li>
+          <li><span>Sul</span></li><li><span>Centro-Oeste</span></li><li><span>Norte</span></li>
+          <li><span>Nordeste</span></li><li><span>Rio Grande do Sul</span></li><li><span>Paraná</span></li>
+          <li><span>Mato Grosso do Sul</span></li><li><span>Paraíba</span></li><li><span>Goiás</span></li>
+          <li><span>Amazonas</span></li><li><span>Tocantins</span></li><li><span>Piauí</span></li>
+          <li><span>Amapá</span></li><li><span>Roraima</span></li><li><span>Acre</span></li>
+          <li><span>Rondônia</span></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="contato">
     <div class="faixa">
       <p class="rotulo">Contato</p>
-      <h2>Peça já o seu orçamento</h2>
-      <p class="apoio col">Fale pelo WhatsApp e receba a cotação da sua empresa ou evento.</p>
+      <h2>Solicite seu orçamento pelo WhatsApp</h2>
+      <p class="apoio col">Não perca tempo, faça uma cotação conosco e compare com a proposta do seu atual
+        fornecedor.</p>
       <div class="canais">
         <a href="tel:7133048316"><b>Telefone</b><span>71 3304-8316</span></a>
         <a href="https://wa.me/5571981775407"><b>WhatsApp</b><span>71 98177-5407</span></a>
-        <a href="https://wa.me/5571983008150"><b>WhatsApp 2</b><span>71 98300-8150</span></a>
+        <a href="https://wa.me/5571983008150"><b>WhatsApp</b><span>71 98300-8150</span></a>
         <a href="mailto:comercial@fortebrim.com.br"><b>E-mail</b><span>comercial@fortebrim.com.br</span></a>
         <div><b>Endereço</b><span>Estrada de Campinas, 376 — São Caetano, Salvador, BA — CEP 40391-161</span></div>
       </div>
-      <div class="acoes"><a class="btn" href="https://wa.me/5571981775407">Chamar no WhatsApp</a></div>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5571981775407">Chamar no WhatsApp</a>
+        <a class="btn vazio" href="https://www.instagram.com/fortebrimuniformes/" rel="nofollow noopener" target="_blank">Instagram</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <span>Fortebrim Uniformes · Salvador, Bahia</span>
+    <span>Fortebrim Uniformes · Estrada de Campinas, 376 — São Caetano, Salvador, BA</span>
     <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Fortebrim Uniformes. Fotos e textos são deles.</span>
   </footer>
 </div>

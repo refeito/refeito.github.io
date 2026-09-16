@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vidraçaria Tecno Temper — Box, Vidros e Espelhos em Niterói</title>
-<meta name="description" content="Vidraçaria em Niterói com mais de 35 anos de experiência. Box para banheiro, vidro temperado, portas de vidro, tampos, espelhos e ferragens. Atendimento personalizado e orçamento grátis.">
+<meta name="description" content="Vidraçaria em Niterói. Box para banheiro, vidro temperado, portas de vidro, espelhos, guarda-corpo, janelas e ferragens. Os sócios têm experiência de mais de 35 anos no ramo.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +25,12 @@
          font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; height:auto; display:block; }
   a { color:inherit; }
-  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.01em; }
+  h1,h2,h3,h4 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.01em; }
   p { margin:0; }
   ul { margin:0; padding:0; list-style:none; }
 
   .env { max-width:1140px; margin:0 auto; padding-inline:20px; }
-  .col { max-width:660px; }
+  .col { max-width:64ch; }
 
   .tarja { background:var(--marinho); border-bottom:1px solid var(--marinho2); color:#e6eaf3;
            font-size:0.78rem; line-height:1.5; text-align:center;
@@ -54,6 +54,8 @@
 
   .heroi { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; padding-block:26px 54px; }
   .heroi h1 { font-size:clamp(1.9rem,4.6vw,2.7rem); line-height:1.08; font-weight:700; color:var(--marinho); }
+  .heroi .socios { font-family:var(--titulo); font-weight:700; font-size:0.74rem; letter-spacing:0.1em;
+                   text-transform:uppercase; color:var(--vermelho); margin-bottom:12px; }
   .heroi .sub { margin-top:16px; font-size:1.05rem; color:var(--tinta2); }
   .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .heroi .foto img { border-radius:10px; aspect-ratio:4/5; object-fit:cover; width:100%; }
@@ -64,50 +66,81 @@
   h2 { font-size:clamp(1.5rem,3.6vw,2.05rem); line-height:1.16; font-weight:700; color:var(--marinho); }
   h3 { font-size:1.08rem; font-weight:700; color:var(--marinho); }
   .apoio { color:var(--tinta2); font-size:1.02rem; margin-top:10px; }
+  .nota { color:var(--tinta2); font-size:0.82rem; margin-top:14px; overflow-wrap:anywhere; }
 
-  /* Produtos: blocos com foto para os que temos, lista compacta para os demais. */
-  .blocos-produto { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px; margin-top:30px; }
+  /* Avaliacoes: a prova social que o site atual publica, logo depois da capa. */
+  .selo-google { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-top:16px; }
+  .selo-google .estrelas { color:#e8a100; font-size:1.05rem; letter-spacing:0.08em; }
+  .selo-google span { font-size:0.88rem; color:var(--tinta2); }
+  .avaliacoes { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));
+                gap:18px; margin-top:26px; align-items:start; }
+  .avaliacao { border:1px solid var(--linha); border-radius:12px; padding:18px 20px; background:var(--papel); }
+  .avaliacao .quem { display:flex; justify-content:space-between; gap:10px; align-items:baseline; flex-wrap:wrap; }
+  .avaliacao .nome { font-family:var(--titulo); font-weight:700; font-size:0.95rem; color:var(--marinho); }
+  .avaliacao .data { font-size:0.78rem; color:var(--tinta2); white-space:nowrap; }
+  .avaliacao .estrelas { color:#e8a100; font-size:0.9rem; letter-spacing:0.06em; margin-top:6px; }
+  .avaliacao p { font-size:0.93rem; color:var(--tinta); margin-top:8px; }
+
+  /* Produtos: um cartao por linha de produto do site atual. */
+  .blocos-produto { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:22px; margin-top:30px; }
   .bloco-produto { border:1px solid var(--linha); border-radius:12px; overflow:hidden; }
   .bloco-produto .capa { aspect-ratio:4/3; background:var(--papel2); }
   .bloco-produto .capa img { width:100%; height:100%; object-fit:cover; }
   .bloco-produto .txt { padding:16px 18px 20px; }
   .bloco-produto h3 { margin-bottom:6px; }
   .bloco-produto p { font-size:0.95rem; color:var(--tinta2); }
+  .modelos { margin-top:12px; font-size:0.88rem; color:var(--tinta); }
+  .modelos b { font-family:var(--titulo); font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
+               color:var(--tinta2); display:block; margin-bottom:3px; }
 
-  .tambem-fabricamos { margin-top:34px; padding-top:28px; border-top:1px solid var(--linha); }
-  .lista-compacta { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:16px; }
-  .lista-compacta h4 { margin:0 0 4px; font-family:var(--titulo); font-weight:700; font-size:0.98rem; color:var(--tinta); }
-  .lista-compacta p { font-size:0.92rem; color:var(--tinta2); }
+  .tipos-vidro { margin-top:34px; padding-top:28px; border-top:1px solid var(--linha); }
+  .tipos-vidro .grade { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr)); margin-top:16px; }
+  .tipos-vidro h4 { font-size:0.95rem; font-weight:700; color:var(--marinho); margin-bottom:3px; }
+  .tipos-vidro p { font-size:0.88rem; color:var(--tinta2); }
 
-  /* Obras: acervo recuperado em tamanho grande — era miniatura no site atual. */
-  .grade-obras { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:28px; }
-  .grade-obras figure { margin:0; border-radius:10px; overflow:hidden; background:var(--papel2); }
-  .grade-obras img { width:100%; height:100%; aspect-ratio:3/4; object-fit:cover; }
-  .grade-obras figcaption { font-size:0.82rem; color:var(--tinta2); padding:8px 2px 0; }
+  /* Servicos: seis linhas do menu /servicos/ do site atual. */
+  .servicos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:18px; margin-top:28px; }
+  .servico { border-left:3px solid var(--linha); padding:4px 0 4px 16px; }
+  .servico h3 { font-size:1rem; margin-bottom:5px; }
+  .servico p { font-size:0.92rem; color:var(--tinta2); }
+  .servico.destaque { border-left-color:var(--vermelho); }
+  .servico.destaque h3 { color:var(--vermelho); }
 
-  /* Vidro temperado: explicação lado a lado com o vidro comum, para mostrar a diferença. */
-  .comparativo { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px; }
-  .comparativo > div { padding:20px 22px; border-radius:12px; }
-  .comparativo .comum { background:var(--papel2); }
-  .comparativo .temperado { background:var(--marinho); color:#fff; }
-  .comparativo .temperado h3 { color:#fff; }
-  .comparativo .temperado p { color:#d7deeb; }
-  .comparativo p { font-size:0.96rem; color:var(--tinta2); margin-top:6px; }
-  .outros-vidros { margin-top:26px; display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-  .outros-vidros h4 { margin:0 0 4px; font-family:var(--titulo); font-weight:700; font-size:0.95rem; }
-  .outros-vidros p { font-size:0.9rem; color:var(--tinta2); }
+  /* Obras: acervo por tipo de obra, com o credito que eles mesmos usam. */
+  .grupo-obras { margin-top:36px; }
+  .grupo-obras h3 { font-size:1rem; padding-bottom:8px; border-bottom:1px solid var(--linha); }
+  .grade-obras { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); gap:14px; margin-top:16px; }
+  .grade-obras figure { margin:0; }
+  .grade-obras img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:10px; background:var(--papel2); }
+  .grade-obras figcaption { font-size:0.8rem; color:var(--tinta2); padding-top:7px; }
+  .tambem { margin-top:34px; padding:20px 22px; background:var(--papel2); border-radius:12px; }
+  .tambem h3 { font-size:0.95rem; margin-bottom:8px; }
+  .tambem p { font-size:0.92rem; color:var(--tinta2); }
+
+  /* Dicas: a secao que o site atual publica em /dicas/. */
+  .dicas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; margin-top:26px; }
+  .dica { border:1px solid var(--linha); border-radius:12px; padding:18px 20px; }
+  .dica h3 { font-size:0.98rem; margin-bottom:8px; }
+  .dica li { font-size:0.9rem; color:var(--tinta2); display:grid; grid-template-columns:14px 1fr; gap:8px; margin-bottom:7px; }
+  .dica li::before { content:"·"; color:var(--vermelho); font-weight:700; }
 
   .faixa { background:var(--papel2); border-radius:14px; padding:clamp(24px,4vw,40px); }
   .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
 
+  .onde { display:grid; grid-template-columns:300px 1fr; gap:34px; align-items:start; margin-top:26px; }
+  .onde .foto img { border-radius:10px; width:100%; }
   .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));
-              gap:20px 26px; margin-top:24px; }
+              gap:20px 26px; }
   .contatos > * { min-width:0; text-decoration:none; }
   .contatos b { display:block; font-family:var(--titulo); font-size:0.66rem; font-weight:700;
                 letter-spacing:0.13em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
   .contatos span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.03rem;
                    overflow-wrap:anywhere; line-height:1.35; color:var(--tinta); }
   .contatos a:hover span { color:var(--vermelho); }
+  .redes { display:flex; gap:10px; flex-wrap:wrap; margin-top:24px; }
+  .redes a { font-family:var(--titulo); font-weight:700; font-size:0.84rem; text-decoration:none;
+             border:1px solid var(--linha); border-radius:99px; padding:9px 18px; color:var(--marinho); }
+  .redes a:hover { border-color:var(--marinho); }
 
   footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
            font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
@@ -116,9 +149,15 @@
     .heroi { grid-template-columns:1fr; gap:24px; padding-block:20px 38px; }
     .heroi .foto { order:-1; }
     .heroi .foto img { aspect-ratio:16/10; }
-    .comparativo { grid-template-columns:1fr; }
+    .onde { grid-template-columns:1fr; gap:26px; }
+    .onde .foto { max-width:300px; }
     section { padding-block:40px; }
     .nav { display:none; }
+  }
+  /* Uma coluna deixaria as 48 obras com 23 mil pixels de rolagem no celular. */
+  @media (max-width:700px) {
+    .grade-obras { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .grade-obras figcaption { font-size:0.74rem; }
   }
 </style>
 </head>
@@ -132,12 +171,13 @@
 
 <div class="env">
   <header class="topo">
-    <a class="logo" href="/tecno-temper/"><img src="img/logo.webp" alt="Tecno Temper Vidraçaria" width="170" height="84"></a>
+    <a class="logo" href="#"><img src="img/logo.webp" alt="Tecno Temper Vidraçaria" width="170" height="84"></a>
     <nav class="nav">
+      <a href="#avaliacoes">Avaliações</a>
       <a href="#produtos">Produtos</a>
-      <a href="#obras">Obras</a>
-      <a href="#vidro-temperado">Vidro temperado</a>
-      <a href="#atendimento">Atendimento</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#obras">Nossas obras</a>
+      <a href="#dicas">Dicas</a>
       <a href="#contato">Contato</a>
     </nav>
     <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">WhatsApp</a>
@@ -145,18 +185,73 @@
 
   <section class="heroi" style="border-top:none; padding-top:6px">
     <div class="texto">
-      <h1>Vidraçaria em Niterói há mais de 35 anos.</h1>
+      <p class="socios">Sócios com mais de 35 anos de experiência no ramo</p>
+      <h1>Vidraçaria em Niterói</h1>
       <p class="sub">
-        A Tecno Temper trabalha com produtos de primeira qualidade para que os clientes tenham
-        segurança e conforto. Os sócios têm experiência de mais de 35 anos no ramo de vidros e espelhos.
+        A Tecno Temper trabalha com produtos de primeira qualidade para que seus clientes tenham
+        segurança e conforto, e assim aumentando cada vez mais sua rede de Amigos.
+        Seus sócios possuem experiência de mais de 35 anos no ramo.
       </p>
       <div class="acoes">
-        <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir cotação no WhatsApp</a>
-        <a class="btn vazio" href="#produtos">Ver produtos</a>
+        <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir orçamento grátis</a>
+        <a class="btn vazio" href="#obras">Ver nossas obras</a>
       </div>
     </div>
     <div class="foto">
-      <img src="img/f06.webp" alt="Box de vidro instalado pela Tecno Temper" width="780" height="1040" fetchpriority="high">
+      <img src="img/hero.webp" alt="Box de vidro instalado em banheiro pela Tecno Temper" width="675" height="900" fetchpriority="high">
+    </div>
+  </section>
+
+  <section id="avaliacoes">
+    <p class="rotulo">Avaliações</p>
+    <h2>O que falam da nossa Vidraçaria em Niterói</h2>
+    <div class="selo-google">
+      <span class="estrelas" aria-hidden="true">★★★★★</span>
+      <span>Avaliações do Google publicadas no site da Tecno Temper, com verificação Trustindex.</span>
+    </div>
+    <div class="avaliacoes">
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Juliana A</span><span class="data">20/06/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>Gostaria de elogiar toda a equipe, que desde o primeiro contato foi solícita e pró ativa, as visitas e
+          instalação da minha porta de vidro ocorreram dentro do prazo e o resultado ficou perfeito; mesmo eu tendo
+          uma parede meio torta, rsrs! Parabéns a todos os envolvidos! Fiquei muito satisfeita! Por mais empresas assim :)</p>
+      </article>
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Rosane T</span><span class="data">01/06/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>A visita ao local foi feita conforme agendamento. O orçamento foi enviado no mesmo dia e ainda fizeram a
+          gentileza de entregar o box, e montá-lo, antes do prazo estipulado. Agradeci imensamente pela ajuda.</p>
+      </article>
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Luiz E</span><span class="data">16/05/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>Ótimo serviço, ótimo atendimento. Abraçou!</p>
+      </article>
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Estevão D</span><span class="data">11/05/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>Serviço prestado foi impecável, desde a medição/elaboração do orçamento até a instalação do espelho e dos
+          boxes. Equipe pontual e atenciosa.</p>
+      </article>
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Marluci M</span><span class="data">16/04/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>Gostei muito do atendimento, dá rapidez e dá forma de pagamento. O serviço ficou perfeito e não tenho do
+          que reclamar 👍🏾.</p>
+      </article>
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Claudia O</span><span class="data">24/03/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>Pessoas mto competentes. Serviço impecável e atendimento, tanto em loja quanto on line irrepreensível.
+          Podem ir sem receios, que terao ótimos resultados.</p>
+      </article>
+      <article class="avaliacao">
+        <div class="quem"><span class="nome">Luciana R</span><span class="data">27/02/2026</span></div>
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <p>Excelente atendimento, profissionalismo e serviço. A atenção dada ao cliente e cumprimento do prazo também
+          se destacaram. Recomendo!</p>
+      </article>
     </div>
   </section>
 
@@ -164,134 +259,304 @@
     <p class="rotulo">Produtos</p>
     <h2>Produtos em vidros e acabamentos</h2>
     <p class="apoio col">
-      A Tecno Temper é reconhecida em todo o Rio de Janeiro por garantir as melhores soluções que
-      uma vidraçaria pode oferecer, com produtos de grande qualidade, segurança e desempenho.
+      A Tecno Temper é reconhecida em todo o Rio de Janeiro por garantir as melhores soluções que uma vidraçaria pode
+      oferecer. Trabalhamos com produtos de grande qualidade, segurança e desempenho, visando sempre a total satisfação
+      de todos os nossos clientes.
     </p>
     <div class="blocos-produto">
       <article class="bloco-produto">
-        <div class="capa"><img src="img/f16.webp" alt="Box de banheiro instalado pela Tecno Temper" width="390" height="701" loading="lazy" decoding="async"></div>
+        <div class="capa"><img src="img/pr-box.webp" alt="Box frontal incolor instalado em banheiro" width="525" height="700" loading="lazy" decoding="async"></div>
         <div class="txt">
           <h3>Box</h3>
-          <p>Delimita a área seca e úmida do banheiro, com fácil limpeza e manuseio prático.
-             Modelos: Sistema Versatik, de Abrir, de Canto, Frontal e sobre Banheira.</p>
+          <p>O box delimita a área seca e úmida do seu banheiro e define o espaço de privacidade. Deve ser de fácil
+            limpeza, manuseio prático e do tamanho ideal.</p>
+          <p class="modelos"><b>Modelos</b>Sistema Versatik · de Abrir · de Canto · Frontal · sobre Banheira</p>
         </div>
       </article>
       <article class="bloco-produto">
-        <div class="capa"><img src="img/f02.webp" alt="Porta de vidro instalada pela Tecno Temper" width="516" height="376" loading="lazy" decoding="async"></div>
+        <div class="capa"><img src="img/pr-porta.webp" alt="Porta de abrir em vidro fosco instalada pela Tecno Temper" width="525" height="700" loading="lazy" decoding="async"></div>
         <div class="txt">
           <h3>Portas de Vidro</h3>
-          <p>Deixam o ambiente com um toque a mais de elegância, além de fáceis de limpar e com
-             grande durabilidade.</p>
+          <p>Deixam o ambiente com um toque de elegância a mais. Além de serem fáceis de limpar e possuir grande
+            durabilidade.</p>
         </div>
       </article>
       <article class="bloco-produto">
-        <div class="capa"><img src="img/f20.webp" alt="Espelho e box instalados pela Tecno Temper" width="1080" height="1080" loading="lazy" decoding="async"></div>
+        <div class="capa"><img src="img/pr-espelho.webp" alt="Painel de espelho bisotado instalado em sala de jantar" width="525" height="700" loading="lazy" decoding="async"></div>
         <div class="txt">
           <h3>Espelho</h3>
-          <p>Todo tipo de espelho para decoração residencial ou comercial, em diversos estilos e
-             acabamentos. Também ajuda a aumentar a claridade do ambiente.</p>
+          <p>Fabricamos todo tipo de espelho para a decoração do seu projeto residencial ou comercial. Diversos estilos
+            com diferentes acabamentos. Os espelhos também auxiliam na claridade do ambiente.</p>
+        </div>
+      </article>
+      <article class="bloco-produto">
+        <div class="capa"><img src="img/pr-mesa.webp" alt="Mesa de vidro lapidada com pé de inox" width="700" height="525" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <h3>Tampas para Mesas e Bancadas</h3>
+          <p>Fabricamos peças avulsas para mesas e bancadas: vidro laminado, vidro pintado e vidro com jato de areia.
+            Consulte-nos para ver as opções para encomenda.</p>
+        </div>
+      </article>
+      <article class="bloco-produto">
+        <div class="capa"><img src="img/pr-ferragem.webp" alt="Puxadores e ferragens para box e portas de vidro" width="451" height="311" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <h3>Ferragem</h3>
+          <p>Acessórios para diversas aplicações como trincos, fechaduras, dobradiças e puxadores, no alto padrão
+            exigido pela Tecno Temper.</p>
+        </div>
+      </article>
+      <article class="bloco-produto">
+        <div class="capa"><img src="img/pr-vidro.webp" alt="Fechamento em vidro temperado incolor" width="700" height="393" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <h3>Vidros em Geral</h3>
+          <p>Vidro comum, temperado, laminado, refletivo e aramado — cada um indicado para um uso diferente.
+            Veja abaixo.</p>
         </div>
       </article>
     </div>
 
-    <div class="tambem-fabricamos">
-      <h3>Também fabricamos</h3>
-      <div class="lista-compacta">
+    <div class="tipos-vidro">
+      <h3>Tipos de vidro que trabalhamos</h3>
+      <div class="grade">
         <div>
-          <h4>Tampos para Mesa</h4>
-          <p>Projetos de tampos de vidro para mesas, com profissionais qualificados e alta precisão de medidas.</p>
+          <h4>Temperado</h4>
+          <p>Passa pela têmpera e fica mais resistente que o comum. Se quebrar, fragmenta-se em pedaços pequenos que
+            não machucam. Indicado para fachadas, portas, janelas, divisórias, boxes e tampos de mesa.</p>
         </div>
         <div>
-          <h4>Ferragem</h4>
-          <p>Trincos, fechaduras, dobradiças, puxadores e outros acessórios para box e portas de vidro.</p>
+          <h4>Laminado</h4>
+          <p>Duas ou mais lâminas unidas por película plástica. Ao romper-se, os cacos ficam presos na película.
+            Serve para portas, janelas, terraços, telhados, parapeitos, pisos e degraus.</p>
         </div>
         <div>
-          <h4>Vidros em geral</h4>
-          <p>Comum, temperado, laminado, refletivo e aramado — cada um indicado para um uso. Veja o vidro temperado abaixo.</p>
+          <h4>Refletivo</h4>
+          <p>Camada metálica espelhada na face externa: reflete os raios solares, reduz a passagem de calor e protege
+            carpetes, móveis e pisos, sem prejudicar a visão de dentro para fora.</p>
         </div>
+        <div>
+          <h4>Aramado</h4>
+          <p>Tela de arame que impede que os cacos se soltem quando quebra. Não é tão resistente quanto os vidros
+            especiais, mas é mais barato. Indicado para coberturas, balaustradas, terraços e portas.</p>
+        </div>
+        <div>
+          <h4>Comum</h4>
+          <p>Quebra em estilhaços pontiagudos e cortantes e não resiste ao transpassamento. Tem resistência mecânica
+            pequena, pode ser cortado e tem baixo custo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <p class="rotulo">Serviços</p>
+    <h2>Serviços da Tecno Temper</h2>
+    <div class="servicos">
+      <div class="servico">
+        <h3>Molduras</h3>
+        <p>Molduras para quadros e gravuras. Se a gravura for protegida por vidro, use vidro anti-reflexo —
+          caso contrário, o quadro vira um espelho.</p>
+      </div>
+      <div class="servico">
+        <h3>Jato de Areia</h3>
+        <p>A técnica de trabalhar o vidro, trocando sua transparência pelo aspecto leitoso, para fosquear e
+          ornamentar a peça.</p>
+      </div>
+      <div class="servico">
+        <h3>Vidros Pintados</h3>
+        <p>Grande variedade de vidros pintados: translúcidos, chapados, opacos e em diversas cores (consulte-nos para
+          saber a opção de cores). A tinta vitrificada adere à massa do vidro pelo processo da têmpera, o que deixa a
+          peça resistente a diversos atritos.</p>
+      </div>
+      <div class="servico">
+        <h3>Vidros Laminados</h3>
+        <p>Propício para controle sonoro, controle de calor e bloqueio da radiação ultravioleta. Filtra até 99% dos
+          raios UV, responsáveis pelo desgaste das cores dos seus objetos e móveis. Se quebrar, os pedaços ficam
+          colados na película plástica, o que reduz a chance de acidentes.</p>
+      </div>
+      <div class="servico">
+        <h3>Tampas para Mesas e Bancadas</h3>
+        <p>Fabricamos peças avulsas para mesas e bancadas. Tampas de vidro laminado, vidro pintado e vidro com jato de
+          areia. Consulte-nos para ver as opções para encomenda.</p>
+      </div>
+      <div class="servico destaque">
+        <h3>Manutenção</h3>
+        <p>Temos técnicos especializados em serviços de revisão e manutenção de sistemas de Vidros, Box, Ferragens,
+          Fachadas, Mola Hidráulica e etc. Para o bom funcionamento de box, portarias e mola hidráulica, faça uma
+          revisão periódica. Caso queira, faça um contrato de manutenção ou serviço avulso.</p>
       </div>
     </div>
   </section>
 
   <section id="obras">
-    <p class="rotulo">Obras</p>
-    <h2>Obras executadas pela Tecno Temper</h2>
-    <p class="apoio col">Fotos reais de boxes, portas e espelhos instalados pela equipe.</p>
-    <div class="grade-obras">
-      <figure><img src="img/f04.webp" alt="Box sobre banheira instalado pela Tecno Temper" width="907" height="907" loading="lazy" decoding="async"><figcaption>Box sobre banheira</figcaption></figure>
-      <figure><img src="img/f05.webp" alt="Box para banheiro instalado pela Tecno Temper" width="780" height="1040" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
-      <figure><img src="img/f07.webp" alt="Box para banheiro instalado pela Tecno Temper" width="780" height="1040" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
-      <figure><img src="img/f08.webp" alt="Box para banheiro instalado pela Tecno Temper" width="780" height="1040" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
-      <figure><img src="img/f09.webp" alt="Box para banheiro com porta de abrir" width="295" height="580" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
-      <figure><img src="img/f13.webp" alt="Box de canto instalado pela Tecno Temper" width="1080" height="1240" loading="lazy" decoding="async"><figcaption>Box de canto</figcaption></figure>
-      <figure><img src="img/f14.webp" alt="Box para banheiro com revestimento em mosaico" width="1080" height="918" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
-      <figure><img src="img/f19.webp" alt="Box deslizante instalado pela Tecno Temper" width="515" height="1020" loading="lazy" decoding="async"><figcaption>Box deslizante</figcaption></figure>
+    <p class="rotulo">Nossas obras</p>
+    <h2>Confira algumas das nossas obras</h2>
+    <p class="apoio col">
+      Com profissionais amplamente experientes e treinados, oferecemos um atendimento personalizado, sanando todas as
+      suas dúvidas e orientando sobre o melhor produto que se adapte às suas necessidades.
+    </p>
+    <p class="nota">Foto / Montagem: Acervo Tecno Temper. As mesmas imagens publicadas em
+      vidracariatecnotemper.com.br/nossas-obras/.</p>
+
+    <div class="grupo-obras">
+      <h3>Box para banheiro</h3>
+      <div class="grade-obras">
+        <figure><img src="img/o01.webp" alt="Box para banheiro em vidro fumê" width="465" height="620" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+        <figure><img src="img/o02.webp" alt="Box frontal em vidro incolor" width="465" height="620" loading="lazy" decoding="async"><figcaption>Box frontal incolor</figcaption></figure>
+        <figure><img src="img/o03.webp" alt="Box de canto de correr em vidro incolor" width="465" height="620" loading="lazy" decoding="async"><figcaption>Box de canto de correr</figcaption></figure>
+        <figure><img src="img/o04.webp" alt="Box de canto sobre banheira" width="465" height="620" loading="lazy" decoding="async"><figcaption>Box de canto com banheira</figcaption></figure>
+        <figure><img src="img/o05.webp" alt="Box de abrir em vidro incolor" width="620" height="465" loading="lazy" decoding="async"><figcaption>Box de abrir</figcaption></figure>
+        <figure><img src="img/o06.webp" alt="Box de canto de correr incolor" width="372" height="620" loading="lazy" decoding="async"><figcaption>Box de canto de correr incolor</figcaption></figure>
+        <figure><img src="img/o07.webp" alt="Box de banheiro em vidro fumê com perfil preto" width="620" height="620" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+        <figure><img src="img/o08.webp" alt="Box de banheiro instalado, três ângulos" width="620" height="620" loading="lazy" decoding="async"><figcaption>Box para banheiro</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="grupo-obras">
+      <h3>Espelhos</h3>
+      <div class="grade-obras">
+        <figure><img src="img/o09.webp" alt="Espelho oval iluminado" width="465" height="620" loading="lazy" decoding="async"><figcaption>Espelho iluminado</figcaption></figure>
+        <figure><img src="img/o10.webp" alt="Espelho redondo em nicho de marcenaria" width="465" height="620" loading="lazy" decoding="async"><figcaption>Espelho redondo</figcaption></figure>
+        <figure><img src="img/o11.webp" alt="Revestimento de espelho em gavetas" width="620" height="465" loading="lazy" decoding="async"><figcaption>Revestimento de espelho em gavetas</figcaption></figure>
+        <figure><img src="img/o12.webp" alt="Espelho decorativo com moldura colorida" width="349" height="620" loading="lazy" decoding="async"><figcaption>Espelho decorativo</figcaption></figure>
+        <figure><img src="img/o13.webp" alt="Espelho decorativo sobre bancada" width="349" height="620" loading="lazy" decoding="async"><figcaption>Espelho decorativo</figcaption></figure>
+        <figure><img src="img/o14.webp" alt="Parede revestida com espelho lapidado" width="463" height="620" loading="lazy" decoding="async"><figcaption>Espelho lapidado</figcaption></figure>
+        <figure><img src="img/o15.webp" alt="Espelho modelado instalado em parede" width="349" height="620" loading="lazy" decoding="async"><figcaption>Espelho modelado</figcaption></figure>
+        <figure><img src="img/o16.webp" alt="Painel de espelho bisotado em ambiente amplo" width="620" height="349" loading="lazy" decoding="async"><figcaption>Painel de espelho bisotado</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="grupo-obras">
+      <h3>Guarda-corpo</h3>
+      <div class="grade-obras">
+        <figure><img src="img/o17.webp" alt="Guarda-corpo de vidro em escada" width="465" height="620" loading="lazy" decoding="async"><figcaption>Guarda-corpo</figcaption></figure>
+        <figure><img src="img/o18.webp" alt="Guarda-corpo de vidro com estrutura preta" width="620" height="620" loading="lazy" decoding="async"><figcaption>Guarda-corpo preto</figcaption></figure>
+        <figure><img src="img/o19.webp" alt="Guarda-corpo de vidro fosco" width="620" height="465" loading="lazy" decoding="async"><figcaption>Guarda-corpo fosco</figcaption></figure>
+        <figure><img src="img/o20.webp" alt="Guarda-corpo branco em escada" width="620" height="463" loading="lazy" decoding="async"><figcaption>Guarda-corpo branco em escada</figcaption></figure>
+        <figure><img src="img/o21.webp" alt="Guarda-corpo branco em sacada" width="620" height="463" loading="lazy" decoding="async"><figcaption>Guarda-corpo branco em sacada</figcaption></figure>
+        <figure><img src="img/o22.webp" alt="Guarda-corpo de vidro em sacada com vista para árvores" width="620" height="463" loading="lazy" decoding="async"><figcaption>Guarda-corpo em sacada</figcaption></figure>
+        <figure><img src="img/o23.webp" alt="Guarda-corpo de vidro acompanhando escada" width="620" height="465" loading="lazy" decoding="async"><figcaption>Guarda-corpo em escadas</figcaption></figure>
+        <figure><img src="img/o24.webp" alt="Montagem de guarda-corpo em obra" width="465" height="620" loading="lazy" decoding="async"><figcaption>Montagem de guarda-corpo</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="grupo-obras">
+      <h3>Janelas e portas</h3>
+      <div class="grade-obras">
+        <figure><img src="img/o25.webp" alt="Janela de correr de duas folhas" width="620" height="465" loading="lazy" decoding="async"><figcaption>Janela de correr de 2 folhas</figcaption></figure>
+        <figure><img src="img/o26.webp" alt="Janela de correr de duas folhas em fachada" width="620" height="465" loading="lazy" decoding="async"><figcaption>Janela de correr de 2 folhas</figcaption></figure>
+        <figure><img src="img/o27.webp" alt="Janelas de vidro em casa" width="349" height="620" loading="lazy" decoding="async"><figcaption>Janelas em casa</figcaption></figure>
+        <figure><img src="img/o28.webp" alt="Janelas em vidro incolor" width="349" height="620" loading="lazy" decoding="async"><figcaption>Janelas incolor</figcaption></figure>
+        <figure><img src="img/o29.webp" alt="Janela pivotante em vidro" width="465" height="620" loading="lazy" decoding="async"><figcaption>Janela pivotante</figcaption></figure>
+        <figure><img src="img/o30.webp" alt="Porta de correr em vidro jateado" width="465" height="620" loading="lazy" decoding="async"><figcaption>Porta de correr jateada</figcaption></figure>
+        <figure><img src="img/o31.webp" alt="Porta de correr espelhada" width="465" height="620" loading="lazy" decoding="async"><figcaption>Porta de correr espelhada</figcaption></figure>
+        <figure><img src="img/o32.webp" alt="Porta articulada em vidro" width="465" height="620" loading="lazy" decoding="async"><figcaption>Porta articulada</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="grupo-obras">
+      <h3>Fachadas, fechamentos e divisórias</h3>
+      <div class="grade-obras">
+        <figure><img src="img/o33.webp" alt="Fachada de loja em vidro incolor" width="620" height="348" loading="lazy" decoding="async"><figcaption>Fachada de loja incolor</figcaption></figure>
+        <figure><img src="img/o34.webp" alt="Fachada de loja envidraçada" width="349" height="620" loading="lazy" decoding="async"><figcaption>Fachada de loja</figcaption></figure>
+        <figure><img src="img/o35.webp" alt="Montagem de fechamento de fachada" width="620" height="372" loading="lazy" decoding="async"><figcaption>Fechamento de fachada</figcaption></figure>
+        <figure><img src="img/o36.webp" alt="Fechamento de área em vidro" width="620" height="465" loading="lazy" decoding="async"><figcaption>Fechamento de área</figcaption></figure>
+        <figure><img src="img/o37.webp" alt="Fechamento de escada em vidro" width="465" height="620" loading="lazy" decoding="async"><figcaption>Fechamento de escada</figcaption></figure>
+        <figure><img src="img/o38.webp" alt="Divisão de ambientes em vidro" width="620" height="465" loading="lazy" decoding="async"><figcaption>Divisão de ambientes</figcaption></figure>
+        <figure><img src="img/o39.webp" alt="Divisória fixa em vidro" width="465" height="620" loading="lazy" decoding="async"><figcaption>Fixo divisória</figcaption></figure>
+        <figure><img src="img/o40.webp" alt="Piso em vidro temperado" width="465" height="620" loading="lazy" decoding="async"><figcaption>Piso em vidro temperado</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="grupo-obras">
+      <h3>Mesas, tampos e balcões</h3>
+      <div class="grade-obras">
+        <figure><img src="img/o41.webp" alt="Mesa de vidro lapidada com suporte Tucano" width="620" height="465" loading="lazy" decoding="async"><figcaption>Mesa lapidada com suporte Tucano</figcaption></figure>
+        <figure><img src="img/o42.webp" alt="Mesa de vidro lapidada com pé de inox" width="620" height="465" loading="lazy" decoding="async"><figcaption>Mesa lapidada com pé inox</figcaption></figure>
+        <figure><img src="img/o43.webp" alt="Balcão em vidro incolor" width="620" height="465" loading="lazy" decoding="async"><figcaption>Balcão incolor</figcaption></figure>
+        <figure><img src="img/o44.webp" alt="Mesa de apoio em vidro" width="348" height="620" loading="lazy" decoding="async"><figcaption>Mesa de apoio</figcaption></figure>
+        <figure><img src="img/o45.webp" alt="Mesa de vidro incolor" width="372" height="620" loading="lazy" decoding="async"><figcaption>Mesa incolor</figcaption></figure>
+        <figure><img src="img/o46.webp" alt="Mesa de vidro incolor montada" width="372" height="620" loading="lazy" decoding="async"><figcaption>Mesa de vidro incolor</figcaption></figure>
+        <figure><img src="img/o47.webp" alt="Suporte de vidro sob bancada de pia" width="620" height="514" loading="lazy" decoding="async"><figcaption>Suporte em vidro</figcaption></figure>
+        <figure><img src="img/o48.webp" alt="Tampo de vidro incolor" width="349" height="620" loading="lazy" decoding="async"><figcaption>Tampo de vidro incolor</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tambem">
+      <h3>Trabalhamos com</h3>
+      <p>Vidros pintados; vidros laminados; box de diversos tipos; tampos para mesas e bancadas; espelhos; e muito
+        mais. No acervo de obras também há envidraçamento de sacada, kit de pia em vidro temperado, fechamento de pia
+        com vidro jateado, painel de espelho bisotado e janelas de 4 folhas em vidro modelado.</p>
     </div>
   </section>
 
-  <section id="vidro-temperado">
-    <p class="rotulo">Vidro temperado</p>
-    <h2>O que é vidro temperado, e por que ele importa</h2>
-    <div class="comparativo">
-      <div class="comum">
-        <h3>Vidro comum</h3>
-        <p>Quebra em estilhaços pontiagudos e perigosamente cortantes, e não resiste ao
-           transpassamento. Tem resistência mecânica pequena, pode ser cortado e tem baixo custo.</p>
+  <section id="dicas">
+    <p class="rotulo">Dicas</p>
+    <h2>Dicas da Tecno Temper</h2>
+    <p class="apoio col">Acompanhe nossas dicas sobre espelhos e vidros.</p>
+    <div class="dicas">
+      <div class="dica">
+        <h3>Espelhos: o que não usar</h3>
+        <ul>
+          <li>Nunca usar produtos ácidos ou alcalinos: amoníaco, cloro ou água sanitária atacam a superfície, as bordas e a tinta protetora.</li>
+          <li>Nunca usar produtos abrasivos: lixa, palha de aço, esponja áspera, sapólio.</li>
+          <li>Ao lavar paredes com espelho, não jogue água ou produto que escorra por trás ou nas bordas.</li>
+        </ul>
       </div>
-      <div class="temperado">
-        <h3>Vidro temperado</h3>
-        <p>Passa por um processo de têmpera — aquecido e resfriado rapidamente — que o torna mais
-           resistente que o comum. Caso quebre, se fragmenta em pedaços pequenos que não machucam.
-           Indicado para fachadas, portas, janelas, divisórias, boxes de banheiro e tampos de mesa,
-           por ser fortemente resistente a impactos.</p>
+      <div class="dica">
+        <h3>Espelhos: como limpar</h3>
+        <ul>
+          <li>Comece com espanador para tirar a poeira e depois passe pano macio umedecido em água morna.</li>
+          <li>Seque sempre as bordas. Pano macio embebido em álcool também pode ser usado.</li>
+          <li>Aplique o produto no pano, nunca borrifando líquido direto no espelho.</li>
+        </ul>
       </div>
-    </div>
-    <div class="outros-vidros">
-      <div>
-        <h4>Vidro laminado</h4>
-        <p>Duas ou mais lâminas de vidro com película plástica entre elas. Ao quebrar, os cacos
-           ficam presos na película, o que impede a passagem de pessoas e objetos.</p>
-      </div>
-      <div>
-        <h4>Vidro refletivo</h4>
-        <p>Camada metálica espelhada que reflete os raios solares e reduz a passagem de calor,
-           sem prejudicar a visão de dentro para fora.</p>
-      </div>
-      <div>
-        <h4>Vidro aramado</h4>
-        <p>Estrutura de tela de arame que impede que os cacos se soltem ao quebrar. Mais barato que
-           os vidros especiais.</p>
+      <div class="dica">
+        <h3>Box: uso e manutenção</h3>
+        <ul>
+          <li>Depois de instalado, o box só pode ser usado após 24 horas — tempo de secagem do silicone de vedação.</li>
+          <li>Chame um profissional capacitado se a porta abrir ou fechar com dificuldade, a guia quebrar ou houver excesso de balanço.</li>
+          <li>Limpe só com água, sabão ou detergente neutro. Remova as gotas de água depois do banho para não manchar.</li>
+          <li>Evite impactos violentos na abertura e não deixe crianças desacompanhadas usarem o box.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="atendimento">
+  <section id="orcamento">
     <div class="faixa">
-      <p class="rotulo">Atendimento</p>
-      <h2>Atendimento personalizado da Tecno Temper</h2>
+      <p class="rotulo">Orçamento</p>
+      <h2>Procurando por uma vidraçaria em Niterói?</h2>
       <p class="apoio col">
-        Para seus projetos em vidro, chame a Tecno Temper e garanta receber o melhor atendimento.
-        Orçamento rápido e gratuito.
+        Faça sua cotação com a nossa Tecno Temper. Para seus projetos em vidro, não pense duas vezes: chame a
+        Tecno Temper e garanta receber o melhor atendimento. É rápido e gratuito.
       </p>
       <div class="acoes">
-        <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir orçamento grátis</a>
+        <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Orçamento grátis pelo WhatsApp</a>
+        <a class="btn vazio" href="tel:2139525623">Ligar para a loja</a>
       </div>
     </div>
   </section>
 
   <section id="contato">
-    <p class="rotulo">Contato</p>
+    <p class="rotulo">Onde estamos</p>
     <h2>Fale com a Tecno Temper</h2>
-    <div class="contatos">
-      <a href="tel:2139525623"><b>Telefone</b><span>(21) 3952-5623</span></a>
-      <a href="tel:2126220015"><b>Telefone</b><span>(21) 2622-0015</span></a>
-      <a href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o"><b>WhatsApp</b><span>(21) 98556-1708</span></a>
-      <a href="mailto:vidros@vidracariatecnotemper.com.br"><b>E-mail</b><span>vidros@vidracariatecnotemper.com.br</span></a>
-      <div><b>Endereço</b><span>R. Barão do Amazonas, 337 — Centro, Niterói — RJ, 24030-111</span></div>
-    </div>
-    <div class="acoes" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
-      <a class="btn" href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Chamar no WhatsApp</a>
-      <a class="btn vazio" href="tel:2139525623">Ligar agora</a>
+    <div class="onde">
+      <div class="foto">
+        <img src="img/loja.webp" alt="Interior da loja da Tecno Temper, com vitrines de ferragens e acessórios" width="570" height="760" loading="lazy" decoding="async">
+      </div>
+      <div>
+        <div class="contatos">
+          <a href="tel:2139525623"><b>Telefone</b><span>(21) 3952-5623</span></a>
+          <a href="tel:2126220015"><b>Telefone</b><span>(21) 2622-0015</span></a>
+          <a href="https://wa.me/5521985561708?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o"><b>WhatsApp</b><span>(21) 98556-1708</span></a>
+          <a href="mailto:vidros@vidracariatecnotemper.com.br"><b>E-mail</b><span>vidros@vidracariatecnotemper.com.br</span></a>
+          <div><b>Endereço</b><span>R. Barão do Amazonas, 337 — Centro, Niterói — RJ, 24030-111</span></div>
+        </div>
+        <div class="redes">
+          <a href="https://www.instagram.com/tecnotempervidros" rel="nofollow noopener" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/tecnotempervidros" rel="nofollow noopener" target="_blank">Facebook</a>
+        </div>
+      </div>
     </div>
   </section>
 
