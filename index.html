@@ -112,6 +112,10 @@
   .barra-nav .url {
     margin-left: 10px; font-family: var(--display); font-size: 0.72rem;
     color: var(--tinta-2); background: var(--papel); padding: 4px 12px; border-radius: 6px;
+    /* Em 375px a barra falsa do navegador nao cabe com o dominio inteiro, e
+       empurrava a moldura para fora. O endereco encolhe e corta, como corta
+       num navegador de verdade. */
+    min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
 
   /* container-type deixa as cenas escalarem com a moldura em cqw, entao o
@@ -290,7 +294,9 @@
   ol.passos h3 { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
   ol.passos p { color: var(--tinta-2); font-size: 1.02rem; }
 
-  ul.entrega { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+  /* minmax(270px,...) nunca encolhe abaixo de 270, entao numa coluna de 263px
+     a grade estoura. min(270px,100%) deixa a faixa ceder quando precisa. */
+  ul.entrega { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); }
   ul.entrega li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; font-size: 1.02rem; }
   ul.entrega li::before { content: "✓"; color: var(--azul); font-family: var(--display); font-weight: 700; }
 
@@ -359,7 +365,11 @@
   @media (max-width: 620px) {
     .heroi { padding-block: 42px 4px; }
     section { padding-block: 46px; }
-    .palco { min-height: 210px; }
+    /* aspect-ratio deriva a altura da largura, mas com min-height maior que
+       essa altura a conta se inverte e a LARGURA passa a sair da altura:
+       210px x 16/10 dava 336px num quadro de 329px. Em tela estreita o
+       aspect-ratio manda sozinho. */
+    .palco { min-height: 0; }
   }
 </style>
 
