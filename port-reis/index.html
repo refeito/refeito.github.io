@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Port Reis — Fabricante de Portões em SP</title>
-<meta name="description" content="A Port Reis fabrica portões, corrimãos, grades e estruturas metálicas desde 1999, atendendo Zona Sul, Zona Norte e Zona Oeste de São Paulo.">
+<title>Port Reis — Fabricante de Portões Automáticos em SP</title>
+<meta name="description" content="A Port Reis atua no ramo de fabricação de portões e serralheria desde 1999 no estado de São Paulo. Portões, corrimãos, grades, estruturas metálicas e manutenção para condomínios, empresas e residências.">
 <link rel="icon" type="image/webp" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,26 +72,50 @@
   h2 { font-size:clamp(1.5rem,4.2vw,2.05rem); line-height:1.16; font-weight:700; margin-bottom:8px; }
   .apoio { color:var(--tinta2); font-size:1rem; }
 
+  /* Publicos: a Port Reis vende para sindico e administradora antes de vender para morador. */
+  .publicos { background:var(--papel2); border-block:1px solid var(--linha); }
+  .publicos .lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));
+                     gap:14px 22px; margin-top:20px; }
+  .publicos .lista div { font-family:var(--titulo); font-weight:700; font-size:1.02rem;
+                         color:var(--azul-escuro); border-top:3px solid var(--azul); padding-top:10px; }
+
+  /* Processos: o argumento tecnico da fabrica, em etapas numeradas. */
+  .etapas { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));
+            gap:26px 24px; margin-top:28px; counter-reset:etapa; }
+  .etapa { min-width:0; }
+  .etapa img { width:100%; aspect-ratio:8/3; object-fit:cover; object-position:center 30%;
+               border-radius:6px; background:var(--papel2); }
+  .etapa h3 { margin-top:12px; font-size:1.04rem; font-weight:700; text-transform:uppercase;
+              letter-spacing:0.02em; display:flex; gap:9px; align-items:baseline; }
+  .etapa h3::before { content:counter(etapa,decimal-leading-zero); counter-increment:etapa;
+                      font-size:0.8rem; color:var(--azul); }
+  .etapa p { font-size:0.9rem; color:var(--tinta2); margin-top:5px; }
+  .seguranca { margin-top:30px; padding:22px 24px; border:1px solid var(--linha); border-radius:10px;
+               background:var(--papel2); }
+  .seguranca h3 { font-size:1.02rem; text-transform:uppercase; letter-spacing:0.02em; color:var(--azul-escuro); }
+  .seguranca p { font-size:0.93rem; color:var(--tinta2); margin-top:6px; }
+  .seguranca dl { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));
+                  gap:14px 24px; margin:16px 0 0; }
+  .seguranca dt { font-family:var(--titulo); font-weight:700; color:var(--azul-escuro); font-size:0.95rem; }
+  .seguranca dd { margin:3px 0 0; font-size:0.88rem; color:var(--tinta2); }
+
   .galeria-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(228px,1fr)); gap:16px; margin-top:24px; }
   .galeria-grade figure { margin:0; border-radius:8px; overflow:hidden; background:var(--papel2); border:1px solid var(--linha); }
   .galeria-grade img { width:100%; aspect-ratio:800/420; object-fit:cover; }
   .galeria-grade figcaption { padding:9px 12px 12px; font-family:var(--titulo); font-weight:700; font-size:0.92rem;
     text-transform:uppercase; letter-spacing:0.01em; color:var(--azul-escuro); background:var(--branco); }
+  .galeria-grade .materiais { display:block; font-family:var(--corpo); font-weight:400; font-size:0.74rem;
+    text-transform:none; letter-spacing:0; color:var(--tinta2); margin-top:4px; }
+  .galeria-grade p { padding:0 12px 12px; font-size:0.86rem; color:var(--tinta2); margin-top:-4px; }
 
-  .grupo { margin-top:32px; }
-  .grupo > h3 { font-family:var(--titulo); font-weight:700; font-size:1.08rem; color:var(--azul);
-    text-transform:uppercase; letter-spacing:0.03em; margin-bottom:14px; padding-bottom:8px;
-    border-bottom:2px solid var(--linha); }
-  .fabrica-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px 28px; }
-  .fabrica-item h4 { font-size:1.02rem; font-weight:600; font-family:var(--titulo); text-transform:uppercase; letter-spacing:0.01em; }
-  .fabrica-item .materiais { font-size:0.78rem; color:var(--azul); margin-top:3px; }
-  .fabrica-item p { font-size:0.92rem; color:var(--tinta2); margin-top:6px; }
+  .obras { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); gap:14px; margin-top:24px; }
+  .obras figure { margin:0; border-radius:8px; overflow:hidden; background:var(--papel2); }
+  .obras img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .obras figcaption { font-size:0.8rem; color:var(--tinta2); padding:8px 2px 0; }
 
-  /* Faixa escura: mesmo mecanismo do heroi, imagem absoluta atras do conteudo. */
-  .servicos { position:relative; overflow:hidden; padding-block:0; }
-  .servicos .fundo-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
-  .servicos .veu { position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(12,22,36,.8),rgba(12,22,36,.93)); }
-  .servicos .conteudo { position:relative; z-index:2; padding-block:52px; }
+  /* Faixa escura: cor de marca deles, sem foto atras (a que havia renderizava preta). */
+  .servicos { background:var(--azul-escuro);
+    background-image:linear-gradient(160deg,#25406f 0%,#20335b 55%,#16243f 100%); }
   .servicos .rotulo { color:#8fc4e0; }
   .servicos h2 { color:#fff; }
   .servicos .apoio { color:#cfe1ec; }
@@ -99,17 +123,32 @@
   .servico-item h4 { font-size:1.04rem; color:#fff; font-family:var(--titulo); font-weight:700; text-transform:uppercase; }
   .servico-item p { font-size:0.92rem; color:#cfe1ec; margin-top:6px; }
 
+  /* Parceiros: o canal de venda da fabrica para condominio. */
+  .parceiros-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
+                     gap:20px 28px; margin-top:26px; }
+  .parceiro { border-left:3px solid var(--azul); padding-left:16px; min-width:0; }
+  .parceiro h3 { font-size:1.02rem; font-weight:700; text-transform:uppercase; letter-spacing:0.02em; }
+  .parceiro p { font-size:0.9rem; color:var(--tinta2); margin-top:6px; }
+  .parceiro ul { margin:8px 0 0; padding-left:18px; font-size:0.88rem; color:var(--tinta2); }
+
   .sobre-grade { display:grid; grid-template-columns:1.05fr 0.95fr; gap:36px; align-items:start; margin-top:24px; }
   .sobre-grade .foto img { border-radius:10px; width:100%; }
   .diferenciais { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 0; padding:0; list-style:none; }
   .diferenciais span { font-size:0.78rem; color:var(--azul-escuro); background:var(--papel2);
     border:1px solid var(--linha); border-radius:99px; padding:6px 12px; }
-  .vantagens { margin-top:14px; font-size:0.92rem; color:var(--tinta2); }
   .depoimento-pr { margin-top:26px; border-left:3px solid var(--azul); padding-left:16px; }
   .depoimento-pr p { font-size:0.94rem; color:var(--tinta2); font-style:italic; }
   .depoimento-pr cite { display:block; margin-top:8px; font-style:normal; font-family:var(--titulo);
     font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.03em; color:var(--tinta2); }
   .crea { margin-top:18px; font-size:0.84rem; color:var(--tinta2); }
+
+  /* Pagamento: eles publicam as bandeiras, entao o "12 vezes" diz em que. */
+  .pagamento { display:grid; grid-template-columns:auto 1fr; gap:28px; align-items:center;
+               margin-top:22px; border:1px solid var(--linha); border-radius:12px; padding:22px 26px; }
+  .pagamento img { width:210px; }
+  .pagamento .vantagens { font-family:var(--titulo); font-weight:700; font-size:1.02rem;
+                          color:var(--azul-escuro); text-transform:uppercase; letter-spacing:0.02em; }
+  .pagamento p { font-size:0.92rem; color:var(--tinta2); margin-top:8px; }
 
   .faixa { background:var(--papel2); border-radius:14px; padding:clamp(24px,4vw,40px); }
   .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
@@ -123,12 +162,13 @@
   .faixa .acoes { margin-top:24px; }
 
   footer { border-top:1px solid var(--linha); padding-block:24px 42px; color:var(--tinta2);
-           font-size:0.8rem; display:grid; gap:5px; }
+           font-size:0.8rem; display:grid; gap:5px; overflow-wrap:anywhere; }
 
   @media (max-width:760px) {
     .sobre-grade { grid-template-columns:1fr; }
+    .pagamento { grid-template-columns:1fr; gap:18px; }
+    .pagamento img { width:190px; }
     section { padding-block:40px; }
-    .servicos .conteudo { padding-block:40px; }
   }
 </style>
 </head>
@@ -142,12 +182,14 @@
 
 <div class="env">
   <header class="topo">
-    <a class="logo" href="/port-reis/"><img src="img/logo.webp" alt="Port Reis Soluções em Aço" width="241" height="61"></a>
+    <a class="logo" href="#"><img src="img/logo.webp" alt="Port Reis" width="241" height="61"></a>
     <nav class="nav">
-      <a href="#galeria">Galeria</a>
-      <a href="#fabricamos">O que fabricamos</a>
+      <a href="#fabricacao">Processos de fabricação</a>
+      <a href="#produtos">Produtos</a>
       <a href="#servicos">Serviços</a>
-      <a href="#sobre">Quem somos</a>
+      <a href="#obras">Obras</a>
+      <a href="#parceiros">Parceiros</a>
+      <a href="#sobre">A empresa</a>
       <a href="#contato">Contato</a>
     </nav>
     <div class="ligar">
@@ -158,165 +200,295 @@
 </div>
 
 <div class="hero">
-  <img class="fundo-img" src="img/capa.webp" alt="Fabricação de portão de aço na Port Reis" width="1024" height="470">
+  <img class="fundo-img" src="img/capa.webp" alt="" width="1024" height="470">
   <div class="veu"></div>
   <div class="env">
-    <h1>Fabricante de Portões em SP</h1>
-    <p class="sub">Desde 1999 industrializando portões, corrimãos, grades e estruturas metálicas com alto grau
-      de confiabilidade — na Zona Sul, Zona Norte e Zona Oeste de São Paulo.</p>
+    <h1>Fabricante de Portões Automáticos em SP</h1>
+    <p class="sub">A Port Reis atua no ramo de fabricação de portões e serralheria desde 1999 no estado de
+      São Paulo, com o objetivo de industrializar, com o auxílio da engenharia, produtos com alto grau de
+      confiabilidade, elevada vida útil e fácil manuseio.</p>
     <div class="acoes">
       <a class="btn" href="https://wa.me/5511965509232">Pedir orçamento no WhatsApp</a>
-      <a class="btn vazio" href="#galeria">Ver galeria de obras</a>
+      <a class="btn vazio" href="#fabricacao">Como fabricamos</a>
     </div>
   </div>
 </div>
 
+<div class="publicos">
+  <div class="env">
+    <section style="padding-block:34px">
+      <p class="rotulo">Para quem fabricamos</p>
+      <h2>Soluções de produtos e serviços para condomínios, empresas e residências</h2>
+      <p class="apoio col">Dispomos de mão de obra especializada e equipamentos de última geração,
+        direcionados para atender as solicitações nas diversas áreas:</p>
+      <div class="lista">
+        <div>Condominial</div>
+        <div>Residencial</div>
+        <div>Industrial</div>
+        <div>Comercial</div>
+        <div>Construtoras</div>
+        <div>Arquitetos e Decoradores</div>
+      </div>
+    </section>
+  </div>
+</div>
+
 <div class="env">
-  <section id="galeria">
-    <p class="rotulo">Galeria de obras</p>
-    <h2>Portões e estruturas que já saíram da nossa fábrica</h2>
-    <p class="apoio col">Direto da fábrica, com parcelamento em até 12 vezes.</p>
-    <div class="galeria-grade">
-      <figure><img src="img/p1.webp" alt="Portão residencial fabricado pela Port Reis" width="800" height="420"><figcaption>Portões Residenciais</figcaption></figure>
-      <figure><img src="img/p2.webp" alt="Portão industrial e comercial fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portões Industriais e Comercial</figcaption></figure>
-      <figure><img src="img/p3.webp" alt="Portão condominial fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portões Condominiais</figcaption></figure>
-      <figure><img src="img/p4.webp" alt="Clausura instalada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Clausuras</figcaption></figure>
-      <figure><img src="img/p5.webp" alt="Fechamento de área fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Fechamento de Áreas</figcaption></figure>
-      <figure><img src="img/p6.webp" alt="Grade de proteção para janela fabricada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Grades de Proteção</figcaption></figure>
-      <figure><img src="img/p7.webp" alt="Corrimão fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Corrimãos</figcaption></figure>
-      <figure><img src="img/p8.webp" alt="Parapeito fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Guarda-corpo e Parapeito</figcaption></figure>
-      <figure><img src="img/p9.webp" alt="Cobertura de vidro instalada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Coberturas</figcaption></figure>
-      <figure><img src="img/p10.webp" alt="Porta de enrolar fabricada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portas de Enrolar</figcaption></figure>
-      <figure><img src="img/p11.webp" alt="Porta social fabricada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portas Sociais</figcaption></figure>
-      <figure><img src="img/p12.webp" alt="Bicicletário fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Bicicletários</figcaption></figure>
+  <section id="fabricacao">
+    <p class="rotulo">Processos de fabricação</p>
+    <h2>Da medição no vão até a instalação, dentro da nossa fábrica</h2>
+    <p class="apoio col">Abaixo seguem os processos de fabricação adotados por nossa empresa na confecção
+      dos portões, portas, grades, clausuras e diversos.</p>
+
+    <div class="etapas">
+      <div class="etapa">
+        <img src="img/e1.webp" alt="Trena medindo a largura de um vão de portão" width="800" height="420" loading="lazy">
+        <h3>Medição Técnica</h3>
+        <p>Efetuada após o fechamento do pedido, tomando como base as medidas do vão. São medidas a altura
+          e a largura, e verificados o nível do piso, o prumo das paredes laterais e as alturas úteis para
+          passagem de veículos.</p>
+      </div>
+      <div class="etapa">
+        <img src="img/e2.webp" alt="Telas de computador com o desenho técnico das peças" width="321" height="120" loading="lazy">
+        <h3>Projeto</h3>
+        <p>As medidas coletadas viram desenho em um programa de computação gráfica, que gera as ordens de
+          produção, o desenho final das peças e as listagens de material com dimensionamento preciso de
+          peso e medidas.</p>
+      </div>
+      <div class="etapa">
+        <img src="img/e3.webp" alt="Máquina cortando perfis metálicos na oficina" width="322" height="120" loading="lazy">
+        <h3>Corte</h3>
+        <p>Os materiais são cortados nos tamanhos e ângulos corretos, com precisão milimétrica, em máquinas
+          de corte refrigerado — o que elimina o problema de rebarbas no material.</p>
+      </div>
+      <div class="etapa">
+        <img src="img/e4.webp" alt="Solda sendo aplicada em uma peça metálica" width="322" height="120" loading="lazy">
+        <h3>Solda</h3>
+        <p>As peças são ponteadas com solda de preenchimento MIG e seguem para a área de soldagem, onde
+          obtêm resistência e robustez com a mesma tecnologia.</p>
+      </div>
+      <div class="etapa">
+        <img src="img/e5.webp" alt="Operário usando esmerilhadeira em uma peça metálica" width="320" height="240" loading="lazy">
+        <h3>Acabamento</h3>
+        <p>O excesso de solda é retirado e a emenda recebe acabamento, sem que haja agressão ao aço
+          galvanizado.</p>
+      </div>
+      <div class="etapa">
+        <img src="img/e6.webp" alt="Peças metálicas sendo pintadas em cabine de pintura" width="322" height="120" loading="lazy">
+        <h3>Pintura</h3>
+        <p>As peças são tratadas em cabines de pintura com um fundo padrão, que as deixa preparadas para
+          receber a pintura final.</p>
+      </div>
+      <div class="etapa">
+        <img src="img/e7.webp" alt="Dois montadores instalando um portão em um vão" width="500" height="350" loading="lazy">
+        <h3>Entrega e Instalação</h3>
+        <p>As peças acabadas são acomodadas em transportes apropriados, o que garante entrega sem avaria.
+          Uma equipe de montadores treinados faz a instalação no vão e dá os acabamentos finais.</p>
+      </div>
+    </div>
+
+    <div class="seguranca">
+      <h3>Projeto de Segurança</h3>
+      <p>Todo o projeto de segurança está apoiado em três subsistemas que devem estar em constante
+        equilíbrio sinérgico:</p>
+      <dl>
+        <div>
+          <dt>Infraestrutura</dt>
+          <dd>Grades, portões, muros, cercas, guaritas — toda a estrutura física e não eletrônica de
+            contenção de ameaças.</dd>
+        </div>
+        <div>
+          <dt>Equipamentos eletrônicos</dt>
+          <dd>Sistema de alarmes, sistema de CFTV e sistema de controle de acesso, entre os principais
+            sistemas de apoio.</dd>
+        </div>
+        <div>
+          <dt>Procedimentos</dt>
+          <dd>Sem um Manual de Procedimentos correto e bem elaborado, os outros subsistemas têm a eficácia
+            comprometida.</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
-  <section id="fabricamos">
-    <p class="rotulo">O que fabricamos</p>
-    <h2>Portões, fechamentos e serralheria sob medida</h2>
-
-    <div class="grupo">
-      <h3>Portões</h3>
-      <div class="fabrica-grade">
-        <div class="fabrica-item">
-          <h4>Portões Residenciais</h4>
-          <p class="materiais">Chapa diversos, chapa lambri, chapa perfurada, chapa veneziana, madeira, tela, tubulares, tubulares com madeira</p>
-          <p>Grande variedade de modelos e revestimentos, para o modelo que melhor se adequa à fachada do seu imóvel.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Portões Industriais e Comercial</h4>
-          <p class="materiais">Articulados, comporta, deslizantes, guilhotina, pivotantes</p>
-          <p>Resistentes, para facilitar a logística da sua indústria, comércio ou negócio.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Portões Condominiais</h4>
-          <p>Alta resistência para suportar altos fluxos de abertura e fechamento, com baixo nível de manutenção.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grupo">
-      <h3>Fechamentos e proteção</h3>
-      <div class="fabrica-grade">
-        <div class="fabrica-item">
-          <h4>Clausuras</h4>
-          <p>Sistema de segurança com duas portas ou portões, que individualiza a entrada de pedestres ou veículos — item indispensável para a segurança de qualquer condomínio.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Fechamento de Áreas</h4>
-          <p>Grades de fechamento em vários modelos e materiais, para limitar a circulação e preservar espaços.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Grades de Proteção</h4>
-          <p>Fabricadas e instaladas em janelas e áreas vulneráveis — a primeira barreira de proteção para o seu patrimônio.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Guarda-corpo / Parapeito</h4>
-          <p>Materiais de excelente resistência física e mecânica, instalados conforme as normas de segurança mais rígidas.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grupo">
-      <h3>Estruturas e acabamentos</h3>
-      <div class="fabrica-grade">
-        <div class="fabrica-item">
-          <h4>Corrimãos</h4>
-          <p class="materiais">Aço galvanizado, aço inox</p>
-          <p>Conferem segurança e modernidade ao seu projeto.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Coberturas</h4>
-          <p>Qualquer projeto de cobertura, confeccionada em vidro ou policarbonato.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Portas de Enrolar</h4>
-          <p>Excelente alternativa de custo-benefício para ambientes comerciais.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Portas Sociais</h4>
-          <p>Excelente alternativa de custo-benefício para ambientes comerciais.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Bicicletários</h4>
-          <p>Espaço adequado para a guarda de bicicletas em condomínios.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Pergolados</h4>
-          <p>Pergolados metálicos que valorizam arquitetonicamente jardins de inverno, corredores, garagens e áreas de lazer.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Móveis e Decoração</h4>
-          <p class="materiais">Decoração em geral, esculturas, estantes e prateleiras, fechamento de vãos, grades de parede e floreiras, mesas e cadeiras, nichos e racks de parede</p>
-          <p>Produtos de arquitetura e decoração, desenvolvidos conforme o seu projeto.</p>
-        </div>
-        <div class="fabrica-item">
-          <h4>Serralheria em Geral</h4>
-          <p class="materiais">Escadas marinheiro, gaiolas de proteção, grelhas para canaleta, lixeiras, mezaninos, passa-pizza e passa-volumes, pedestais e totens, tampas de inspeção</p>
-        </div>
-      </div>
+  <section id="produtos">
+    <p class="rotulo">Produtos</p>
+    <h2>O que fazemos</h2>
+    <p class="apoio col">Fabricante de portões, portas, grades e estruturas metálicas diversas.</p>
+    <div class="galeria-grade">
+      <figure>
+        <img src="img/p1.webp" alt="Portão residencial de chapa" width="800" height="420" loading="lazy">
+        <figcaption>Portões Residenciais<span class="materiais">Chapa diversos · Chapa lambri · Chapa perfurada · Chapa veneziana · Madeira · Tela · Tubulares · Tubulares com madeira</span></figcaption>
+        <p>Grande variedade de modelos e revestimentos, para o modelo que melhor se adequa à fachada do seu imóvel.</p>
+      </figure>
+      <figure>
+        <img src="img/p2.webp" alt="Portão de uso industrial e comercial" width="800" height="420" loading="lazy">
+        <figcaption>Portões Industriais e Comercial<span class="materiais">Articulados · Comporta · Deslizantes · Guilhotina · Pivotantes</span></figcaption>
+        <p>Resistentes e com diversas formas de funcionamento, para facilitar a logística da sua indústria, comércio ou negócio.</p>
+      </figure>
+      <figure>
+        <img src="img/p3.webp" alt="Portão de entrada de um condomínio" width="800" height="420" loading="lazy">
+        <figcaption>Portões Condominiais</figcaption>
+        <p>Alta resistência para suportar os altos fluxos de abertura e fechamento e as máquinas ultra rápidas de hoje, garantindo baixos níveis de manutenção.</p>
+      </figure>
+      <figure>
+        <img src="img/p4.webp" alt="Clausura de duas portas na entrada de um prédio" width="800" height="420" loading="lazy">
+        <figcaption>Clausuras</figcaption>
+        <p>Sistema de segurança de duas portas ou portões, que individualiza a entrada de pedestres ou veículos — item indispensável para a segurança de qualquer condomínio.</p>
+      </figure>
+      <figure>
+        <img src="img/p5.webp" alt="Grade de fechamento de área" width="800" height="420" loading="lazy">
+        <figcaption>Fechamentos de Áreas</figcaption>
+        <p>Grades de fechamento em vários modelos e materiais, para limitar a circulação de pessoas e preservar os diversos espaços e áreas.</p>
+      </figure>
+      <figure>
+        <img src="img/p6.webp" alt="Grade de proteção instalada em uma janela" width="800" height="420" loading="lazy">
+        <figcaption>Grades de Proteção</figcaption>
+        <p>Fabricadas e instaladas em janelas e áreas vulneráveis, são a primeira barreira de proteção física do seu patrimônio.</p>
+      </figure>
+      <figure>
+        <img src="img/p7.webp" alt="Corrimão de escada em aço inox" width="800" height="420" loading="lazy">
+        <figcaption>Corrimãos<span class="materiais">Aço galvanizado · Aço inox</span></figcaption>
+        <p>Fabricados em aço inox ou aço galvanizado, conferem segurança e modernidade ao seu projeto.</p>
+      </figure>
+      <figure>
+        <img src="img/p8.webp" alt="Guarda-corpo de vidro e metal em uma sacada" width="800" height="420" loading="lazy">
+        <figcaption>Guarda-corpo / Parapeito</figcaption>
+        <p>Materiais de excelente resistência física e mecânica, com instalação sob as mais rígidas normas de segurança.</p>
+      </figure>
+      <figure>
+        <img src="img/p9.webp" alt="Cobertura de vidro sobre uma entrada" width="800" height="420" loading="lazy">
+        <figcaption>Coberturas</figcaption>
+        <p>Executamos qualquer projeto de cobertura, confeccionada em vidro ou policarbonato.</p>
+      </figure>
+      <figure>
+        <img src="img/p10.webp" alt="Porta de enrolar em fachada comercial" width="800" height="420" loading="lazy">
+        <figcaption>Portas de Enrolar</figcaption>
+        <p>Geralmente utilizadas em ambientes comerciais, são uma excelente alternativa de custo-benefício.</p>
+      </figure>
+      <figure>
+        <img src="img/p11.webp" alt="Porta social de entrada de prédio" width="800" height="420" loading="lazy">
+        <figcaption>Portas Sociais</figcaption>
+        <p>Geralmente utilizadas em ambientes comerciais, são uma excelente alternativa de custo-benefício.</p>
+      </figure>
+      <figure>
+        <img src="img/p12.webp" alt="Ilustração de um bicicletário para condomínio" width="800" height="420" loading="lazy">
+        <figcaption>Bicicletários</figcaption>
+        <p>Com o crescimento contínuo do uso de bicicletas, o bicicletário é hoje preocupação de síndicos e moradores, para oferecer um espaço adequado de guarda.</p>
+      </figure>
+      <figure>
+        <img src="img/p13.webp" alt="Pergolado metálico sobre uma área de lazer" width="800" height="420" loading="lazy">
+        <figcaption>Pergolados</figcaption>
+        <p>Os pergolados metálicos geram diferenciação estética e valorização arquitetônica em jardins de inverno, corredores, garagens e áreas de lazer.</p>
+      </figure>
+      <figure>
+        <img src="img/p14.webp" alt="Painel metálico decorativo em uma parede" width="800" height="420" loading="lazy">
+        <figcaption>Móveis e Decoração<span class="materiais">Decoração em geral · Esculturas · Estantes e prateleiras · Fechamento de vãos · Grades de parede e floreiras · Mesas e cadeiras · Nichos e racks de parede</span></figcaption>
+        <p>Fabricamos produtos de arquitetura e decoração em geral, desenvolvidos conforme o seu projeto.</p>
+      </figure>
+      <figure>
+        <img src="img/p15.webp" alt="Estrutura metálica de gaiola de proteção para escada marinheiro" width="800" height="420" loading="lazy">
+        <figcaption>Serralheria em Geral<span class="materiais">Escadas marinheiro · Gaiolas de proteção · Grelhas para canaleta · Lixeiras · Mezaninos · Passa-pizza e passa-volumes · Pedestais e totens · Tampas de inspeção</span></figcaption>
+        <p>Fabricamos os mais diversos itens de serralheria, conforme a necessidade do projeto.</p>
+      </figure>
     </div>
   </section>
 </div>
 
 <section class="servicos" id="servicos">
-  <img class="fundo-img" src="img/automacao-bg.webp" alt="" width="1400" height="233" loading="lazy">
-  <div class="veu"></div>
-  <div class="env conteudo">
+  <div class="env">
     <p class="rotulo">Serviços</p>
-    <h2>Automação, manutenção e mais</h2>
-    <p class="apoio col">Além da fabricação e instalação dos produtos, a Port Reis executa os mais variados
-      serviços do nosso segmento:</p>
+    <h2>Automação, manutenção e adequação</h2>
+    <p class="apoio col">Além da fabricação e instalação dos produtos fabricados pela empresa, a Port Reis
+      executa os mais variados tipos de serviços relacionados ao nosso segmento. Dentre eles estão:</p>
     <div class="servicos-grade">
-      <div class="servico-item"><h4>Automatização</h4><p>Automatização de portões ainda abertos e fechados de forma manual, instalando motor de qualidade.</p></div>
-      <div class="servico-item"><h4>Manutenção</h4><p>Manutenção corretiva e preventiva em produtos instalados por nossa equipe ou por terceiros.</p></div>
-      <div class="servico-item"><h4>Reformas</h4><p>Reforma de diversos produtos, além da fabricação de peças novas para cada projeto.</p></div>
-      <div class="servico-item"><h4>Pintura e Restauração</h4><p>Equipe especializada em pintura e restauração, para estética e durabilidade dos produtos.</p></div>
-      <div class="servico-item"><h4>Segurança</h4><p>Instalação de fechaduras, travas eletromagnéticas, sensores anti-esmagamento, intertravamento e molas aéreas.</p></div>
-      <div class="servico-item"><h4>Adequações</h4><p>Adequação de corrimãos de escada em condomínios para retirada do AVCB, conforme NBR 9077.</p></div>
+      <div class="servico-item"><h4>Automatização</h4><p>Automatização dos portões que ainda são abertos e fechados de forma manual, instalando motor de qualidade.</p></div>
+      <div class="servico-item"><h4>Manutenção</h4><p>Manutenção corretiva e preventiva em diversos tipos de produtos instalados por nossa equipe ou por terceiros.</p></div>
+      <div class="servico-item"><h4>Reformas</h4><p>Além de comercializarmos somente produtos novos e fabricados para cada projeto, também efetuamos reforma de diversos produtos.</p></div>
+      <div class="servico-item"><h4>Pintura e Restauração</h4><p>Equipe especializada em pintura e restauração, pela estética e durabilidade dos produtos comercializados.</p></div>
+      <div class="servico-item"><h4>Segurança</h4><p>Instalação de itens de segurança como fechaduras, travas eletromagnéticas, sensores anti-esmagamento, sistemas de intertravamento e molas aéreas.</p></div>
+      <div class="servico-item"><h4>Adequações</h4><p>Adequação de corrimãos de escada para condomínios, para retirada do AVCB, conforme NBR 9077.</p></div>
     </div>
   </div>
 </section>
 
 <div class="env">
+  <section id="obras">
+    <p class="rotulo">Em campo</p>
+    <h2>Obras e serviços executados</h2>
+    <p class="apoio col">Fotos de serviços da Port Reis fora da fábrica.</p>
+    <div class="obras">
+      <figure><img src="img/o1.webp" alt="Gradil metálico branco instalado na frente de um imóvel" width="760" height="570" loading="lazy"><figcaption>Gradil instalado</figcaption></figure>
+      <figure><img src="img/o2.webp" alt="Profissional fazendo manutenção em um portão de veneziana" width="760" height="427" loading="lazy"><figcaption>Manutenção de portão</figcaption></figure>
+      <figure><img src="img/o3.webp" alt="Profissional trabalhando em um portão na calçada" width="760" height="427" loading="lazy"><figcaption>Serralheria em campo</figcaption></figure>
+      <figure><img src="img/o4.webp" alt="Profissional soldando uma peça metálica no local da obra" width="600" height="1068" loading="lazy"><figcaption>Pontos de solda no local</figcaption></figure>
+      <figure><img src="img/o5.webp" alt="Profissional montando uma estrutura metálica com cobertura em um jardim" width="620" height="827" loading="lazy"><figcaption>Montagem de estrutura metálica</figcaption></figure>
+      <figure><img src="img/o6.webp" alt="Dois profissionais cortando e soldando perfis metálicos" width="760" height="464" loading="lazy"><figcaption>Corte e solda em obra</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="parceiros">
+    <p class="rotulo">Parceiros</p>
+    <h2>Quem trabalha junto com a fábrica</h2>
+    <p class="apoio col">Unir forças em parcerias estratégicas pode e deve ajudar na conquista de um bem
+      comum. Esse tipo de parceria visa uma troca de benefícios entre empresas e tem como objetivo a
+      evolução destas no mercado.</p>
+    <div class="parceiros-grade">
+      <div class="parceiro">
+        <h3>Revendedores</h3>
+        <p>A Port Reis possui hoje revendedores cadastrados, que distribuem e revendem nossos produtos.
+          Requisitos para se tornar um revendedor:</p>
+        <ul>
+          <li>Possuir empresa aberta (ser Pessoa Jurídica);</li>
+          <li>Possuir ponto comercial estabelecido.</li>
+        </ul>
+      </div>
+      <div class="parceiro">
+        <h3>Administradoras de Condomínio</h3>
+        <p>Prezamos pela parceria com as Administradoras de Condomínio para facilitar a gestão do síndico
+          e reduzir custos para o mesmo.</p>
+      </div>
+      <div class="parceiro">
+        <h3>Síndicos Profissionais</h3>
+        <p>Fornecemos atendimento personalizado aos síndicos profissionais, de modo a facilitar sua gestão,
+          prestando assessoria e buscando soluções.</p>
+      </div>
+      <div class="parceiro">
+        <h3>Arquitetos e Decoradores</h3>
+        <p>Desenvolvemos projetos personalizados para seus clientes, com atendimento preferencial,
+          benefícios exclusivos e soluções pensadas.</p>
+      </div>
+      <div class="parceiro">
+        <h3>Empresas de Segurança Privada</h3>
+        <p>Portaria virtual e controle de acesso: atendimento diferenciado na execução dos projetos e nas
+          alterações necessárias na infraestrutura dos condomínios, para viabilizar o projeto de segurança
+          como um todo.</p>
+      </div>
+      <div class="parceiro">
+        <h3>Empresas de Consultoria</h3>
+        <p>Buscamos parcerias com empresas de consultoria de segurança condominial, para oferecer ao
+          condomínio a indicação de uma empresa que executará o projeto de forma plena, a um custo justo e
+          atendendo rigorosamente os prazos de entrega.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="sobre">
-    <p class="rotulo">Quem somos</p>
-    <h2>Desde 1999 na Zona Sul, Zona Norte e Zona Oeste de São Paulo</h2>
+    <p class="rotulo">A empresa</p>
+    <h2>Desde 1999 no estado de São Paulo</h2>
     <div class="sobre-grade">
       <div>
-        <p class="apoio">A Port Reis atua no ramo de fabricação de portões e serralheria desde 1999 no estado de
-          São Paulo. Fabricante de portões, portas, grades e estruturas metálicas diversas, atende condomínios,
-          residências, indústrias, comércios, construtoras, arquitetos e decoradores, com mão de obra
-          especializada e equipamentos de última geração.</p>
+        <p class="apoio">A Port Reis é uma empresa que atua no ramo de fabricação de portões e serralheria
+          desde 1999 no estado de São Paulo. Fabricante de portões, portas, grades e estruturas metálicas
+          diversas, oferece o que há de melhor e mais moderno no mercado, conquistando com isso a confiança
+          de seus clientes pelo padrão de excelência no atendimento e na qualidade de seus trabalhos.</p>
         <ul class="diferenciais">
-          <li><span>+ de 21 anos de experiência</span></li>
+          <li><span>Desde 1999</span></li>
           <li><span>Projetos personalizados</span></li>
           <li><span>Mão de obra especializada</span></li>
           <li><span>Assistência técnica permanente</span></li>
           <li><span>Certificação de garantia</span></li>
         </ul>
-        <p class="vantagens">Direto da fábrica · Parcelamento em até 12 vezes · Melhores condições</p>
         <p class="crea">Empresa cadastrada junto ao CREA-SP (Conselho Regional de Engenharia e Agronomia do Estado de São Paulo).</p>
         <div class="depoimento-pr">
           <p>"Port Reis demonstrou capacitação técnica e qualidade desde o estabelecimento do projeto de um
@@ -327,7 +499,15 @@
         </div>
       </div>
       <div class="foto">
-        <img src="img/processo.webp" alt="Fabricação de portão na Port Reis" width="921" height="639" loading="lazy">
+        <img src="img/processo.webp" alt="Acabamento de uma grade metálica na oficina, com faíscas do esmeril" width="921" height="639" loading="lazy">
+      </div>
+    </div>
+
+    <div class="pagamento">
+      <img src="img/cartoes.webp" alt="Bandeiras aceitas: Visa, Mastercard, Hipercard, Elo, American Express, Hiper e boleto" width="400" height="312" loading="lazy">
+      <div>
+        <p class="vantagens">Direto da fábrica · Parcelamento em até 12 vezes · Melhores condições</p>
+        <p>Formas de pagamento aceitas pela Port Reis.</p>
       </div>
     </div>
   </section>
@@ -348,7 +528,8 @@
   </section>
 
   <footer>
-    <span>Port Reis · Vila Matilde, São Paulo, SP</span>
+    <span>Port Reis · Av. Joaquim Marra, 676 — Vila Matilde, São Paulo, SP · (11) 2092-3879 · Seg a sex, 9h às 17h</span>
+    <span>Empresa cadastrada junto ao CREA-SP.</span>
     <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Port Reis. Fotos e textos são deles.</span>
   </footer>
 </div>
