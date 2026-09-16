@@ -84,6 +84,16 @@
   .extra { margin-top:22px; font-size:0.94rem; color:var(--tinta2); }
   .extra b { color:var(--tinta); }
 
+  /* Peças em resina: fotos escuras, tiradas de noite, com a peça acesa por
+     dentro. Forçar num cartao claro como o da galeria lava o contraste que e
+     o proprio assunto da foto — por isso cada peca fica numa caixa escura. */
+  .resina-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:12px; margin-top:26px; }
+  .resina-item { background:#191913; border-radius:10px; overflow:hidden; }
+  .resina-item .capa { aspect-ratio:1; }
+  .resina-item .capa img { width:100%; height:100%; object-fit:cover; }
+  .resina-item p { padding:9px 10px 12px; font-size:0.76rem; font-weight:600; line-height:1.3;
+                    color:#c7c7ba; text-align:center; }
+
   .faixa { background:var(--verde-fraco); border-radius:14px; padding:clamp(24px,4vw,38px); }
   .lista-manut { display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; margin-top:22px; list-style:none; }
   .lista-manut li { display:grid; grid-template-columns:16px 1fr; gap:10px; font-size:0.98rem; }
@@ -136,6 +146,7 @@
     </a>
     <nav class="nav">
       <a href="#galeria">Galeria</a>
+      <a href="#resina">Resina</a>
       <a href="#manutencao">Manutenção</a>
       <a href="#atendemos">Atendimento</a>
       <a href="#contato">Contato</a>
@@ -212,6 +223,28 @@
     </div>
     <p class="extra col"><b>Também fazem:</b> painéis em madeira, polietileno, ferro, alumínio, pedra porosa ou
       resina, e locações.</p>
+  </div>
+</section>
+
+<section id="resina">
+  <div class="env">
+    <p class="rotulo">Produtos</p>
+    <h2>Produtos em resina</h2>
+    <p class="apoio col">Criação de peças em resina de diversos tamanhos e modelos, tornando-se um produto,
+      diferenciado, resistente e único. Uma verdadeira obra de arte.</p>
+    <div class="resina-grade">
+      <div class="resina-item"><div class="capa"><img src="img/resina-floreira-1.webp" alt="Floreira em resina iluminada — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Floreira iluminada</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-luminaria.webp" alt="Luminária pendente em resina — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Luminária pendente</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-caixa-correio.webp" alt="Caixa de correio em resina iluminada — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Caixa de correio</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-peixes.webp" alt="Peça em resina com peixes — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Peça com peixes</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-floreira-2.webp" alt="Floreiras em resina iluminadas — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Floreiras iluminadas</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-floreira-3.webp" alt="Floreiras em resina com planta — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Floreiras com planta</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-floreira-4.webp" alt="Floreira em resina com planta — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Floreira com planta</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-floreira-5.webp" alt="Floreira em resina com planta — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Floreira com planta</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-peca-1.webp" alt="Peça em resina iluminada — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Peça iluminada</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-floreira-6.webp" alt="Floreira em resina com planta — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Floreira com planta</p></div>
+      <div class="resina-item"><div class="capa"><img src="img/resina-bancada.webp" alt="Bancada de banheiro com detalhes em resina iluminada — Vida e Arte Paisagismo" width="600" height="455" loading="lazy"></div><p>Bancada com resina</p></div>
+    </div>
   </div>
 </section>
 
