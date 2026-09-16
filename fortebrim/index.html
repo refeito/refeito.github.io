@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fortebrim Uniformes — uniformes profissionais em Salvador desde 2002</title>
+<meta name="description" content="Fábrica de uniformes profissionais em Salvador desde 2002: uniformes de obra, sociais, scrubs, polos e mais. Personalizados com sua logomarca. Envio para todo o Brasil.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --papel:#ffffff; --papel2:#faf6f5; --linha:#ece2e1;
+    --tinta:#262220; --tinta2:#726863;
+    --vermelho:#c8333a; --vermelho2:#9e262c;
+    --titulo:"Oswald","Arial Narrow",Arial,sans-serif;
+    --corpo:"Work Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; }
+  p { margin:0; }
+
+  .env { max-width:1180px; margin:0 auto; padding-inline:18px; }
+  .col { max-width:62ch; }
+
+  .tarja { background:#fdf3f3; border-bottom:1px solid #f3d9da; color:#6f2f32;
+           font-size:0.76rem; line-height:1.5; text-align:center;
+           padding:10px 16px; padding-top:calc(10px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:var(--vermelho2); } .tarja a { color:var(--vermelho); }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:16px;
+          padding-block:14px; flex-wrap:wrap; border-bottom:3px solid var(--vermelho); }
+  .topo .logo { display:block; }
+  .topo .logo img { height:46px; width:auto; }
+  .nav { display:flex; gap:18px; align-items:center; font-size:0.86rem; font-weight:500; flex-wrap:wrap; }
+  .nav a { text-decoration:none; color:var(--tinta2); }
+  .nav a:hover { color:var(--vermelho); }
+  .ligar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .ligar a.tel { font-family:var(--titulo); font-weight:600; font-size:0.96rem; text-decoration:none;
+                 white-space:nowrap; color:var(--tinta); }
+  .ligar a.tel small { display:block; font-family:var(--corpo); font-weight:500; font-size:0.6rem;
+                        letter-spacing:0.1em; text-transform:uppercase; color:var(--tinta2); }
+
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:600; font-size:0.9rem;
+         text-decoration:none; background:var(--vermelho); color:#fff; padding:13px 22px;
+         border-radius:4px; letter-spacing:0.01em; white-space:nowrap; }
+  .btn:hover { background:var(--vermelho2); }
+  .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+
+  .intro { background:var(--papel2); border-bottom:1px solid var(--linha); padding-block:38px; }
+  .rotulo { font-family:var(--titulo); font-weight:600; font-size:0.72rem; letter-spacing:0.16em;
+            text-transform:uppercase; color:var(--vermelho); margin-bottom:10px; }
+  .intro h1 { font-weight:700; font-size:clamp(1.7rem,5.6vw,2.5rem); line-height:1.1;
+              text-transform:uppercase; letter-spacing:-0.005em; max-width:17ch; }
+  .intro .sub { margin-top:14px; color:var(--tinta2); font-size:1rem; max-width:58ch; }
+  .intro .acoes { margin-top:22px; }
+
+  section { padding-block:50px; }
+  h2 { font-size:clamp(1.4rem,4.2vw,1.9rem); line-height:1.18; font-weight:700; margin-bottom:8px;
+       text-transform:uppercase; letter-spacing:-0.005em; }
+  .apoio { color:var(--tinta2); font-size:1rem; }
+
+  .categorias { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0 32px; padding:0; list-style:none; }
+  .categorias span { display:inline-block; font-family:var(--titulo); font-weight:500; font-size:0.74rem;
+    letter-spacing:0.03em; text-transform:uppercase; color:var(--vermelho2); background:var(--papel2);
+    border:1px solid var(--linha); border-radius:99px; padding:7px 13px; }
+
+  .produtos { display:grid; grid-template-columns:repeat(auto-fill,minmax(128px,1fr)); gap:14px; }
+  .produto { border:1px solid var(--linha); border-radius:10px; overflow:hidden; background:var(--papel); }
+  .produto .foto { aspect-ratio:242/374; background:var(--papel2); display:flex; align-items:center;
+                    justify-content:center; overflow:hidden; }
+  .produto .foto img { width:86%; height:86%; object-fit:contain; }
+  .produto .dados { padding:9px 11px 13px; }
+  .produto h3 { font-size:0.86rem; font-weight:600; text-transform:uppercase; letter-spacing:0.01em; line-height:1.25; }
+  .produto .detalhe { font-size:0.74rem; color:var(--tinta2); margin-top:2px; }
+  .produto .preco { display:block; margin-top:6px; font-family:var(--titulo); font-weight:600;
+                     color:var(--vermelho); font-size:0.98rem; }
+  .aviso { margin-top:20px; font-size:0.78rem; color:var(--tinta2); }
+
+  .depoimentos { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); margin-top:22px; }
+  .depoimento { border-top:3px solid var(--vermelho); padding-top:12px; }
+  .depoimento p { font-size:0.92rem; }
+  .depoimento cite { display:block; margin-top:9px; font-style:normal; font-family:var(--titulo);
+    font-weight:600; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--tinta2); }
+
+  .grade-segmentos { display:grid; grid-template-columns:200px 1fr; gap:26px; align-items:center; margin-top:22px; }
+  .grade-segmentos .foto-segmentos img { border-radius:10px; width:100%; }
+  .tags { display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:0; list-style:none; }
+  .tags span { display:inline-block; font-size:0.76rem; font-weight:500; color:var(--tinta2);
+    background:var(--papel2); border:1px solid var(--linha); border-radius:99px; padding:6px 12px; }
+
+  .passos { display:grid; gap:2px; margin-top:24px; }
+  .passos > div { display:grid; grid-template-columns:38px 1fr; gap:14px; padding-block:18px;
+                  border-top:1px solid var(--linha); }
+  .passos > div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
+                          font-family:var(--titulo); font-weight:700; font-size:0.86rem;
+                          color:var(--vermelho); padding-top:2px; }
+  .passos { counter-reset:passo; }
+  .passos h3 { font-size:1rem; font-weight:600; margin-bottom:3px; text-transform:none; }
+  .passos p { font-size:0.94rem; color:var(--tinta2); }
+
+  .regioes { display:grid; gap:10px; margin-top:22px; list-style:none; padding:0; max-width:62ch; }
+  .regioes li { display:grid; grid-template-columns:16px 1fr; gap:10px; font-size:0.96rem; }
+  .regioes li::before { content:"›"; color:var(--vermelho); font-family:var(--titulo); font-weight:700; }
+  .regioes b { font-weight:600; }
+  .estados { display:flex; flex-wrap:wrap; gap:6px; margin-top:22px; padding:0; list-style:none; }
+  .estados span { font-size:0.72rem; color:var(--tinta2); background:var(--papel2); border:1px solid var(--linha);
+                   border-radius:99px; padding:5px 10px; }
+
+  .faixa { background:var(--papel2); border-radius:14px; padding:clamp(24px,4vw,40px); }
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:18px 24px; margin-top:22px; }
+  .canais > * { min-width:0; text-decoration:none; overflow-wrap:anywhere; }
+  .canais b { display:block; font-family:var(--titulo); font-size:0.66rem; font-weight:600;
+              letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:600; font-size:1rem;
+                 overflow-wrap:anywhere; line-height:1.35; }
+  .canais a:hover span { color:var(--vermelho); }
+  .faixa .acoes { margin-top:24px; }
+
+  footer { border-top:1px solid var(--linha); padding-block:24px 42px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:5px; }
+
+  @media (max-width:680px) {
+    .grade-segmentos { grid-template-columns:1fr; }
+    .grade-segmentos .foto-segmentos { max-width:220px; }
+    section { padding-block:38px; }
+    .passos > div { grid-template-columns:30px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada, feita por Refeito.</b> Não é o site oficial da Fortebrim Uniformes.
+  O site oficial é <a href="https://www.fortebrim.com.br/">fortebrim.com.br</a>. Todas as fotos, textos e
+  informações são deles.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <a class="logo" href="/fortebrim/"><img src="img/logo.webp" alt="Fortebrim Uniformes" width="209" height="120"></a>
+    <nav class="nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#pedir">Como pedir</a>
+      <a href="#regiao">Região</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="ligar">
+      <a class="tel" href="tel:7133048316"><small>Telefone</small>71 3304-8316</a>
+      <a class="btn" href="https://wa.me/5571981775407">Pedir orçamento</a>
+    </div>
+  </header>
+</div>
+
+<div class="intro">
+  <div class="env">
+    <p class="rotulo">Desde 2002 · Salvador, Bahia</p>
+    <h1>Uniformes profissionais direto da fábrica, pelo menor preço.</h1>
+    <p class="sub">Somos fábrica atacadista de uniformes profissionais, com ampla variedade de modelos tanto na
+      pronta entrega como sob encomenda. Fabricamos em Salvador e enviamos para todo o Brasil — são mais de 20
+      anos vestindo profissionais em todo o país.</p>
+    <div class="acoes"><a class="btn" href="https://wa.me/5571981775407">Solicitar orçamento pelo WhatsApp</a></div>
+  </div>
+</div>
+
+<div class="env">
+  <section id="catalogo">
+    <p class="rotulo">Catálogo</p>
+    <h2>23 linhas de uniforme, tudo sob a sua logomarca</h2>
+    <p class="apoio col">Do fardamento de obra ao jaleco hospitalar, a Fortebrim fabrica para praticamente todo
+      setor profissional:</p>
+
+    <ul class="categorias">
+      <li><span>Uniformes Profissionais</span></li>
+      <li><span>Camisetas Personalizadas</span></li>
+      <li><span>Calças com Faixa Refletiva</span></li>
+      <li><span>Camisas Polo</span></li>
+      <li><span>Jalecos Personalizados</span></li>
+      <li><span>Farda para Obra</span></li>
+      <li><span>Uniformes para Construção Civil</span></li>
+      <li><span>Camisas em Brim</span></li>
+      <li><span>Roupas Privativas Scrubs</span></li>
+      <li><span>Bonés Personalizados</span></li>
+      <li><span>Touca Árabe Brim</span></li>
+      <li><span>Calças Jeans para Trabalho</span></li>
+      <li><span>Calças em Oxford Profissionais</span></li>
+      <li><span>Camisas UV Proteção Solar</span></li>
+      <li><span>Fábrica de Uniformes Profissionais</span></li>
+      <li><span>Calça em Tactel</span></li>
+      <li><span>Camisas Básicas Promocionais</span></li>
+      <li><span>Uniformes para Cozinha</span></li>
+      <li><span>Batas Femininas Mullet</span></li>
+      <li><span>Macacão para Mecânico</span></li>
+      <li><span>Uniformes Industriais Personalizados</span></li>
+      <li><span>Pijama Cirúrgico Hospitalar</span></li>
+      <li><span>Uniformes para Empresas</span></li>
+    </ul>
+
+    <div class="produtos">
+      <article class="produto">
+        <div class="foto"><img src="img/p1.webp" alt="Camisa social Fortebrim, com algodão" width="242" height="374"></div>
+        <div class="dados"><h3>Camisa Social</h3><p class="detalhe">Com algodão</p><span class="preco">R$ 49,00</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p2.webp" alt="Camisa brim Fortebrim, 100% algodão" width="242" height="374"></div>
+        <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">100% algodão</p><span class="preco">R$ 41,99</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p3.webp" alt="Calça brim Fortebrim, com faixa refletiva" width="242" height="374"></div>
+        <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 52,90</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p4.webp" alt="Calça jeans Fortebrim, tradicional operacional" width="242" height="374"></div>
+        <div class="dados"><h3>Calça Jeans</h3><p class="detalhe">Tradicional</p><span class="preco">R$ 63,90</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p5.webp" alt="Camisa em malha Fortebrim, com capuz" width="242" height="374"></div>
+        <div class="dados"><h3>Camisa em Malha</h3><p class="detalhe">Com capuz</p><span class="preco">R$ 15,90</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p6.webp" alt="Camisa brim Fortebrim, com faixa refletiva" width="242" height="374"></div>
+        <div class="dados"><h3>Camisa Brim</h3><p class="detalhe">Com faixa refletiva</p><span class="preco">R$ 59,90</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p7.webp" alt="Calça oxford Fortebrim, operacional" width="242" height="374"></div>
+        <div class="dados"><h3>Calça Oxford</h3><p class="detalhe">Operacional, elástico e cordão</p><span class="preco">R$ 24,00</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p8.webp" alt="Camisa polo Fortebrim" width="242" height="374"></div>
+        <div class="dados"><h3>Camisa Polo</h3><p class="detalhe">Piquet tradicional</p><span class="preco">R$ 46,90</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p9.webp" alt="Camisa básica Fortebrim" width="242" height="374"></div>
+        <div class="dados"><h3>Camisa Básica</h3><p class="detalhe">Promocional</p></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p10.webp" alt="Calça brim Fortebrim, profissional" width="242" height="374"></div>
+        <div class="dados"><h3>Calça Brim</h3><p class="detalhe">Profissional</p><span class="preco">R$ 31,90</span></div>
+      </article>
+      <article class="produto">
+        <div class="foto"><img src="img/p11.webp" alt="Calça jeans operacional Fortebrim, elástico e cordão" width="242" height="374"></div>
+        <div class="dados"><h3>Calça Jeans Operacional</h3><p class="detalhe">Elástico e cordão</p><span class="preco">R$ 41,99</span></div>
+      </article>
+    </div>
+    <p class="aviso">Todas as imagens acima são meramente ilustrativas. Consulte condições comerciais. Preços à
+      vista, no pix, depósito ou transferência.</p>
+  </section>
+
+  <section id="parceiros">
+    <p class="rotulo">Quem já compra da Fortebrim</p>
+    <h2>Parceiros que recomendam</h2>
+    <div class="depoimentos">
+      <div class="depoimento">
+        <p>"Nossa parceira há muitos anos. Sei que podemos contar sempre com a Fortebrim."</p>
+        <cite>Luciane Aguiar — Leopold Construções</cite>
+      </div>
+      <div class="depoimento">
+        <p>"Tem preço e qualidade. Compramos nossos fardamentos para obra e escritório por um preço justo."</p>
+        <cite>Henrique Saiko Jr. — Subasi Engenharia</cite>
+      </div>
+      <div class="depoimento">
+        <p>"Bom atendimento e uniformes na pronta entrega. Recomendo."</p>
+        <cite>Paulo B. Guimarães — RP Facilities</cite>
+      </div>
+    </div>
+  </section>
+
+  <section id="segmentos">
+    <p class="rotulo">Segmentos</p>
+    <h2>Quem já veste Fortebrim</h2>
+    <p class="apoio col">Uniformizamos equipes de indústria, comércio, saúde e serviços:</p>
+    <div class="grade-segmentos">
+      <div class="foto-segmentos">
+        <img src="img/seg.webp" alt="Perfis atendidos pela Fortebrim: escritório, indústria, obra e saúde" width="364" height="149" loading="lazy">
+      </div>
+      <ul class="tags">
+        <li><span>Indústria</span></li>
+        <li><span>Geral</span></li>
+        <li><span>Cozinha</span></li>
+        <li><span>Atendimento</span></li>
+        <li><span>Recepção</span></li>
+        <li><span>Logística</span></li>
+        <li><span>Automação</span></li>
+        <li><span>Manutenção</span></li>
+        <li><span>Serviços</span></li>
+        <li><span>Facilities</span></li>
+        <li><span>Comunicação Visual</span></li>
+        <li><span>Escolas</span></li>
+        <li><span>Universidades</span></li>
+        <li><span>Cursos</span></li>
+        <li><span>Oficinas Mecânicas</span></li>
+        <li><span>Transportes</span></li>
+        <li><span>Mercados</span></li>
+        <li><span>Açougues</span></li>
+        <li><span>Padarias</span></li>
+        <li><span>Clínicas</span></li>
+        <li><span>Hospitais</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pedir">
+    <p class="rotulo">Como pedir</p>
+    <h2>Personalizado com a sua logomarca</h2>
+    <div class="passos col">
+      <div><div>
+        <h3>1. Escolha as peças</h3>
+        <p>Ampla variedade de modelos para fardamento, tanto na pronta entrega como sob encomenda.</p>
+      </div></div>
+      <div><div>
+        <h3>2. Envie sua logomarca</h3>
+        <p>As peças saem personalizadas com a logomarca corporativa da sua empresa.</p>
+      </div></div>
+      <div><div>
+        <h3>3. Peça o orçamento pelo WhatsApp</h3>
+        <p>Não perca tempo: faça uma cotação conosco e compare com a proposta do seu fornecedor atual.</p>
+      </div></div>
+    </div>
+    <div class="acoes" style="margin-top:24px">
+      <a class="btn" href="https://wa.me/5571981775407">Solicitar orçamento pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="regiao">
+    <p class="rotulo">Região atendida</p>
+    <h2>Salvador, Camaçari, Lauro de Freitas, Simões Filho — e todo o Brasil</h2>
+    <ul class="regioes">
+      <li><b>Salvador</b> — fábrica própria, uniformes personalizados com a sua logomarca corporativa.</li>
+      <li><b>Camaçari e outros polos fabris</b> — ampla linha em materiais resistentes e tecidos de alta
+        qualidade, voltados para o fardamento industrial.</li>
+      <li><b>Lauro de Freitas e Simões Filho</b> — uniformes em tecidos leves e respiráveis, para o setor de
+        serviços e facilities.</li>
+      <li><b>Todo o Brasil</b> — atendemos pedidos e enviamos para qualquer estado.</li>
+    </ul>
+    <ul class="estados">
+      <li><span>Rio de Janeiro</span></li><li><span>Ceará</span></li><li><span>Sudeste</span></li>
+      <li><span>Sul</span></li><li><span>Centro-Oeste</span></li><li><span>Norte</span></li>
+      <li><span>Nordeste</span></li><li><span>Rio Grande do Sul</span></li><li><span>Paraná</span></li>
+      <li><span>Mato Grosso do Sul</span></li><li><span>Paraíba</span></li><li><span>Goiás</span></li>
+      <li><span>Amazonas</span></li><li><span>Tocantins</span></li><li><span>Piauí</span></li>
+      <li><span>Amapá</span></li><li><span>Roraima</span></li><li><span>Acre</span></li>
+      <li><span>Rondônia</span></li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <div class="faixa">
+      <p class="rotulo">Contato</p>
+      <h2>Peça já o seu orçamento</h2>
+      <p class="apoio col">Fale pelo WhatsApp e receba a cotação da sua empresa ou evento.</p>
+      <div class="canais">
+        <a href="tel:7133048316"><b>Telefone</b><span>71 3304-8316</span></a>
+        <a href="https://wa.me/5571981775407"><b>WhatsApp</b><span>71 98177-5407</span></a>
+        <a href="https://wa.me/5571983008150"><b>WhatsApp 2</b><span>71 98300-8150</span></a>
+        <a href="mailto:comercial@fortebrim.com.br"><b>E-mail</b><span>comercial@fortebrim.com.br</span></a>
+        <div><b>Endereço</b><span>Estrada de Campinas, 376 — São Caetano, Salvador, BA — CEP 40391-161</span></div>
+      </div>
+      <div class="acoes"><a class="btn" href="https://wa.me/5571981775407">Chamar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Fortebrim Uniformes · Salvador, Bahia</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Fortebrim Uniformes. Fotos e textos são deles.</span>
+  </footer>
+</div>
+
+</body>
+</html>

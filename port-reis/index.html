@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Port Reis — Fabricante de Portões em SP</title>
+<meta name="description" content="A Port Reis fabrica portões, corrimãos, grades e estruturas metálicas desde 1999, atendendo Zona Sul, Zona Norte e Zona Oeste de São Paulo.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --branco:#ffffff; --papel2:#eef5f9; --linha:#d9e6ee;
+    --tinta:#1a2c47; --tinta2:#54687e;
+    --azul:#1e6d97; --azul-escuro:#20335b; --azul-hover:#175577;
+    --titulo:"Rajdhani",Arial,sans-serif;
+    --corpo:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--branco); color:var(--tinta); font-family:var(--corpo);
+         font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3,h4 { margin:0; font-family:var(--titulo); text-wrap:balance; }
+  p { margin:0; }
+
+  .env { max-width:1180px; margin:0 auto; padding-inline:18px; }
+  .col { max-width:64ch; }
+
+  .tarja { background:#eef5f9; border-bottom:1px solid #cfe0ea; color:#274a63;
+           font-size:0.76rem; line-height:1.5; text-align:center;
+           padding:10px 16px; padding-top:calc(10px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:var(--azul-escuro); } .tarja a { color:var(--azul); }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:16px;
+          padding-block:14px; flex-wrap:wrap; }
+  .topo .logo img { height:40px; width:auto; }
+  .nav { display:flex; gap:18px; align-items:center; font-size:0.86rem; font-weight:500; flex-wrap:wrap; }
+  .nav a { text-decoration:none; color:var(--tinta2); }
+  .nav a:hover { color:var(--azul); }
+  .ligar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .ligar a.tel { font-family:var(--titulo); font-weight:700; font-size:1rem; text-decoration:none;
+                 white-space:nowrap; color:var(--tinta); }
+  .ligar a.tel small { display:block; font-family:var(--corpo); font-weight:500; font-size:0.6rem;
+                        letter-spacing:0.1em; text-transform:uppercase; color:var(--tinta2); }
+
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.94rem;
+         text-decoration:none; background:var(--azul); color:#fff; padding:13px 22px;
+         border-radius:5px; letter-spacing:0.01em; white-space:nowrap; }
+  .btn:hover { background:var(--azul-hover); }
+  .btn:focus-visible { outline:3px solid var(--azul-escuro); outline-offset:2px; }
+  .btn.vazio { background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.5); }
+  .btn.vazio:hover { background:rgba(255,255,255,.22); }
+
+  /* Heroi: imagem absoluta cobrindo a secao, texto ancorado embaixo. */
+  .hero { position:relative; overflow:hidden; min-height:clamp(400px,60vh,560px); display:flex; align-items:flex-end; }
+  .hero .fundo-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; z-index:0; }
+  .hero .veu { position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg,rgba(10,20,32,.2) 0%,rgba(10,20,32,.58) 55%,rgba(10,20,32,.9) 100%); }
+  .hero .env { position:relative; z-index:2; padding-block:34px 40px; width:100%; }
+  .hero h1 { color:#fff; font-weight:700; font-size:clamp(2rem,6.4vw,3.3rem); line-height:1.05;
+             text-shadow:0 2px 20px rgba(0,0,0,.45); max-width:17ch; }
+  .hero .sub { margin-top:14px; color:rgba(255,255,255,.94); font-size:1.04rem; max-width:52ch;
+               text-shadow:0 1px 12px rgba(0,0,0,.55); }
+  .hero .acoes { margin-top:22px; display:flex; gap:12px; flex-wrap:wrap; }
+
+  section { padding-block:52px; }
+  .rotulo { font-family:var(--titulo); font-weight:700; font-size:0.76rem; letter-spacing:0.16em;
+            text-transform:uppercase; color:var(--azul); margin-bottom:10px; }
+  h2 { font-size:clamp(1.5rem,4.2vw,2.05rem); line-height:1.16; font-weight:700; margin-bottom:8px; }
+  .apoio { color:var(--tinta2); font-size:1rem; }
+
+  .galeria-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(228px,1fr)); gap:16px; margin-top:24px; }
+  .galeria-grade figure { margin:0; border-radius:8px; overflow:hidden; background:var(--papel2); border:1px solid var(--linha); }
+  .galeria-grade img { width:100%; aspect-ratio:800/420; object-fit:cover; }
+  .galeria-grade figcaption { padding:9px 12px 12px; font-family:var(--titulo); font-weight:700; font-size:0.92rem;
+    text-transform:uppercase; letter-spacing:0.01em; color:var(--azul-escuro); background:var(--branco); }
+
+  .grupo { margin-top:32px; }
+  .grupo > h3 { font-family:var(--titulo); font-weight:700; font-size:1.08rem; color:var(--azul);
+    text-transform:uppercase; letter-spacing:0.03em; margin-bottom:14px; padding-bottom:8px;
+    border-bottom:2px solid var(--linha); }
+  .fabrica-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px 28px; }
+  .fabrica-item h4 { font-size:1.02rem; font-weight:600; font-family:var(--titulo); text-transform:uppercase; letter-spacing:0.01em; }
+  .fabrica-item .materiais { font-size:0.78rem; color:var(--azul); margin-top:3px; }
+  .fabrica-item p { font-size:0.92rem; color:var(--tinta2); margin-top:6px; }
+
+  /* Faixa escura: mesmo mecanismo do heroi, imagem absoluta atras do conteudo. */
+  .servicos { position:relative; overflow:hidden; padding-block:0; }
+  .servicos .fundo-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .servicos .veu { position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(12,22,36,.8),rgba(12,22,36,.93)); }
+  .servicos .conteudo { position:relative; z-index:2; padding-block:52px; }
+  .servicos .rotulo { color:#8fc4e0; }
+  .servicos h2 { color:#fff; }
+  .servicos .apoio { color:#cfe1ec; }
+  .servicos-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:22px 28px; margin-top:26px; }
+  .servico-item h4 { font-size:1.04rem; color:#fff; font-family:var(--titulo); font-weight:700; text-transform:uppercase; }
+  .servico-item p { font-size:0.92rem; color:#cfe1ec; margin-top:6px; }
+
+  .sobre-grade { display:grid; grid-template-columns:1.05fr 0.95fr; gap:36px; align-items:start; margin-top:24px; }
+  .sobre-grade .foto img { border-radius:10px; width:100%; }
+  .diferenciais { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 0; padding:0; list-style:none; }
+  .diferenciais span { font-size:0.78rem; color:var(--azul-escuro); background:var(--papel2);
+    border:1px solid var(--linha); border-radius:99px; padding:6px 12px; }
+  .vantagens { margin-top:14px; font-size:0.92rem; color:var(--tinta2); }
+  .depoimento-pr { margin-top:26px; border-left:3px solid var(--azul); padding-left:16px; }
+  .depoimento-pr p { font-size:0.94rem; color:var(--tinta2); font-style:italic; }
+  .depoimento-pr cite { display:block; margin-top:8px; font-style:normal; font-family:var(--titulo);
+    font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.03em; color:var(--tinta2); }
+  .crea { margin-top:18px; font-size:0.84rem; color:var(--tinta2); }
+
+  .faixa { background:var(--papel2); border-radius:14px; padding:clamp(24px,4vw,40px); }
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:18px 24px; margin-top:22px; }
+  .canais > * { min-width:0; text-decoration:none; overflow-wrap:anywhere; }
+  .canais b { display:block; font-family:var(--titulo); font-size:0.68rem; font-weight:700;
+              letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.02rem;
+                 overflow-wrap:anywhere; line-height:1.35; color:var(--tinta); }
+  .canais a:hover span { color:var(--azul); }
+  .faixa .acoes { margin-top:24px; }
+
+  footer { border-top:1px solid var(--linha); padding-block:24px 42px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:5px; }
+
+  @media (max-width:760px) {
+    .sobre-grade { grid-template-columns:1fr; }
+    section { padding-block:40px; }
+    .servicos .conteudo { padding-block:40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada, feita por Refeito.</b> Não é o site oficial da Port Reis.
+  O site oficial é <a href="https://portreis.com.br/">portreis.com.br</a>. Todas as fotos, textos e
+  informações são deles.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <a class="logo" href="/port-reis/"><img src="img/logo.webp" alt="Port Reis Soluções em Aço" width="241" height="61"></a>
+    <nav class="nav">
+      <a href="#galeria">Galeria</a>
+      <a href="#fabricamos">O que fabricamos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Quem somos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="ligar">
+      <a class="tel" href="tel:1120923879"><small>Telefone</small>(11) 2092-3879</a>
+      <a class="btn" href="https://wa.me/5511965509232">Pedir orçamento</a>
+    </div>
+  </header>
+</div>
+
+<div class="hero">
+  <img class="fundo-img" src="img/capa.webp" alt="Fabricação de portão de aço na Port Reis" width="1024" height="470">
+  <div class="veu"></div>
+  <div class="env">
+    <h1>Fabricante de Portões em SP</h1>
+    <p class="sub">Desde 1999 industrializando portões, corrimãos, grades e estruturas metálicas com alto grau
+      de confiabilidade — na Zona Sul, Zona Norte e Zona Oeste de São Paulo.</p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5511965509232">Pedir orçamento no WhatsApp</a>
+      <a class="btn vazio" href="#galeria">Ver galeria de obras</a>
+    </div>
+  </div>
+</div>
+
+<div class="env">
+  <section id="galeria">
+    <p class="rotulo">Galeria de obras</p>
+    <h2>Portões e estruturas que já saíram da nossa fábrica</h2>
+    <p class="apoio col">Direto da fábrica, com parcelamento em até 12 vezes.</p>
+    <div class="galeria-grade">
+      <figure><img src="img/p1.webp" alt="Portão residencial fabricado pela Port Reis" width="800" height="420"><figcaption>Portões Residenciais</figcaption></figure>
+      <figure><img src="img/p2.webp" alt="Portão industrial e comercial fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portões Industriais e Comercial</figcaption></figure>
+      <figure><img src="img/p3.webp" alt="Portão condominial fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portões Condominiais</figcaption></figure>
+      <figure><img src="img/p4.webp" alt="Clausura instalada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Clausuras</figcaption></figure>
+      <figure><img src="img/p5.webp" alt="Fechamento de área fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Fechamento de Áreas</figcaption></figure>
+      <figure><img src="img/p6.webp" alt="Grade de proteção para janela fabricada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Grades de Proteção</figcaption></figure>
+      <figure><img src="img/p7.webp" alt="Corrimão fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Corrimãos</figcaption></figure>
+      <figure><img src="img/p8.webp" alt="Parapeito fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Guarda-corpo e Parapeito</figcaption></figure>
+      <figure><img src="img/p9.webp" alt="Cobertura de vidro instalada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Coberturas</figcaption></figure>
+      <figure><img src="img/p10.webp" alt="Porta de enrolar fabricada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portas de Enrolar</figcaption></figure>
+      <figure><img src="img/p11.webp" alt="Porta social fabricada pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Portas Sociais</figcaption></figure>
+      <figure><img src="img/p12.webp" alt="Bicicletário fabricado pela Port Reis" width="800" height="420" loading="lazy"><figcaption>Bicicletários</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="fabricamos">
+    <p class="rotulo">O que fabricamos</p>
+    <h2>Portões, fechamentos e serralheria sob medida</h2>
+
+    <div class="grupo">
+      <h3>Portões</h3>
+      <div class="fabrica-grade">
+        <div class="fabrica-item">
+          <h4>Portões Residenciais</h4>
+          <p class="materiais">Chapa diversos, chapa lambri, chapa perfurada, chapa veneziana, madeira, tela, tubulares, tubulares com madeira</p>
+          <p>Grande variedade de modelos e revestimentos, para o modelo que melhor se adequa à fachada do seu imóvel.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Portões Industriais e Comercial</h4>
+          <p class="materiais">Articulados, comporta, deslizantes, guilhotina, pivotantes</p>
+          <p>Resistentes, para facilitar a logística da sua indústria, comércio ou negócio.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Portões Condominiais</h4>
+          <p>Alta resistência para suportar altos fluxos de abertura e fechamento, com baixo nível de manutenção.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h3>Fechamentos e proteção</h3>
+      <div class="fabrica-grade">
+        <div class="fabrica-item">
+          <h4>Clausuras</h4>
+          <p>Sistema de segurança com duas portas ou portões, que individualiza a entrada de pedestres ou veículos — item indispensável para a segurança de qualquer condomínio.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Fechamento de Áreas</h4>
+          <p>Grades de fechamento em vários modelos e materiais, para limitar a circulação e preservar espaços.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Grades de Proteção</h4>
+          <p>Fabricadas e instaladas em janelas e áreas vulneráveis — a primeira barreira de proteção para o seu patrimônio.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Guarda-corpo / Parapeito</h4>
+          <p>Materiais de excelente resistência física e mecânica, instalados conforme as normas de segurança mais rígidas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h3>Estruturas e acabamentos</h3>
+      <div class="fabrica-grade">
+        <div class="fabrica-item">
+          <h4>Corrimãos</h4>
+          <p class="materiais">Aço galvanizado, aço inox</p>
+          <p>Conferem segurança e modernidade ao seu projeto.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Coberturas</h4>
+          <p>Qualquer projeto de cobertura, confeccionada em vidro ou policarbonato.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Portas de Enrolar</h4>
+          <p>Excelente alternativa de custo-benefício para ambientes comerciais.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Portas Sociais</h4>
+          <p>Excelente alternativa de custo-benefício para ambientes comerciais.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Bicicletários</h4>
+          <p>Espaço adequado para a guarda de bicicletas em condomínios.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Pergolados</h4>
+          <p>Pergolados metálicos que valorizam arquitetonicamente jardins de inverno, corredores, garagens e áreas de lazer.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Móveis e Decoração</h4>
+          <p class="materiais">Decoração em geral, esculturas, estantes e prateleiras, fechamento de vãos, grades de parede e floreiras, mesas e cadeiras, nichos e racks de parede</p>
+          <p>Produtos de arquitetura e decoração, desenvolvidos conforme o seu projeto.</p>
+        </div>
+        <div class="fabrica-item">
+          <h4>Serralheria em Geral</h4>
+          <p class="materiais">Escadas marinheiro, gaiolas de proteção, grelhas para canaleta, lixeiras, mezaninos, passa-pizza e passa-volumes, pedestais e totens, tampas de inspeção</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="servicos" id="servicos">
+  <img class="fundo-img" src="img/automacao-bg.webp" alt="" width="1400" height="233" loading="lazy">
+  <div class="veu"></div>
+  <div class="env conteudo">
+    <p class="rotulo">Serviços</p>
+    <h2>Automação, manutenção e mais</h2>
+    <p class="apoio col">Além da fabricação e instalação dos produtos, a Port Reis executa os mais variados
+      serviços do nosso segmento:</p>
+    <div class="servicos-grade">
+      <div class="servico-item"><h4>Automatização</h4><p>Automatização de portões ainda abertos e fechados de forma manual, instalando motor de qualidade.</p></div>
+      <div class="servico-item"><h4>Manutenção</h4><p>Manutenção corretiva e preventiva em produtos instalados por nossa equipe ou por terceiros.</p></div>
+      <div class="servico-item"><h4>Reformas</h4><p>Reforma de diversos produtos, além da fabricação de peças novas para cada projeto.</p></div>
+      <div class="servico-item"><h4>Pintura e Restauração</h4><p>Equipe especializada em pintura e restauração, para estética e durabilidade dos produtos.</p></div>
+      <div class="servico-item"><h4>Segurança</h4><p>Instalação de fechaduras, travas eletromagnéticas, sensores anti-esmagamento, intertravamento e molas aéreas.</p></div>
+      <div class="servico-item"><h4>Adequações</h4><p>Adequação de corrimãos de escada em condomínios para retirada do AVCB, conforme NBR 9077.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="env">
+  <section id="sobre">
+    <p class="rotulo">Quem somos</p>
+    <h2>Desde 1999 na Zona Sul, Zona Norte e Zona Oeste de São Paulo</h2>
+    <div class="sobre-grade">
+      <div>
+        <p class="apoio">A Port Reis atua no ramo de fabricação de portões e serralheria desde 1999 no estado de
+          São Paulo. Fabricante de portões, portas, grades e estruturas metálicas diversas, atende condomínios,
+          residências, indústrias, comércios, construtoras, arquitetos e decoradores, com mão de obra
+          especializada e equipamentos de última geração.</p>
+        <ul class="diferenciais">
+          <li><span>+ de 21 anos de experiência</span></li>
+          <li><span>Projetos personalizados</span></li>
+          <li><span>Mão de obra especializada</span></li>
+          <li><span>Assistência técnica permanente</span></li>
+          <li><span>Certificação de garantia</span></li>
+        </ul>
+        <p class="vantagens">Direto da fábrica · Parcelamento em até 12 vezes · Melhores condições</p>
+        <p class="crea">Empresa cadastrada junto ao CREA-SP (Conselho Regional de Engenharia e Agronomia do Estado de São Paulo).</p>
+        <div class="depoimento-pr">
+          <p>"Port Reis demonstrou capacitação técnica e qualidade desde o estabelecimento do projeto de um
+            conjunto de novos portões e clausura, tanto para os pedestres quanto aos automóveis, para instalação
+            de portaria virtual. [...] Na implantação se fez no prazo estabelecido e com técnicas rígidas no
+            assentamento, alinhado com a qualidade do trabalho de seus colaboradores."</p>
+          <cite>José Renato Oliveira — Síndico, Cond. Ed. Mateus Grou</cite>
+        </div>
+      </div>
+      <div class="foto">
+        <img src="img/processo.webp" alt="Fabricação de portão na Port Reis" width="921" height="639" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="faixa">
+      <p class="rotulo">Contato</p>
+      <h2>Peça o seu orçamento</h2>
+      <p class="apoio col">Atendimento de segunda a sexta, das 9h às 17h.</p>
+      <div class="canais">
+        <a href="tel:1120923879"><b>Telefone</b><span>(11) 2092-3879</span></a>
+        <a href="https://wa.me/5511965509232"><b>WhatsApp</b><span>(11) 96550-9232</span></a>
+        <a href="mailto:contato@portreis.com.br"><b>E-mail</b><span>contato@portreis.com.br</span></a>
+        <div><b>Endereço</b><span>Av. Joaquim Marra, 676 — Vila Matilde — São Paulo, SP — CEP 03514-000</span></div>
+      </div>
+      <div class="acoes"><a class="btn" href="https://wa.me/5511965509232">Chamar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Port Reis · Vila Matilde, São Paulo, SP</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Port Reis. Fotos e textos são deles.</span>
+  </footer>
+</div>
+
+</body>
+</html>
