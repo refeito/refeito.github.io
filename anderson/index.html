@@ -176,6 +176,16 @@
   .pac li::before { content: "· "; color: var(--acento); }
   .pac .sinal { margin-top: auto; padding-top: 12px; font-size: 0.88rem; color: var(--texto-2); }
   .pac .sinal b { display: block; font-family: var(--titulo); font-size: 1.6rem; color: var(--texto); font-weight: 500; line-height: 1.2; }
+  .pac .pagar {
+    display: block; text-align: center; text-decoration: none;
+    font-family: var(--corpo); font-weight: 600; font-size: 0.82rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    background: var(--acento); color: var(--fundo);
+    padding: 13px 16px; margin-top: 14px;
+  }
+  .pac .pagar:hover { filter: brightness(1.12); }
+  .pac .pagar:focus-visible { outline: 2px solid var(--aviso); outline-offset: 3px; }
+  .pac.escolhido .pagar { background: var(--acento); }
 
   .exemplo {
     display: inline-block;
@@ -297,7 +307,7 @@
   <section class="reserva" id="reserva">
     <p class="rotulo">Reserva</p>
     <h2>Trave a sua data agora, pelo Pix.</h2>
-    <span class="exemplo">Valores de exemplo · você define os seus</span>
+    <span class="exemplo">Checkout de teste · valores de exemplo, você define os seus</span>
     <div class="pacotes">
       <div class="pac">
         <h3>Ensaio</h3>
@@ -307,6 +317,7 @@
           <li>60 fotos tratadas</li>
         </ul>
         <p class="sinal">Sinal de reserva<b>R$ 300</b></p>
+        <a class="pagar" href="https://pay.depixapp.com/refeito/demo-sinal-ensaio" rel="nofollow">Pagar o sinal por Pix</a>
       </div>
       <div class="pac escolhido">
         <h3>Casamento</h3>
@@ -316,6 +327,7 @@
           <li>Galeria online entregue</li>
         </ul>
         <p class="sinal">Sinal de reserva<b>R$ 800</b></p>
+        <a class="pagar" href="https://pay.depixapp.com/refeito/demo-sinal-casamento" rel="nofollow">Pagar o sinal por Pix</a>
       </div>
       <div class="pac">
         <h3>Destination</h3>
@@ -325,12 +337,13 @@
           <li>Deslocamento incluso</li>
         </ul>
         <p class="sinal">Sinal de reserva<b>R$ 1.500</b></p>
+        <a class="pagar" href="https://pay.depixapp.com/refeito" rel="nofollow">Pagar o sinal por Pix</a>
       </div>
     </div>
 
     <div class="fluxo">
       <div><b>1 · Escolhe</b> O casal seleciona o pacote e informa a data do casamento.</div>
-      <div><b>2 · Paga o sinal</b> Um QR Pix aparece na hora, sem sair do site e sem cadastro.</div>
+      <div><b>2 · Paga o sinal</b> Um QR Pix aparece na hora, sem cadastro. Os botões acima já funcionam, em modo de teste.</div>
       <div><b>3 · Data travada</b> Você recebe a confirmação assim que o Pix cai, em segundos.</div>
     </div>
   </section>
