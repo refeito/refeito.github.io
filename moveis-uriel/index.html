@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Marcenaria Uriel</title>
+<meta name="description" content="Cozinhas, guarda-roupas e móveis planejados sob medida, com a experiência de quem atravessou quatro décadas de marcenaria.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Libre+Franklin:wght@300;400;600&display=swap">
@@ -99,6 +103,8 @@
   .faixa h2 { margin-bottom:12px; }
   .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
+  .contatos a { text-decoration:none; }
+  .contatos a:hover span { color:var(--acento); }
   .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
                 text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
   .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
@@ -110,9 +116,11 @@
     .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
     .heroi.invertido .texto { order:0; }
     section { padding-block:48px; }
-    .nav { display:none; }
+    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
   }
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</head>
+<body>
 
 <div class="tarja">
   <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Marcenaria Uriel e não foi feita por eles.
@@ -133,7 +141,7 @@
 
 <div class="heroi cheio">
     <div class="capa">
-      <img src="img/capa.webp" alt="" width="1600" height="900">
+      <img src="img/capa.webp" alt="Móveis planejados" width="1600" height="900">
       <div class="veu"></div>
       <div class="env texto">
         <h1>Quarenta e cinco anos fazendo móvel que dura.</h1>
@@ -155,15 +163,15 @@
     <p class="apoio col">Quatro décadas ensinam onde o móvel falha. É por isso que o nosso não falha ali.</p>
     <div class="cards">
       <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="" width="800" height="500"></div>
+        <div class="capa"><img src="img/s1.webp" alt="Cozinha planejada" width="800" height="500"></div>
         <div class="txt"><h3>Cozinha planejada</h3><p>Marcenaria que aguenta calor, umidade e uso diário por anos.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="" width="800" height="500"></div>
+        <div class="capa"><img src="img/s2.webp" alt="Guarda-roupa" width="800" height="500"></div>
         <div class="txt"><h3>Guarda-roupa</h3><p>Interno organizado de acordo com o que você realmente guarda.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="" width="800" height="500"></div>
+        <div class="capa"><img src="img/s3.webp" alt="Sob medida" width="800" height="500"></div>
         <div class="txt"><h3>Sob medida</h3><p>Espaços difíceis, pé-direito alto e recortes que móvel pronto não resolve.</p></div>
       </article>
     </div>
@@ -184,8 +192,8 @@
       <p class="rotulo">Contato</p>
       <h2>Conta o que você quer planejar.</h2>
       <p class="apoio col">Mande a medida ou a foto do espaço. O orçamento é sem compromisso.</p>
-      <div class="contatos"><div><b>Telefone</b><span>(11) 94331-5404</span></div><div><b>WhatsApp</b><span>(11) 98047-1798</span></div><div><b>Atendimento</b><span>São Paulo</span></div></div>
-      <div class="acoes"><a class="btn" href="#contato">Pedir orçamento</a></div>
+      <div class="contatos"><div><b>Telefone</b><a href="tel:11943315404"><span>(11) 94331-5404</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511980471798"><span>(11) 98047-1798</span></a></div><div><b>E-mail</b><a href="mailto:contato@moveisplanejadosuriel.com.br"><span>contato@moveisplanejadosuriel.com.br</span></a></div><div><b>Atendimento</b><span>São Paulo</span></div></div>
+      <div class="acoes"><a class="btn" href="https://wa.me/5511980471798">Chamar no WhatsApp</a><a class="btn vazio" href="tel:11943315404">Ligar agora</a></div>
     </div>
   </section>
 
@@ -194,3 +202,5 @@
     <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Marcenaria Uriel.</span>
   </footer>
 </div>
+</body>
+</html>

@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GS Marcenaria</title>
+<meta name="description" content="Cozinha, sala, dormitório, área gourmet e banheiro planejados, e também móveis para escritórios e empresas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Libre+Franklin:wght@300;400;600&display=swap">
@@ -99,6 +103,8 @@
   .faixa h2 { margin-bottom:12px; }
   .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
+  .contatos a { text-decoration:none; }
+  .contatos a:hover span { color:var(--acento); }
   .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
                 text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
   .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
@@ -110,9 +116,11 @@
     .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
     .heroi.invertido .texto { order:0; }
     section { padding-block:48px; }
-    .nav { display:none; }
+    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
   }
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</head>
+<body>
 
 <div class="tarja">
   <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de GS Marcenaria e não foi feita por eles.
@@ -134,36 +142,36 @@
 <div class="env"><div class="heroi lado">
     <div class="grade">
       <div class="texto">
-        <h1>Móveis planejados feitos na medida do seu espaço.</h1>
-        <p class="sub">Cozinha, dormitório, home office e portas sob medida, com projeto e fabricação próprios em Guarulhos.</p>
+        <h1>Móveis planejados e portas de madeira sob medida, em Guarulhos.</h1>
+        <p class="sub">Cozinha, sala, dormitório, área gourmet e banheiro planejados, e também móveis para escritórios e empresas.</p>
         <div class="acoes">
         <a class="btn" href="#contato">Pedir orçamento</a>
         <a class="btn vazio" href="#servicos">Ver serviços</a>
       </div>
       </div>
-      <div class="foto"><img src="img/capa.webp" alt="" width="1600" height="1200"></div>
+      <div class="foto"><img src="img/capa.webp" alt="Cozinha planejada em madeira" width="1600" height="1200"></div>
     </div>
   </div></div>
 
 <div class="env">
-  <div class="provas"><div><b>Fábrica</b><span>própria</span></div><div><b>Projeto 3D</b><span>antes de fabricar</span></div><div><b>Grande SP</b><span>instalação</span></div></div>
+  <div class="provas"><div><b>12x</b><span>no cartão</span></div><div><b>5% off</b><span>à vista</span></div><div><b>Nota fiscal</b><span>em todo serviço</span></div></div>
 
   <section id="servicos">
     <p class="rotulo">Serviços</p>
     <h2>Do projeto à instalação, tudo aqui dentro.</h2>
-    <p class="apoio col">Não terceirizamos a fabricação. Isso encurta o prazo e mantém o acabamento no padrão.</p>
+    <p class="apoio col">Trabalhamos apenas com os melhores marceneiros de São Paulo, e todo trabalho tem garantia e nota fiscal.</p>
     <div class="cards">
       <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Cozinha planejada</h3><p>Armários, torre quente e ilha, aproveitando cada centímetro.</p></div>
+        <div class="capa"><img src="img/s1.webp" alt="Residencial" width="800" height="500"></div>
+        <div class="txt"><h3>Residencial</h3><p>Cozinha, sala, dormitório, área gourmet, banheiro e lavanderia planejados.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Dormitório e closet</h3><p>Guarda-roupa, painel e cabeceira com acabamento contínuo.</p></div>
+        <div class="capa"><img src="img/s2.webp" alt="Corporativo" width="800" height="500"></div>
+        <div class="txt"><h3>Corporativo</h3><p>Escritórios, clínicas, restaurantes e lojas, com móvel sob medida para o uso.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Portas sob medida</h3><p>Portas de correr, pivotantes e embutidas no mesmo material.</p></div>
+        <div class="capa"><img src="img/s3.webp" alt="Portas de madeira" width="800" height="500"></div>
+        <div class="txt"><h3>Portas de madeira</h3><p>Portas comuns, pivotantes e de correr, com escolha de madeira, acabamento e cor.</p></div>
       </article>
     </div>
   </section>
@@ -172,9 +180,9 @@
     <p class="rotulo">Como funciona</p>
     <h2>Como seu móvel nasce.</h2>
     <div class="passos col">
-      <div><div><h3>Medição no local</h3><p>Tiramos as medidas reais do ambiente, com prumo e nível.</p></div></div>
-      <div><div><h3>Projeto em 3D</h3><p>Você vê o móvel antes de existir e ajusta o que quiser.</p></div></div>
-      <div><div><h3>Fabricação e montagem</h3><p>Produzimos na nossa fábrica e montamos no dia combinado.</p></div></div>
+      <div><div><h3>Simule o seu projeto</h3><p>Diga o ambiente e a medida, e a gente monta a proposta.</p></div></div>
+      <div><div><h3>Escolha o material</h3><p>Tipo de madeira, acabamento, cor e formato definidos com você.</p></div></div>
+      <div><div><h3>Fabricação e instalação</h3><p>Fabricamos e instalamos, com garantia e nota fiscal no final.</p></div></div>
     </div>
   </section>
 
@@ -183,8 +191,8 @@
       <p class="rotulo">Contato</p>
       <h2>Qual ambiente você quer planejar?</h2>
       <p class="apoio col">Mande a planta ou uma foto do espaço. Fazemos o projeto e o orçamento sem compromisso.</p>
-      <div class="contatos"><div><b>Telefone</b><span>(11) 99284-9376</span></div><div><b>WhatsApp</b><span>(11) 99284-9376</span></div><div><b>Atendimento</b><span>Guarulhos e Grande SP</span></div></div>
-      <div class="acoes"><a class="btn" href="#contato">Pedir orçamento</a></div>
+      <div class="contatos"><div><b>Telefone</b><a href="tel:1150509888"><span>(11) 5050-9888</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511992849376"><span>(11) 99284-9376</span></a></div><div><b>E-mail</b><a href="mailto:contato@gsmarcenaria.com.br"><span>contato@gsmarcenaria.com.br</span></a></div><div><b>Atendimento</b><span>Guarulhos e Grande SP</span></div><div><b>Endereço</b><span>Rua Porto Velho, 856 — Jardim Cumbica, Guarulhos. Seg a sex 8h às 17h</span></div></div>
+      <div class="acoes"><a class="btn" href="https://wa.me/5511992849376">Chamar no WhatsApp</a><a class="btn vazio" href="tel:1150509888">Ligar agora</a></div>
     </div>
   </section>
 
@@ -193,3 +201,5 @@
     <span>Proposta de redesenho feita pelo Refeito. Não afiliada a GS Marcenaria.</span>
   </footer>
 </div>
+</body>
+</html>

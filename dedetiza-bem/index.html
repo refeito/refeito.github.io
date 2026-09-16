@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dedetiza Bem</title>
+<meta name="description" content="Atendemos todo o estado de São Paulo, com serviço adequado às normas da Anvisa para ambientes regulados.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Libre+Franklin:wght@300;400;600&display=swap">
@@ -99,6 +103,8 @@
   .faixa h2 { margin-bottom:12px; }
   .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
+  .contatos a { text-decoration:none; }
+  .contatos a:hover span { color:var(--acento); }
   .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
                 text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
   .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
@@ -110,9 +116,11 @@
     .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
     .heroi.invertido .texto { order:0; }
     section { padding-block:48px; }
-    .nav { display:none; }
+    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
   }
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</head>
+<body>
 
 <div class="tarja">
   <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Dedetiza Bem e não foi feita por eles.
@@ -133,11 +141,11 @@
 
 <div class="heroi cheio">
     <div class="capa">
-      <img src="img/capa.webp" alt="" width="1600" height="900">
+      <img src="img/capa.webp" alt="Ambiente comercial atendido por dedetização" width="1600" height="900">
       <div class="veu"></div>
       <div class="env texto">
-        <h1>Dedetização feita direito, com garantia por escrito.</h1>
-        <p class="sub">Atendimento rápido em toda São Paulo, com produtos registrados e retorno incluso se a praga voltar.</p>
+        <h1>Dedetização para clínica, restaurante, indústria e condomínio.</h1>
+        <p class="sub">Atendemos todo o estado de São Paulo, com serviço adequado às normas da Anvisa para ambientes regulados.</p>
         <div class="acoes">
         <a class="btn" href="#contato">Pedir orçamento</a>
         <a class="btn vazio" href="#servicos">Ver serviços</a>
@@ -147,7 +155,7 @@
   </div>
 
 <div class="env">
-  <div class="provas"><div><b>Garantia</b><span>por escrito</span></div><div><b>Rápido</b><span>agendamento</span></div><div><b>São Paulo</b><span>toda a cidade</span></div></div>
+  <div class="provas"><div><b>Estado de SP</b><span>atendimento</span></div><div><b>Anvisa</b><span>normas atendidas</span></div><div><b>Rápido</b><span>agendamento</span></div></div>
 
   <section id="servicos">
     <p class="rotulo">Serviços</p>
@@ -155,16 +163,16 @@
     <p class="apoio col">Insetos, roedores e cupim. Identificamos a praga antes de escolher o produto.</p>
     <div class="cards">
       <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Insetos rasteiros</h3><p>Baratas, formigas e pulgas, com aplicação em frestas e ralos.</p></div>
+        <div class="capa"><img src="img/s1.webp" alt="Saúde e alimentação" width="800" height="500"></div>
+        <div class="txt"><h3>Saúde e alimentação</h3><p>Clínicas, consultórios, ambientes hospitalares, restaurantes e indústria alimentícia.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Roedores</h3><p>Controle com iscas em pontos seguros e vedação de acessos.</p></div>
+        <div class="capa"><img src="img/s2.webp" alt="Condomínio e indústria" width="800" height="500"></div>
+        <div class="txt"><h3>Condomínio e indústria</h3><p>Áreas comuns, garagem, galpão e centro logístico, com cronograma.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Cupim</h3><p>Madeira e solo, com tratamento localizado na colônia.</p></div>
+        <div class="capa"><img src="img/s3.webp" alt="Pragas e serviços" width="800" height="500"></div>
+        <div class="txt"><h3>Pragas e serviços</h3><p>De baratas e cupim a pombos e morcegos, mais caixa d'água, sanitização e desentupimento.</p></div>
       </article>
     </div>
   </section>
@@ -175,7 +183,7 @@
     <div class="passos col">
       <div><div><h3>Você chama</h3><p>Conte qual praga apareceu e em que tipo de imóvel.</p></div></div>
       <div><div><h3>Agendamos</h3><p>Marcamos no horário que funciona para você, inclusive fora do comercial.</p></div></div>
-      <div><div><h3>Aplicamos com garantia</h3><p>Se a praga voltar dentro do prazo, voltamos sem cobrar de novo.</p></div></div>
+      <div><div><h3>Aplicação</h3><p>Equipe no local no horário combinado, com o método adequado ao tipo de imóvel.</p></div></div>
     </div>
   </section>
 
@@ -183,14 +191,16 @@
     <div class="faixa">
       <p class="rotulo">Contato</p>
       <h2>Conta o que apareceu por aí.</h2>
-      <p class="apoio col">Descreva a praga e o local. Orçamento na hora, sem compromisso.</p>
-      <div class="contatos"><div><b>Telefone</b><span>(11) 94048-0734</span></div><div><b>WhatsApp</b><span>(11) 94048-0734</span></div><div><b>Atendimento</b><span>São Paulo</span></div></div>
-      <div class="acoes"><a class="btn" href="#contato">Pedir orçamento</a></div>
+      <p class="apoio col">Diga a praga, o tipo de imóvel e a área aproximada. Assim o orçamento sai certo de primeira.</p>
+      <div class="contatos"><div><b>Telefone</b><a href="tel:1128727591"><span>(11) 2872-7591</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511940480734"><span>(11) 94048-0734</span></a></div><div><b>E-mail</b><a href="mailto:comercial@dedetizabem.com.br"><span>comercial@dedetizabem.com.br</span></a></div><div><b>Atendimento</b><span>Todo o estado de São Paulo</span></div><div><b>Endereço</b><span>R. Edgar de Campos, 206 — Vila Nair, São Paulo</span></div></div>
+      <div class="acoes"><a class="btn" href="https://wa.me/5511940480734">Chamar no WhatsApp</a><a class="btn vazio" href="tel:1128727591">Ligar agora</a></div>
     </div>
   </section>
 
   <footer>
-    <span>Dedetiza Bem · São Paulo</span>
+    <span>Dedetiza Bem · Todo o estado de São Paulo</span>
     <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Dedetiza Bem.</span>
   </footer>
 </div>
+</body>
+</html>

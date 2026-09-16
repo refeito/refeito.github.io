@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dedetizadora Samurai</title>
+<meta name="description" content="Dedetização, desratização e descupinização com atendimento 24 horas por dia, em São Paulo, ABCD, Baixada Santista e Litoral.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Libre+Franklin:wght@300;400;600&display=swap">
@@ -99,6 +103,8 @@
   .faixa h2 { margin-bottom:12px; }
   .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
+  .contatos a { text-decoration:none; }
+  .contatos a:hover span { color:var(--acento); }
   .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
                 text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
   .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
@@ -110,9 +116,11 @@
     .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
     .heroi.invertido .texto { order:0; }
     section { padding-block:48px; }
-    .nav { display:none; }
+    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
   }
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</head>
+<body>
 
 <div class="tarja">
   <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Dedetizadora Samurai e não foi feita por eles.
@@ -135,18 +143,18 @@
     <div class="grade">
       <div class="texto">
         <h1>Proteção total contra pragas, para a sua família e o seu negócio.</h1>
-        <p class="sub">Dedetização, desratização e descupinização com produtos registrados na Anvisa e aplicação sem cheiro forte.</p>
+        <p class="sub">Dedetização, desratização e descupinização com atendimento 24 horas por dia, em São Paulo, ABCD, Baixada Santista e Litoral.</p>
         <div class="acoes">
         <a class="btn" href="#contato">Pedir orçamento</a>
         <a class="btn vazio" href="#servicos">Ver serviços</a>
       </div>
       </div>
-      <div class="foto"><img src="img/capa.webp" alt="" width="1600" height="1200"></div>
+      <div class="foto"><img src="img/capa.webp" alt="Atendimento de controle de pragas 24 horas" width="1600" height="1200"></div>
     </div>
   </div></div>
 
 <div class="env">
-  <div class="provas"><div><b>Anvisa</b><span>produtos registrados</span></div><div><b>Garantia</b><span>em todo serviço</span></div><div><b>Grande SP</b><span>atendimento</span></div></div>
+  <div class="provas"><div><b>24 horas</b><span>todos os dias</span></div><div><b>Litoral</b><span>abcd e baixada</span></div><div><b>Inspeção</b><span>gratuita</span></div></div>
 
   <section id="servicos">
     <p class="rotulo">Serviços</p>
@@ -154,16 +162,16 @@
     <p class="apoio col">Cada praga pede um produto e um método. Identificamos antes de aplicar qualquer coisa.</p>
     <div class="cards">
       <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Dedetização</h3><p>Baratas, formigas, aranhas e insetos rasteiros, com produto sem cheiro forte.</p></div>
+        <div class="capa"><img src="img/s1.webp" alt="Baratas, pulgas e traças" width="800" height="500"></div>
+        <div class="txt"><h3>Baratas, pulgas e traças</h3><p>Insetos rasteiros e voadores, com aplicação em frestas, ralos e rodapés.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Desratização</h3><p>Ratos e camundongos, com bloqueio de entrada e monitoramento.</p></div>
+        <div class="capa"><img src="img/s2.webp" alt="Cupim e carrapato" width="800" height="500"></div>
+        <div class="txt"><h3>Cupim e carrapato</h3><p>Descupinização de madeira e solo, e controle de carrapato em área externa.</p></div>
       </article>
       <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="" width="800" height="500"></div>
-        <div class="txt"><h3>Descupinização</h3><p>Cupim de madeira e de solo, com tratamento na origem da colônia.</p></div>
+        <div class="capa"><img src="img/s3.webp" alt="Ratos, caixa d'água e desentupimento" width="800" height="500"></div>
+        <div class="txt"><h3>Ratos, caixa d'água e desentupimento</h3><p>Desratização, limpeza de caixa d'água e desentupidora, também 24 horas.</p></div>
       </article>
     </div>
   </section>
@@ -172,9 +180,9 @@
     <p class="rotulo">Como funciona</p>
     <h2>Como é o atendimento.</h2>
     <div class="passos col">
-      <div><div><h3>Inspeção</h3><p>Vamos ao local identificar a praga e por onde ela entra.</p></div></div>
+      <div><div><h3>Inspeção gratuita</h3><p>Vamos ao local sem custo identificar a praga e por onde ela entra.</p></div></div>
       <div><div><h3>Orçamento fechado</h3><p>Preço e método definidos antes de começar, sem surpresa depois.</p></div></div>
-      <div><div><h3>Aplicação e retorno</h3><p>Aplicamos e voltamos dentro da garantia se a praga reaparecer.</p></div></div>
+      <div><div><h3>Aplicação</h3><p>Equipe no local no horário combinado, inclusive de madrugada.</p></div></div>
     </div>
   </section>
 
@@ -183,13 +191,15 @@
       <p class="rotulo">Contato</p>
       <h2>Qual é o problema hoje?</h2>
       <p class="apoio col">Conte qual praga apareceu e onde. Fazemos a inspeção e o orçamento sem compromisso.</p>
-      <div class="contatos"><div><b>Telefone</b><span>(11) 95379-1988</span></div><div><b>WhatsApp</b><span>(11) 95379-1988</span></div><div><b>Atendimento</b><span>São Paulo e Grande SP</span></div></div>
-      <div class="acoes"><a class="btn" href="#contato">Pedir orçamento</a></div>
+      <div class="contatos"><div><b>Telefone</b><a href="tel:11953791988"><span>(11) 95379-1988</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511953791988"><span>(11) 95379-1988</span></a></div><div><b>E-mail</b><a href="mailto:contato@dedetizadorasamurai.com.br"><span>contato@dedetizadorasamurai.com.br</span></a></div><div><b>Atendimento</b><span>São Paulo, ABCD, Baixada Santista e Litoral</span></div></div>
+      <div class="acoes"><a class="btn" href="https://wa.me/5511953791988">Chamar no WhatsApp</a><a class="btn vazio" href="tel:11953791988">Ligar agora</a></div>
     </div>
   </section>
 
   <footer>
-    <span>Dedetizadora Samurai · São Paulo e Grande SP</span>
+    <span>Dedetizadora Samurai · São Paulo, ABCD, Baixada Santista e Litoral</span>
     <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Dedetizadora Samurai.</span>
   </footer>
 </div>
+</body>
+</html>
