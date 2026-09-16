@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tapeçaria Gonçalves — Fabricação e reforma de estofados em Londrina</title>
+<meta name="description" content="Há 30 anos a Tapeçaria Gonçalves fabrica e reforma sofás, poltronas, cadeiras, puffs e cabeceiras em Londrina, com grande variedade de cores e tecidos.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap">
+<style>
+  /* Paleta do site atual: preto #010101 e vermelho #ee3b24 (mesmo tom que aparece
+     na fachada e no letreiro da loja, ver f02/f08). Fundo branco predominante — as
+     15 fotos de produto são todas em still branco, e um fundo escuro faria cada
+     uma virar uma caixa branca flutuando. Preto e vermelho ficam como acento forte
+     no cabeçalho, nos botões e na faixa de contato, onde entra a foto noturna que
+     eles mesmos usavam como fundo dessa seção (entre-em-contato-escura.jpg). */
+  :root {
+    --papel:#ffffff; --papel2:#f7f4f1; --linha:#e8e1d9;
+    --tinta:#1c1714; --tinta2:#6d6259;
+    --preto:#121110; --vermelho:#ee3b24; --vermelho2:#c62d18; --vermelho-tinta:#ffffff;
+    --titulo:"Barlow Condensed",Arial,sans-serif;
+    --corpo:"Work Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); font-weight:700; text-wrap:balance;
+             letter-spacing:-0.01em; text-transform:uppercase; }
+  p { margin:0; }
+  ul { margin:0; padding:0; list-style:none; }
+
+  .env { max-width:1160px; margin:0 auto; padding-inline:20px; }
+  .col { max-width:640px; }
+
+  .tarja { background:#1c1714; border-bottom:1px solid #000; color:#cfc6bd;
+           font-size:0.78rem; line-height:1.5; text-align:center;
+           padding:11px 18px; padding-top:calc(11px + env(safe-area-inset-top,0px));
+           overflow-wrap:anywhere; }
+  .tarja b { color:#fff; } .tarja a { color:#ff8a75; font-weight:600; }
+
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:16px;
+          padding-block:16px; flex-wrap:wrap; }
+  .topo .logo img { width:170px; height:auto; }
+  .ligar { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ligar a.fone { font-family:var(--titulo); font-weight:700; font-size:1.1rem;
+                  text-decoration:none; white-space:nowrap; letter-spacing:0.01em; }
+  .ligar a.fone small { display:block; font-family:var(--corpo); font-weight:600; font-size:0.6rem;
+                        letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); }
+  .ligar a.fone:hover { color:var(--vermelho); }
+
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:1rem;
+         text-transform:uppercase; letter-spacing:0.02em;
+         text-decoration:none; background:var(--vermelho); color:var(--vermelho-tinta);
+         padding:13px 24px; border-radius:4px; white-space:nowrap; }
+  .btn:hover { background:var(--vermelho2); }
+  .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
+  .btn.vazio { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.5); }
+  .btn.vazio:hover { border-color:#fff; }
+  .btn.escuro { background:var(--preto); color:#fff; }
+  .btn.escuro:hover { background:#000; }
+
+  .faixa-vermelha { background:var(--vermelho); height:4px; }
+
+  .heroi { display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center;
+           padding-block:44px 48px; }
+  .heroi .selo { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.72rem;
+                 letter-spacing:0.14em; text-transform:uppercase; color:#fff; background:var(--preto);
+                 padding:6px 14px; border-radius:99px; margin-bottom:16px; }
+  .heroi h1 { font-size:clamp(2rem,5.4vw,3.1rem); line-height:1.02; }
+  .heroi .sub { margin-top:14px; font-family:var(--titulo); font-weight:600; font-size:1.2rem;
+                text-transform:uppercase; color:var(--vermelho); letter-spacing:0.01em; }
+  .heroi p.txt { margin-top:14px; color:var(--tinta2); font-size:1.02rem; max-width:38em; }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .heroi .foto img { border-radius:10px; aspect-ratio:4/3; object-fit:cover;
+                      box-shadow:0 20px 50px -20px rgba(0,0,0,.35); }
+
+  .diferenciais-wrap { position:relative; border-block:1px solid var(--linha); overflow:hidden; }
+  .diferenciais-wrap .textura { position:absolute; inset:0; background-image:url('img/f05.webp');
+                                 background-size:420px; background-repeat:repeat; opacity:0.05; }
+  .diferenciais { position:relative; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+                  gap:2px; background:var(--linha); }
+  .diferenciais > div { background:var(--papel); padding:24px 22px; }
+  .diferenciais b { display:block; font-family:var(--titulo); font-weight:700; font-size:1.05rem;
+                     text-transform:uppercase; color:var(--vermelho); margin-bottom:6px; }
+  .diferenciais span { display:block; color:var(--tinta2); font-size:0.92rem; }
+
+  section { padding-block:58px; }
+  .rotulo { font-family:var(--titulo); font-weight:700; font-size:0.76rem; letter-spacing:0.16em;
+            text-transform:uppercase; color:var(--vermelho); margin-bottom:10px; }
+  h2 { font-size:clamp(1.6rem,4vw,2.15rem); line-height:1.08; margin-bottom:16px; }
+  .apoio { color:var(--tinta2); font-size:1.02rem; }
+
+  .reforma { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+  .reforma .lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;
+                     margin-top:22px; }
+  .reforma .lista li { display:grid; grid-template-columns:16px 1fr; gap:10px; font-weight:600;
+                        font-size:0.98rem; align-items:start; }
+  .reforma .lista li::before { content:"—"; color:var(--vermelho); font-weight:700; }
+  .reforma figure { margin:0; border-radius:10px; overflow:hidden; border:1px solid var(--linha); }
+  .reforma img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .reforma figcaption { padding:12px 16px; font-size:0.84rem; color:var(--tinta2); background:var(--papel2); }
+
+  .categoria { margin-top:40px; }
+  .categoria:first-of-type { margin-top:28px; }
+  .categoria h3 { font-family:var(--titulo); font-weight:700; font-size:1.2rem;
+                  text-transform:uppercase; color:var(--tinta); margin-bottom:4px; }
+  .categoria p { color:var(--tinta2); font-size:0.92rem; max-width:56ch; margin-bottom:16px; }
+  /* auto-fill (nao auto-fit) com teto fixo: uma categoria com 1 ou 2 fotos nao pode
+     esticar a foto sozinha pra ocupar a linha inteira — foi o que aconteceu com
+     Cadeiras (1 foto virando um quadrado gigante) antes desse ajuste. */
+  .galeria { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,210px)); gap:14px; }
+  .galeria figure { margin:0; border-radius:10px; overflow:hidden; border:1px solid var(--linha);
+                     background:var(--papel2); }
+  .galeria img { width:100%; aspect-ratio:1/1; object-fit:contain; padding:8px; background:#fff; }
+
+  .tecidos { background:var(--papel2); }
+  .tecidos .grade { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; margin-top:8px; }
+  .tecidos .galeria { grid-template-columns:repeat(2,1fr); }
+  .tecidos .galeria img { aspect-ratio:4/3; object-fit:cover; padding:0; }
+  .tecidos p + p { margin-top:12px; }
+
+  #contato { position:relative; color:#fff; }
+  #contato .fundo { position:absolute; inset:0; }
+  #contato .fundo img { width:100%; height:100%; object-fit:cover; }
+  #contato .fundo::after { content:""; position:absolute; inset:0;
+                            background:linear-gradient(180deg, rgba(10,8,7,.86), rgba(10,8,7,.93)); }
+  #contato .env { position:relative; }
+  #contato .rotulo { color:var(--vermelho); }
+  #contato h2 { color:#fff; }
+  #contato .apoio { color:#d8d1c9; }
+  .contato-grade { display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; margin-top:30px; align-items:start; }
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:20px 24px; }
+  .canais > * { min-width:0; text-decoration:none; }
+  .canais b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
+              letter-spacing:0.12em; text-transform:uppercase; color:#b9afa5; margin-bottom:5px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.15rem;
+                 overflow-wrap:anywhere; line-height:1.3; color:#fff; }
+  .canais a:hover span { color:var(--vermelho); }
+  .contato-foto { border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,.15); }
+  .contato-foto img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .contato-foto figcaption { padding:10px 14px; font-size:0.8rem; background:rgba(0,0,0,.5); color:#d8d1c9; }
+  .acoes-contato { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+
+  footer { padding-block:22px 40px; color:var(--tinta2); font-size:0.8rem; display:grid; gap:6px; }
+  footer a { color:var(--vermelho); text-decoration:none; }
+
+  @media (max-width:820px) {
+    .heroi { grid-template-columns:1fr; gap:26px; padding-block:32px 36px; }
+    .reforma { grid-template-columns:1fr; gap:24px; }
+    .reforma .foto { order:-1; }
+    .tecidos .grade { grid-template-columns:1fr; gap:22px; }
+    .contato-grade { grid-template-columns:1fr; gap:28px; }
+    section { padding-block:42px; }
+    .topo .logo img { width:140px; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada</b>, feita pelo Refeito. Não é o site oficial da Tapeçaria Gonçalves.
+  O site oficial é <a href="https://tapecariagoncalves.com.br/">tapecariagoncalves.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<div class="env">
+  <header class="topo">
+    <a class="logo" href="#"><img src="img/logo.webp" alt="Tapeçaria Gonçalves" width="300" height="60" style="width:170px;height:auto"></a>
+    <div class="ligar">
+      <a class="fone" href="tel:+554333286949"><small>Telefone</small>(43) 3328-6949</a>
+      <a class="fone" href="https://wa.me/5543999630606"><small>WhatsApp</small>(43) 99963-0606</a>
+      <a class="btn" href="https://wa.me/5543999630606">Pedir orçamento</a>
+    </div>
+  </header>
+</div>
+<div class="faixa-vermelha"></div>
+
+<div class="env">
+  <div class="heroi">
+    <div>
+      <span class="selo">Há 30 anos em Londrina</span>
+      <h1>Fabricação e reforma de estofados</h1>
+      <p class="sub">Tradição e qualidade em estofados em Londrina</p>
+      <p class="txt">
+        Há 30 anos a Tapeçaria Gonçalves fabrica e comercializa móveis estofados com
+        qualidade e conforto para deixar seu ambiente decorado e aconchegante. Conheça
+        os nossos serviços e faça um orçamento sem compromisso.
+      </p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5543999630606">Fazer orçamento</a>
+        <a class="btn vazio" style="color:var(--tinta);border-color:var(--linha)" href="#trabalhos">Ver trabalhos</a>
+      </div>
+    </div>
+    <div class="foto"><img src="img/f01.webp" alt="Sofá em couro e tecido fabricado pela Tapeçaria Gonçalves" width="1400" height="747"></div>
+  </div>
+</div>
+
+<div class="diferenciais-wrap">
+  <div class="textura"></div>
+  <div class="diferenciais">
+    <div><b>Fabricação própria</b><span>Fabricação e reforma de estofados.</span></div>
+    <div><b>Pagamento facilitado</b><span>Parcelamos no cartão em até 10×.</span></div>
+    <div><b>Produtos de qualidade</b><span>Produtos com garantia de qualidade.</span></div>
+    <div><b>Variedade em produtos</b><span>Diversos modelos a pronta entrega.</span></div>
+  </div>
+</div>
+
+<div class="env">
+  <section id="o-que-fazemos">
+    <p class="rotulo">O que reformamos</p>
+    <div class="reforma">
+      <div>
+        <h2>Se é estofado, a Tapeçaria Gonçalves fabrica ou reforma.</h2>
+        <p class="apoio">
+          Atuando há 30 anos em Londrina no ramo de móveis estofados, a empresa é
+          especializada em fabricação e reforma de:
+        </p>
+        <ul class="lista">
+          <li>Estofados reclináveis e retráteis</li>
+          <li>Sofá-cama</li>
+          <li>Poltronas</li>
+          <li>Recamiê</li>
+          <li>Cadeiras</li>
+          <li>Cabeceiras</li>
+          <li>Chaise</li>
+          <li>Sofás</li>
+          <li>Puffs</li>
+        </ul>
+      </div>
+      <figure class="foto">
+        <img src="img/f02.webp" alt="Fachada da Tapeçaria Gonçalves, na Avenida Winston Churchill em Londrina" width="1400" height="747" loading="lazy">
+        <figcaption>A loja da Tapeçaria Gonçalves, na Av. Winston Churchill, em Londrina.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="trabalhos">
+    <p class="rotulo">Trabalhos executados</p>
+    <h2>Confira a diversidade e qualidade dos nossos produtos.</h2>
+
+    <div class="categoria">
+      <h3>Sofás</h3>
+      <p>Várias opções em estofados reclináveis e retráteis. Modelos de 2 e 3 lugares,
+      sofá de canto e sofá com chaise, com variedade de cores, estampas e tecidos.</p>
+      <div class="galeria">
+        <figure><img src="img/f03.webp" alt="Sofá retrátil e reclinável Tapeçaria Gonçalves" width="1400" height="747" loading="lazy"></figure>
+        <figure><img src="img/f06.webp" alt="Sofá em tecido azul-marinho com almofadas estampadas" width="800" height="356" loading="lazy"></figure>
+        <figure><img src="img/f10.webp" alt="Sofá retrátil com chaise em tecido bege" width="500" height="400" loading="lazy"></figure>
+        <figure><img src="img/f15.webp" alt="Sofá reto em couro caramelo" width="500" height="400" loading="lazy"></figure>
+        <figure><img src="img/f16.webp" alt="Sofá cinza com almofadas soltas" width="500" height="400" loading="lazy"></figure>
+        <figure><img src="img/f19.webp" alt="Sofá bege com almofadas em couro caramelo" width="500" height="400" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3>Poltronas</h3>
+      <p>Poltronas tradicionais e decorativas — modelos decorativa, reclinável,
+      amamentação e capitonê, com variedade de cores, estampas e tecidos.</p>
+      <div class="galeria">
+        <figure><img src="img/f12.webp" alt="Poltrona capitonê rosa" width="500" height="400" loading="lazy"></figure>
+        <figure><img src="img/f18.webp" alt="Poltrona reclinável em couro caramelo com porta-copos" width="500" height="400" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3>Cadeiras</h3>
+      <div class="galeria">
+        <figure><img src="img/f09.webp" alt="Cadeira estofada em couro marrom com braços de madeira" width="500" height="400" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3>Cabeceiras</h3>
+      <p>Cabeceiras para decorar a cama, em formas geométricas e capitonê.</p>
+      <div class="galeria">
+        <figure><img src="img/f11.webp" alt="Cabeceira estofada branca em formas geométricas" width="500" height="400" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="tecidos" id="tecidos">
+    <div style="max-width:1160px;margin:0 auto">
+      <p class="rotulo">Tecido e acabamento</p>
+      <h2>Grande variedade de cores e tecidos no mostruário.</h2>
+      <div class="grade">
+        <div>
+          <p class="apoio">Oferecemos qualidade, eficiência e rapidez, com grande variedade
+          de cores e tecidos no nosso mostruário.</p>
+          <p class="apoio">Nos puffs, modelos patchwork, baú, pés palito, banqueta, quadrado,
+          redondo e capitonê — e nas almofadas, variedade de cores, estampas, modelos e tecidos.</p>
+        </div>
+        <div class="galeria">
+          <figure><img src="img/f07.webp" alt="Almofadas decorativas em tecidos diferentes" width="550" height="500" loading="lazy"></figure>
+          <figure><img src="img/f13.webp" alt="Puff patchwork colorido" width="500" height="400" loading="lazy"></figure>
+          <figure><img src="img/f14.webp" alt="Puff estampado colorido" width="500" height="400" loading="lazy"></figure>
+          <figure><img src="img/f17.webp" alt="Puff capitonê azul-turquesa" width="500" height="400" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="contato">
+  <div class="fundo"><img src="img/f04.webp" alt="" width="1400" height="622" loading="lazy"></div>
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Faça um orçamento sem compromisso.</h2>
+    <div class="contato-grade">
+      <div>
+        <div class="canais">
+          <a href="tel:+554333286949"><b>Telefone</b><span>(43) 3328-6949</span></a>
+          <a href="https://wa.me/5543999630606"><b>WhatsApp</b><span>(43) 99963-0606</span></a>
+          <a href="mailto:tapecaria.goncalves@hotmail.com"><b>E-mail</b><span>tapecaria.goncalves@hotmail.com</span></a>
+          <div><b>Endereço</b><span>Av. Winston Churchill, 897 — Londrina, PR</span></div>
+          <div><b>Atendimento</b><span style="font-size:0.98rem">Seg. a sexta: 8h às 18h<br>Sábado: 8h às 12h</span></div>
+        </div>
+        <div class="acoes-contato">
+          <a class="btn" href="https://wa.me/5543999630606">Chamar no WhatsApp</a>
+          <a class="btn vazio" href="tel:+554333286949">Ligar agora</a>
+        </div>
+      </div>
+      <figure class="contato-foto">
+        <img src="img/f08.webp" alt="Fachada atual da Tapeçaria Gonçalves em Londrina" width="600" height="450" loading="lazy">
+        <figcaption>A Tapeçaria Gonçalves, na Av. Winston Churchill, 897.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="env">
+  <footer>
+    <span>Tapeçaria Gonçalves · Av. Winston Churchill, 897 — Londrina, PR</span>
+    <span>Proposta de redesenho feita pelo <a href="https://refeito.github.io">Refeito</a>. Não afiliada à Tapeçaria Gonçalves. Fotos e textos são deles.</span>
+  </footer>
+</div>
+
+</body>
+</html>
