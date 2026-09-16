@@ -86,10 +86,11 @@
   .card p { font-size:0.96rem; color:var(--tinta2); }
 
   .passos { display:grid; gap:2px; margin-top:26px; }
-  .passos div { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
-                border-top:1px solid var(--linha); }
-  .passos div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
-                        font-family:var(--titulo); font-weight:700; font-size:0.86rem; color:var(--acento); padding-top:3px; }
+  .passos > div { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
+                  border-top:1px solid var(--linha); }
+  .passos > div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
+                          font-family:var(--titulo); font-weight:700; font-size:0.86rem;
+                          color:var(--acento); padding-top:3px; }
   .passos { counter-reset:passo; }
   .passos h3 { font-size:1.04rem; font-weight:700; margin-bottom:3px; }
   .passos p { font-size:0.98rem; color:var(--tinta2); }
