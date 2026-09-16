@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vida e Arte Paisagismo — Paisagismo e jardinagem em Niterói, RJ</title>
-<meta name="description" content="Jardins, jardins verticais, lagos, cascatas e gazebos de piaçava. Vida e Arte Paisagismo, em Niterói, RJ.">
+<title>Vida e Arte Paisagismo — Paisagismo, aquarismo e loja no Rio de Janeiro e Niterói</title>
+<meta name="description" content="Paisagismo e decoração na criação de painéis, lagos, cascatas e jardins, e loja de plantas, vasos, pedras e aquarismo. Vida e Arte Paisagismo, em Itaipú, Niterói - RJ.">
 <link rel="icon" type="image/webp" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,11 +50,13 @@
   .btn:focus-visible { outline:3px solid var(--verde); outline-offset:3px; }
   .btn.vazio { background:transparent; color:var(--verde); border:1.5px solid var(--verde); }
 
-  .heroi { padding-block:20px 46px; }
+  .heroi { padding-block:20px 30px; }
   .heroi h1 { font-size:clamp(2.1rem,6vw,3.1rem); font-weight:700; line-height:1.05; }
   .heroi .sub { margin-top:14px; font-size:1.15rem; color:var(--verde2); font-weight:600; }
   .heroi .txt { margin-top:16px; color:var(--tinta2); font-size:1.03rem; }
   .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+  .faixa-foto { margin-top:30px; border-radius:14px; overflow:hidden; }
+  .faixa-foto img { width:100%; }
 
   section { padding-block:46px; border-top:1px solid var(--linha); }
   .rotulo { font-size:0.7rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
@@ -63,26 +65,54 @@
   .apoio { color:var(--tinta2); font-size:1.03rem; }
 
   /* Galeria grande: o produto deles e visual, entao ela abre a pagina. */
-  .galeria { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px; }
+  .galeria { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:24px; }
   .cartao { border-radius:14px; overflow:hidden; background:var(--papel2); border:1px solid var(--linha); }
-  .cartao .capa { aspect-ratio:4/3; overflow:hidden; }
+  .cartao .capa { aspect-ratio:12/5; overflow:hidden; }
   .cartao .capa img { width:100%; height:100%; object-fit:cover; }
-  .cartao .par { aspect-ratio:4/3; display:grid; grid-template-columns:1fr 1fr; gap:2px; }
-  .cartao .par > div { position:relative; overflow:hidden; }
-  .cartao .par img { width:100%; height:100%; object-fit:cover; }
-  .cartao .par span { position:absolute; left:6px; bottom:6px; background:rgba(3,41,3,.78); color:#fff;
-                       font-size:0.62rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
-                       padding:3px 7px; border-radius:5px; }
   .cartao .txt { padding:16px 18px 20px; }
   .cartao h3 { font-size:1.15rem; font-weight:700; }
   .cartao p { font-size:0.92rem; color:var(--tinta2); margin-top:5px; }
+
+  .obras { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr)); gap:14px; margin-top:24px; }
+  .obra { border-radius:12px; overflow:hidden; border:1px solid var(--linha); background:var(--papel2); }
+  .obra .capa { aspect-ratio:4/3; }
+  .obra .capa img { width:100%; height:100%; object-fit:cover; }
+  .obra p { padding:10px 12px 14px; font-size:0.86rem; font-weight:600; line-height:1.3; }
+
+  /* Fotorrealismo: o par nao e obra construida, e a pre-visualizacao grafica
+     que eles vendem como servico. A moldura escura e o rotulo de cada metade
+     tem que dizer isso sozinhos, porque a imagem por si parece foto. */
+  .previa { background:#141613; border-radius:16px; padding:clamp(18px,3vw,26px); margin-top:24px; }
+  .previa-par { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .previa figure { margin:0; }
+  .previa .capa { aspect-ratio:4/3; border-radius:10px; overflow:hidden; }
+  .previa .capa img { width:100%; height:100%; object-fit:cover; }
+  .previa figcaption { margin-top:9px; font-size:0.74rem; font-weight:700; letter-spacing:0.08em;
+                       text-transform:uppercase; color:#b9c4b6; }
+  .previa figcaption span { display:block; margin-top:3px; font-size:0.78rem; font-weight:500;
+                            letter-spacing:0; text-transform:none; color:#8d968b; }
+  .previa .nota { margin-top:16px; font-size:0.92rem; color:#c7cfc4; }
 
   .tipos { display:grid; gap:26px; margin-top:26px; grid-template-columns:1fr 1fr; }
   .tipos > div { border-left:3px solid var(--verde); padding-left:16px; }
   .tipos h3 { font-size:1.05rem; font-weight:700; margin-bottom:6px; }
   .tipos p { font-size:0.96rem; color:var(--tinta2); }
-  .extra { margin-top:22px; font-size:0.94rem; color:var(--tinta2); }
-  .extra b { color:var(--tinta); }
+
+  .servicos-lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));
+                    gap:8px 20px; margin-top:24px; list-style:none; }
+  .servicos-lista li { display:grid; grid-template-columns:16px 1fr; gap:10px; font-size:0.96rem; }
+  .servicos-lista li::before { content:"✓"; color:var(--verde); font-weight:700; }
+
+  /* A loja e metade do negocio: duas verticais com catalogo proprio, lado a lado. */
+  .loja-grade { display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:26px; }
+  .vertical { background:var(--papel2); border:1px solid var(--linha); border-radius:14px; padding:22px 24px 24px; }
+  .vertical h3 { font-size:1.2rem; font-weight:700; }
+  .vertical > p { font-size:0.94rem; color:var(--tinta2); margin-top:8px; }
+  .vertical ul { list-style:none; margin-top:16px; display:grid; gap:9px; }
+  .vertical li { font-size:0.95rem; display:grid; grid-template-columns:auto 1fr; gap:8px; align-items:baseline; }
+  .vertical li b { font-weight:700; }
+  .vertical li i { font-style:normal; color:var(--tinta2); font-size:0.88rem; }
+  .vertical li::before { content:"·"; color:var(--verde); font-weight:700; }
 
   /* Peças em resina: fotos escuras, tiradas de noite, com a peça acesa por
      dentro. Forçar num cartao claro como o da galeria lava o contraste que e
@@ -99,13 +129,15 @@
   .lista-manut li { display:grid; grid-template-columns:16px 1fr; gap:10px; font-size:0.98rem; }
   .lista-manut li::before { content:"✓"; color:var(--verde); font-weight:700; }
 
+  .empresa-grade { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:24px; }
+  .cartao-txt { background:var(--papel2); border-radius:12px; padding:20px 22px; }
+  .cartao-txt b { display:block; font-family:var(--titulo); font-weight:700; font-size:0.95rem; color:var(--verde); margin-bottom:6px; }
+  .cartao-txt p { font-size:0.94rem; color:var(--tinta2); }
+
   .atende-grade { display:grid; grid-template-columns:1.2fr 1fr; gap:32px; margin-top:22px; align-items:start; }
   .endereco b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
                 letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:5px; }
   .endereco p { font-size:1.02rem; overflow-wrap:anywhere; }
-  .missao { background:var(--papel2); border-radius:12px; padding:20px 22px; }
-  .missao b { display:block; font-family:var(--titulo); font-weight:700; font-size:0.95rem; color:var(--verde); margin-bottom:6px; }
-  .missao p { font-size:0.94rem; color:var(--tinta2); }
 
   .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:20px 26px; margin-top:24px; }
   .contatos > * { text-decoration:none; }
@@ -113,17 +145,32 @@
                 text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
   .contatos span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.05rem;
                    color:var(--tinta); overflow-wrap:anywhere; line-height:1.3; }
+  .contatos i { display:block; font-style:normal; font-size:0.78rem; font-weight:500; color:var(--tinta2); margin-top:2px; }
   .contatos a:hover span { color:var(--verde); }
 
   footer { border-top:1px solid var(--linha); padding-block:26px 44px; color:var(--tinta2);
-           font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
+           font-size:0.8rem; overflow-wrap:anywhere; }
+  footer .env { display:grid; gap:6px; }
   footer a { color:var(--verde2); }
 
+  @media (max-width:900px) {
+    .galeria { grid-template-columns:1fr 1fr; }
+  }
+  /* A foto e um recorte 4:1, para escapar do texto queimado no original. Em
+     375px isso vira uma tira de 84px; o corte lateral devolve altura a ela. */
+  @media (max-width:620px) {
+    .faixa-foto { aspect-ratio:12/5; }
+    .faixa-foto img { height:100%; object-fit:cover; }
+  }
   @media (max-width:760px) {
     .galeria { grid-template-columns:1fr; }
+    .cartao .capa { aspect-ratio:16/9; }
     .tipos { grid-template-columns:1fr; gap:20px; }
+    .loja-grade { grid-template-columns:1fr; gap:18px; }
+    .empresa-grade { grid-template-columns:1fr; gap:16px; }
     .atende-grade { grid-template-columns:1fr; gap:22px; }
     .lista-manut { grid-template-columns:1fr; }
+    .previa-par { grid-template-columns:1fr; }
     section { padding-block:36px; }
     .nav { gap:14px; font-size:0.84rem; }
   }
@@ -142,13 +189,14 @@
   <header class="topo">
     <a class="marca" href="#">
       <img src="img/logo.webp" alt="Vida e Arte Paisagismo" width="115" height="120">
-      <span class="nome"><b>Vida e Arte</b><span>Paisagismo · Niterói, RJ</span></span>
+      <span class="nome"><b>Vida e Arte</b><span>Paisagismo · Itaipú, Niterói - RJ</span></span>
     </a>
     <nav class="nav">
-      <a href="#galeria">Galeria</a>
+      <a href="#servicos-realizados">Projetos</a>
+      <a href="#fotorrealismo">Fotorrealismo</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#loja">Loja</a>
       <a href="#resina">Resina</a>
-      <a href="#manutencao">Manutenção</a>
-      <a href="#atendemos">Atendimento</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
@@ -157,23 +205,66 @@
     <h1>Natureza é vida.</h1>
     <p class="sub">Ter a natureza por perto realmente faz uma grande diferença na vida das pessoas.</p>
     <p class="txt col">A Vida e Arte Paisagismo é uma empresa que prima pela execução de projetos personalizados,
-      conduzidos por um atendimento único, do projeto mais simples ao mais complexo — em Itaipú, Niterói.</p>
+      conduzidos por um atendimento único. Paisagismo e decoração na criação de painéis, lagos, cascatas e
+      jardins — e uma loja de plantas, vasos, pedras e aquarismo, em Itaipú, Niterói.</p>
     <div class="acoes">
-      <a class="btn" href="https://wa.me/5521993233389?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20vida%20e%20arte%20paisagismo!">Chamar no WhatsApp</a>
-      <a class="btn vazio" href="#galeria">Ver os projetos</a>
+      <a class="btn" href="https://wa.me/5521993233389?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20vida%20e%20arte%20paisagismo!">WhatsApp (21) 99323-3389</a>
+      <a class="btn vazio" href="#servicos-realizados">Ver os projetos</a>
     </div>
+    <figure class="faixa-foto">
+      <img src="img/ponte-corda.webp" alt="Ponte de madeira com corrimão de corda sobre lago, entre pedras artificiais, em jardim da Vida e Arte Paisagismo" width="1200" height="300">
+    </figure>
   </div>
 </div>
 
-<section id="galeria">
+<section id="servicos-realizados">
   <div class="env">
-    <p class="rotulo">O que já construímos</p>
-    <h2>Jardins, jardins verticais, lagos e gazebos de piaçava.</h2>
-    <p class="apoio col">Os próprios projetos realizados, divididos como a empresa os organiza.</p>
+    <p class="rotulo">Portfólio</p>
+    <h2>Últimos serviços realizados</h2>
+    <p class="apoio col">Profissionais qualificados e com muita experiência para execução dos projetos.
+      Cada peça abaixo leva o nome que a própria Vida e Arte deu a ela.</p>
+
+    <div class="obras">
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-cascata-piscina.webp" alt="Cascata de pedra artificial caindo em piscina de pastilha azul" width="600" height="455"></div>
+        <p>Cascata na piscina</p>
+      </figure>
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-cascata-lago.webp" alt="Cascata em lago artificial com pedras, bromélias e topiaria" width="600" height="455"></div>
+        <p>Cascata no lago artificial</p>
+      </figure>
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-hoteis.webp" alt="Deck de madeira com corrimão de corda e quiosque ao fundo, em hotel" width="600" height="455" loading="lazy"></div>
+        <p>Paisagismo em hotéis</p>
+      </figure>
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-espaco-zen.webp" alt="Quiosque de palha, ponte vermelha e canteiro florido em jardim" width="600" height="455" loading="lazy"></div>
+        <p>Espaço zen</p>
+      </figure>
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-quiosque.webp" alt="Interior de quiosque de piaçava com mesas, cadeiras e luminárias acesas" width="600" height="455" loading="lazy"></div>
+        <p>Quiosque de piaçava</p>
+      </figure>
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-jardim-iluminacao.webp" alt="Escada de pedra iluminada entre canteiros, à noite" width="600" height="455" loading="lazy"></div>
+        <p>Jardim, iluminação e pedras artificiais</p>
+      </figure>
+      <figure class="obra" style="margin:0">
+        <div class="capa"><img src="img/obra-jardim-vertical-deck.webp" alt="Jardim vertical com vasos brancos em treliça, ao lado de piscina com cascata" width="600" height="455" loading="lazy"></div>
+        <p>Jardim vertical e deck</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="env">
+    <p class="rotulo">Projetos</p>
+    <h2>Jardins, jardins verticais, lagos e cascatas</h2>
 
     <div class="galeria">
       <article class="cartao">
-        <div class="capa"><img src="img/jardins.webp" alt="Jardim com lago, ponte e cascata em pedra — Vida e Arte Paisagismo" width="1169" height="487"></div>
+        <div class="capa"><img src="img/jardins.webp" alt="Jardim com lago, ponte e cascata em pedra — Vida e Arte Paisagismo" width="1169" height="487" loading="lazy"></div>
         <div class="txt"><h3>Jardins</h3><p>Criamos ou modificamos seu jardim.</p></div>
       </article>
       <article class="cartao">
@@ -184,51 +275,127 @@
         <div class="capa"><img src="img/lagos.webp" alt="Cascata de pedra sobre lago com carpas, com deque de madeira" width="1169" height="487" loading="lazy"></div>
         <div class="txt"><h3>Lagos e cascatas</h3><p>Pode ser feito em vários tamanhos e formatos diferentes.</p></div>
       </article>
-      <article class="cartao">
-        <div class="par">
-          <div><img src="img/gazebo-antes.webp" alt="Terreno antes da obra" width="464" height="260" loading="lazy"><span>Antes</span></div>
-          <div><img src="img/gazebo-depois.webp" alt="Gazebo de piaçava construído sobre o lago" width="464" height="260" loading="lazy"><span>Depois</span></div>
-        </div>
-        <div class="txt"><h3>Gazebos de piaçava</h3><p>Quiosque de piaçava — um dos últimos projetos realizados.</p></div>
-      </article>
+    </div>
+
+    <div class="tipos">
+      <div>
+        <h3>Painéis</h3>
+        <p>Painéis de madeira, polietileno, ferro, alumínio, pedra porosa ou resina.</p>
+      </div>
+      <div>
+        <h3>Gazebos de piaçava</h3>
+        <p>O quiosque de piaçava é um dos projetos já entregues pela equipe.</p>
+      </div>
+      <div>
+        <h3>Locações</h3>
+        <p>Realizamos locação de vasos e plantas para eventos. Temos vários modelos de vaso e espécies de
+           plantas, para áreas externas e internas. Entre em contato conosco e faça um orçamento.</p>
+      </div>
+      <div>
+        <h3>Projetos antes e depois</h3>
+        <p>Realizamos todos os tipos de projetos de paisagismo. Transformamos seu sonho em realidade.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="o-que-fazemos">
+<section id="fotorrealismo">
   <div class="env">
-    <p class="rotulo">Como trabalhamos</p>
-    <h2>O que fazemos em cada tipo de projeto</h2>
-    <div class="tipos">
-      <div>
-        <h3>Jardins</h3>
-        <p>Criamos ou modificamos seu jardim. Realizamos todos os tipos de serviços de paisagismo, do projeto
-           mais simples ao mais complexo, para transformar seu sonho em realidade.</p>
+    <p class="rotulo">Serviço</p>
+    <h2>Fotorrealismo: veja o projeto antes de executar</h2>
+    <p class="apoio col">Utilizamos fotorrealismo com imagens digitalizadas para pré-visualização do projeto.
+      Visualize seu projeto antes da execução através de arte gráfica.</p>
+
+    <div class="previa">
+      <div class="previa-par">
+        <figure>
+          <div class="capa"><img src="img/gazebo-antes.webp" alt="Terreno em declive com muro de arrimo e grama, antes do projeto" width="464" height="260" loading="lazy"></div>
+          <figcaption>Antes<span>Foto do terreno como ele está hoje.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="capa"><img src="img/gazebo-depois.webp" alt="Arte gráfica do mesmo terreno com gazebo de piaçava, ponte de madeira, lago com carpas e pedras artificiais" width="464" height="260" loading="lazy"></div>
+          <figcaption>Projeto em arte gráfica<span>Imagem digitalizada sobre a foto do terreno. Não é foto de obra pronta.</span></figcaption>
+        </figure>
       </div>
-      <div>
-        <h3>Jardins verticais</h3>
-        <p>Jardim vertical e deck de madeira estão entre os últimos serviços realizados pela equipe, aliando
-           parede verde a estrutura de madeira sob pergolado.</p>
+      <p class="nota">Este é o par de “Projetos antes e depois” que a Vida e Arte publica: o gazebo, a ponte,
+        as carpas e as plantas são desenhados por cima da fotografia do terreno, para o cliente decidir antes
+        da obra começar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="env">
+    <p class="rotulo">Serviços</p>
+    <h2>O que a Vida e Arte faz</h2>
+    <p class="apoio col">Profissionais qualificados e com muita experiência para execução dos serviços.
+      Realizamos todos os tipos de serviços de paisagismo, do projeto mais simples ao mais complexo.</p>
+    <ul class="servicos-lista">
+      <li>Fotorrealismo</li>
+      <li>Cascata em piscinas e lagos artificiais</li>
+      <li>Lagos</li>
+      <li>Jardim vertical</li>
+      <li>Gazebo de piaçava</li>
+      <li>Painéis</li>
+      <li>Locações</li>
+      <li>Plantio</li>
+      <li>Reforma de jardim</li>
+      <li>Reforma de lago</li>
+      <li>Manutenção de jardins</li>
+      <li>Manutenção de lagos</li>
+      <li>Manutenção de aquários</li>
+    </ul>
+  </div>
+</section>
+
+<section id="loja">
+  <div class="env">
+    <p class="rotulo">Loja</p>
+    <h2>A loja: paisagismo e aquarismo</h2>
+    <p class="apoio col">Além dos projetos, a Vida e Arte vende os produtos para montar e manter o jardim e o
+      aquário — treze catálogos de produto, divididos em duas linhas.</p>
+
+    <div class="loja-grade">
+      <div class="vertical">
+        <h3>Paisagismo</h3>
+        <p>A criação de projetos de áreas verdes traz a natureza para perto, transforma seu espaço em um
+          ambiente agradável, equilibrado e harmonioso. Com isso, aumentamos nossa qualidade de vida.</p>
+        <ul>
+          <li><span><b>Plantas</b></span></li>
+          <li><span><b>Vasos</b> <i>— fibra de vidro ou polietileno, impermeáveis e fáceis de limpar, em
+            diferentes modelos, formatos e cores.</i></span></li>
+          <li><span><b>Vasos Geniale</b></span></li>
+          <li><span><b>Pedras</b> <i>— artificiais, de resina ou concreto, com material reciclado de entulho
+            da própria obra na base. Excelentes para marcar caminhos, formar lagos e decorar jardins.</i></span></li>
+          <li><span><b>Fertilizantes</b> <i>— diversas opções para as plantas crescerem fortes e bonitas.</i></span></li>
+          <li><span><b>Acessórios</b> <i>— ferramentas que facilitam o plantio e a manutenção do jardim.</i></span></li>
+          <li><span><b>Produtos em resina</b></span></li>
+        </ul>
       </div>
-      <div>
-        <h3>Lagos e cascatas</h3>
-        <p>Lagos: pode ser feito em vários tamanhos e formatos diferentes. Cascatas: pode ser feito em vários
-           tamanhos e formatos. O lago com ponte é um dos projetos já entregues.</p>
-      </div>
-      <div>
-        <h3>Gazebos de piaçava</h3>
-        <p>Gazebo de piaçava é um dos serviços oferecidos. O quiosque de piaçava ao lado, construído sobre o
-           lago, é um dos últimos projetos realizados pela equipe.</p>
+
+      <div class="vertical">
+        <h3>Aquarismo</h3>
+        <p>O hobby de criar peixes ornamentais proporciona sensações de bem-estar, relaxamento e harmonia para
+          as pessoas e o ambiente. As crianças aprendem sobre o ciclo de vida, desenvolvem responsabilidades e
+          o contato direto com a natureza.</p>
+        <ul>
+          <li><span><b>Aquários</b></span></li>
+          <li><span><b>Peixes</b></span></li>
+          <li><span><b>Rações</b></span></li>
+          <li><span><b>Bombas e filtros</b> <i>— a filtragem é um dos fatores determinantes para o sucesso do
+            aquário: com filtros, mídias e clarificadores UV estabelecemos uma filtragem mecânica, química e
+            biológica segura.</i></span></li>
+          <li><span><b>Decorações</b></span></li>
+          <li><span><b>Testes</b></span></li>
+        </ul>
       </div>
     </div>
-    <p class="extra col"><b>Também fazem:</b> painéis em madeira, polietileno, ferro, alumínio, pedra porosa ou
-      resina, e locações.</p>
   </div>
 </section>
 
 <section id="resina">
   <div class="env">
-    <p class="rotulo">Produtos</p>
+    <p class="rotulo">Loja · Paisagismo</p>
     <h2>Produtos em resina</h2>
     <p class="apoio col">Criação de peças em resina de diversos tamanhos e modelos, tornando-se um produto,
       diferenciado, resistente e único. Uma verdadeira obra de arte.</p>
@@ -266,6 +433,36 @@
   </div>
 </section>
 
+<section id="empresa">
+  <div class="env">
+    <p class="rotulo">A empresa</p>
+    <h2>A Vida e Arte Paisagismo</h2>
+    <p class="apoio col">Estar mais perto do cliente é nosso maior desejo, e poder tornar realidade os sonhos
+      de nossos clientes, e ser responsável por esses sonhos nos traz grande satisfação pessoal e profissional.</p>
+    <div class="empresa-grade">
+      <div class="cartao-txt">
+        <b>Nosso grande diferencial</b>
+        <p>Dedicamos atenção exclusiva na criação dos projetos, do mais simples ao mais complexo, buscando
+          atender cada cliente de acordo com suas necessidades individuais.</p>
+      </div>
+      <div class="cartao-txt">
+        <b>Missão</b>
+        <p>Gerar qualidade de vida, transformando espaços comuns em ambientes vivos e agradáveis para o
+          convívio familiar e socialização.</p>
+      </div>
+      <div class="cartao-txt">
+        <b>Visão</b>
+        <p>Ser a empresa de paisagismo número um em criação de valor, conectando pessoas a natureza e
+          preservando a vida!</p>
+      </div>
+      <div class="cartao-txt">
+        <b>Loja virtual</b>
+        <p>Estamos desenvolvendo nossa loja virtual, que em breve levará nossos produtos para todo o mundo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="atendemos">
   <div class="env">
     <p class="rotulo">Atendimento</p>
@@ -274,12 +471,10 @@
       <div class="endereco">
         <b>Endereço</b>
         <p>Av. Ewerton da Costa Xavier, Nº4900 — Itaipú, Niterói - RJ</p>
-        <p class="apoio" style="margin-top:14px">Atendimento em Niterói e região, incluindo Maricá e São Gonçalo.</p>
       </div>
-      <div class="missao">
-        <b>Missão</b>
-        <p>Gerar qualidade de vida, transformando espaços comuns em ambientes vivos e agradáveis para o convívio
-           familiar e socialização.</p>
+      <div class="endereco">
+        <b>Área de atendimento</b>
+        <p>Paisagismo no Rio de Janeiro e Niterói. Atendimento em todo o Brasil.</p>
       </div>
     </div>
   </div>
@@ -290,23 +485,24 @@
     <p class="rotulo">Contato</p>
     <h2>Fale com a Vida e Arte</h2>
     <div class="contatos">
-      <a href="https://wa.me/5521993233389?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20vida%20e%20arte%20paisagismo!"><b>WhatsApp</b><span>Chamar agora</span></a>
-      <a href="tel:2127090798"><b>Telefone</b><span>(21) 2709-0798</span></a>
-      <a href="tel:2137411570"><b>Telefone</b><span>(21) 3741-1570</span></a>
-      <a href="tel:21996341892"><b>Celular</b><span>(21) 99634-1892</span></a>
+      <a href="https://wa.me/5521993233389?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20vida%20e%20arte%20paisagismo!"><b>WhatsApp</b><span>(21) 99323-3389</span><i>o número do botão de WhatsApp do site</i></a>
+      <a href="tel:+552127090798"><b>Telefone fixo</b><span>(21) 2709-0798</span></a>
+      <a href="tel:+552137411570"><b>Telefone fixo</b><span>(21) 3741-1570</span></a>
+      <a href="tel:+5521996341892"><b>Celular</b><span>(21) 99634-1892</span></a>
       <a href="mailto:contato@vidaearte.com.br"><b>E-mail</b><span>contato@vidaearte.com.br</span></a>
+      <a href="https://www.facebook.com/vidaeartepaisagismo"><b>Facebook</b><span>/vidaeartepaisagismo</span></a>
       <div><b>Endereço</b><span>Av. Ewerton da Costa Xavier, Nº4900 — Itaipú, Niterói - RJ</span></div>
     </div>
     <div class="acoes" style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
-      <a class="btn" href="https://wa.me/5521993233389?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20vida%20e%20arte%20paisagismo!">Chamar no WhatsApp</a>
-      <a class="btn vazio" href="tel:2127090798">Ligar agora</a>
+      <a class="btn" href="https://wa.me/5521993233389?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20vida%20e%20arte%20paisagismo!">WhatsApp (21) 99323-3389</a>
+      <a class="btn vazio" href="tel:+552127090798">Ligar (21) 2709-0798</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="env">
-    <span>Vida e Arte Paisagismo · Itaipú, Niterói - RJ</span>
+    <span>Vida e Arte Paisagismo · Av. Ewerton da Costa Xavier, Nº4900 — Itaipú, Niterói - RJ</span>
     <span>Proposta de redesenho não solicitada, feita pelo <a href="https://refeito.github.io">Refeito</a>.
       Não afiliada à Vida e Arte Paisagismo. Fotos, textos e informações são deles.</span>
   </div>

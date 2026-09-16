@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nado Azul Piscinas — Piscinas em Santo André, SP</title>
-<meta name="description" content="Reforma, manutenção e construção de piscinas. Loja física de produtos para piscina em Santo André, SP. Nado Azul Piscinas, desde 1997.">
+<title>Nado Azul Piscinas — Construção, reforma e loja de piscinas em Santo André</title>
+<meta name="description" content="Construção e manutenção de piscinas desde 1997 e a loja de produtos para piscina mais completa do ABC Paulista. Nado Azul Piscinas, Vila América, Santo André - SP.">
 <link rel="icon" type="image/webp" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +27,7 @@
   h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.01em; }
   p { margin:0; }
   ul { margin:0; padding:0; list-style:none; }
+  figure, blockquote { margin:0; }
 
   .env { max-width:1120px; margin:0 auto; padding-inline:20px; }
   .col { max-width:620px; }
@@ -59,11 +60,14 @@
   .heroi .txt { margin-top:16px; color:var(--tinta2); font-size:1.02rem; }
   .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
 
-  .numeros { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px;
+  /* Os dois numeros vem da pagina de historia, que os data. Os contadores da
+     home sao menores e contam outra coisa; manter os dois na mesma tela faria
+     um desmentir o outro. */
+  .numeros { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:36px;
              padding-top:28px; border-top:1px solid var(--linha); }
   .numeros b { display:block; font-family:var(--titulo); font-weight:700; font-size:clamp(1.5rem,4vw,2.1rem); line-height:1.1; }
-  .numeros span { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.08em;
-                  text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
+  .numeros span { display:block; font-size:0.8rem; color:var(--tinta2); margin-top:4px; }
+  .numeros i { grid-column:1/-1; display:block; font-style:normal; font-size:0.72rem; color:var(--tinta2); margin-top:8px; opacity:0.85; }
 
   .porque { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:22px; }
   .porque li { font-size:0.92rem; font-weight:500; display:flex; align-items:center; gap:7px; }
@@ -77,39 +81,88 @@
   h2 { font-size:clamp(1.5rem,3.8vw,2rem); line-height:1.15; font-weight:700; margin-bottom:14px; }
   .apoio { color:var(--tinta2); font-size:1.02rem; }
 
+  .obras-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));
+                 gap:16px; margin-top:24px; }
+  .obra { border:1px solid var(--linha); border-radius:12px; overflow:hidden; background:var(--papel2); }
+  .obra .capa { aspect-ratio:3/2; }
+  .obra .capa img { width:100%; height:100%; object-fit:cover; }
+  .obra figcaption { padding:12px 14px 16px; font-size:0.88rem; }
+  .obra figcaption b { display:block; font-family:var(--titulo); font-size:0.95rem; }
+  .obra figcaption span { display:block; color:var(--tinta2); font-size:0.84rem; margin-top:3px; }
+
+  /* A prova social e o ativo que o concorrente nao copia — entra alta e com
+     nome e data, nao como faixa decorativa no rodape. */
+  .depo-grade { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:24px; }
+  .depo { border-left:4px solid var(--amarelo); background:var(--papel2); border-radius:0 12px 12px 0;
+          padding:22px 24px; }
+  .depo p { font-size:0.95rem; color:var(--tinta2); }
+  .depo p + p { margin-top:12px; }
+  .depo .assina { margin-top:16px; font-family:var(--titulo); font-weight:700; font-size:0.92rem; color:var(--tinta); }
+  .depo .assina span { display:block; font-family:var(--corpo); font-weight:500; font-size:0.8rem; color:var(--tinta2); }
+
   .servicos-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
                      gap:10px; margin-top:24px; }
   .servicos-grade li { background:var(--papel2); border:1px solid var(--linha); border-radius:10px;
                         padding:14px 16px; font-size:0.94rem; font-weight:500; }
 
-  .produtos-cats { margin-top:22px; font-size:0.96rem; color:var(--tinta2); display:grid; gap:6px; }
-  .produtos-cats b { color:var(--tinta); font-weight:600; }
-
-  .produtos-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
-                     gap:14px; margin-top:26px; }
-  .prod { border:1px solid var(--linha); border-radius:12px; overflow:hidden; background:#fff; }
-  .prod .capa { aspect-ratio:1; background:#fafaf8; display:flex; align-items:center; justify-content:center; padding:10px; }
-  .prod .capa img { width:100%; height:100%; object-fit:contain; }
-  .prod p { padding:10px 12px 14px; font-size:0.86rem; font-weight:600; text-align:center; }
-  .prod.linha { grid-column:1/-1; }
-  .prod.linha .capa { aspect-ratio:16/5; padding:16px; }
-
-  .marcas { margin-top:22px; font-size:0.92rem; color:var(--tinta2); }
-  .marcas b { color:var(--tinta); }
-
   .loja { background:var(--preto); color:#f2f2f0; }
   .loja .rotulo { color:var(--amarelo); }
-  .loja h2 { color:#fff; }
-  .loja-grade { display:grid; grid-template-columns:1.1fr 1fr; gap:32px; margin-top:24px; }
+  .loja h2, .loja h3 { color:#fff; }
+  .loja .apoio { color:#c9c9c5; }
+  .destaque { font-family:var(--titulo); font-weight:600; font-size:clamp(1.05rem,2.4vw,1.25rem);
+              line-height:1.4; color:#fff; margin-top:18px; max-width:760px; }
+  .destaque b { color:var(--amarelo); }
+
+  .produtos-cats { margin-top:22px; font-size:0.95rem; color:#c9c9c5; display:grid; gap:7px; }
+  .produtos-cats b { color:#fff; font-weight:600; }
+
+  .produtos-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));
+                     gap:12px; margin-top:24px; }
+  .prod { border-radius:10px; overflow:hidden; background:#fff; }
+  .prod .capa { aspect-ratio:1; background:#fff; display:flex; align-items:center; justify-content:center; padding:10px; }
+  .prod .capa img { width:100%; height:100%; object-fit:contain; }
+  .prod p { padding:9px 10px 12px; font-size:0.8rem; font-weight:600; text-align:center; color:var(--tinta); }
+  .prod.linha { grid-column:1/-1; }
+  .prod.linha .capa { aspect-ratio:16/5; padding:14px; }
+  .legenda-grade { margin-top:10px; font-size:0.8rem; color:#9c9c98; }
+
+  .marcas-bloco { margin-top:30px; padding-top:24px; border-top:1px solid #2a2a27; }
+  .marcas-bloco b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
+                    letter-spacing:0.12em; text-transform:uppercase; color:#a8a8a4; margin-bottom:10px; }
+  .marcas-lista { display:flex; flex-wrap:wrap; gap:8px 10px; }
+  .marcas-lista li { border:1px solid #33332f; border-radius:99px; padding:6px 14px; font-size:0.88rem;
+                     font-weight:600; color:#f2f2f0; }
+
+  .loja-grade { display:grid; grid-template-columns:1.1fr 1fr; gap:32px; margin-top:30px;
+                padding-top:24px; border-top:1px solid #2a2a27; }
   .loja-info b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
                  letter-spacing:0.12em; text-transform:uppercase; color:#a8a8a4; margin-bottom:5px; }
-  .loja-info p { font-size:1.05rem; overflow-wrap:anywhere; }
+  .loja-info p { font-size:1.02rem; overflow-wrap:anywhere; }
   .loja-info .bloco { margin-bottom:18px; }
   .loja-info a.mapa { display:inline-block; margin-top:6px; color:var(--amarelo); font-weight:600;
                        text-decoration:underline; font-size:0.94rem; }
-  .regioes p { font-size:0.94rem; color:#c9c9c5; }
-  .regioes b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
-               letter-spacing:0.12em; text-transform:uppercase; color:#a8a8a4; margin-bottom:8px; }
+
+  /* Linha do tempo: a empresa conta a propria historia em tres datas, e e
+     dela que saem os dois numeros do alto da pagina. */
+  .linha-tempo { display:grid; gap:0; margin-top:26px; }
+  .marco { display:grid; grid-template-columns:96px 1fr; gap:22px; padding-block:22px;
+           border-top:1px solid var(--linha); }
+  .marco:first-child { border-top:none; padding-top:0; }
+  .marco .ano { font-family:var(--titulo); font-weight:700; font-size:1.5rem; line-height:1.1; color:var(--tinta); }
+  .marco h3 { font-size:1.02rem; font-weight:700; margin-bottom:6px; }
+  .marco p { font-size:0.95rem; color:var(--tinta2); }
+
+  .valores-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));
+                   gap:18px; margin-top:26px; }
+  .valor { background:var(--papel2); border:1px solid var(--linha); border-radius:12px; padding:20px 22px; }
+  .valor b { display:block; font-family:var(--titulo); font-size:0.95rem; margin-bottom:6px; }
+  .valor p { font-size:0.92rem; color:var(--tinta2); }
+
+  .regioes-grade { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+                   gap:20px; margin-top:24px; }
+  .regiao b { display:block; font-family:var(--titulo); font-size:0.7rem; font-weight:700;
+              letter-spacing:0.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:6px; }
+  .regiao p { font-size:0.93rem; color:var(--tinta2); }
 
   .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:20px 26px; margin-top:24px; }
   .contatos > * { text-decoration:none; }
@@ -120,13 +173,14 @@
   .contatos a:hover span { color:var(--amarelo-tinta); text-decoration:underline; }
 
   footer { border-top:1px solid var(--linha); padding-block:26px 44px; color:var(--tinta2);
-           font-size:0.8rem; display:grid; gap:6px; overflow-wrap:anywhere; }
+           font-size:0.8rem; overflow-wrap:anywhere; }
+  footer .env { display:grid; gap:6px; }
   footer a { color:var(--tinta); }
 
   @media (max-width:760px) {
-    .numeros { grid-template-columns:1fr 1fr; }
-    .numeros > div:last-child { grid-column:1/-1; }
+    .depo-grade { grid-template-columns:1fr; }
     .loja-grade { grid-template-columns:1fr; gap:26px; }
+    .marco { grid-template-columns:1fr; gap:6px; }
     section { padding-block:36px; }
     .nav { gap:14px; font-size:0.84rem; }
   }
@@ -145,16 +199,18 @@
   <header class="topo">
     <a class="marca" href="#"><img src="img/logo.webp" alt="Nado Azul Piscinas" width="344" height="120"></a>
     <nav class="nav">
+      <a href="#obras">Obras</a>
+      <a href="#reputacao">Clientes</a>
       <a href="#servicos">Serviços</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#loja">Loja física</a>
+      <a href="#loja">Loja</a>
+      <a href="#empresa">Empresa</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <div class="heroi">
     <span class="selo">Desde 1997</span>
-    <h1>28 anos de experiência em piscinas.</h1>
+    <h1>Construção, reforma e manutenção de piscinas no ABC Paulista.</h1>
     <p class="sub">Credibilidade, compromisso e excelência.</p>
     <p class="txt col">A Nado Azul Piscinas é especialista em venda, instalação e manutenção de piscinas,
       equipamentos e acessórios, atendendo com excelência o ABC Paulista, São Paulo Capital, Interior e
@@ -167,73 +223,146 @@
     </ul>
     <div class="acoes">
       <a class="btn" href="https://wa.me/551144555753">Pedir orçamento no WhatsApp</a>
-      <a class="btn vazio" href="tel:1144555753">Ligar agora</a>
+      <a class="btn vazio" href="tel:+551144555753">Ligar (11) 4455-5753</a>
     </div>
     <div class="numeros">
-      <div><b>28</b><span>Anos de experiência</span></div>
-      <div><b>1.459</b><span>Clientes ativos</span></div>
-      <div><b>4.279</b><span>Serviços executados</span></div>
+      <div><b>+ de 3.000</b><span>clientes atendidos em construção e reforma de piscinas</span></div>
+      <div><b>+ de 7.000</b><span>clientes atendidos na loja física</span></div>
+      <i>Números declarados pela empresa na página de história, em 09/2022.</i>
     </div>
   </div>
 </div>
 
-<section id="servicos">
+<section id="obras">
   <div class="env">
-    <p class="rotulo">Serviços</p>
-    <h2>Reforma e manutenção de piscinas</h2>
-    <p class="apoio col">Atuamos no mercado de construção e manutenção de piscinas e derivados desde 1997,
-      com equipe própria de profissionais treinados e capacitados.</p>
-    <ul class="servicos-grade">
-      <li>Manutenção preventiva e corretiva</li>
-      <li>Reforma e troca de vinil</li>
-      <li>Impermeabilização de piscinas</li>
-      <li>Limpeza e tratamento de água</li>
-      <li>Manutenção de bombas de piscinas</li>
-      <li>Construção de piscinas em alvenaria e vinil</li>
-      <li>Instalação de aquecimento solar, elétrico e a gás</li>
-      <li>Instalação de iluminação em LED subaquática</li>
-      <li>Montagem de cascatas modernas e personalizadas</li>
-      <li>Deck de piscina — instalação, manutenção e pintura</li>
-      <li>Construção de hidromassagem</li>
-      <li>Construção de sauna</li>
-      <li>Consultoria para novos projetos</li>
-    </ul>
+    <p class="rotulo">Obras</p>
+    <h2>Nossos serviços em piscinas</h2>
+    <p class="apoio col">Assumimos todas as etapas: vendemos, fabricamos, inspecionamos os locais da
+      instalação, entregamos, montamos e ainda prestamos assistência técnica com recursos e pessoal próprios.</p>
+
+    <div class="obras-grade">
+      <figure class="obra">
+        <div class="capa"><img src="img/obra-construcao.webp" alt="Equipe da Nado Azul concretando a casca de uma piscina em obra" width="300" height="168"></div>
+        <figcaption><b>Construção de piscina</b><span>Concretagem da casca, com equipe própria.</span></figcaption>
+      </figure>
+      <figure class="obra">
+        <div class="capa"><img src="img/obra-revestimento.webp" alt="Dois profissionais assentando pastilha azul no interior de uma piscina" width="850" height="450"></div>
+        <figcaption><b>Revestimento e reforma</b><span>Assentamento de pastilha no interior da piscina.</span></figcaption>
+      </figure>
+      <figure class="obra">
+        <div class="capa"><img src="img/obra-manutencao.webp" alt="Três profissionais limpando o interior de uma piscina vazia" width="900" height="400" loading="lazy"></div>
+        <figcaption><b>Manutenção de piscinas</b><span>Limpeza e tratamento com a piscina esgotada.</span></figcaption>
+      </figure>
+      <figure class="obra">
+        <div class="capa"><img src="img/obra-bomba.webp" alt="Bomba de piscina recuperada, com etiqueta de serviço da Nado Azul, na loja" width="900" height="602" loading="lazy"></div>
+        <figcaption><b>Manutenção de bombas</b><span>Bomba recuperada, com a etiqueta de serviço da Nado Azul.</span></figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
-<section id="produtos">
+<section id="reputacao">
   <div class="env">
-    <p class="rotulo">Produtos</p>
-    <h2>Produtos para piscina</h2>
-    <p class="apoio col">Se você está procurando produtos para piscina, está no lugar certo.</p>
-    <div class="produtos-cats">
-      <p><b>Química e tratamento:</b> cloro (HTH Tradicional, HTH 10 em 1, Cris Água Tradicional, Cris Água 3 em 1,
-        Genco 3 em 1, em 1kg, 2,5kg e 10kg, e cloro líquido), algicida, clarificante, redutor e elevador de pH.</p>
-      <p><b>Equipamentos:</b> filtros e bombas, aquecedores (solar, elétrico e a gás), iluminação LED subaquática,
-        escadas inox e acessórios.</p>
-      <p><b>Limpeza:</b> kit limpeza (aspiradores, peneiras, mangueiras), robôs aspiradores automáticos, capas de
-        proteção e segurança.</p>
-      <p><b>Lazer:</b> cascatas e fontes.</p>
-    </div>
+    <p class="rotulo">Sobre nossa reputação</p>
+    <h2>Opinião dos clientes</h2>
 
-    <div class="produtos-grade">
-      <div class="prod"><div class="capa"><img src="img/produto-genco.webp" alt="Cloro granulado Genco 3 em 1, balde de 10kg" width="1085" height="1085" loading="lazy"></div><p>Cloro Genco 3 em 1</p></div>
-      <div class="prod"><div class="capa"><img src="img/produto-domclor.webp" alt="Domclor tricloro, desinfetante para piscinas" width="1000" height="1000" loading="lazy"></div><p>Domclor Tricloro</p></div>
-      <div class="prod"><div class="capa"><img src="img/produto-domclor-familia.webp" alt="Domclor cloro granulado, balde de 10kg" width="1000" height="1000" loading="lazy"></div><p>Domclor cloro granulado</p></div>
-      <div class="prod"><div class="capa"><img src="img/produto-hth-tradicional.webp" alt="HTH Tradicional, cloro granulado concentrado" width="604" height="553" loading="lazy"></div><p>HTH Tradicional</p></div>
-      <div class="prod linha"><div class="capa"><img src="img/produto-hth-linha.webp" alt="Linha completa de produtos HTH para piscina" width="985" height="312" loading="lazy"></div><p>Linha completa HTH</p></div>
-    </div>
+    <div class="depo-grade">
+      <blockquote class="depo">
+        <p>Entregamos nas mãos da Nado Azul Piscinas a Reforma e Modernização da Piscina do Nosso Condomínio e
+          até hoje comentamos dentro do Condomínio sobre o conhecimento técnico deles desde o primeiro contato
+          e o entendimento sobre nossas ideias dentro da necessidade e nosso orçamento.</p>
+        <p>Desde a análise crítica da Piscina Antiga, até a entrega do orçamento com amostras de materiais e
+          ainda o projeto muito realista foi tudo perfeito e quando nos entregaram a Piscina, Deck de Madeira,
+          a Sauna e demais áreas, vimos que a qualidade e acabamento fizeram a diferença em Nosso Condomínio.</p>
+        <p>Quando o Assunto é Construção ou Reforma de Piscina, Indicamos a todos a Nado Azul Piscinas.</p>
+        <p class="assina">Mauro Vieira<span>Maio / 2021 · reforma da piscina do condomínio</span></p>
+      </blockquote>
 
-    <p class="marcas"><b>Trabalhamos com as melhores marcas:</b> HidroAll, Genco, Veico, Tholz, Fluidra, Sibrape, Albacete.</p>
+      <blockquote class="depo">
+        <p>Quando Pensamos no Projeto da Nossa Piscina estávamos com medo de confiar em qualquer empresa e
+          recebemos a indicação da nossa Arquiteta da Nado Azul Piscinas e entramos em contato com eles e
+          solicitamos uma visita em nossa casa e logo superou nossas expectativas desde o começo com o
+          atendimento e apresentação da proposta comercial.</p>
+        <p>Além da qualidade que dispensa comentários, o que me surpreendeu muito foi os detalhes no acabamento
+          e em todos os Materiais de Primeira Linha Apresentado e utilizado. Até hoje somos clientes da Nado
+          Azul com sua ampla linha de produtos e prestam sempre serviços de manutenção e limpeza para nós.</p>
+        <p>Se procuram uma Empresa com Profissionais de Confiança, e que não queiram dor de cabeça, indico a
+          Nado Azul Piscina.</p>
+        <p class="assina">Richard Marques<span>Fevereiro / 2020 · projeto de piscina residencial</span></p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="env">
+    <p class="rotulo">Serviços</p>
+    <h2>Construção, reforma e manutenção</h2>
+    <p class="apoio col">Atuamos no mercado de construção e manutenção de piscinas e derivados desde 1997,
+      com equipe própria de profissionais treinados e capacitados. Construímos piscinas de alvenaria, fibra de
+      vidro e vinil, com diversos tipos de acabamento.</p>
+    <ul class="servicos-grade">
+      <li>Projetos personalizados</li>
+      <li>Construção de piscinas em alvenaria, fibra de vidro e vinil</li>
+      <li>Piscinas para condomínios e clubes</li>
+      <li>Reformas e modernização</li>
+      <li>Troca de vinil de piscina</li>
+      <li>Troca de azulejos de piscina</li>
+      <li>Impermeabilização de piscinas</li>
+      <li>Decks e bordas — instalação, manutenção e pintura</li>
+      <li>Construção de hidromassagem</li>
+      <li>Construção de sauna</li>
+      <li>Montagem de cascatas modernas e personalizadas</li>
+      <li>Instalação de iluminação em LED subaquática</li>
+      <li>Instalação de aquecimento solar, elétrico e a gás</li>
+      <li>Manutenção preventiva e corretiva</li>
+      <li>Limpeza e tratamento de água</li>
+      <li>Manutenção de bombas de piscinas</li>
+      <li>Conserto de vazamentos, filtros e aquecedores</li>
+      <li>Consultoria para novos projetos</li>
+    </ul>
   </div>
 </section>
 
 <section id="loja" class="loja">
   <div class="env">
     <p class="rotulo">Loja física</p>
-    <h2>Visite nossa loja em Santo André</h2>
-    <p class="apoio col" style="color:#c9c9c5">Além de atender em obra, a Nado Azul tem loja física de produtos
-      para piscina, com equipe pronta para tirar dúvidas na hora.</p>
+    <h2>A loja, em Vila América</h2>
+    <p class="destaque">A Nado Azul Piscinas é <b>a loja de piscina em Santo André e loja de produtos para
+      piscina mais completa do ABC Paulista.</b></p>
+    <p class="apoio col" style="margin-top:18px">Se você está procurando produtos para piscina, está no lugar
+      certo. A loja abriu em 2000 e hoje reúne a ampla linha de produtos da Nado Azul.</p>
+
+    <div class="produtos-cats">
+      <p><b>Cloro:</b> HTH Tradicional, HTH 10 em 1, Cris Água Tradicional, Cris Água 3 em 1, Genco 3 em 1,
+        em 1 kg, 2,5 kg e 10 kg, e cloro líquido.</p>
+      <p><b>Tratamento de água:</b> algicida de manutenção e de choque, redutor e elevador de pH, Crisfloc,
+        Maxfloc, Genfloc, sulfato de alumínio, barrilha leve, alcalinidade.</p>
+      <p><b>Limpeza:</b> limpa borda, limpa pedra, eliminador de oleosidade, redutor extra forte, kit limpeza
+        (aspiradores, peneiras, escovas, mangueiras) e robôs aspiradores automáticos.</p>
+      <p><b>Equipamentos:</b> bombas, filtros, skimmers, válvulas, corpo de bomba, aquecedores (solar, elétrico
+        e a gás), iluminação LED subaquática, escadas inox e acessórios.</p>
+      <p><b>Testes e lazer:</b> estojos de pH e cloro, fitas-teste, capas de proteção e segurança, cascatas e fontes.</p>
+    </div>
+
+    <div class="produtos-grade">
+      <div class="prod"><div class="capa"><img src="img/produto-genco.webp" alt="Cloro granulado Genco 3 em 1, balde de 10kg" width="1085" height="1085" loading="lazy"></div><p>Cloro Genco 3 em 1</p></div>
+      <div class="prod"><div class="capa"><img src="img/produto-hth-tradicional.webp" alt="HTH Tradicional, cloro granulado concentrado" width="604" height="553" loading="lazy"></div><p>HTH Tradicional</p></div>
+      <div class="prod"><div class="capa"><img src="img/produto-domclor.webp" alt="Domclor tricloro, desinfetante para piscinas" width="1000" height="1000" loading="lazy"></div><p>Domclor Tricloro</p></div>
+      <div class="prod"><div class="capa"><img src="img/produto-domclor-familia.webp" alt="Domclor cloro granulado, balde de 10kg" width="1000" height="1000" loading="lazy"></div><p>Domclor cloro granulado</p></div>
+      <div class="prod linha"><div class="capa"><img src="img/produto-hth-linha.webp" alt="Linha completa de produtos HTH para piscina" width="985" height="312" loading="lazy"></div><p>Linha completa HTH</p></div>
+    </div>
+    <p class="legenda-grade">Fotos de produto publicadas pela Nado Azul. São itens de prateleira, não a lista
+      inteira da loja.</p>
+
+    <div class="marcas-bloco">
+      <b>Trabalhamos com as melhores marcas</b>
+      <ul class="marcas-lista">
+        <li>HidroAll</li><li>Genco</li><li>Veico</li><li>Tholz</li>
+        <li>Fluidra</li><li>Sibrape</li><li>Albacete</li>
+      </ul>
+    </div>
+
     <div class="loja-grade">
       <div class="loja-info">
         <div class="bloco">
@@ -246,10 +375,118 @@
           <p>Segunda a sexta: 09:00 às 18:00<br>Sábados: 09:00 às 13:00</p>
         </div>
       </div>
-      <div class="regioes">
-        <b>Regiões atendidas</b>
+      <div class="loja-info">
+        <div class="bloco">
+          <b>Formas de pagamento</b>
+          <p>Cartão de crédito, Cartão Construcard da Caixa e Cartão BNDES.</p>
+        </div>
+        <div class="bloco">
+          <b>Atendemos</b>
+          <p>Residências, clubes, academias, hotéis e condomínios.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="empresa">
+  <div class="env">
+    <p class="rotulo">A empresa</p>
+    <h2>História da Nado Azul</h2>
+    <p class="apoio col">Mais que piscinas, a Nado Azul Piscinas cria ambientes completos que expressam o seu
+      estilo e sua personalidade.</p>
+
+    <div class="linha-tempo">
+      <div class="marco">
+        <div class="ano">1997</div>
+        <div>
+          <h3>Início das atividades</h3>
+          <p>Solidifica-se a ideia dos sócios, que são do segmento, e inicia-se uma empresa para atender um
+            mercado de alto padrão em construção e reforma de piscinas, visando qualidade e o melhor
+            custo-benefício para clientes e parceiros.</p>
+        </div>
+      </div>
+      <div class="marco">
+        <div class="ano">2000</div>
+        <div>
+          <h3>Abre a loja e fecha parcerias</h3>
+          <p>A Nado Azul amplia os negócios, abre a sua loja e fecha diversas parcerias no mercado para
+            oferecer produtos de qualidade com preços competitivos, reduzindo o custo das próprias obras.</p>
+        </div>
+      </div>
+      <div class="marco">
+        <div class="ano">2008</div>
+        <div>
+          <h3>Ampliação dos negócios</h3>
+          <p>Investimento em treinamento e novas parcerias. A empresa passa a trabalhar com aquecimento solar,
+            iluminação em LED, cascatas diferenciadas, trocador de calor, sauna, hidromassagem e manutenção de
+            bombas, e agrega mais produtos na loja.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="valores-grade">
+      <div class="valor">
+        <b>Missão</b>
+        <p>Manter e assegurar a continuidade dos negócios, ampliando a participação no mercado, a fim de
+          viabilizar novos investimentos e proporcionar crescimento a todos os colaboradores.</p>
+      </div>
+      <div class="valor">
+        <b>Visão</b>
+        <p>Em um mercado altamente competitivo, somente empresas com sistemas de gestão voltados para
+          satisfazer seus clientes poderão ter seus negócios continuados. Somos referência no mercado de
+          piscinas e capacitados para atender qualquer projeto por completo.</p>
+      </div>
+      <div class="valor">
+        <b>Valores</b>
+        <p>Ética, Transparência, Efetividade e Competência.</p>
+      </div>
+      <div class="valor">
+        <b>Política de qualidade</b>
+        <p>Qualidade é fator fundamental em nosso trabalho. Gestão de pessoas com foco na necessidade do
+          cliente, agregando melhor custo-benefício.</p>
+      </div>
+      <div class="valor">
+        <b>Responsabilidade ambiental</b>
+        <p>Há anos conferimos a procedência das matérias-primas que utilizamos e trabalhamos sempre que
+          possível com materiais ecologicamente corretos, procurando o mínimo de impacto ambiental.</p>
+      </div>
+      <div class="valor">
+        <b>Materiais utilizados</b>
+        <p>Materiais de primeira linha e sempre atualizados no que há de mais moderno em construção e
+          acabamento, agregando inox, acrílicos, espelhos e madeira de demolição.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="regioes">
+  <div class="env">
+    <p class="rotulo">Atendimento</p>
+    <h2>Regiões onde atendemos</h2>
+    <p class="apoio col">Algumas das regiões e cidades que a Nado Azul Piscinas atende, como ela mesma as lista.</p>
+    <div class="regioes-grade">
+      <div class="regiao">
+        <b>ABC Paulista</b>
         <p>Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá, Ribeirão Pires e Rio Grande
-           da Serra, além de Suzano, Mogi das Cruzes e as zonas Leste, Sul, Norte e Oeste de São Paulo.</p>
+          da Serra.</p>
+      </div>
+      <div class="regiao">
+        <b>São Paulo e Grande SP</b>
+        <p>Zonas Leste, Sul, Norte e Oeste da capital, Guarulhos, Osasco, Barueri, Alphaville, Santana do
+          Parnaíba, Cotia, Embu das Artes, Mairiporã, São Roque, Suzano, Mogi das Cruzes e Arujá.</p>
+      </div>
+      <div class="regiao">
+        <b>Interior</b>
+        <p>Campinas, Jundiaí, Sorocaba, Indaiatuba, Valinhos, Vinhedo, Itatiba, Atibaia, Bragança Paulista,
+          Itu, Itupeva, Porto Feliz, Boituva, Louveira, Hortolândia, Americana, Paulínia, Amparo, Araras,
+          Ribeirão Preto, Sertãozinho, Jaboticabal, São Carlos, Araraquara, Bauru, Marília, Araçatuba,
+          Votuporanga e São José do Rio Preto.</p>
+      </div>
+      <div class="regiao">
+        <b>Litoral e Vale</b>
+        <p>Santos, São Vicente, Guarujá, Praia Grande, Bertioga, Riviera de São Lourenço, Ilhabela, São
+          Sebastião, Caraguatatuba, Ubatuba, Cubatão, Itanhaém, Mongaguá, Peruíbe, São José dos Campos e Taubaté.</p>
       </div>
     </div>
   </div>
@@ -262,20 +499,22 @@
     <p class="apoio col">Atendemos residências, clubes, academias, hotéis e muito mais.</p>
     <div class="contatos">
       <a href="https://wa.me/551144555753"><b>WhatsApp</b><span>(11) 4455-5753</span></a>
-      <a href="tel:1144555753"><b>Telefone</b><span>(11) 4455-5753</span></a>
+      <a href="tel:+551144555753"><b>Telefone</b><span>(11) 4455-5753</span></a>
       <a href="mailto:nadoazul.piscinas@gmail.com"><b>E-mail</b><span>nadoazul.piscinas@gmail.com</span></a>
-      <div><b>Endereço</b><span>Av. Dom Pedro I, Nº465 — Santo André, SP</span></div>
+      <a href="https://www.facebook.com/nadoazulpiscinas"><b>Facebook</b><span>/nadoazulpiscinas</span></a>
+      <a href="https://www.instagram.com/nadoazulpiscinas/"><b>Instagram</b><span>@nadoazulpiscinas</span></a>
+      <div><b>Endereço</b><span>Av. Dom Pedro I, Nº465 — Vila América, Santo André - SP</span></div>
     </div>
     <div class="acoes" style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
       <a class="btn escuro" href="https://wa.me/551144555753">Pedir orçamento no WhatsApp</a>
-      <a class="btn vazio" href="tel:1144555753">Ligar agora</a>
+      <a class="btn vazio" href="tel:+551144555753">Ligar (11) 4455-5753</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="env">
-    <span>Nado Azul Piscinas · Av. Dom Pedro I, Nº465 — Vila América, Santo André - SP</span>
+    <span>Nado Azul Piscinas e Acessórios · Av. Dom Pedro I, Nº465 — Vila América, Santo André - SP</span>
     <span>Proposta de redesenho não solicitada, feita pelo <a href="https://refeito.github.io">Refeito</a>.
       Não afiliada à Nado Azul Piscinas. Fotos, textos e informações são deles.</span>
   </div>
