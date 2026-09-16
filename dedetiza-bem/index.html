@@ -3,204 +3,274 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dedetiza Bem</title>
-<meta name="description" content="Atendemos todo o estado de São Paulo, com serviço adequado às normas da Anvisa para ambientes regulados.">
+<title>Dedetiza Bem — Dedetização em São Paulo</title>
+<meta name="description" content="Dedetizadora em SP especializada em controle de pragas para clínicas, consultórios, ambientes hospitalares, restaurantes, indústrias alimentícias e condomínios. Atendemos todo o estado de São Paulo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Libre+Franklin:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Lora:wght@400;500&display=swap">
 <style>
+  /* Paleta lida do site atual da Dedetiza Bem: verde escuro 153d37 e ambar d78b33. */
   :root {
-    --fundo:#0d1512; --fundo2:#14201b; --linha:#22322b;
-    --tinta:#eaf2ee; --tinta2:#8ba296;
-    --acento:#3fbd7f; --acento-tinta:#0d1512;
-    --titulo:"Bricolage Grotesque", Georgia, serif;
-    --corpo:"Libre Franklin", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --papel:#ffffff; --papel2:#f3f6f4; --linha:#dde5e1;
+    --tinta:#163e37; --tinta2:#5d6f69;
+    --verde:#153d37; --ambar:#d78b33; --ambar2:#b8721f;
+    --titulo:"Sora",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --corpo:"Lora",Georgia,serif;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--fundo); color:var(--tinta); font-family:var(--corpo);
-         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; height:auto; display:block; }
   a { color:inherit; }
-  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.02em; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); font-weight:700; text-wrap:balance; letter-spacing:-0.025em; }
   p { margin:0; }
 
-  .env { max-width:1120px; margin:0 auto; padding-inline:22px; }
-  .col { max-width:640px; }
+  .env { max-width:1140px; margin:0 auto; padding-inline:22px; }
+  .col { max-width:660px; }
 
-  .tarja { background:var(--fundo2); border-bottom:1px solid var(--linha); color:var(--tinta2);
+  .tarja { background:var(--papel2); border-bottom:1px solid var(--linha); color:var(--tinta2);
            font-size:0.78rem; line-height:1.5; text-align:center;
-           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top, 0px)); }
-  .tarja b { color:var(--tinta); }
-  .tarja a { color:var(--acento); }
+           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:var(--tinta); } .tarja a { color:var(--ambar2); }
 
-  .topo { display:flex; align-items:center; justify-content:space-between; gap:18px;
-          padding-block:20px; flex-wrap:wrap; }
-  .marca { font-family:var(--titulo); font-weight:700; font-size:1.18rem; letter-spacing:-0.03em; }
-  .marca span { display:block; font-family:var(--corpo); font-weight:600; font-size:0.64rem;
-                letter-spacing:0.18em; text-transform:uppercase; color:var(--tinta2); margin-top:2px; }
-  .nav { display:flex; gap:22px; align-items:center; font-size:0.9rem; font-weight:600; color:var(--tinta2); }
-  .nav a { text-decoration:none; }
-  .nav a:hover { color:var(--acento); }
+  .barra { background:var(--verde); color:#fff; }
+  .barra .env { display:flex; justify-content:space-between; align-items:center; gap:14px;
+                flex-wrap:wrap; padding-block:9px; font-family:var(--titulo); font-size:0.82rem; }
+  .barra a { text-decoration:none; font-weight:600; }
+  .barra a:hover { color:var(--ambar); }
 
-  .btn { display:inline-block; font-family:var(--corpo); font-weight:600; font-size:0.92rem;
-         text-decoration:none; background:var(--acento); color:var(--acento-tinta);
-         padding:14px 24px; border-radius:8px; }
-  .btn:hover { filter:brightness(1.08); }
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:20px;
+          padding-block:18px; flex-wrap:wrap; }
+  .topo .logo img { width:180px; }
+  .topo nav { display:flex; gap:22px; font-family:var(--titulo); font-size:0.88rem; font-weight:600; flex-wrap:wrap; }
+  .topo nav a { text-decoration:none; color:var(--tinta2); }
+  .topo nav a:hover { color:var(--ambar2); }
+
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.92rem;
+         text-decoration:none; background:var(--ambar); color:#2a1a04; padding:15px 26px; border-radius:8px; }
+  .btn:hover { background:var(--ambar2); color:#fff; }
   .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
   .btn.vazio { background:transparent; color:var(--tinta); border:1px solid var(--linha); }
 
-  .heroi { padding-block:52px 60px; }
-  .heroi .grade { display:grid; gap:40px; align-items:center; }
-  .heroi.lado .grade { grid-template-columns:1.05fr 0.95fr; }
-  .heroi.invertido .grade { grid-template-columns:0.95fr 1.05fr; }
-  .heroi.invertido .texto { order:2; }
-  .heroi h1 { font-size:clamp(2.2rem,5.6vw,3.5rem); line-height:1.04; font-weight:700; }
-  .heroi .sub { margin-top:18px; font-size:1.12rem; color:var(--tinta2); max-width:30em; }
+  .heroi { display:grid; grid-template-columns:1.05fr 1fr; gap:46px; align-items:center; padding-block:50px; }
+  .heroi h1 { font-size:clamp(2rem,4.8vw,3rem); line-height:1.08; font-weight:800; }
+  .heroi .sub { margin-top:18px; color:var(--tinta2); font-size:1.06rem; }
   .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
-  .heroi .foto img { border-radius:14px; aspect-ratio:4/3; object-fit:cover; width:100%; }
+  .heroi .foto img { border-radius:10px; aspect-ratio:4/3; object-fit:cover; width:100%; }
 
-  .heroi.cheio { padding-block:0 0; }
-  .heroi.cheio .capa { position:relative; }
-  .heroi.cheio .capa img { width:100%; height:clamp(380px,58vh,540px); object-fit:cover; border-radius:0; }
-  .heroi.cheio .veu { position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.52) 58%, rgba(0,0,0,.84) 100%); }
-  .heroi.cheio .texto { position:absolute; left:0; right:0; bottom:0; padding-block:0 36px; color:#fff; }
-  .heroi.cheio .texto h1 { color:#fff; text-shadow:0 2px 22px rgba(0,0,0,.5); }
-  .heroi.cheio .texto .sub { color:rgba(255,255,255,.86); text-shadow:0 1px 14px rgba(0,0,0,.6); }
-  .heroi.cheio .btn.vazio { color:#fff; border-color:rgba(255,255,255,.45); }
+  /* Ambiente regulado e o segmento mais rentavel deste negocio: vem primeiro. */
+  .ambientes { display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px; margin-top:26px; }
+  .amb { border:1px solid var(--linha); border-top:4px solid var(--ambar); border-radius:8px; padding:20px 22px; }
+  .amb b { display:block; font-family:var(--titulo); font-weight:700; font-size:1.04rem; }
+  .amb span { display:block; font-size:0.9rem; color:var(--tinta2); margin-top:4px; }
 
-  .provas { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:22px;
-            padding-block:30px; border-block:1px solid var(--linha); }
-  .provas div b { display:block; font-family:var(--titulo); font-weight:700; font-size:1.9rem; line-height:1.1; }
-  .provas div span { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.12em;
-                     text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
+  .numeros { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:24px;
+             padding-block:26px; border-block:1px solid var(--linha); }
+  .numeros b { display:block; font-family:var(--titulo); font-weight:800; font-size:1.85rem;
+               line-height:1.15; color:var(--ambar2); }
+  .numeros span { display:block; font-family:var(--titulo); font-size:0.66rem; font-weight:600;
+                  letter-spacing:0.13em; text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
 
-  section { padding-block:64px; }
-  .rotulo { font-size:0.7rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
-            color:var(--acento); margin-bottom:12px; }
-  h2 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.15; font-weight:700; margin-bottom:18px; }
-  .apoio { color:var(--tinta2); font-size:1.05rem; }
+  section { padding-block:58px; }
+  .rotulo { font-family:var(--titulo); font-weight:700; font-size:0.68rem; letter-spacing:0.16em;
+            text-transform:uppercase; color:var(--ambar2); margin-bottom:12px; }
+  h2 { font-size:clamp(1.55rem,3.8vw,2.1rem); line-height:1.16; margin-bottom:16px; }
+  .apoio { color:var(--tinta2); }
 
-  .cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:30px; }
-  .card { border:1px solid var(--linha); border-radius:14px; overflow:hidden; background:var(--fundo); }
-  .card .capa { aspect-ratio:16/10; }
-  .card .capa img { width:100%; height:100%; object-fit:cover; }
-  .card .txt { padding:18px 20px 22px; }
-  .card h3 { font-size:1.1rem; font-weight:700; margin-bottom:6px; }
-  .card p { font-size:0.96rem; color:var(--tinta2); }
+  .grelha { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:26px; }
+  .cartao { border:1px solid var(--linha); border-radius:10px; overflow:hidden; }
+  .cartao img { width:100%; aspect-ratio:16/10; object-fit:cover; }
+  .cartao .txt { padding:15px 18px 19px; }
+  .cartao h3 { font-size:1.04rem; margin-bottom:4px; }
+  .cartao p { font-size:0.92rem; color:var(--tinta2); }
 
-  .passos { display:grid; gap:2px; margin-top:26px; }
-  .passos > div { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
-                  border-top:1px solid var(--linha); }
-  .passos > div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
-                          font-family:var(--titulo); font-weight:700; font-size:0.86rem;
-                          color:var(--acento); padding-top:3px; }
-  .passos { counter-reset:passo; }
-  .passos h3 { font-size:1.04rem; font-weight:700; margin-bottom:3px; }
-  .passos p { font-size:0.98rem; color:var(--tinta2); }
+  .itens { display:flex; flex-wrap:wrap; gap:9px; margin-top:22px; list-style:none; padding:0; }
+  .itens li { border:1px solid var(--linha); border-radius:99px; padding:8px 16px;
+              font-size:0.89rem; background:var(--papel2); font-family:var(--titulo); font-weight:500; }
 
-  .faixa { background:var(--fundo2); border-radius:16px; padding:clamp(26px,4vw,44px); }
-  .faixa h2 { margin-bottom:12px; }
-  .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
-  .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
-  .contatos a { text-decoration:none; }
-  .contatos a:hover span { color:var(--acento); }
-  .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
-                text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
-  .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
+  .avaliacoes { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:22px; margin-top:24px; }
+  .av { border-top:3px solid var(--ambar); padding-top:15px; }
+  .av .estrelas { color:var(--ambar); font-family:var(--titulo); font-weight:700; letter-spacing:2px; }
+  .av p { font-size:0.97rem; margin-top:6px; }
+  .av cite { display:block; font-style:normal; font-family:var(--titulo); font-weight:700;
+             font-size:0.79rem; color:var(--tinta2); margin-top:10px; }
 
-  footer { border-top:1px solid var(--linha); padding-block:28px 46px; color:var(--tinta2); font-size:0.82rem;
-           display:grid; gap:6px; }
+  .contato { background:var(--papel2); border-radius:12px; padding:clamp(26px,4vw,42px); }
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:20px 28px; margin-top:24px; }
+  .canais > * { min-width:0; text-decoration:none; }
+  .canais b { display:block; font-family:var(--titulo); font-size:0.66rem; font-weight:700;
+              letter-spacing:0.14em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:700; font-size:1.04rem;
+                 overflow-wrap:anywhere; line-height:1.35; }
+  .canais a:hover span { color:var(--ambar2); }
 
-  @media (max-width:820px) {
-    .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
-    .heroi.invertido .texto { order:0; }
-    section { padding-block:48px; }
-    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
+  footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:6px; }
+
+  @media (max-width:860px) {
+    .heroi { grid-template-columns:1fr; gap:24px; padding-block:32px; }
+    section { padding-block:42px; }
+    .topo nav { display:none; }
   }
-  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</style>
 </head>
 <body>
 
 <div class="tarja">
-  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Dedetiza Bem e não foi feita por eles.
-  O site real é <a href="https://dedetizabem.com.br">dedetizabem.com.br</a>. Conteúdo e informações são deles.
-  Feita pelo <a href="https://refeito.github.io">Refeito</a>.
+  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial da Dedetiza Bem e não foi feita por eles.
+  O site real é <a href="https://dedetizabem.com.br/">dedetizabem.com.br</a>.
+  Todas as fotos, textos e informações são deles. Feita pelo <a href="https://refeito.github.io">Refeito</a>.
+</div>
+
+<div class="barra">
+  <div class="env">
+    <span>Pelo WhatsApp é mais rápido e fácil</span>
+    <span><a href="tel:1128727591">(11) 2872-7591</a> · <a href="https://wa.me/5511940480734">(11) 94048-0734</a></span>
+  </div>
 </div>
 
 <div class="env">
   <header class="topo">
-    <div class="marca">Dedetiza Bem<span>Dedetização em São Paulo</span></div>
-    <nav class="nav">
+    <a class="logo" href="/dedetiza-bem/"><img src="img/logo.webp" alt="Dedetiza Bem" width="180" height="60"></a>
+    <nav>
+      <a href="#ambientes">Ambientes</a>
       <a href="#servicos">Serviços</a>
-      <a href="#como">Como funciona</a>
+      <a href="#pragas">Pragas</a>
       <a href="#contato">Contato</a>
     </nav>
+    <a class="btn" href="https://wa.me/5511940480734?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir cotação</a>
   </header>
-</div>
 
-<div class="heroi cheio">
-    <div class="capa">
-      <img src="img/capa.webp" alt="Ambiente comercial atendido por dedetização" width="1600" height="900">
-      <div class="veu"></div>
-      <div class="env texto">
-        <h1>Dedetização para clínica, restaurante, indústria e condomínio.</h1>
-        <p class="sub">Atendemos todo o estado de São Paulo, com serviço adequado às normas da Anvisa para ambientes regulados.</p>
-        <div class="acoes">
-        <a class="btn" href="#contato">Pedir orçamento</a>
-        <a class="btn vazio" href="#servicos">Ver serviços</a>
-      </div>
+  <div class="heroi">
+    <div>
+      <h1>Dedetização para quem não pode errar.</h1>
+      <p class="sub">
+        Evite infestações que geram transtornos e prejuízos para a sua empresa ou
+        residência. Atendemos clínicas, consultórios, ambientes hospitalares,
+        restaurantes, indústrias alimentícias e condomínios em todo o estado de São Paulo.
+      </p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5511940480734?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Solicitar cotação</a>
+        <a class="btn vazio" href="tel:1128727591">Ligar agora</a>
       </div>
     </div>
+    <div class="foto"><img src="img/capa.webp" alt="Controle de cupim executado pela Dedetiza Bem" width="1400" height="1050"></div>
   </div>
 
-<div class="env">
-  <div class="provas"><div><b>Estado de SP</b><span>atendimento</span></div><div><b>Anvisa</b><span>normas atendidas</span></div><div><b>Rápido</b><span>agendamento</span></div></div>
+  <div class="numeros">
+    <div><b>Estado de SP</b><span>toda a área de atuação</span></div>
+    <div><b>Ambientes</b><span>regulados e críticos</span></div>
+    <div><b>Condomínios</b><span>contrato e revisão</span></div>
+    <div><b>Equipe</b><span>altamente treinada</span></div>
+  </div>
 
-  <section id="servicos">
-    <p class="rotulo">Serviços</p>
-    <h2>O que a gente resolve.</h2>
-    <p class="apoio col">Insetos, roedores e cupim. Identificamos a praga antes de escolher o produto.</p>
-    <div class="cards">
-      <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="Saúde e alimentação" width="800" height="500"></div>
-        <div class="txt"><h3>Saúde e alimentação</h3><p>Clínicas, consultórios, ambientes hospitalares, restaurantes e indústria alimentícia.</p></div>
-      </article>
-      <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="Condomínio e indústria" width="800" height="500"></div>
-        <div class="txt"><h3>Condomínio e indústria</h3><p>Áreas comuns, garagem, galpão e centro logístico, com cronograma.</p></div>
-      </article>
-      <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="Pragas e serviços" width="800" height="500"></div>
-        <div class="txt"><h3>Pragas e serviços</h3><p>De baratas e cupim a pombos e morcegos, mais caixa d'água, sanitização e desentupimento.</p></div>
-      </article>
+  <section id="ambientes">
+    <p class="rotulo">Para o seu tipo de imóvel</p>
+    <h2>Cada ambiente pede um método.</h2>
+    <p class="apoio col">
+      Ambiente de saúde e de alimentação tem exigência própria. Nosso serviço é pensado
+      para quem precisa cumprir as normas da Anvisa.
+    </p>
+    <div class="ambientes">
+      <div class="amb"><b>Clínicas</b><span>Ambulatório e sala de procedimento</span></div>
+      <div class="amb"><b>Consultórios odontológicos</b><span>Área clínica e esterilização</span></div>
+      <div class="amb"><b>Ambientes hospitalares</b><span>Internação, copa e rouparia</span></div>
+      <div class="amb"><b>Restaurantes e redes</b><span>Cozinha, estoque e salão</span></div>
+      <div class="amb"><b>Indústrias alimentícias</b><span>Linha de produção e armazém</span></div>
+      <div class="amb"><b>Condomínios</b><span>Áreas comuns, garagem e lixeira</span></div>
     </div>
   </section>
 
-  <section id="como">
-    <p class="rotulo">Como funciona</p>
-    <h2>Três passos e resolvido.</h2>
-    <div class="passos col">
-      <div><div><h3>Você chama</h3><p>Conte qual praga apareceu e em que tipo de imóvel.</p></div></div>
-      <div><div><h3>Agendamos</h3><p>Marcamos no horário que funciona para você, inclusive fora do comercial.</p></div></div>
-      <div><div><h3>Aplicação</h3><p>Equipe no local no horário combinado, com o método adequado ao tipo de imóvel.</p></div></div>
+  <section id="servicos">
+    <p class="rotulo">Serviços</p>
+    <h2>Controle de pragas e vetores.</h2>
+    <p class="apoio col">
+      Possuímos uma equipe altamente treinada, trabalhando com foco e determinação para
+      solucionar todos os seus problemas com pragas, respeitando sua saúde e a do planeta.
+    </p>
+    <div class="grelha">
+      <article class="cartao">
+        <img src="img/p1.webp" alt="Serviço de descupinização" width="900" height="560">
+        <div class="txt"><h3>Descupinização</h3><p>Cupim de madeira e de solo, incluindo galpão, arquivo e centro logístico.</p></div>
+      </article>
+      <article class="cartao">
+        <img src="img/p4.webp" alt="Serviço de desratização" width="900" height="560">
+        <div class="txt"><h3>Desratização</h3><p>Controle de roedores com bloqueio de acesso e monitoramento.</p></div>
+      </article>
+      <article class="cartao">
+        <img src="img/p2.webp" alt="Limpeza de caixa d'água" width="900" height="560">
+        <div class="txt"><h3>Limpeza de caixa d'água</h3><p>Higienização de reservatório, com sanitização e desinfecção.</p></div>
+      </article>
+      <article class="cartao">
+        <img src="img/p3.webp" alt="Dedetização em condomínio" width="900" height="560">
+        <div class="txt"><h3>Condomínios</h3><p>Solicite sua cotação ou revisão de contrato para áreas comuns.</p></div>
+      </article>
+    </div>
+    <ul class="itens">
+      <li>Dedetização</li><li>MIP — Manejo Integrado de Pragas</li>
+      <li>Sanitização e desinfecção</li><li>Capina química</li><li>Desentupimento</li>
+      <li>Manejo de pombos</li>
+    </ul>
+  </section>
+
+  <section id="pragas">
+    <p class="rotulo">Pragas</p>
+    <h2>O que a gente resolve.</h2>
+    <p class="apoio col">
+      Nossa equipe tem as melhores soluções para a eliminação de baratas, formigas, ratos
+      e outros animais nocivos que infestam o seu espaço.
+    </p>
+    <ul class="itens">
+      <li>Barata</li><li>Cupim</li><li>Formiga</li><li>Rato</li><li>Pulga</li><li>Carrapato</li>
+      <li>Escorpião</li><li>Aranha</li><li>Mosca</li><li>Broca de madeira</li><li>Traça</li>
+      <li>Marimbondo</li><li>Caruncho</li><li>Mosquito e pernilongo</li><li>Percevejo de cama</li>
+      <li>Manejo de pombo</li><li>Manejo de morcego</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="rotulo">Avaliações</p>
+    <h2>O que dizem no Google.</h2>
+    <div class="avaliacoes">
+      <div class="av"><div class="estrelas">★★★★★</div>
+        <p>Gostei muito do atendimento desde o primeiro contato. Quanto à dedetização, foi muito bem feita, e o técnico extremamente educado e cuidadoso. Super recomendo!</p>
+        <cite>Thereza Camporesi</cite></div>
+      <div class="av"><div class="estrelas">★★★★★</div>
+        <p>Fizemos descupinização. Fomos muito bem atendidos, desde o primeiro contato via WhatsApp até o retorno do pós-venda da finalização do serviço. Técnicos atenciosos, tiraram todas as dúvidas que foram surgindo. Aprovados.</p>
+        <cite>Maria Dionisia Gonzalez Menconi</cite></div>
+      <div class="av"><div class="estrelas">★★★★★</div>
+        <p>Excelente serviço, pontual, organizado e muito cordial.</p>
+        <cite>Renato Ito</cite></div>
     </div>
   </section>
 
   <section id="contato">
-    <div class="faixa">
-      <p class="rotulo">Contato</p>
-      <h2>Conta o que apareceu por aí.</h2>
-      <p class="apoio col">Diga a praga, o tipo de imóvel e a área aproximada. Assim o orçamento sai certo de primeira.</p>
-      <div class="contatos"><div><b>Telefone</b><a href="tel:1128727591"><span>(11) 2872-7591</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511940480734"><span>(11) 94048-0734</span></a></div><div><b>E-mail</b><a href="mailto:comercial@dedetizabem.com.br"><span>comercial@dedetizabem.com.br</span></a></div><div><b>Atendimento</b><span>Todo o estado de São Paulo</span></div><div><b>Endereço</b><span>R. Edgar de Campos, 206 — Vila Nair, São Paulo</span></div></div>
-      <div class="acoes"><a class="btn" href="https://wa.me/5511940480734">Chamar no WhatsApp</a><a class="btn vazio" href="tel:1128727591">Ligar agora</a></div>
+    <div class="contato">
+      <p class="rotulo">Cotação</p>
+      <h2>Para o orçamento sair certo de primeira.</h2>
+      <p class="apoio col">
+        Diga qual é a praga, o tipo de imóvel e a área aproximada. Com esses três dados
+        a gente já consegue passar o valor. Atendemos todo o estado de São Paulo, chame-nos
+        de onde estiver.
+      </p>
+      <div class="canais">
+        <a href="tel:1128727591"><b>Telefone fixo</b><span>(11) 2872-7591</span></a>
+        <a href="https://wa.me/5511940480734?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o"><b>WhatsApp</b><span>(11) 94048-0734</span></a>
+        <div><b>Onde estamos</b><span>R. Edgar de Campos, 206 — Vila Nair, São Paulo, 04282-010</span></div>
+        <div><b>Área de atuação</b><span>Todo o estado de São Paulo</span></div>
+      </div>
+      <div class="acoes" style="margin-top:26px">
+        <a class="btn" href="https://wa.me/5511940480734?text=Ol%C3%A1!%20Estou%20no%20seu%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o">Pedir cotação no WhatsApp</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <span>Dedetiza Bem · Todo o estado de São Paulo</span>
-    <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Dedetiza Bem.</span>
+    <span>Dedetiza Bem · R. Edgar de Campos, 206 — Vila Nair, São Paulo, SP</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Dedetiza Bem. Fotos e textos são deles.</span>
   </footer>
 </div>
+
 </body>
 </html>

@@ -3,203 +3,248 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dedetizadora Samurai</title>
-<meta name="description" content="Dedetização, desratização e descupinização com atendimento 24 horas por dia, em São Paulo, ABCD, Baixada Santista e Litoral.">
+<title>Dedetizadora Samurai — Dedetização 24 horas em São Paulo</title>
+<meta name="description" content="Controle de pragas com atendimento rápido, equipe técnica especializada e soluções seguras para residências, condomínios e empresas. Atendemos São Paulo, ABCD, Baixada Santista e Litoral.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Libre+Franklin:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
 <style>
+  /* Paleta lida do site atual da Samurai: vermelho e30817 e 91040d, azul 1d2746. */
   :root {
-    --fundo:#ffffff; --fundo2:#f1f6f3; --linha:#dfe7e2;
-    --tinta:#0f1a15; --tinta2:#5b6b63;
-    --acento:#12734b; --acento-tinta:#ffffff;
-    --titulo:"Bricolage Grotesque", Georgia, serif;
-    --corpo:"Libre Franklin", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --papel:#ffffff; --papel2:#edf5ff; --linha:#dbe3ef;
+    --tinta:#1d2746; --tinta2:#666666;
+    --vermelho:#e30817; --vermelho2:#91040d;
+    --titulo:"Oswald",Impact,"Helvetica Neue",Arial,sans-serif;
+    --corpo:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--fundo); color:var(--tinta); font-family:var(--corpo);
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
          font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; height:auto; display:block; }
   a { color:inherit; }
-  h1,h2,h3 { margin:0; font-family:var(--titulo); text-wrap:balance; letter-spacing:-0.02em; }
+  h1,h2,h3 { margin:0; font-family:var(--titulo); font-weight:600; text-wrap:balance;
+             letter-spacing:0.01em; text-transform:uppercase; }
   p { margin:0; }
 
-  .env { max-width:1120px; margin:0 auto; padding-inline:22px; }
-  .col { max-width:640px; }
+  .env { max-width:1140px; margin:0 auto; padding-inline:22px; }
+  .col { max-width:660px; }
 
-  .tarja { background:var(--fundo2); border-bottom:1px solid var(--linha); color:var(--tinta2);
+  .tarja { background:var(--papel2); border-bottom:1px solid var(--linha); color:var(--tinta2);
            font-size:0.78rem; line-height:1.5; text-align:center;
-           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top, 0px)); }
-  .tarja b { color:var(--tinta); }
-  .tarja a { color:var(--acento); }
+           padding:11px 20px; padding-top:calc(11px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:var(--tinta); } .tarja a { color:var(--vermelho2); }
 
-  .topo { display:flex; align-items:center; justify-content:space-between; gap:18px;
-          padding-block:20px; flex-wrap:wrap; }
-  .marca { font-family:var(--titulo); font-weight:700; font-size:1.18rem; letter-spacing:-0.03em; }
-  .marca span { display:block; font-family:var(--corpo); font-weight:600; font-size:0.64rem;
-                letter-spacing:0.18em; text-transform:uppercase; color:var(--tinta2); margin-top:2px; }
-  .nav { display:flex; gap:22px; align-items:center; font-size:0.9rem; font-weight:600; color:var(--tinta2); }
-  .nav a { text-decoration:none; }
-  .nav a:hover { color:var(--acento); }
+  /* 24 horas e o eixo do negocio: fica fixo no topo, com telefone clicavel. */
+  .urgencia { background:var(--vermelho2); color:#fff; position:sticky; top:0; z-index:9; }
+  .urgencia .env { display:flex; justify-content:space-between; align-items:center; gap:14px;
+                   flex-wrap:wrap; padding-block:10px; font-family:var(--titulo);
+                   font-weight:600; font-size:0.92rem; letter-spacing:0.03em; }
+  .urgencia a { text-decoration:none; }
+  .urgencia a:hover { text-decoration:underline; }
 
-  .btn { display:inline-block; font-family:var(--corpo); font-weight:600; font-size:0.92rem;
-         text-decoration:none; background:var(--acento); color:var(--acento-tinta);
-         padding:14px 24px; border-radius:8px; }
-  .btn:hover { filter:brightness(1.08); }
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:20px;
+          padding-block:18px; flex-wrap:wrap; }
+  .topo .logo img { width:190px; }
+  .topo nav { display:flex; gap:22px; font-family:var(--titulo); font-size:0.9rem;
+              font-weight:500; text-transform:uppercase; flex-wrap:wrap; }
+  .topo nav a { text-decoration:none; color:var(--tinta2); }
+  .topo nav a:hover { color:var(--vermelho); }
+
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:600; font-size:0.95rem;
+         letter-spacing:0.04em; text-transform:uppercase; text-decoration:none;
+         background:var(--vermelho); color:#fff; padding:15px 28px; border-radius:4px; }
+  .btn:hover { background:var(--vermelho2); }
   .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
   .btn.vazio { background:transparent; color:var(--tinta); border:1px solid var(--linha); }
 
-  .heroi { padding-block:52px 60px; }
-  .heroi .grade { display:grid; gap:40px; align-items:center; }
-  .heroi.lado .grade { grid-template-columns:1.05fr 0.95fr; }
-  .heroi.invertido .grade { grid-template-columns:0.95fr 1.05fr; }
-  .heroi.invertido .texto { order:2; }
-  .heroi h1 { font-size:clamp(2.2rem,5.6vw,3.5rem); line-height:1.04; font-weight:700; }
-  .heroi .sub { margin-top:18px; font-size:1.12rem; color:var(--tinta2); max-width:30em; }
+  .heroi { display:grid; grid-template-columns:1.05fr 1fr; gap:44px; align-items:center; padding-block:48px; }
+  .heroi h1 { font-size:clamp(2.1rem,5.2vw,3.3rem); line-height:1.06; font-weight:700; }
+  .heroi .sub { margin-top:18px; color:var(--tinta2); font-size:1.06rem; }
   .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
-  .heroi .foto img { border-radius:14px; aspect-ratio:4/3; object-fit:cover; width:100%; }
+  .heroi .foto img { border-radius:8px; aspect-ratio:4/3; object-fit:cover; width:100%; }
 
-  .heroi.cheio { padding-block:0 0; }
-  .heroi.cheio .capa { position:relative; }
-  .heroi.cheio .capa img { width:100%; height:clamp(380px,58vh,540px); object-fit:cover; border-radius:0; }
-  .heroi.cheio .veu { position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.52) 58%, rgba(0,0,0,.84) 100%); }
-  .heroi.cheio .texto { position:absolute; left:0; right:0; bottom:0; padding-block:0 36px; color:#fff; }
-  .heroi.cheio .texto h1 { color:#fff; text-shadow:0 2px 22px rgba(0,0,0,.5); }
-  .heroi.cheio .texto .sub { color:rgba(255,255,255,.86); text-shadow:0 1px 14px rgba(0,0,0,.6); }
-  .heroi.cheio .btn.vazio { color:#fff; border-color:rgba(255,255,255,.45); }
+  .numeros { display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:24px;
+             padding-block:26px; border-block:1px solid var(--linha); }
+  .numeros b { display:block; font-family:var(--titulo); font-weight:700; font-size:2rem;
+               line-height:1.1; color:var(--vermelho2); }
+  .numeros span { display:block; font-family:var(--corpo); font-size:0.68rem; font-weight:600;
+                  letter-spacing:0.13em; text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
 
-  .provas { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:22px;
-            padding-block:30px; border-block:1px solid var(--linha); }
-  .provas div b { display:block; font-family:var(--titulo); font-weight:700; font-size:1.9rem; line-height:1.1; }
-  .provas div span { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.12em;
-                     text-transform:uppercase; color:var(--tinta2); margin-top:4px; }
+  section { padding-block:58px; }
+  .rotulo { font-family:var(--titulo); font-weight:600; font-size:0.75rem; letter-spacing:0.16em;
+            text-transform:uppercase; color:var(--vermelho); margin-bottom:12px; }
+  h2 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.16; margin-bottom:16px; font-weight:700; }
+  .apoio { color:var(--tinta2); }
 
-  section { padding-block:64px; }
-  .rotulo { font-size:0.7rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
-            color:var(--acento); margin-bottom:12px; }
-  h2 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.15; font-weight:700; margin-bottom:18px; }
-  .apoio { color:var(--tinta2); font-size:1.05rem; }
+  .servicos { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:26px; }
+  .serv { border:1px solid var(--linha); border-left:4px solid var(--vermelho); border-radius:6px;
+          padding:20px 22px; }
+  .serv b { display:block; font-family:var(--titulo); font-weight:600; font-size:1.06rem;
+            text-transform:uppercase; letter-spacing:0.02em; }
+  .serv span { display:block; font-size:0.9rem; color:var(--tinta2); margin-top:4px; }
 
-  .cards { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:30px; }
-  .card { border:1px solid var(--linha); border-radius:14px; overflow:hidden; background:var(--fundo); }
-  .card .capa { aspect-ratio:16/10; }
-  .card .capa img { width:100%; height:100%; object-fit:cover; }
-  .card .txt { padding:18px 20px 22px; }
-  .card h3 { font-size:1.1rem; font-weight:700; margin-bottom:6px; }
-  .card p { font-size:0.96rem; color:var(--tinta2); }
+  .antes-depois { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:26px; }
+  .ad figure { margin:0; border-radius:8px; overflow:hidden; }
+  .ad img { width:100%; aspect-ratio:16/10; object-fit:cover; }
+  .ad h3 { font-size:1.08rem; margin:14px 0 6px; }
+  .ad p { font-size:0.96rem; color:var(--tinta2); }
 
-  .passos { display:grid; gap:2px; margin-top:26px; }
-  .passos > div { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
-                  border-top:1px solid var(--linha); }
-  .passos > div::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
-                          font-family:var(--titulo); font-weight:700; font-size:0.86rem;
-                          color:var(--acento); padding-top:3px; }
-  .passos { counter-reset:passo; }
-  .passos h3 { font-size:1.04rem; font-weight:700; margin-bottom:3px; }
-  .passos p { font-size:0.98rem; color:var(--tinta2); }
+  .regioes { display:flex; flex-wrap:wrap; gap:9px; margin-top:22px; list-style:none; padding:0; }
+  .regioes li { border:1px solid var(--linha); border-radius:4px; padding:9px 16px;
+                font-family:var(--titulo); font-weight:500; font-size:0.9rem;
+                text-transform:uppercase; letter-spacing:0.03em; background:var(--papel2); }
 
-  .faixa { background:var(--fundo2); border-radius:16px; padding:clamp(26px,4vw,44px); }
-  .faixa h2 { margin-bottom:12px; }
-  .faixa .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
-  .contatos { display:flex; gap:26px; flex-wrap:wrap; margin-top:22px; font-size:0.98rem; color:var(--tinta2); }
-  .contatos a { text-decoration:none; }
-  .contatos a:hover span { color:var(--acento); }
-  .contatos b { display:block; font-size:0.7rem; font-weight:600; letter-spacing:0.12em;
-                text-transform:uppercase; margin-bottom:3px; color:var(--tinta2); }
-  .contatos span { color:var(--tinta); font-family:var(--titulo); font-size:1.15rem; font-weight:700; }
+  .contato { background:var(--papel2); border-radius:10px; padding:clamp(26px,4vw,42px); }
+  .canais { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+            gap:20px 28px; margin-top:24px; }
+  .canais > * { min-width:0; text-decoration:none; }
+  .canais b { display:block; font-family:var(--corpo); font-size:0.66rem; font-weight:700;
+              letter-spacing:0.14em; text-transform:uppercase; color:var(--tinta2); margin-bottom:4px; }
+  .canais span { display:block; font-family:var(--titulo); font-weight:600; font-size:1.15rem;
+                 overflow-wrap:anywhere; line-height:1.35; }
+  .canais a:hover span { color:var(--vermelho); }
 
-  footer { border-top:1px solid var(--linha); padding-block:28px 46px; color:var(--tinta2); font-size:0.82rem;
-           display:grid; gap:6px; }
+  footer { border-top:1px solid var(--linha); padding-block:26px 46px; color:var(--tinta2);
+           font-size:0.8rem; display:grid; gap:6px; }
 
-  @media (max-width:820px) {
-    .heroi.lado .grade, .heroi.invertido .grade { grid-template-columns:1fr; gap:28px; }
-    .heroi.invertido .texto { order:0; }
-    section { padding-block:48px; }
-    .nav { gap:16px; font-size:0.84rem; width:100%; flex-wrap:wrap; }
+  @media (max-width:860px) {
+    .heroi { grid-template-columns:1fr; gap:24px; padding-block:32px; }
+    .antes-depois { grid-template-columns:1fr; }
+    section { padding-block:42px; }
+    .topo nav { display:none; }
   }
-  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }</style>
+</style>
 </head>
 <body>
 
 <div class="tarja">
-  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial de Dedetizadora Samurai e não foi feita por eles.
-  O site real é <a href="https://dedetizadorasamurai.com.br">dedetizadorasamurai.com.br</a>. Conteúdo e informações são deles.
-  Feita pelo <a href="https://refeito.github.io">Refeito</a>.
+  <b>Proposta de redesenho não solicitada.</b> Não é o site oficial da Dedetizadora Samurai e não foi feita por eles.
+  O site real é <a href="https://www.dedetizadorasamurai.com.br/">dedetizadorasamurai.com.br</a>.
+  Todas as fotos, textos e informações são deles. Feita pelo <a href="https://refeito.github.io">Refeito</a>.
+</div>
+
+<div class="urgencia">
+  <div class="env">
+    <span>Atendimento 24 horas por dia, todos os dias</span>
+    <span><a href="tel:11953791988">(11) 95379-1988</a> · <a href="tel:11993188468">(11) 99318-8468</a></span>
+  </div>
 </div>
 
 <div class="env">
   <header class="topo">
-    <div class="marca">Dedetizadora Samurai<span>Controle de pragas</span></div>
-    <nav class="nav">
+    <a class="logo" href="/dedetizadora-samurai/"><img src="img/logo.svg" alt="Dedetizadora Samurai" width="190" height="60"></a>
+    <nav>
       <a href="#servicos">Serviços</a>
-      <a href="#como">Como funciona</a>
+      <a href="#transformacao">Transformação</a>
+      <a href="#regioes">Onde atendemos</a>
       <a href="#contato">Contato</a>
     </nav>
+    <a class="btn" href="https://wa.me/5511953791988?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20para%20dedetiza%C3%A7%C3%A3o.">Inspeção gratuita</a>
   </header>
-</div>
 
-<div class="env"><div class="heroi lado">
-    <div class="grade">
-      <div class="texto">
-        <h1>Proteção total contra pragas, para a sua família e o seu negócio.</h1>
-        <p class="sub">Dedetização, desratização e descupinização com atendimento 24 horas por dia, em São Paulo, ABCD, Baixada Santista e Litoral.</p>
-        <div class="acoes">
-        <a class="btn" href="#contato">Pedir orçamento</a>
-        <a class="btn vazio" href="#servicos">Ver serviços</a>
+  <div class="heroi">
+    <div>
+      <h1>Contra pragas, nós somos a sua melhor defesa.</h1>
+      <p class="sub">
+        Proteção total contra pragas para sua família. Controle de pragas com atendimento
+        rápido, equipe técnica especializada e soluções seguras para residências,
+        condomínios e empresas. Receba uma resposta em até 24 horas.
+      </p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5511953791988?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20para%20dedetiza%C3%A7%C3%A3o.">Agendar inspeção gratuita</a>
+        <a class="btn vazio" href="tel:11953791988">Ligar agora</a>
       </div>
-      </div>
-      <div class="foto"><img src="img/capa.webp" alt="Atendimento de controle de pragas 24 horas" width="1600" height="1200"></div>
     </div>
-  </div></div>
+    <div class="foto"><img src="img/capa.webp" alt="Proteção total contra pragas, Dedetizadora Samurai" width="1400" height="1050"></div>
+  </div>
 
-<div class="env">
-  <div class="provas"><div><b>24 horas</b><span>todos os dias</span></div><div><b>Litoral</b><span>abcd e baixada</span></div><div><b>Inspeção</b><span>gratuita</span></div></div>
+  <div class="numeros">
+    <div><b>25 anos</b><span>de experiência</span></div>
+    <div><b>24 horas</b><span>todos os dias</span></div>
+    <div><b>Inspeção</b><span>gratuita</span></div>
+    <div><b>Litoral</b><span>abcd e baixada santista</span></div>
+  </div>
 
   <section id="servicos">
-    <p class="rotulo">Serviços</p>
-    <h2>Resolvemos a praga e evitamos a volta.</h2>
-    <p class="apoio col">Cada praga pede um produto e um método. Identificamos antes de aplicar qualquer coisa.</p>
-    <div class="cards">
-      <article class="card">
-        <div class="capa"><img src="img/s1.webp" alt="Baratas, pulgas e traças" width="800" height="500"></div>
-        <div class="txt"><h3>Baratas, pulgas e traças</h3><p>Insetos rasteiros e voadores, com aplicação em frestas, ralos e rodapés.</p></div>
-      </article>
-      <article class="card">
-        <div class="capa"><img src="img/s2.webp" alt="Cupim e carrapato" width="800" height="500"></div>
-        <div class="txt"><h3>Cupim e carrapato</h3><p>Descupinização de madeira e solo, e controle de carrapato em área externa.</p></div>
-      </article>
-      <article class="card">
-        <div class="capa"><img src="img/s3.webp" alt="Ratos, caixa d'água e desentupimento" width="800" height="500"></div>
-        <div class="txt"><h3>Ratos, caixa d'água e desentupimento</h3><p>Desratização, limpeza de caixa d'água e desentupidora, também 24 horas.</p></div>
-      </article>
+    <p class="rotulo">Serviços de dedetização</p>
+    <h2>Dê adeus às pragas.</h2>
+    <p class="apoio col">
+      Nossa equipe especializada oferece uma ampla gama de serviços de controle de pragas.
+      Atendemos residências, condomínios e estabelecimentos comerciais, garantindo um
+      espaço mais seguro e saudável para você e sua família.
+    </p>
+    <div class="servicos">
+      <div class="serv"><b>Dedetização de baratas</b><span>Disponível 24 horas por dia, com resposta rápida e eficaz independentemente da hora.</span></div>
+      <div class="serv"><b>Dedetização de carrapatos</b><span>Controle em área interna e externa, incluindo quintal e jardim.</span></div>
+      <div class="serv"><b>Dedetização de pulgas</b><span>Tratamento de ambiente com foco em residências com animais.</span></div>
+      <div class="serv"><b>Dedetização de traças</b><span>Proteção de armário, guarda-roupa e arquivo de documentos.</span></div>
+      <div class="serv"><b>Descupinização</b><span>Cupim de madeira e de solo. Ligue agora e agende uma inspeção gratuita.</span></div>
+      <div class="serv"><b>Desratização</b><span>Controle de ratos, com bloqueio dos pontos de entrada.</span></div>
+      <div class="serv"><b>Desentupidora 24 horas</b><span>Também somos desentupidora, com atendimento a qualquer hora.</span></div>
+      <div class="serv"><b>Limpeza de caixa d'água</b><span>Limpeza de reservatório de água potável.</span></div>
     </div>
   </section>
 
-  <section id="como">
-    <p class="rotulo">Como funciona</p>
-    <h2>Como é o atendimento.</h2>
-    <div class="passos col">
-      <div><div><h3>Inspeção gratuita</h3><p>Vamos ao local sem custo identificar a praga e por onde ela entra.</p></div></div>
-      <div><div><h3>Orçamento fechado</h3><p>Preço e método definidos antes de começar, sem surpresa depois.</p></div></div>
-      <div><div><h3>Aplicação</h3><p>Equipe no local no horário combinado, inclusive de madrugada.</p></div></div>
+  <section id="transformacao">
+    <p class="rotulo">Transformação Samurai</p>
+    <h2>Antes e depois.</h2>
+    <div class="antes-depois">
+      <div class="ad">
+        <figure><img src="img/p3.webp" alt="Ambiente com infestação antes do serviço" width="900" height="560"></figure>
+        <h3>Antes: o desafio da infestação</h3>
+        <p>Imagine um lar onde cada canto pode esconder pragas indesejadas, onde cada noite é uma batalha contra intrusos que ameaçam sua saúde. Pragas como ratos, baratas e cupins não só causam desconforto, como trazem doenças e danificam a integridade da casa.</p>
+      </div>
+      <div class="ad">
+        <figure><img src="img/p4.webp" alt="Ambiente tratado depois do serviço" width="900" height="560"></figure>
+        <h3>Depois: a solução Samurai</h3>
+        <p>Utilizando métodos seguros e sustentáveis, transformamos espaços infestados em ambientes limpos, saudáveis e livres de pragas. Nossa tecnologia e técnicos treinados garantem que cada canto da sua casa seja seguro para você, sua família e seus animais de estimação.</p>
+      </div>
     </div>
+  </section>
+
+  <section id="regioes">
+    <p class="rotulo">Onde atendemos</p>
+    <h2>São Paulo, ABCD, Baixada Santista e Litoral.</h2>
+    <p class="apoio col">
+      Cobrimos todas as zonas da capital e também as regiões metropolitana e litorânea,
+      com atendimento rápido e métodos seguros.
+    </p>
+    <ul class="regioes">
+      <li>Zona Leste</li><li>Zona Norte</li><li>Zona Oeste</li><li>Zona Sul</li><li>Centro</li>
+      <li>Grande São Paulo</li><li>ABCD</li><li>Alto Tietê</li>
+      <li>Baixada Santista</li><li>Litoral de São Paulo</li>
+    </ul>
+    <p class="apoio col" style="margin-top:20px">
+      Na Baixada e no Litoral atendemos Santos, São Vicente, Guarujá, Praia Grande,
+      Bertioga, Ubatuba, Caraguatatuba e São Sebastião, entre outras.
+    </p>
   </section>
 
   <section id="contato">
-    <div class="faixa">
+    <div class="contato">
       <p class="rotulo">Contato</p>
-      <h2>Qual é o problema hoje?</h2>
-      <p class="apoio col">Conte qual praga apareceu e onde. Fazemos a inspeção e o orçamento sem compromisso.</p>
-      <div class="contatos"><div><b>Telefone</b><a href="tel:11953791988"><span>(11) 95379-1988</span></a></div><div><b>WhatsApp</b><a href="https://wa.me/5511953791988"><span>(11) 95379-1988</span></a></div><div><b>E-mail</b><a href="mailto:contato@dedetizadorasamurai.com.br"><span>contato@dedetizadorasamurai.com.br</span></a></div><div><b>Atendimento</b><span>São Paulo, ABCD, Baixada Santista e Litoral</span></div></div>
-      <div class="acoes"><a class="btn" href="https://wa.me/5511953791988">Chamar no WhatsApp</a><a class="btn vazio" href="tel:11953791988">Ligar agora</a></div>
+      <h2>Problemas com pragas?</h2>
+      <p class="apoio col">
+        Receba uma resposta rápida em até 24 horas. Garantimos um atendimento
+        personalizado e soluções rápidas para sua tranquilidade.
+      </p>
+      <div class="canais">
+        <a href="tel:11953791988"><b>Telefone</b><span>(11) 95379-1988</span></a>
+        <a href="tel:11993188468"><b>Telefone 2</b><span>(11) 99318-8468</span></a>
+        <a href="https://wa.me/5511953791988?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20para%20dedetiza%C3%A7%C3%A3o."><b>WhatsApp</b><span>(11) 95379-1988</span></a>
+        <a href="mailto:contato@dedetizadorasamurai.com.br"><b>E-mail</b><span>contato@dedetizadorasamurai.com.br</span></a>
+      </div>
+      <div class="acoes" style="margin-top:26px">
+        <a class="btn" href="https://wa.me/5511953791988?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20para%20dedetiza%C3%A7%C3%A3o.">Agendar inspeção gratuita</a>
+      </div>
     </div>
   </section>
 
   <footer>
     <span>Dedetizadora Samurai · São Paulo, ABCD, Baixada Santista e Litoral</span>
-    <span>Proposta de redesenho feita pelo Refeito. Não afiliada a Dedetizadora Samurai.</span>
+    <span>Proposta de redesenho feita pelo Refeito. Não afiliada à Dedetizadora Samurai. Fotos e textos são deles.</span>
   </footer>
 </div>
+
 </body>
 </html>
