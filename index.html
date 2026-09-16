@@ -1,5 +1,7 @@
 <meta charset="utf-8">
 <title>Refeito</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Newsreader:opsz,ital,wght@6..72,0,300;6..72,0,400;6..72,1,300&display=swap">
@@ -7,15 +9,15 @@
 <style>
   :root {
     --papel: #fbfbf9;
-    --papel-2: #f0f0ed;
-    --papel-3: #e7e7e3;
+    --papel-2: #f2f2ef;
+    --papel-3: #e8e8e4;
     --linha: #dededa;
     --tinta: #12141a;
-    --tinta-2: #666d7a;
+    --tinta-2: #646b78;
     --azul: #1b3fd8;
-    --azul-2: #d9e0fb;
+    --azul-2: #dfe4fc;
     --lento: #ab3826;
-    --sombra: 0 1px 2px rgba(18,20,26,.06), 0 12px 32px -8px rgba(18,20,26,.14);
+    --sombra: 0 1px 2px rgba(18,20,26,.05), 0 16px 42px -12px rgba(18,20,26,.18);
 
     --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
     --corpo: "Newsreader", Georgia, "Times New Roman", serif;
@@ -26,26 +28,26 @@
       --papel: #0b0d11;
       --papel-2: #14171e;
       --papel-3: #1c212a;
-      --linha: #262c37;
+      --linha: #272d38;
       --tinta: #eceef2;
-      --tinta-2: #8b93a2;
-      --azul: #7d97ff;
-      --azul-2: #182348;
+      --tinta-2: #8a92a1;
+      --azul: #829aff;
+      --azul-2: #18203c;
       --lento: #e07a68;
-      --sombra: 0 1px 2px rgba(0,0,0,.4), 0 18px 40px -10px rgba(0,0,0,.6);
+      --sombra: 0 1px 2px rgba(0,0,0,.4), 0 20px 46px -12px rgba(0,0,0,.7);
     }
   }
   :root[data-theme="dark"] {
     --papel: #0b0d11;
     --papel-2: #14171e;
     --papel-3: #1c212a;
-    --linha: #262c37;
+    --linha: #272d38;
     --tinta: #eceef2;
-    --tinta-2: #8b93a2;
-    --azul: #7d97ff;
-    --azul-2: #182348;
+    --tinta-2: #8a92a1;
+    --azul: #829aff;
+    --azul-2: #18203c;
     --lento: #e07a68;
-    --sombra: 0 1px 2px rgba(0,0,0,.4), 0 18px 40px -10px rgba(0,0,0,.6);
+    --sombra: 0 1px 2px rgba(0,0,0,.4), 0 20px 46px -12px rgba(0,0,0,.7);
   }
 
   * { box-sizing: border-box; }
@@ -60,9 +62,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, .ui { font-family: var(--display); }
-  h1, h2, h3 { margin: 0; text-wrap: balance; letter-spacing: -0.025em; }
+  h1, h2, h3 { margin: 0; font-family: var(--display); text-wrap: balance; letter-spacing: -0.025em; }
   p { margin: 0; }
+  a { color: inherit; }
 
   .env { max-width: 1000px; margin: 0 auto; padding-inline: 22px; }
   .col { max-width: 660px; }
@@ -70,43 +72,33 @@
   /* Cabecalho */
   .topo {
     display: flex; align-items: center; justify-content: space-between;
-    gap: 16px; padding-block: 22px;
-    border-bottom: 1px solid var(--linha);
+    gap: 16px; padding-block: 20px; border-bottom: 1px solid var(--linha);
   }
-  .logo { display: flex; align-items: center; gap: 11px; }
-  .logo .mark {
-    width: 34px; height: 34px; border-radius: 7px; background: var(--azul);
-    display: grid; place-items: center;
-    font-family: var(--display); font-weight: 800; font-size: 1.15rem; color: #fff;
-  }
-  .logo b { font-family: var(--display); font-weight: 800; font-size: 1.12rem; letter-spacing: -0.025em; }
-  .topo .aferidor {
+  .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+  .logo img { width: 36px; height: 36px; border-radius: 8px; display: block; }
+  .logo b { font-family: var(--display); font-weight: 800; font-size: 1.14rem; letter-spacing: -0.03em; }
+  .aferidor {
     font-family: var(--display); font-size: 0.76rem; font-weight: 600;
-    letter-spacing: 0.04em; color: var(--tinta-2);
-    display: flex; align-items: center; gap: 8px;
+    color: var(--tinta-2); display: flex; align-items: center; gap: 8px;
   }
-  .topo .aferidor i {
-    width: 7px; height: 7px; border-radius: 50%; background: var(--azul);
-    display: inline-block;
-  }
-  .topo .aferidor b { color: var(--tinta); font-variant-numeric: tabular-nums; }
+  .aferidor i { width: 7px; height: 7px; border-radius: 50%; background: var(--azul); }
+  .aferidor b { color: var(--tinta); font-variant-numeric: tabular-nums; }
 
   /* Heroi */
-  .heroi { padding-block: 66px 8px; }
+  .heroi { padding-block: 64px 6px; }
   .selo {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: var(--display); font-weight: 600; font-size: 0.72rem;
-    letter-spacing: 0.12em; text-transform: uppercase; color: var(--azul);
-    background: var(--azul-2); padding: 7px 13px; border-radius: 999px;
-    margin-bottom: 26px;
+    display: inline-block; font-family: var(--display); font-weight: 600;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--azul); background: var(--azul-2); padding: 7px 14px;
+    border-radius: 999px; margin-bottom: 26px;
   }
   h1 { font-weight: 800; font-size: clamp(2.5rem, 7.4vw, 4.2rem); line-height: 1.0; }
   h1 em { font-family: var(--corpo); font-style: italic; font-weight: 300; letter-spacing: -0.01em; }
   .sub { font-size: 1.25rem; color: var(--tinta-2); margin-top: 24px; max-width: 30em; }
   .sub b { color: var(--tinta); font-weight: 500; font-family: var(--display); font-size: 1.1rem; }
 
-  /* Comparador */
-  .comparador { padding-block: 48px 0; }
+  /* ---------- Comparador ---------- */
+  .comparador { padding-block: 46px 0; }
   .moldura {
     border: 1px solid var(--linha); border-radius: 14px; overflow: hidden;
     background: var(--papel-2); box-shadow: var(--sombra);
@@ -121,95 +113,148 @@
     color: var(--tinta-2); background: var(--papel); padding: 4px 12px; border-radius: 6px;
   }
 
-  .palco { position: relative; aspect-ratio: 16 / 10; min-height: 300px; background: #fff; }
+  /* container-type deixa as cenas escalarem com a moldura em cqw, entao o
+     mini-site se comporta como uma captura de tela de verdade em qualquer largura. */
+  .palco { position: relative; aspect-ratio: 16 / 10; min-height: 290px; background: #fff; container-type: size; }
   .lado { position: absolute; inset: 0; overflow: hidden; }
   .lado.depois { clip-path: inset(0 0 0 var(--corte, 50%)); }
-  .cena { position: absolute; inset: 0; }
+  .cena { position: absolute; inset: 0; overflow: hidden; }
 
-  /* Cena antiga: apertado, sem hierarquia, cor de 2009. */
-  .antigo { background: #eceae2; color: #2d2a24; font-family: Verdana, Geneva, sans-serif; }
-  .antigo .faixa-topo {
-    background: linear-gradient(#5b7fa6, #3c5c80); color: #fff;
-    padding: 7px 12px; font-size: 11px; font-weight: bold;
-    display: flex; justify-content: space-between; border-bottom: 2px solid #26415c;
+  /* Portao desenhado em CSS: nenhuma foto de terceiro entra na peca. */
+  .portao {
+    background:
+      repeating-linear-gradient(180deg,
+        #9aa3ab 0 1.1cqw, #7d868f 1.1cqw 1.3cqw, #b6bec5 1.3cqw 2.2cqw, #8d959d 2.2cqw 2.4cqw),
+      #8d959d;
+    position: relative;
   }
-  .antigo .miolo { padding: 12px; display: grid; grid-template-columns: 1.6fr 1fr; gap: 10px; }
-  .antigo h4 { margin: 0 0 6px; font-size: 13px; color: #8a2b1e; text-align: center; }
-  .antigo p { font-size: 9px; line-height: 1.45; margin: 0 0 7px; }
-  .antigo .caixa { border: 1px solid #b9b3a3; background: #f7f5ef; padding: 8px; }
-  .antigo .bloco { background: #cfc9b8; height: 46px; margin-bottom: 7px; display: grid; place-items: center; font-size: 8px; color: #6d6757; }
-  .antigo .btn {
-    background: linear-gradient(#f0c14b, #d8a01f); border: 1px solid #a07d14;
-    font-size: 9px; font-weight: bold; padding: 4px 9px; display: inline-block;
+  .portao::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(115deg, rgba(255,255,255,.26) 0 16%, transparent 46%);
   }
-  .antigo .rodape { font-size: 8px; color: #7b7466; text-align: center; padding: 6px; }
 
-  /* Cena refeita: respiro, hierarquia, uma acao clara. */
-  .novo { background: #ffffff; color: #13161c; font-family: var(--display); }
-  .novo .faixa-topo {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 12px 18px; font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+  /* --- Cena antiga: carrossel, logo enorme, tudo gritando junto --- */
+  .antigo { background: #f2efe9; color: #221f1c; font-family: Verdana, Geneva, sans-serif; }
+  .antigo .fita {
+    background: #1c1c1c; color: #fff; font-size: 1.15cqw; font-weight: bold;
+    padding: 0.8cqw 1.4cqw; display: flex; align-items: center; gap: 1cqw;
   }
-  .novo .faixa-topo span { color: #8b93a2; font-weight: 600; }
-  .novo .miolo { padding: 8px 18px 18px; }
-  .novo h4 {
-    margin: 0 0 8px; font-size: clamp(15px, 3.4vw, 26px); line-height: 1.06;
-    font-weight: 800; letter-spacing: -0.03em; max-width: 11em;
+  .antigo .fita .zap { color: #4ac95c; }
+  .antigo .fita .redes { margin-left: auto; display: flex; gap: 0.7cqw; }
+  .antigo .fita .redes i { width: 1.5cqw; height: 1.5cqw; background: #d8d4cc; display: block; border-radius: 2px; }
+  .antigo .cabeca {
+    background: #fff; display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2cqw 1.6cqw; border-bottom: 0.35cqw solid #b3121a;
   }
-  .novo .linha-fina { font-family: var(--corpo); font-size: 11px; color: #666d7a; max-width: 24em; margin-bottom: 12px; }
-  .novo .btn {
-    background: var(--azul); color: #fff; font-size: 10px; font-weight: 700;
-    padding: 9px 16px; border-radius: 7px; display: inline-block;
+  .antigo .marcao { display: flex; align-items: baseline; gap: 0.5cqw; }
+  .antigo .marcao b {
+    font-size: 4.4cqw; color: #b3121a; font-weight: bold; letter-spacing: -0.12cqw;
+    text-shadow: 0.12cqw 0.12cqw 0 rgba(0,0,0,.25);
   }
-  .novo .tira { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
-  .novo .tira div { aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(140deg, #e8ebf6, #d2d9ef); }
-  .novo .tira div:nth-child(2) { background: linear-gradient(140deg, #dfe4f5, #c3cdea); }
-  .novo .tira div:nth-child(3) { background: linear-gradient(140deg, #eaecf4, #dae0f0); }
+  .antigo .marcao span { font-size: 1.2cqw; color: #55504a; letter-spacing: 0.3cqw; }
+  .antigo .burger { display: grid; gap: 0.45cqw; }
+  .antigo .burger i { width: 2.8cqw; height: 0.4cqw; background: #333; display: block; }
+  .antigo .palco-foto { position: relative; height: 26cqw; }
+  .antigo .palco-foto .portao { position: absolute; inset: 0; }
+  .antigo .selos {
+    position: absolute; right: 2cqw; top: 3cqw; display: grid; gap: 1.1cqw; width: 33cqw;
+  }
+  .antigo .selos div { display: flex; gap: 0.8cqw; align-items: flex-start; font-size: 1.25cqw; color: #fff; text-shadow: 0 0.1cqw 0.3cqw rgba(0,0,0,.9); }
+  .antigo .selos div::before { content: "✔"; color: #ffd400; font-size: 1.4cqw; }
+  .antigo .zapbtn {
+    position: absolute; right: 2cqw; bottom: 2.4cqw;
+    background: #4ac95c; color: #fff; font-size: 1.15cqw; font-weight: bold;
+    padding: 0.8cqw 1.4cqw; border-radius: 0.5cqw;
+  }
+  .antigo .pontos { position: absolute; left: 50%; bottom: 1.2cqw; transform: translateX(-50%); display: flex; gap: 0.7cqw; }
+  .antigo .pontos i { width: 1cqw; height: 1cqw; border-radius: 50%; background: rgba(255,255,255,.55); display: block; }
+  .antigo .pontos i:first-child { background: #fff; }
+  .antigo .setas { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding-inline: 1.2cqw; color: #fff; font-size: 2.6cqw; }
+  .antigo .abaixo { padding: 1.6cqw; text-align: center; }
+  .antigo .abaixo h4 { margin: 0 0 0.7cqw; font-size: 2cqw; color: #b3121a; }
+  .antigo .abaixo p { font-size: 1.15cqw; line-height: 1.5; color: #4a4540; max-width: 62cqw; margin: 0 auto; }
+  .antigo .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2cqw; padding: 0 1.6cqw 1.6cqw; }
+  .antigo .cards div {
+    border: 0.15cqw solid #c9c3b6; background: #fff; padding: 1cqw; text-align: center;
+  }
+  .antigo .cards .mini { height: 7cqw; margin-bottom: 0.7cqw; }
+  .antigo .cards .mini .portao { width: 100%; height: 100%; }
+  .antigo .cards b { font-size: 1.15cqw; color: #b3121a; text-transform: uppercase; }
+  .antigo .cards p { font-size: 0.95cqw; color: #6b645b; margin: 0.3cqw 0 0; }
+  .antigo .bolha {
+    position: absolute; right: 2cqw; bottom: 2cqw; width: 5.4cqw; height: 5.4cqw;
+    border-radius: 50%; background: #25d366; display: grid; place-items: center;
+    color: #fff; font-size: 2.4cqw; box-shadow: 0 0.3cqw 0.8cqw rgba(0,0,0,.35); z-index: 2;
+  }
+
+  /* --- Cena refeita: uma promessa, uma acao, prova em numeros --- */
+  .novo { background: #ffffff; color: #12141a; font-family: var(--display); }
+  .novo .cabeca {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.6cqw 2.4cqw;
+  }
+  .novo .marca-n { display: flex; align-items: center; gap: 0.8cqw; font-weight: 800; font-size: 1.5cqw; letter-spacing: -0.04cqw; }
+  .novo .marca-n s { width: 1.8cqw; height: 1.8cqw; border-radius: 0.4cqw; background: #12141a; display: block; }
+  .novo .menu { display: flex; gap: 1.6cqw; font-size: 1.05cqw; font-weight: 600; color: #6b7280; }
+  .novo .menu b { color: #12141a; }
+  .novo .miolo { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2.2cqw; padding: 0.4cqw 2.4cqw 2cqw; align-items: center; }
+  .novo h4 { margin: 0 0 1cqw; font-size: 3.6cqw; line-height: 1.02; font-weight: 800; letter-spacing: -0.11cqw; }
+  .novo .apoio { font-family: var(--corpo); font-size: 1.35cqw; line-height: 1.5; color: #5b6270; margin-bottom: 1.6cqw; }
+  .novo .acoes-n { display: flex; gap: 0.9cqw; align-items: center; }
+  .novo .cta { background: #1b3fd8; color: #fff; font-size: 1.15cqw; font-weight: 700; padding: 1cqw 1.8cqw; border-radius: 0.6cqw; }
+  .novo .cta2 { font-size: 1.15cqw; font-weight: 700; color: #12141a; border-bottom: 0.18cqw solid #12141a; padding-bottom: 0.2cqw; }
+  .novo .provas { display: flex; gap: 2.4cqw; margin-top: 2cqw; padding-top: 1.4cqw; border-top: 0.12cqw solid #e6e7ea; }
+  .novo .provas div b { display: block; font-size: 2.1cqw; font-weight: 800; letter-spacing: -0.06cqw; }
+  .novo .provas div span { font-size: 0.95cqw; color: #6b7280; font-weight: 600; }
+  .novo .vitrine { border-radius: 1cqw; overflow: hidden; aspect-ratio: 4/5; }
+  .novo .vitrine .portao { width: 100%; height: 100%; }
+  .novo .servicos {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4cqw;
+    padding: 0 2.4cqw 2.4cqw;
+  }
+  .novo .servicos article {
+    border: 0.12cqw solid #e6e7ea; border-radius: 0.9cqw; overflow: hidden;
+  }
+  .novo .servicos .capa { height: 9cqw; }
+  .novo .servicos .capa .portao { width: 100%; height: 100%; }
+  .novo .servicos .txt { padding: 1cqw 1.2cqw 1.3cqw; }
+  .novo .servicos b { display: block; font-size: 1.25cqw; font-weight: 700; letter-spacing: -0.02cqw; }
+  .novo .servicos span { display: block; font-family: var(--corpo); font-size: 1.05cqw; color: #6b7280; margin-top: 0.3cqw; }
 
   .etiqueta {
-    position: absolute; bottom: 12px; font-family: var(--display);
-    font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 5px 10px; border-radius: 999px; color: #fff; z-index: 3; pointer-events: none;
+    position: absolute; bottom: 1.4cqw; font-family: var(--display);
+    font-size: 1.05cqw; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.6cqw 1.1cqw; border-radius: 999px; color: #fff; z-index: 3; pointer-events: none;
   }
-  .etiqueta.a { left: 12px; background: var(--lento); }
-  .etiqueta.d { right: 12px; background: var(--azul); }
+  .etiqueta.a { left: 1.4cqw; background: #ab3826; }
+  .etiqueta.d { right: 1.4cqw; background: #1b3fd8; }
 
-  .puxador {
-    position: absolute; top: 0; bottom: 0; width: 2px; background: var(--azul);
-    left: var(--corte, 50%); z-index: 4; pointer-events: none;
-  }
+  .puxador { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--azul); left: var(--corte, 50%); z-index: 4; pointer-events: none; }
   .puxador::after {
-    content: "‹ ›"; position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     background: var(--azul); color: #fff; border-radius: 999px;
     font-family: var(--display); font-size: 0.8rem; font-weight: 700;
-    width: 40px; height: 40px; display: grid; place-items: center;
-    letter-spacing: 1px;
+    width: 42px; height: 42px; display: grid; place-items: center; letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.3);
   }
-
-  input[type="range"].corte {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    margin: 0; opacity: 0; cursor: ew-resize; z-index: 5;
-  }
-  input[type="range"].corte:focus-visible { opacity: 0; }
+  input[type="range"].corte { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; z-index: 5; }
   .palco:focus-within { outline: 3px solid var(--azul); outline-offset: 3px; }
 
   .legenda-comp {
-    font-size: 0.93rem; color: var(--tinta-2);
-    margin-top: 13px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    font-size: 0.93rem; color: var(--tinta-2); margin-top: 13px;
+    display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
   }
 
-  /* Secoes */
-  section { padding-block: 64px; border-top: 1px solid var(--linha); }
+  /* ---------- Secoes ---------- */
+  section { padding-block: 62px; border-top: 1px solid var(--linha); }
+  .rotulo[id] { scroll-margin-top: 24px; }
   .rotulo {
     font-family: var(--display); font-weight: 600; font-size: 0.72rem;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--azul);
-    margin-bottom: 13px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--azul); margin-bottom: 13px;
   }
   h2 { font-weight: 700; font-size: clamp(1.6rem, 4.4vw, 2.2rem); line-height: 1.14; margin-bottom: 20px; }
   section p + p { margin-top: 15px; }
 
-  /* Tempos */
   .tempos { display: grid; gap: 18px; margin-block: 28px 12px; }
   .tempo-linha { display: grid; gap: 7px; }
   .tempo-topo {
@@ -224,17 +269,15 @@
   .faixa.rapido { width: 7.6%; min-width: 7px; background: var(--azul); padding: 0; }
   .fora { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--azul); padding-left: 14px; }
 
-  /* Passos */
-  ol.passos { list-style: none; counter-reset: p; margin: 0; padding: 0; display: grid; gap: 4px; }
+  ol.passos { list-style: none; counter-reset: p; margin: 0; padding: 0; display: grid; }
   ol.passos li {
     counter-increment: p; display: grid; grid-template-columns: 52px 1fr; gap: 18px;
     padding-block: 22px; border-top: 1px solid var(--linha);
   }
   ol.passos li:first-child { border-top: 0; padding-top: 6px; }
   ol.passos li::before {
-    content: counter(p, decimal-leading-zero);
-    font-family: var(--display); font-weight: 700; font-size: 0.86rem;
-    color: var(--azul); padding-top: 5px; letter-spacing: 0.04em;
+    content: counter(p, decimal-leading-zero); font-family: var(--display);
+    font-weight: 700; font-size: 0.86rem; color: var(--azul); padding-top: 5px;
   }
   ol.passos h3 { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
   ol.passos p { color: var(--tinta-2); font-size: 1.02rem; }
@@ -243,19 +286,34 @@
   ul.entrega li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; font-size: 1.02rem; }
   ul.entrega li::before { content: "✓"; color: var(--azul); font-family: var(--display); font-weight: 700; }
 
-  .preco-caixa {
-    background: var(--papel-2); border-radius: 12px; padding: 30px;
-    display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 20px;
+  /* ---------- Preco ---------- */
+  .oferta {
+    border: 1px solid var(--linha); border-radius: 14px; overflow: hidden;
+    display: grid; grid-template-columns: 1fr 1fr;
   }
-  .preco-caixa .num { font-family: var(--display); font-weight: 800; font-size: clamp(2.5rem, 8vw, 3.4rem); letter-spacing: -0.035em; line-height: 1; }
-  .preco-caixa .cond { color: var(--tinta-2); font-size: 1rem; }
+  .oferta .valor {
+    padding: 34px; background: var(--papel-2);
+    display: flex; flex-direction: column; justify-content: center; gap: 6px;
+  }
+  .oferta .valor .cifra {
+    font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 7vw, 3.4rem);
+    letter-spacing: -0.04em; line-height: 1;
+  }
+  .oferta .valor .unico {
+    font-family: var(--display); font-size: 0.76rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--tinta-2);
+  }
+  .oferta .termos { padding: 30px 34px; display: grid; gap: 14px; align-content: center; }
+  .oferta .termos div { display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 1rem; }
+  .oferta .termos div::before { content: "✓"; color: var(--azul); font-family: var(--display); font-weight: 700; }
+  .oferta .termos b { font-family: var(--display); font-weight: 700; }
 
-  .opcional { background: var(--azul-2); border-radius: 12px; padding: 30px; }
+  .opcional { background: var(--azul-2); border-radius: 14px; padding: 34px; }
   .opcional .selo { background: transparent; border: 1px solid var(--azul); }
   .opcional p { color: var(--tinta-2); }
   .opcional p b { color: var(--tinta); font-weight: 500; font-family: var(--display); font-size: 1rem; }
 
-  .robo { border: 1px solid var(--linha); border-radius: 12px; padding: 28px; }
+  .robo { border: 1px solid var(--linha); border-radius: 14px; padding: 30px; }
   .robo h2 { font-size: 1.22rem; margin-bottom: 11px; }
   .robo p { color: var(--tinta-2); font-size: 1.02rem; }
 
@@ -267,24 +325,40 @@
   .botao:hover { filter: brightness(1.1); }
   .botao:focus-visible { outline: 3px solid var(--lento); outline-offset: 3px; }
 
-  footer {
-    border-top: 1px solid var(--linha); padding-block: 26px 48px;
+  /* ---------- Rodape ---------- */
+  footer { border-top: 1px solid var(--linha); padding-block: 42px 54px; }
+  .rodape-grade { display: grid; gap: 30px; grid-template-columns: 1.4fr 1fr 1fr; }
+  .rodape-grade .sobre p { font-size: 0.96rem; color: var(--tinta-2); margin-top: 12px; max-width: 26em; }
+  .rodape-grade h4 {
+    font-family: var(--display); font-weight: 600; font-size: 0.72rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--tinta-2);
+    margin: 0 0 12px;
+  }
+  .rodape-grade ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.98rem; }
+  .rodape-grade a { text-decoration: none; }
+  .rodape-grade a:hover { color: var(--azul); }
+  .rodape-fim {
+    margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--linha);
+    display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between;
     font-family: var(--display); font-size: 0.78rem; color: var(--tinta-2);
-    display: grid; gap: 5px;
   }
 
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  @media (max-width: 760px) {
+    .oferta { grid-template-columns: 1fr; }
+    .rodape-grade { grid-template-columns: 1fr; gap: 26px; }
+  }
   @media (max-width: 620px) {
-    .heroi { padding-block: 44px 4px; }
-    section { padding-block: 48px; }
-    .palco { aspect-ratio: 4 / 3; }
+    .heroi { padding-block: 42px 4px; }
+    section { padding-block: 46px; }
+    .palco { min-height: 210px; }
   }
 </style>
 
 <div class="env">
 
   <div class="topo">
-    <div class="logo"><span class="mark">R</span><b>Refeito</b></div>
+    <a class="logo" href="/"><img src="logo.png" alt="Refeito" width="36" height="36"><b>Refeito</b></a>
     <div class="aferidor"><i></i>esta página respondeu em <b id="ttfb">—</b></div>
   </div>
 
@@ -301,7 +375,7 @@
     <div class="moldura">
       <div class="barra-nav">
         <i></i><i></i><i></i>
-        <span class="url">seunegocio.com.br</span>
+        <span class="url">portoesbianchi.com.br</span>
       </div>
       <div class="palco">
         <span class="etiqueta a">Antes</span>
@@ -309,32 +383,76 @@
 
         <div class="lado antes">
           <div class="cena antigo">
-            <div class="faixa-topo"><span>SEU NEGÓCIO LTDA</span><span>Início · Sobre · Serviços · Contato</span></div>
-            <div class="miolo">
-              <div>
-                <h4>SEJA BEM VINDO AO NOSSO SITE!!</h4>
-                <p>Somos uma empresa que atua há muitos anos no mercado oferecendo os melhores serviços com qualidade e compromisso para todos os nossos clientes em toda a região.</p>
-                <p>Trabalhamos com dedicação e seriedade para atender você da melhor forma possível, sempre buscando a excelência em tudo o que fazemos no dia a dia.</p>
-                <span class="btn">Clique aqui</span>
-              </div>
-              <div class="caixa">
-                <div class="bloco">foto</div>
-                <div class="bloco">foto</div>
-                <p style="font-size:8px">Telefone: (00) 0000-0000<br>Rua Exemplo, 123</p>
-              </div>
+            <div class="fita">
+              <span class="zap">✆</span> 16 3xxx-xxxx
+              <span class="redes"><i></i><i></i></span>
             </div>
-            <div class="rodape">Copyright 2011 · Todos os direitos reservados · Visitantes: 004821</div>
+            <div class="cabeca">
+              <div class="marcao"><b>BIANCHI</b><span>SERRALHERIA</span></div>
+              <div class="burger"><i></i><i></i><i></i></div>
+            </div>
+            <div class="palco-foto">
+              <div class="portao"></div>
+              <div class="setas"><span>‹</span><span>›</span></div>
+              <div class="selos">
+                <div>Especializada na fabricação de Portões de Ferro (aço carbono).</div>
+                <div>Parcelamos no Cartão em até 12 vezes.</div>
+                <div>Entrega e instalação em até 200Km de Ribeirão Preto.</div>
+              </div>
+              <div class="zapbtn">Solicite orçamento sem compromisso</div>
+              <div class="pontos"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="abaixo">
+              <h4>SEJA BEM VINDO!</h4>
+              <p>Fabricamos e instalamos portas e portões com muitos anos de experiência e soluções para você. Solicite um orçamento! Entrega Rápida.</p>
+            </div>
+            <div class="cards">
+              <div><div class="mini"><div class="portao"></div></div><b>Basculante</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><div class="portao"></div></div><b>Deslizante</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><div class="portao"></div></div><b>Automatizador</b><p>Clique e saiba mais</p></div>
+            </div>
+            <div class="bolha">✆</div>
           </div>
         </div>
 
         <div class="lado depois">
           <div class="cena novo">
-            <div class="faixa-topo">SEU NEGÓCIO<span>Trabalho · Sobre · Contato</span></div>
+            <div class="cabeca">
+              <div class="marca-n"><s></s>Bianchi Serralheria</div>
+              <div class="menu"><b>Portões</b><span>Trabalhos</span><span>Orçamento</span></div>
+            </div>
             <div class="miolo">
-              <h4>Um trabalho que fala por si.</h4>
-              <p class="linha-fina">Atendemos a região há vinte anos. Veja o que já fizemos e peça um orçamento em um minuto.</p>
-              <span class="btn">Pedir orçamento</span>
-              <div class="tira"><div></div><div></div><div></div></div>
+              <div>
+                <h4>Portões de ferro feitos sob medida, em Ribeirão Preto.</h4>
+                <p class="apoio">
+                  Fabricação e instalação num raio de 200 km. Você manda a medida
+                  e a foto do vão, e devolvemos o orçamento no mesmo dia.
+                </p>
+                <div class="acoes-n">
+                  <span class="cta">Pedir orçamento</span>
+                  <span class="cta2">Ver trabalhos</span>
+                </div>
+                <div class="provas">
+                  <div><b>22 anos</b><span>DE OFICINA</span></div>
+                  <div><b>200 km</b><span>DE ALCANCE</span></div>
+                  <div><b>12x</b><span>SEM JUROS</span></div>
+                </div>
+              </div>
+              <div class="vitrine"><div class="portao"></div></div>
+            </div>
+            <div class="servicos">
+              <article>
+                <div class="capa"><div class="portao"></div></div>
+                <div class="txt"><b>Basculante</b><span>Uma folha, abre para cima</span></div>
+              </article>
+              <article>
+                <div class="capa"><div class="portao"></div></div>
+                <div class="txt"><b>Deslizante</b><span>Para vãos largos</span></div>
+              </article>
+              <article>
+                <div class="capa"><div class="portao"></div></div>
+                <div class="txt"><b>Automação</b><span>Motor e controle remoto</span></div>
+              </article>
             </div>
           </div>
         </div>
@@ -345,8 +463,8 @@
       </div>
     </div>
     <p class="legenda-comp">
-      <span>Arraste para comparar. Ilustrativo, não é o site de ninguém.</span>
-      <span>Setas do teclado também funcionam.</span>
+      <span>Arraste para comparar. Baseado num site real que medimos, com nome e domínio trocados.</span>
+      <span>As setas do teclado também funcionam.</span>
     </p>
   </div>
 
@@ -371,36 +489,30 @@
         <div class="trilho"><div class="faixa rapido"></div><span class="fora">0,05 s</span></div>
       </div>
     </div>
-    <p class="legenda-comp"><span>As duas barras estão na escala real uma da outra. Mediana de 8 medições em cada site: 13 vezes mais rápido.</span></p>
+    <p class="legenda-comp"><span>As barras estão na escala real uma da outra. Mediana de 8 medições em cada site: 13 vezes mais rápido.</span></p>
   </section>
 
   <section>
-    <p class="rotulo">Como funciona</p>
+    <p class="rotulo" id="como-funciona">Como funciona</p>
     <h2>Sem reunião, sem briefing, sem orçamento.</h2>
     <ol class="passos">
-      <li>
-        <div>
-          <h3>Medimos o seu site</h3>
-          <p>Abrimos como qualquer cliente seu abriria e medimos quanto tempo leva e quanto pesa. Sem acesso, sem senha, e você nem fica sabendo ainda.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3>Refazemos e colocamos no ar</h3>
-          <p>Seu conteúdo, suas fotos, seu texto. Layout novo, carregamento instantâneo, funcionando bem no celular, num link de verdade que você abre e testa.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3>Você olha e decide</h3>
-          <p>Mandamos o link com o antes e o depois. Gostou, apontamos seu domínio e ele fica no ar. Não gostou, acabou ali, sem custo nenhum.</p>
-        </div>
-      </li>
+      <li><div>
+        <h3>Medimos o seu site</h3>
+        <p>Abrimos como qualquer cliente seu abriria e medimos quanto tempo leva e quanto pesa. Sem acesso, sem senha, e você nem fica sabendo ainda.</p>
+      </div></li>
+      <li><div>
+        <h3>Refazemos e colocamos no ar</h3>
+        <p>Seu conteúdo, suas fotos, seu texto. Layout novo, carregamento instantâneo, funcionando bem no celular, num link de verdade que você abre e testa.</p>
+      </div></li>
+      <li><div>
+        <h3>Você olha e decide</h3>
+        <p>Mandamos o link com o antes e o depois. Gostou, apontamos seu domínio e ele fica no ar. Não gostou, acabou ali, sem custo nenhum.</p>
+      </div></li>
     </ol>
   </section>
 
   <section>
-    <p class="rotulo">O que vem junto</p>
+    <p class="rotulo" id="o-que-vem">O que vem junto</p>
     <h2>Site completo, no ar, no seu domínio.</h2>
     <ul class="entrega">
       <li>Layout feito para o seu negócio, não um modelo genérico</li>
@@ -413,13 +525,22 @@
   </section>
 
   <section>
-    <p class="rotulo">Preço</p>
-    <div class="preco-caixa">
-      <span class="num">R$ 1.200</span>
-      <span class="cond">preço fechado · pago só depois de você ver o site pronto</span>
+    <p class="rotulo" id="preco">Preço</p>
+    <h2>Um valor, dito antes de começar.</h2>
+    <div class="oferta">
+      <div class="valor">
+        <span class="unico">Site completo</span>
+        <span class="cifra">R$ 1.200</span>
+        <span class="unico">pagamento único</span>
+      </div>
+      <div class="termos">
+        <div><span>Você paga <b>só depois</b> de ver o site pronto e funcionando</span></div>
+        <div><span>Hospedagem inclusa, <b>sem mensalidade</b> nenhuma</span></div>
+        <div><span>Não gostou, <b>não paga</b> e não deve nada</span></div>
+      </div>
     </div>
     <div class="col">
-      <p style="margin-top:18px">
+      <p style="margin-top:20px">
         Não cobramos nada para começar, porque quando o link chega até você o trabalho
         já está feito. O risco é nosso.
       </p>
@@ -476,8 +597,34 @@
   </section>
 
   <footer>
-    <span>Refeito · sites de pequeno negócio · refeito101@gmail.com</span>
-    <span>Medições de setembro de 2026, feitas em sites públicos.</span>
+    <div class="rodape-grade">
+      <div class="sobre">
+        <a class="logo" href="/"><img src="logo.png" alt="" width="36" height="36"><b>Refeito</b></a>
+        <p>
+          Refazemos sites de pequeno negócio antes do cliente pedir, e só cobramos
+          de quem gosta do resultado.
+        </p>
+      </div>
+      <div>
+        <h4>Na página</h4>
+        <ul>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#o-que-vem">O que vem junto</a></li>
+          <li><a href="#preco">Preço</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Falar com o Refeito</h4>
+        <ul>
+          <li><a href="mailto:refeito101@gmail.com">refeito101@gmail.com</a></li>
+          <li><a href="https://github.com/refeito">github.com/refeito</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-fim">
+      <span>Refeito · sites de pequeno negócio</span>
+      <span>Medições de setembro de 2026, feitas em sites públicos.</span>
+    </div>
   </footer>
 
 </div>
