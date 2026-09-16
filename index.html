@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Refeito</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo-512.png">
@@ -116,21 +117,39 @@
   /* container-type deixa as cenas escalarem com a moldura em cqw, entao o
      mini-site se comporta como uma captura de tela de verdade em qualquer largura. */
   .palco { position: relative; aspect-ratio: 16 / 10; min-height: 290px; background: #fff; container-type: size; }
-  .lado { position: absolute; inset: 0; overflow: hidden; }
+  .lado { position: absolute; inset: 0; overflow: hidden; isolation: isolate; }
   .lado.depois { clip-path: inset(0 0 0 var(--corte, 50%)); }
   .cena { position: absolute; inset: 0; overflow: hidden; }
 
-  /* Portao desenhado em CSS: nenhuma foto de terceiro entra na peca. */
-  .portao {
+  /* Cena do portao desenhada em CSS: ceu, muro, portao e chao. Textura solta
+     le como placeholder; o que convence e a composicao. Nenhuma foto de
+     terceiro entra na peca. */
+  .cena-foto {
+    position: relative; overflow: hidden; width: 100%; height: 100%;
+    background: linear-gradient(180deg, #cfe1f0 0%, #e9eff4 44%, #cdc6b8 44%, #b6ae9e 100%);
+  }
+  .cena-foto .muro { position: absolute; bottom: 0; width: 17%; height: 60%; background: linear-gradient(180deg, #ece6da, #cdc5b4); }
+  .cena-foto .muro.e { left: 0; } .cena-foto .muro.d { right: 0; }
+  .cena-foto .muro::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 9%; background: #b5ab99; }
+  .cena-foto .vao {
+    position: absolute; left: 17%; right: 17%; bottom: 13%; height: 47%;
     background:
       repeating-linear-gradient(180deg,
-        #9aa3ab 0 1.1cqw, #7d868f 1.1cqw 1.3cqw, #b6bec5 1.3cqw 2.2cqw, #8d959d 2.2cqw 2.4cqw),
-      #8d959d;
-    position: relative;
+        #b9c1c8 0 13%, #969ea6 13% 16%, #cad1d7 16% 27%, #a2aab1 27% 30%);
+    box-shadow: inset 0 0 0 0.45cqw #737b82;
   }
-  .portao::after {
+  .cena-foto .vao::after {
     content: ""; position: absolute; inset: 0;
-    background: linear-gradient(115deg, rgba(255,255,255,.26) 0 16%, transparent 46%);
+    background: linear-gradient(105deg, rgba(255,255,255,.34) 0 22%, transparent 52%);
+  }
+  .cena-foto .chao { position: absolute; left: 0; right: 0; bottom: 0; height: 13%; background: linear-gradient(180deg, #ada395, #978d7e); }
+  .cena-foto .sombra {
+    position: absolute; left: 13%; right: 13%; bottom: 10.5%; height: 4%;
+    background: rgba(40,34,26,.3); border-radius: 50%; filter: blur(0.5cqw);
+  }
+  .cena-foto .mato {
+    position: absolute; bottom: 12%; left: 2%; width: 11%; height: 15%;
+    background: radial-gradient(circle at 50% 100%, #6f8f5e 0 62%, transparent 63%);
   }
 
   /* --- Cena antiga: carrossel, logo enorme, tudo gritando junto --- */
@@ -155,7 +174,7 @@
   .antigo .burger { display: grid; gap: 0.45cqw; }
   .antigo .burger i { width: 2.8cqw; height: 0.4cqw; background: #333; display: block; }
   .antigo .palco-foto { position: relative; height: 26cqw; }
-  .antigo .palco-foto .portao { position: absolute; inset: 0; }
+  .antigo .palco-foto .cena-foto { position: absolute; inset: 0; }
   .antigo .selos {
     position: absolute; right: 2cqw; top: 3cqw; display: grid; gap: 1.1cqw; width: 33cqw;
   }
@@ -178,7 +197,7 @@
     border: 0.15cqw solid #c9c3b6; background: #fff; padding: 1cqw; text-align: center;
   }
   .antigo .cards .mini { height: 7cqw; margin-bottom: 0.7cqw; }
-  .antigo .cards .mini .portao { width: 100%; height: 100%; }
+  
   .antigo .cards b { font-size: 1.15cqw; color: #b3121a; text-transform: uppercase; }
   .antigo .cards p { font-size: 0.95cqw; color: #6b645b; margin: 0.3cqw 0 0; }
   .antigo .bolha {
@@ -197,7 +216,7 @@
   .novo .marca-n s { width: 1.8cqw; height: 1.8cqw; border-radius: 0.4cqw; background: #12141a; display: block; }
   .novo .menu { display: flex; gap: 1.6cqw; font-size: 1.05cqw; font-weight: 600; color: #6b7280; }
   .novo .menu b { color: #12141a; }
-  .novo .miolo { display: grid; grid-template-columns: 1.25fr 1fr; gap: 2.2cqw; padding: 0.4cqw 2.4cqw 2cqw; align-items: center; }
+  .novo .miolo { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.2cqw; padding: 0.4cqw 2.4cqw 2cqw; align-items: center; }
   .novo h4 { margin: 0 0 1cqw; font-size: 3.6cqw; line-height: 1.02; font-weight: 800; letter-spacing: -0.11cqw; }
   .novo .apoio { font-family: var(--corpo); font-size: 1.35cqw; line-height: 1.5; color: #5b6270; margin-bottom: 1.6cqw; }
   .novo .acoes-n { display: flex; gap: 0.9cqw; align-items: center; }
@@ -206,8 +225,8 @@
   .novo .provas { display: flex; gap: 2.4cqw; margin-top: 2cqw; padding-top: 1.4cqw; border-top: 0.12cqw solid #e6e7ea; }
   .novo .provas div b { display: block; font-size: 2.1cqw; font-weight: 800; letter-spacing: -0.06cqw; }
   .novo .provas div span { font-size: 0.95cqw; color: #6b7280; font-weight: 600; }
-  .novo .vitrine { border-radius: 1cqw; overflow: hidden; aspect-ratio: 4/5; }
-  .novo .vitrine .portao { width: 100%; height: 100%; }
+  .novo .vitrine { border-radius: 1cqw; overflow: hidden; aspect-ratio: 4 / 3; }
+  
   .novo .servicos {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4cqw;
     padding: 0 2.4cqw 2.4cqw;
@@ -215,8 +234,8 @@
   .novo .servicos article {
     border: 0.12cqw solid #e6e7ea; border-radius: 0.9cqw; overflow: hidden;
   }
-  .novo .servicos .capa { height: 9cqw; }
-  .novo .servicos .capa .portao { width: 100%; height: 100%; }
+  .novo .servicos .capa { height: 8.5cqw; }
+  
   .novo .servicos .txt { padding: 1cqw 1.2cqw 1.3cqw; }
   .novo .servicos b { display: block; font-size: 1.25cqw; font-weight: 700; letter-spacing: -0.02cqw; }
   .novo .servicos span { display: block; font-family: var(--corpo); font-size: 1.05cqw; color: #6b7280; margin-top: 0.3cqw; }
@@ -392,7 +411,7 @@
               <div class="burger"><i></i><i></i><i></i></div>
             </div>
             <div class="palco-foto">
-              <div class="portao"></div>
+              <div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div>
               <div class="setas"><span>‹</span><span>›</span></div>
               <div class="selos">
                 <div>Especializada na fabricação de Portões de Ferro (aço carbono).</div>
@@ -407,9 +426,9 @@
               <p>Fabricamos e instalamos portas e portões com muitos anos de experiência e soluções para você. Solicite um orçamento! Entrega Rápida.</p>
             </div>
             <div class="cards">
-              <div><div class="mini"><div class="portao"></div></div><b>Basculante</b><p>Clique e saiba mais</p></div>
-              <div><div class="mini"><div class="portao"></div></div><b>Deslizante</b><p>Clique e saiba mais</p></div>
-              <div><div class="mini"><div class="portao"></div></div><b>Automatizador</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div><b>Basculante</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div><b>Deslizante</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div><b>Automatizador</b><p>Clique e saiba mais</p></div>
             </div>
             <div class="bolha">✆</div>
           </div>
@@ -438,19 +457,19 @@
                   <div><b>12x</b><span>SEM JUROS</span></div>
                 </div>
               </div>
-              <div class="vitrine"><div class="portao"></div></div>
+              <div class="vitrine"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
             </div>
             <div class="servicos">
               <article>
-                <div class="capa"><div class="portao"></div></div>
+                <div class="capa"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
                 <div class="txt"><b>Basculante</b><span>Uma folha, abre para cima</span></div>
               </article>
               <article>
-                <div class="capa"><div class="portao"></div></div>
+                <div class="capa"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
                 <div class="txt"><b>Deslizante</b><span>Para vãos largos</span></div>
               </article>
               <article>
-                <div class="capa"><div class="portao"></div></div>
+                <div class="capa"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
                 <div class="txt"><b>Automação</b><span>Motor e controle remoto</span></div>
               </article>
             </div>
