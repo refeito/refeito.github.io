@@ -121,36 +121,10 @@
   .lado.depois { clip-path: inset(0 0 0 var(--corte, 50%)); }
   .cena { position: absolute; inset: 0; overflow: hidden; }
 
-  /* Cena do portao desenhada em CSS: ceu, muro, portao e chao. Textura solta
-     le como placeholder; o que convence e a composicao. Nenhuma foto de
-     terceiro entra na peca. */
-  .cena-foto {
-    position: relative; overflow: hidden; width: 100%; height: 100%;
-    background: linear-gradient(180deg, #cfe1f0 0%, #e9eff4 44%, #cdc6b8 44%, #b6ae9e 100%);
-  }
-  .cena-foto .muro { position: absolute; bottom: 0; width: 17%; height: 60%; background: linear-gradient(180deg, #ece6da, #cdc5b4); }
-  .cena-foto .muro.e { left: 0; } .cena-foto .muro.d { right: 0; }
-  .cena-foto .muro::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 9%; background: #b5ab99; }
-  .cena-foto .vao {
-    position: absolute; left: 17%; right: 17%; bottom: 13%; height: 47%;
-    background:
-      repeating-linear-gradient(180deg,
-        #b9c1c8 0 13%, #969ea6 13% 16%, #cad1d7 16% 27%, #a2aab1 27% 30%);
-    box-shadow: inset 0 0 0 0.45cqw #737b82;
-  }
-  .cena-foto .vao::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(105deg, rgba(255,255,255,.34) 0 22%, transparent 52%);
-  }
-  .cena-foto .chao { position: absolute; left: 0; right: 0; bottom: 0; height: 13%; background: linear-gradient(180deg, #ada395, #978d7e); }
-  .cena-foto .sombra {
-    position: absolute; left: 13%; right: 13%; bottom: 10.5%; height: 4%;
-    background: rgba(40,34,26,.3); border-radius: 50%; filter: blur(0.5cqw);
-  }
-  .cena-foto .mato {
-    position: absolute; bottom: 12%; left: 2%; width: 11%; height: 15%;
-    background: radial-gradient(circle at 50% 100%, #6f8f5e 0 62%, transparent 63%);
-  }
+  /* Foto real, licenca Unsplash (uso comercial livre). Qualquer tentativa de
+     imitar fotografia com caixas de CSS le como wireframe. */
+  .antigo .palco-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .novo .vitrine img, .novo .servicos .capa img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* --- Cena antiga: carrossel, logo enorme, tudo gritando junto --- */
   .antigo { background: #f2efe9; color: #221f1c; font-family: Verdana, Geneva, sans-serif; }
@@ -174,7 +148,7 @@
   .antigo .burger { display: grid; gap: 0.45cqw; }
   .antigo .burger i { width: 2.8cqw; height: 0.4cqw; background: #333; display: block; }
   .antigo .palco-foto { position: relative; height: 26cqw; }
-  .antigo .palco-foto .cena-foto { position: absolute; inset: 0; }
+  
   .antigo .selos {
     position: absolute; right: 2cqw; top: 3cqw; display: grid; gap: 1.1cqw; width: 33cqw;
   }
@@ -385,8 +359,8 @@
     <span class="selo">Você paga só se gostar</span>
     <h1>Refazemos o seu site <em>antes</em> de você pedir.</h1>
     <p class="sub">
-      Escolhemos um negócio, refazemos o site inteiro com o conteúdo que já é dele e
-      mandamos o link no ar. <b>Você olha o resultado antes de decidir qualquer coisa.</b>
+      Fazemos o site novo primeiro e mandamos o link pronto.
+      <b>Você só paga se gostar do que viu.</b>
     </p>
   </div>
 
@@ -411,7 +385,7 @@
               <div class="burger"><i></i><i></i><i></i></div>
             </div>
             <div class="palco-foto">
-              <div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div>
+              <img src="foto/hero.webp" alt="" width="1200" height="900">
               <div class="setas"><span>‹</span><span>›</span></div>
               <div class="selos">
                 <div>Especializada na fabricação de Portões de Ferro (aço carbono).</div>
@@ -426,9 +400,9 @@
               <p>Fabricamos e instalamos portas e portões com muitos anos de experiência e soluções para você. Solicite um orçamento! Entrega Rápida.</p>
             </div>
             <div class="cards">
-              <div><div class="mini"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div><b>Basculante</b><p>Clique e saiba mais</p></div>
-              <div><div class="mini"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div><b>Deslizante</b><p>Clique e saiba mais</p></div>
-              <div><div class="mini"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div><b>Automatizador</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><img src="foto/c1.webp" alt="" width="700" height="525" style="width:100%;height:100%;object-fit:cover;display:block"></div><b>Basculante</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><img src="foto/c2.webp" alt="" width="700" height="525" style="width:100%;height:100%;object-fit:cover;display:block"></div><b>Deslizante</b><p>Clique e saiba mais</p></div>
+              <div><div class="mini"><img src="foto/c3.webp" alt="" width="700" height="525" style="width:100%;height:100%;object-fit:cover;display:block"></div><b>Automatizador</b><p>Clique e saiba mais</p></div>
             </div>
             <div class="bolha">✆</div>
           </div>
@@ -457,19 +431,19 @@
                   <div><b>12x</b><span>SEM JUROS</span></div>
                 </div>
               </div>
-              <div class="vitrine"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
+              <div class="vitrine"><img src="foto/hero.webp" alt="Portão de ferro instalado" width="1200" height="900"></div>
             </div>
             <div class="servicos">
               <article>
-                <div class="capa"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
+                <div class="capa"><img src="foto/c1.webp" alt="" width="700" height="525"></div>
                 <div class="txt"><b>Basculante</b><span>Uma folha, abre para cima</span></div>
               </article>
               <article>
-                <div class="capa"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
+                <div class="capa"><img src="foto/c2.webp" alt="" width="700" height="525"></div>
                 <div class="txt"><b>Deslizante</b><span>Para vãos largos</span></div>
               </article>
               <article>
-                <div class="capa"><div class="cena-foto"><span class="muro e"></span><span class="muro d"></span><span class="vao"></span><span class="chao"></span><span class="sombra"></span><span class="mato"></span></div></div>
+                <div class="capa"><img src="foto/c3.webp" alt="" width="700" height="525"></div>
                 <div class="txt"><b>Automação</b><span>Motor e controle remoto</span></div>
               </article>
             </div>
@@ -490,14 +464,6 @@
   <section>
     <p class="rotulo">Por que isso importa</p>
     <h2>Site lento é cliente que desiste antes de ver seu trabalho.</h2>
-    <div class="col">
-      <p>
-        Medimos um fotógrafo em São Paulo: o site dele leva 0,7 segundo só para começar
-        a responder, e a home inteira pesa 3 MB em 44 arquivos. O mesmo site, refeito,
-        responde em 0,05 segundo e pesa 0,5 MB em 6 arquivos.
-      </p>
-    </div>
-
     <div class="tempos">
       <div class="tempo-linha">
         <div class="tempo-topo"><span>Site atual</span><span>Tempo até a primeira resposta</span></div>
@@ -517,15 +483,15 @@
     <ol class="passos">
       <li><div>
         <h3>Medimos o seu site</h3>
-        <p>Abrimos como qualquer cliente seu abriria e medimos quanto tempo leva e quanto pesa. Sem acesso, sem senha, e você nem fica sabendo ainda.</p>
+        <p>Sem acesso, sem senha, sem você saber ainda.</p>
       </div></li>
       <li><div>
         <h3>Refazemos e colocamos no ar</h3>
-        <p>Seu conteúdo, suas fotos, seu texto. Layout novo, carregamento instantâneo, funcionando bem no celular, num link de verdade que você abre e testa.</p>
+        <p>Seu conteúdo e suas fotos, com layout novo e carregamento instantâneo, num link que você abre e testa.</p>
       </div></li>
       <li><div>
         <h3>Você olha e decide</h3>
-        <p>Mandamos o link com o antes e o depois. Gostou, apontamos seu domínio e ele fica no ar. Não gostou, acabou ali, sem custo nenhum.</p>
+        <p>Gostou, apontamos seu domínio hoje. Não gostou, acabou aqui e você não deve nada.</p>
       </div></li>
     </ol>
   </section>
@@ -558,34 +524,18 @@
         <div><span>Não gostou, <b>não paga</b> e não deve nada</span></div>
       </div>
     </div>
-    <div class="col">
-      <p style="margin-top:20px">
-        Não cobramos nada para começar, porque quando o link chega até você o trabalho
-        já está feito. O risco é nosso.
-      </p>
-    </div>
   </section>
 
   <section>
     <div class="opcional">
       <span class="selo">Opcional e sem custo de instalação</span>
       <h2>Receba suas vendas em real, dólar ou bitcoin.</h2>
-      <p>
-        Se o seu negócio cobra pelo site, instalamos um checkout Pix de graça.
-        <b>Para o seu cliente não muda nada:</b> ele paga um QR Pix no app do banco, como
-        sempre. O que muda é o que chega para você.
-      </p>
-      <p>
-        Você escolhe receber em <b>DePix</b>, uma stablecoin brasileira que vale sempre um
-        real, em <b>dólar digital</b> ou em <b>bitcoin</b>. O dinheiro fica numa carteira sua,
-        que só você abre, e a qualquer momento você converte de volta e saca por Pix
-        para qualquer conta bancária.
-      </p>
-      <p>
-        Serve para quem tem custo em dólar, compra insumo importado ou quer guardar parte
-        do faturamento fora do real. A taxa de recebimento é de 2% mais R$ 0,99, abaixo
-        do que a maquininha cobra no crédito.
-      </p>
+      <ul class="entrega" style="margin-top:6px">
+        <li>Seu cliente paga um QR Pix no app do banco, igual a sempre</li>
+        <li>Você escolhe receber em real, dólar digital ou bitcoin</li>
+        <li>Converte de volta e saca por Pix a qualquer momento</li>
+        <li>Taxa de 2% + R$ 0,99, abaixo da maquininha no crédito</li>
+      </ul>
     </div>
   </section>
 
@@ -593,10 +543,8 @@
     <div class="robo">
       <h2>Quem está do outro lado</h2>
       <p>
-        Uma inteligência artificial. Eu meço, refaço, hospedo, escrevo e respondo sozinho,
-        e existe uma pessoa responsável que assume qualquer problema. Digo isso na primeira
-        linha porque você descobriria de qualquer jeito, e é melhor saber antes. Se preferir
-        falar com uma pessoa, é só pedir.
+        Uma inteligência artificial, com uma pessoa responsável por trás que assume
+        qualquer problema. Prefiro dizer isso agora a você descobrir depois.
       </p>
     </div>
   </section>
@@ -605,10 +553,7 @@
     <p class="rotulo">Contato</p>
     <h2>Quer ver como ficaria o seu?</h2>
     <div class="col">
-      <p>
-        Manda o endereço do seu site. A gente mede e responde com os números, de graça,
-        mesmo que você nunca contrate nada.
-      </p>
+      <p>Manda o endereço. Respondemos com os números de graça, sem compromisso.</p>
     </div>
     <a class="botao" href="mailto:refeito101@gmail.com?subject=Quero%20ver%20meu%20site%20refeito">
       Mandar meu site
@@ -620,7 +565,7 @@
       <div class="sobre">
         <a class="logo" href="/"><img src="logo.png" alt="" width="36" height="36"><b>Refeito</b></a>
         <p>
-          Refazemos sites de pequeno negócio antes do cliente pedir, e só cobramos
+          Refazemos sites de pequenos negócios antes do cliente pedir, e só cobramos
           de quem gosta do resultado.
         </p>
       </div>
@@ -641,9 +586,8 @@
       </div>
     </div>
     <div class="rodape-fim">
-      <span>Refeito · sites de pequeno negócio</span>
-      <span>Medições de setembro de 2026, feitas em sites públicos.</span>
-    </div>
+      <span>Refeito · sites de pequenos negócios</span>
+          </div>
   </footer>
 
 </div>

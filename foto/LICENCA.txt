@@ -1,0 +1,8 @@
+Fotos sob Licenca Unsplash: uso comercial e nao comercial livre, sem
+necessidade de atribuicao.
+
+hero.webp, c1.webp, c3.webp  -> unsplash.com/photos/6vVEd4LOxl0
+c2.webp                      -> unsplash.com/photos/c2deDdEO8hc
+
+Usadas apenas na maquete ilustrativa "Bianchi Serralheria", que e um negocio
+ficticio. Nao representam trabalho de nenhum cliente real.
