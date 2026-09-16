@@ -221,7 +221,7 @@
   .faixa { height: 100%; display: flex; align-items: center; padding-inline: 14px; white-space: nowrap; }
   .faixa span { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: #fff; }
   .faixa.devagar { width: 100%; background: var(--lento); }
-  .faixa.rapido { width: 1.5%; min-width: 7px; background: var(--azul); padding: 0; }
+  .faixa.rapido { width: 7.6%; min-width: 7px; background: var(--azul); padding: 0; }
   .fora { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--azul); padding-left: 14px; }
 
   /* Passos */
@@ -355,23 +355,23 @@
     <h2>Site lento é cliente que desiste antes de ver seu trabalho.</h2>
     <div class="col">
       <p>
-        Medimos um fotógrafo em São Paulo: o servidor dele levava 3,4 segundos só para
-        começar a responder, antes de qualquer imagem aparecer. O mesmo site, refeito,
-        responde em 50 milissegundos.
+        Medimos um fotógrafo em São Paulo: o site dele leva 0,7 segundo só para começar
+        a responder, e a home inteira pesa 3 MB em 44 arquivos. O mesmo site, refeito,
+        responde em 0,05 segundo e pesa 0,5 MB em 6 arquivos.
       </p>
     </div>
 
     <div class="tempos">
       <div class="tempo-linha">
         <div class="tempo-topo"><span>Site atual</span><span>Tempo até a primeira resposta</span></div>
-        <div class="trilho"><div class="faixa devagar"><span>3,4 s</span></div></div>
+        <div class="trilho"><div class="faixa devagar"><span>0,7 s</span></div></div>
       </div>
       <div class="tempo-linha">
         <div class="tempo-topo"><span>Refeito</span><span>Mesmo conteúdo, mesmas fotos</span></div>
         <div class="trilho"><div class="faixa rapido"></div><span class="fora">0,05 s</span></div>
       </div>
     </div>
-    <p class="legenda-comp"><span>As duas barras estão na escala real uma da outra. 68 vezes mais rápido.</span></p>
+    <p class="legenda-comp"><span>As duas barras estão na escala real uma da outra. Mediana de 8 medições em cada site: 13 vezes mais rápido.</span></p>
   </section>
 
   <section>
