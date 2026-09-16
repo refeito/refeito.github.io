@@ -28,6 +28,8 @@ O trabalho é **mapear**, não escrever:
 | Depoimentos, avaliações, selos | Os mesmos, com nome e data |
 | Telefones, endereço, horário, e-mail | Todos, clicáveis |
 | Áreas atendidas, garantia, formas de pagamento | Preservados como estão |
+| **A logo deles** | A mesma logo, convertida para WebP, no cabeçalho |
+| **A paleta deles** | As mesmas cores de marca, lidas do site atual |
 
 **Nunca**: foto de Unsplash no site de um cliente, serviço que eles não vendem,
 número de anos que eles não declaram, certificação que eles não têm, promessa
@@ -40,7 +42,18 @@ uma maquete de negócio fictício. Nunca numa proposta com o nome de alguém.
 
 O que eu posso mudar: layout, hierarquia, tipografia, ordem das seções,
 velocidade, responsividade. O que eu não posso mudar: o que a empresa diz que
-faz, para quem, onde e com qual credencial.
+faz, para quem, onde e com qual credencial, nem a cor e a logo da marca dela.
+
+### Logo e paleta vêm do site atual
+
+**Nunca inventar identidade visual.** A logo é baixada do site deles e usada no
+cabeçalho. As cores saem do site deles, lidas pelo navegador: contar as cores
+de fundo e de texto mais frequentes, e usar a cor de marca como acento.
+
+**Nada de site preto por padrão.** Fundo escuro é escolha de nicho, e a maioria
+dos pequenos negócios não vai gostar. Se o site atual é branco com vermelho, o
+refeito é branco com vermelho. Escuro só se o site atual for escuro ou se o
+setor pedir, como um portfólio de fotografia.
 
 Se o site atual tem pouca coisa aproveitável, o refeito fica pequeno. Site
 pequeno e verdadeiro vende; site grande e inventado destrói a venda quando o
@@ -73,7 +86,17 @@ O processo tem duas partes, e as duas são obrigatórias:
 
 - **Auditoria automática** sobre todos os sites de uma vez, medindo: imagens
   quebradas, rolagem horizontal, largura mínima de parágrafo, elementos
-  estourando o container, itens de grade duplicados.
+  estourando o container, itens de grade duplicados e **texto passando da
+  própria coluna**.
+
+  O teste de texto vazando é: para cada elemento de grade ou flex, comparar
+  `scrollWidth` com `clientWidth` **e** conferir se o retângulo do filho
+  ultrapassa o do pai. Medir só `scrollWidth` não pega, e foi assim que um
+  e-mail longo vazou para fora do cartão de contato e chegou ao operador.
+
+  A causa quase sempre é a mesma: item de grade sem `min-width:0` e texto sem
+  `overflow-wrap:anywhere`. Endereço, e-mail e URL são os candidatos naturais,
+  porque são longos e não têm espaço para quebrar.
 - **Folha de contato**: todos renderizados lado a lado numa tela, olhados de
   fato.
 
