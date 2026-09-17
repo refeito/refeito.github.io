@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Imperllaje Impermeabilizações — Infiltração em telhado, laje, calha e sacada</title>
+<meta name="description" content="Impermeabilização e isolação térmica em telhados, lajes, calhas e sacadas para condomínios, indústrias, construtoras e residências. Imperllaje Impermeabilizações, Mauá-SP.">
+<link rel="icon" type="image/webp" href="logo.webp">
+<style>
+  :root{
+    --papel:#ffffff; --papel2:#f4f6f3; --papel3:#e7ebe5; --linha:#d9ded6;
+    --tinta:#23291f; --tinta2:#5d665a;
+    --verde:#025022; --verde2:#013b19; --verde-claro:#eef3ea;
+    --agua:#246d6d;
+    --serifa:Georgia,"Iowan Old Style","Times New Roman",Times,serif;
+    --fonte:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;min-width:0}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--fonte);
+       font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  h1,h2,h3{margin:0;font-family:var(--serifa);line-height:1.2;text-wrap:balance;font-weight:700}
+  p{margin:0}
+  ul,ol{margin:0;padding:0;list-style:none}
+  figure{margin:0}
+  .env{max-width:1060px;margin:0 auto;padding-inline:20px}
+  .txt{max-width:62ch}
+
+  .tarja{background:var(--verde2);color:#e3ece1;font-size:.76rem;line-height:1.5;text-align:center;
+         padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+  .tarja a{color:#a9e3b6}
+  .tarja b{color:#fff}
+
+  .topo{border-bottom:1px solid var(--linha)}
+  .topo .env{display:flex;align-items:center;justify-content:space-between;gap:16px;
+             flex-wrap:wrap;padding-block:15px}
+  .topo img{width:212px;height:81px;object-fit:contain;object-position:left center}
+  .nav{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.87rem;font-weight:600}
+  .nav a{text-decoration:none;color:var(--tinta2)}
+  .nav a:hover{color:var(--verde)}
+
+  /* Quem procura impermeabilizacao tem um problema. O heroi abre por ele. */
+  .heroi{background:var(--verde-claro);border-bottom:1px solid var(--linha)}
+  .heroi .env{display:grid;grid-template-columns:1.02fr .98fr;gap:38px;align-items:center;
+              padding-block:44px}
+  @media (max-width:840px){.heroi .env{grid-template-columns:1fr;gap:26px;padding-block:32px}}
+  .eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--verde)}
+  h1{font-size:clamp(1.85rem,4.7vw,2.7rem);margin-top:12px}
+  .heroi .sub{margin-top:15px;font-size:1.03rem;color:var(--tinta2)}
+  .heroi .doze{margin-top:16px;font-size:.95rem;font-weight:700;color:var(--verde)}
+  .acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .heroi figure{border-radius:4px;overflow:hidden;box-shadow:0 2px 0 var(--linha)}
+  .heroi figcaption{font-size:.76rem;color:var(--tinta2);padding-top:8px}
+
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;
+       background:var(--verde);color:#fff;padding:13px 22px;border-radius:3px}
+  .btn:hover{background:var(--verde2)}
+  .btn:focus-visible{outline:3px solid var(--agua);outline-offset:2px}
+  .btn.vazio{background:transparent;color:var(--verde);box-shadow:inset 0 0 0 1.5px var(--verde)}
+  .btn.vazio:hover{background:rgba(2,80,34,.07)}
+  .btn.claro{background:#fff;color:var(--verde)}
+
+  section{padding-block:46px;border-top:1px solid var(--linha)}
+  section:first-of-type{border-top:none}
+  .rotulo{font-size:.69rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+          color:var(--agua);margin-bottom:9px;font-family:var(--fonte)}
+  h2{font-size:clamp(1.42rem,3.4vw,2rem);margin-bottom:12px}
+  h3{font-size:1.06rem}
+  .apoio{color:var(--tinta2);font-size:1.01rem}
+
+  /* Os quatro lugares onde a agua entra sao os quatro titulos de servico deles.
+     Sem foto nos cards: nao ha foto de sacada no acervo, e um telhado sob o
+     rotulo "Sacadas" seria legenda errada. As fotos vao para a galeria. */
+  .lugares{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,208px),1fr));
+           gap:18px;margin-top:26px}
+  .lugar{border-top:4px solid var(--verde);padding-top:14px}
+  .lugar .n{font-size:.67rem;font-weight:800;letter-spacing:.14em;color:var(--agua)}
+  .lugar h3{font-size:1.2rem;margin-top:4px}
+  .lugar p{font-size:.93rem;color:var(--tinta2);margin-top:7px}
+
+  .banda{margin-top:32px;border:1px solid var(--linha)}
+  .banda img{width:100%;height:230px;object-fit:cover;object-position:center 58%}
+  .banda figcaption{padding:10px 14px 13px;font-size:.84rem;color:var(--tinta2)}
+  @media (max-width:600px){.banda img{height:180px}}
+
+  .destaque{margin-top:30px;border-left:4px solid var(--verde);padding:4px 0 4px 20px;
+            font-family:var(--serifa);font-size:clamp(1.05rem,2.3vw,1.3rem);line-height:1.45;max-width:54ch}
+
+  .sistemas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));
+            gap:1px;background:var(--linha);border:1px solid var(--linha);margin-top:26px}
+  .sistemas li{background:var(--papel);padding:20px 20px 22px}
+  .sistemas b{display:block;font-family:var(--serifa);font-size:1.06rem;font-weight:700}
+  .sistemas span{display:block;font-size:.91rem;color:var(--tinta2);margin-top:6px}
+  .sistemas .n{display:block;font-size:.68rem;font-weight:800;letter-spacing:.13em;color:var(--agua);
+               margin-bottom:8px}
+
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:26px;align-items:start}
+  @media (max-width:800px){.duo{grid-template-columns:1fr;gap:26px}}
+
+  .publicos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .publicos li{background:var(--papel2);border:1px solid var(--linha);border-radius:99px;
+               padding:6px 15px;font-size:.9rem;font-weight:600}
+
+  .inclui{margin-top:14px;display:grid;gap:10px}
+  .inclui li{font-size:.95rem;padding-left:26px;position:relative}
+  .inclui li::before{content:"✓";position:absolute;left:0;top:0;color:var(--verde);font-weight:800}
+
+  .marcas{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .marcas li{border:1.5px solid var(--verde);color:var(--verde);border-radius:3px;padding:5px 14px;
+             font-size:.88rem;font-weight:800;letter-spacing:.04em}
+
+  .sub-h{font-family:var(--fonte);font-size:.69rem;font-weight:800;letter-spacing:.14em;
+         text-transform:uppercase;color:var(--tinta2)}
+
+  /* align-items:start impede que a figura estique ate a altura da linha e
+     deixe um retangulo cinza embaixo da legenda. */
+  .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,262px),1fr));
+           gap:14px;margin-top:26px;align-items:start}
+  .galeria figure{background:var(--papel3);border:1px solid var(--linha)}
+  .galeria .capa{aspect-ratio:4/3}
+  .galeria img{width:100%;height:100%;object-fit:cover}
+  .galeria figcaption{padding:9px 11px 12px;font-size:.83rem;color:var(--tinta2)}
+  .creditos{margin-top:14px;font-size:.82rem;color:var(--tinta2)}
+
+  .vistoria{background:var(--verde);color:#e9f1e6;border-top:none}
+  .vistoria h2{color:#fff}
+  .vistoria .rotulo{color:#9fd9ae}
+  .vistoria .apoio{color:#cfe0ca}
+  .vistoria .passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));
+                    gap:20px;margin-top:26px;counter-reset:v}
+  .vistoria .passos li{counter-increment:v;border-top:2px solid #4b8760;padding-top:13px}
+  .vistoria .passos li::before{content:counter(v);display:block;font-family:var(--serifa);
+                               font-size:1.5rem;font-weight:700;color:#9fd9ae;line-height:1}
+  .vistoria .passos b{display:block;font-size:.99rem;margin-top:5px;color:#fff}
+  .vistoria .passos span{display:block;font-size:.9rem;color:#cfe0ca;margin-top:4px}
+
+  .contato-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,224px),1fr));
+                 gap:24px;margin-top:26px}
+  .ct b{display:block;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+        color:var(--agua);margin-bottom:7px}
+  .ct a,.ct p{display:block;font-size:1.03rem;text-decoration:none;overflow-wrap:anywhere}
+  .ct a{font-weight:700}
+  .ct a + a{margin-top:5px}
+  .ct a:hover{color:var(--verde)}
+  .ct .peq{font-size:.89rem;color:var(--tinta2);margin-top:6px;font-weight:400}
+
+  .area{margin-top:28px;background:var(--papel2);border:1px solid var(--linha);padding:18px 20px}
+  .area b{display:block;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+          color:var(--agua);margin-bottom:5px}
+  .area p{font-size:.97rem}
+
+  footer{border-top:1px solid var(--linha);padding-block:24px 34px;font-size:.83rem;color:var(--tinta2)}
+  footer .env{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+  footer img{width:150px;height:57px;object-fit:contain}
+  footer a{color:var(--tinta2)}
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  Proposta de redesenho não solicitada, feita por <b>Refeito</b>. Não é o site oficial da Imperllaje
+  Impermeabilizações. O site oficial é
+  <a href="https://www.imperllaje.com.br/" rel="nofollow noopener" target="_blank">imperllaje.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<header class="topo">
+  <div class="env">
+    <a href="#inicio" aria-label="Imperllaje Impermeabilizações"><img src="logo.webp" alt="Imperllaje Impermeabilizações LTDA" width="300" height="115"></a>
+    <nav class="nav">
+      <a href="#problema">Onde a água entra</a>
+      <a href="#sistemas">Serviços</a>
+      <a href="#quem">Como trabalhamos</a>
+      <a href="#obras">Galeria de fotos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<div class="heroi" id="inicio">
+  <div class="env">
+    <div>
+      <p class="eyebrow">Impermeabilização · Mauá-SP</p>
+      <h1>Resolvemos a infiltração sem trocar o seu telhado</h1>
+      <p class="sub">A Imperllaje Impermeabilizações e Pinturas Prediais é especializada em serviços de
+        impermeabilização e isolação térmica, executando serviços para condomínios, indústrias,
+        construtoras e residências, sejam obras novas ou reformas.</p>
+      <p class="doze">Há mais de 12 anos solucionando problemas de infiltrações e vazamentos.</p>
+      <div class="acoes">
+        <a class="btn" href="tel:+551128097972">(11) 2809-7972</a>
+        <a class="btn vazio" href="#vistoria">Agendar vistoria</a>
+      </div>
+    </div>
+    <figure>
+      <img src="telhado-manta-aluminizada.webp" alt="Profissionais aplicando manta asfáltica aluminizada sobre telhado" width="980" height="551">
+      <figcaption>Manta asfáltica aluminizada sobre telhado. Foto publicada pela Imperllaje.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="problema">
+  <div class="env">
+    <p class="rotulo">Onde a água entra</p>
+    <h2>Quatro pontos, e a infiltração quase sempre sai de um deles</h2>
+    <p class="apoio txt">São os quatro serviços que a Imperllaje lista: telhados, lajes, calhas e sacadas.
+      A empresa trabalha em obras novas e em reformas.</p>
+
+    <div class="lugares">
+      <article class="lugar">
+        <p class="n">01</p>
+        <h3>Telhados</h3>
+        <p>Impermeabilização do telhado sem trocá-lo, eliminando também a temperatura alta do ambiente.</p>
+      </article>
+      <article class="lugar">
+        <p class="n">02</p>
+        <h3>Lajes</h3>
+        <p>Aplicação de manta asfáltica em laje, em obra nova ou em reforma de cobertura já existente.</p>
+      </article>
+      <article class="lugar">
+        <p class="n">03</p>
+        <h3>Calhas</h3>
+        <p>Tratamento da calha e do rufo, por onde a água do telhado inteiro passa antes de escoar.</p>
+      </article>
+      <article class="lugar">
+        <p class="n">04</p>
+        <h3>Sacadas</h3>
+        <p>Impermeabilização de sacadas e das demais áreas expostas da edificação.</p>
+      </article>
+    </div>
+
+    <p class="destaque">“Solucionamos o seu problema de infiltração sem trocar o telhado, eliminando a
+      temperatura alta do ambiente e uma garantia de (5) cinco anos.”</p>
+
+    <figure class="banda">
+      <img src="telhado-manta-equipe.webp" alt="Dois profissionais aplicando manta aluminizada sobre telhado residencial" width="760" height="428" loading="lazy">
+      <figcaption>Aplicação de manta aluminizada sobre telhado. Foto publicada pela Imperllaje.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="sistemas">
+  <div class="env">
+    <p class="rotulo">Produtos em destaque</p>
+    <h2>O que a Imperllaje aplica</h2>
+    <p class="apoio txt">São os quatro sistemas que a empresa destaca no próprio site, além de isolação
+      térmica e pintura predial.</p>
+    <ul class="sistemas">
+      <li><span class="n">01</span><b>Aplicação de manta asfáltica</b>
+        <span>O sistema base, para laje, cobertura e áreas expostas.</span></li>
+      <li><span class="n">02</span><b>Manta asfáltica aluminizada</b>
+        <span>Face aluminizada, que também trabalha contra o calor do ambiente.</span></li>
+      <li><span class="n">03</span><b>Manta asfáltica em laje</b>
+        <span>Aplicação sobre laje, com acabamento e proteção mecânica.</span></li>
+      <li><span class="n">04</span><b>Manta asfáltica em telhado</b>
+        <span>Resolve a infiltração sem exigir a troca do telhado.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="quem">
+  <div class="env">
+    <p class="rotulo">Como trabalhamos</p>
+    <h2>Prédio habitado não precisa esvaziar para a obra acontecer</h2>
+    <div class="duo">
+      <div>
+        <p class="apoio">A Imperllaje possui em seu corpo técnico operários com larga experiência na área.
+          Os funcionários são treinados para trabalhar em edificações já habitadas ou não, como condomínios
+          e residências.</p>
+        <p class="sub-h" style="margin-top:22px">Quem chama a Imperllaje</p>
+        <ul class="publicos">
+          <li>Condomínios</li><li>Indústrias</li><li>Construtoras</li><li>Residências</li>
+          <li>Obras novas</li><li>Reformas</li>
+        </ul>
+        <p class="sub-h" style="margin-top:24px">Fabricantes com quem trabalham</p>
+        <ul class="marcas"><li>DRYKO</li><li>VIAPOL</li><li>IHIPER</li></ul>
+        <p class="apoio" style="margin-top:12px;font-size:.92rem">Fabricantes de produtos impermeabilizantes
+          que seguem as rígidas normas brasileiras. A atuação em conjunto com os fornecedores visa garantir
+          ao cliente conhecer o corpo técnico dos fabricantes.</p>
+      </div>
+      <div>
+        <p class="sub-h">O que a empresa declara entregar</p>
+        <ul class="inclui">
+          <li>Acompanhamento por técnicos especializados.</li>
+          <li>Orçamento detalhado, com especificações corretas dos serviços e materiais a serem utilizados.</li>
+          <li>Serviços executados por profissionais com larga experiência em obras de impermeabilização.</li>
+          <li>Garantia de 5 anos nos serviços executados.</li>
+        </ul>
+        <figure style="margin-top:24px;border:1px solid var(--linha)">
+          <img src="laje-manta-aplicacao.webp" alt="Profissional aplicando manta asfáltica com maçarico sobre laje de concreto" width="760" height="567" loading="lazy">
+          <figcaption style="padding:10px 12px 13px;font-size:.84rem;color:var(--tinta2)">Aplicação de manta asfáltica em laje.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="obras">
+  <div class="env">
+    <p class="rotulo">Galeria de fotos</p>
+    <h2>Serviços executados pela Imperllaje</h2>
+    <p class="apoio txt">As mesmas fotos publicadas pela empresa na galeria do site dela.</p>
+    <div class="galeria">
+      <figure>
+        <div class="capa"><img src="telhado-residencial.webp" alt="Telhado residencial de telha cerâmica visto de cima, com profissional trabalhando ao fundo" width="760" height="570" loading="lazy"></div>
+        <figcaption>Telhado residencial</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="telhado-industrial.webp" alt="Telhado de galpão industrial recoberto com manta aluminizada" width="820" height="461" loading="lazy"></div>
+        <figcaption>Telhado industrial recoberto</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="laje-manta-macarico.webp" alt="Rolos de manta asfáltica sobre laje já impermeabilizada" width="760" height="567" loading="lazy"></div>
+        <figcaption>Laje com manta em aplicação</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="laje-manta-acabada.webp" alt="Laje com manta asfáltica aplicada e acabamento pronto" width="600" height="360" loading="lazy"></div>
+        <figcaption>Laje com manta acabada</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="laje-terraco.webp" alt="Terraço com laje impermeabilizada, caixa d'água e muretas" width="600" height="360" loading="lazy"></div>
+        <figcaption>Terraço impermeabilizado</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="calha-telhado.webp" alt="Calha entre dois telhados de telha cerâmica, impermeabilizada" width="560" height="747" loading="lazy"></div>
+        <figcaption>Calha entre telhados</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="calha-rufo.webp" alt="Calha e rufo impermeabilizados entre telhado cerâmico e muro" width="560" height="747" loading="lazy"></div>
+        <figcaption>Calha e rufo tratados</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="reservatorio-interno.webp" alt="Interior de reservatório de água com impermeabilização branca aplicada" width="800" height="600" loading="lazy"></div>
+        <figcaption>Reservatório impermeabilizado</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="reservatorio-pilares.webp" alt="Reservatório com pilares e piso impermeabilizados" width="800" height="600" loading="lazy"></div>
+        <figcaption>Pilares e piso de reservatório</figcaption>
+      </figure>
+    </div>
+    <p class="creditos">Fotos publicadas pela Imperllaje Impermeabilizações.</p>
+  </div>
+</section>
+
+<section id="vistoria" class="vistoria">
+  <div class="env">
+    <p class="rotulo">Vistoria e orçamento</p>
+    <h2>Entre em contato e solicite um orçamento sem compromisso</h2>
+    <p class="apoio txt">A empresa se coloca à disposição para fornecer informações sobre os serviços,
+      esclarecer dúvidas, receber sugestões e agendar vistorias.</p>
+    <ol class="passos">
+      <li><b>Ligue ou escreva</b><span>Três telefones e um e-mail, todos publicados pela empresa.</span></li>
+      <li><b>Agende a vistoria</b><span>Alguém vai ver o telhado, a laje, a calha ou a sacada.</span></li>
+      <li><b>Receba o orçamento detalhado</b><span>Com as especificações dos serviços e dos materiais.</span></li>
+    </ol>
+    <div class="acoes">
+      <a class="btn claro" href="tel:+551128097972">Ligar (11) 2809-7972</a>
+      <a class="btn claro" href="mailto:contato.imperllaje@gmail.com?subject=Or%C3%A7amento%20de%20impermeabiliza%C3%A7%C3%A3o">Escrever por e-mail</a>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Imperllaje Impermeabilizações</h2>
+    <div class="contato-grade">
+      <div class="ct">
+        <b>Telefones</b>
+        <a href="tel:+551128097972">(11) 2809-7972</a>
+        <a href="tel:+5511982710285">(11) 98271-0285</a>
+        <a href="tel:+5511947301072">(11) 94730-1072</a>
+      </div>
+      <div class="ct">
+        <b>E-mail</b>
+        <a href="mailto:contato.imperllaje@gmail.com">contato.imperllaje@gmail.com</a>
+        <p class="peq">Responder seu e-mail será uma grande satisfação para nós.</p>
+      </div>
+      <div class="ct">
+        <b>Endereço</b>
+        <p>Rua Cecília Meireles, 412 — Jardim Miranda D'Aviz, Mauá-SP — CEP 09330-540</p>
+      </div>
+    </div>
+    <div class="area">
+      <b>Área atendida</b>
+      <p>Atendemos toda a Grande São Paulo, capital e interior. Consulte também sobre outras localidades.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <img src="logo.webp" alt="Imperllaje Impermeabilizações LTDA" width="300" height="115" loading="lazy">
+    <span>Conteúdo, fotos e marca são da Imperllaje Impermeabilizações.
+      Site oficial: <a href="https://www.imperllaje.com.br/" rel="nofollow noopener" target="_blank">imperllaje.com.br</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

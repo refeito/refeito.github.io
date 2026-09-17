@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>GM Tendas Galpões — Venda e locação de galpões de lona GM Log</title>
+<meta name="description" content="Galpões de lona GM Log de 10 a 40 metros de largura, com comprimento e altura personalizados, para armazenagem logística e industrial, obras e eventos. Matriz em Campinas/SP, atendimento em todo o Brasil.">
+<link rel="icon" type="image/webp" href="icone.webp">
+<style>
+  :root{
+    --papel:#ffffff; --papel2:#f7f7f8; --papel3:#ececed; --linha:#dcdcde;
+    --tinta:#282628; --tinta2:#707070;
+    --vermelho:#bf0012; --vermelho2:#a2000f;
+    --grafite:#282628; --grafite2:#3a373a;
+    --fonte:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;min-width:0}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--fonte);
+       font-size:16.5px;line-height:1.58;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  h1,h2,h3{margin:0;line-height:1.14;text-wrap:balance;letter-spacing:-0.018em}
+  p{margin:0}
+  ul,ol{margin:0;padding:0;list-style:none}
+  figure{margin:0}
+  .env{max-width:1140px;margin:0 auto;padding-inline:20px}
+  .txt{max-width:66ch}
+
+  /* Tarja obrigatoria de proposta nao solicitada. */
+  .tarja{background:var(--grafite);color:#e9e7e7;font-size:.76rem;line-height:1.5;text-align:center;
+         padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+  .tarja a{color:#ffb3ba}
+  .tarja b{color:#fff}
+
+  .barra{background:var(--vermelho);color:#fff}
+  .barra .env{display:flex;align-items:center;justify-content:space-between;gap:14px;
+              flex-wrap:wrap;padding-block:13px}
+  .barra img{width:188px;height:102px;object-fit:contain;object-position:left center}
+  .nav{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.85rem;font-weight:600}
+  .nav a{text-decoration:none;color:#ffd9dd;padding-block:2px}
+  .nav a:hover{color:#fff}
+  .fone-topo{font-size:.95rem;font-weight:700;text-decoration:none;white-space:nowrap}
+  .fone-topo span{display:block;font-size:.64rem;font-weight:600;letter-spacing:.14em;
+                  text-transform:uppercase;color:#ffc6cc}
+
+  .heroi{padding-block:40px 34px}
+  .eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--vermelho)}
+  h1{font-size:clamp(1.95rem,5.4vw,3.05rem);font-weight:800;margin-top:12px}
+  .heroi .linha-fina{margin-top:16px;font-size:1.06rem;color:var(--tinta2);max-width:60ch}
+  .heroi figure{margin-top:26px;border-radius:6px;overflow:hidden;background:var(--papel3)}
+  .heroi figcaption{font-size:.76rem;color:var(--tinta2);padding-top:9px}
+
+  .numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,164px),1fr));
+           gap:1px;background:var(--linha);border:1px solid var(--linha);margin-top:28px}
+  .numeros li{background:var(--papel);padding:16px 18px}
+  .numeros b{display:block;font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:var(--vermelho)}
+  .numeros span{display:block;font-size:.83rem;color:var(--tinta2);margin-top:2px}
+
+  section{padding-block:44px;border-top:1px solid var(--linha)}
+  .rotulo{font-size:.69rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+          color:var(--tinta2);margin-bottom:9px}
+  h2{font-size:clamp(1.42rem,3.5vw,1.95rem);font-weight:800;margin-bottom:12px}
+  h3{font-size:1.03rem;font-weight:700}
+  .apoio{color:var(--tinta2);font-size:1.01rem}
+
+  /* Tabela de modelos: a linha vira bloco no celular, entao nada de <table>. */
+  .medidas{margin-top:24px;border-top:2px solid var(--grafite)}
+  .medidas li{display:grid;grid-template-columns:162px 104px minmax(0,1fr);gap:4px 18px;
+              align-items:baseline;padding:13px 0;border-bottom:1px solid var(--linha)}
+  .medidas .modelo{font-weight:800;font-size:1.02rem}
+  .medidas .larg{font-size:.9rem;font-weight:700;color:var(--vermelho);white-space:nowrap}
+  .medidas .ex{font-size:.9rem;color:var(--tinta2);overflow-wrap:anywhere}
+  .medidas .cab{border-bottom:1px solid var(--grafite);padding-block:8px;font-size:.67rem;
+                font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--tinta2)}
+  .medidas .cab span{font-weight:800}
+  .medidas .nota{grid-column:1/-1;font-size:.86rem;color:var(--tinta2);margin-top:2px}
+  @media (max-width:640px){
+    .medidas li{grid-template-columns:1fr auto}
+    .medidas .ex{grid-column:1/-1}
+    .medidas .cab{display:none}
+  }
+
+  .ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,238px),1fr));
+         gap:9px 22px;margin-top:22px}
+  .ficha li{font-size:.94rem;padding-left:19px;position:relative}
+  .ficha li::before{content:"";position:absolute;left:0;top:.56em;width:9px;height:9px;
+                    background:var(--vermelho)}
+
+  .usos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));
+        gap:22px;margin-top:26px}
+  .uso{border:1px solid var(--linha);display:flex;flex-direction:column}
+  .uso .capa{aspect-ratio:16/10;background:var(--papel3)}
+  .uso .capa img{width:100%;height:100%;object-fit:cover}
+  .uso .corpo{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
+  .uso h3{font-size:1.06rem}
+  .uso p{font-size:.93rem;color:var(--tinta2)}
+  .uso .lista{font-size:.88rem;color:var(--tinta2);display:grid;gap:4px;margin-top:2px}
+  .uso .lista li{padding-left:15px;position:relative}
+  .uso .lista li::before{content:"—";position:absolute;left:0;color:var(--vermelho)}
+
+  .faixa-foto{margin-top:26px}
+  .faixa-foto img{width:100%;height:150px;object-fit:cover;object-position:center 42%}
+  .faixa-foto figcaption{font-size:.76rem;color:var(--tinta2);padding-top:8px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .chips li{border:1px solid var(--linha);background:var(--papel2);padding:7px 14px;
+            font-size:.89rem;font-weight:600}
+
+  .duo{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;margin-top:24px;align-items:start}
+  @media (max-width:860px){.duo{grid-template-columns:1fr;gap:26px}}
+
+  .caixa{border:1px solid var(--linha);background:var(--papel2);padding:20px 22px}
+  .caixa h3{font-size:.7rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+            color:var(--tinta2);margin-bottom:10px}
+  .caixa p, .caixa li{font-size:.93rem;color:var(--tinta)}
+  .caixa ul{display:grid;gap:6px}
+  .caixa + .caixa{margin-top:16px}
+
+  .etapas{counter-reset:e;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));
+          gap:16px;margin-top:24px}
+  .etapas li{counter-increment:e;border-top:3px solid var(--vermelho);padding-top:12px}
+  .etapas li::before{content:"0" counter(e);display:block;font-size:.76rem;font-weight:800;
+                     color:var(--vermelho);letter-spacing:.08em}
+  .etapas b{display:block;font-size:.97rem;font-weight:700;margin-top:3px}
+  .etapas span{display:block;font-size:.86rem;color:var(--tinta2);margin-top:4px}
+
+  .galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,232px),1fr));
+           gap:14px;margin-top:24px}
+  .galeria figure{border:1px solid var(--linha)}
+  .galeria .capa{aspect-ratio:3/2;background:var(--papel3)}
+  .galeria img{width:100%;height:100%;object-fit:cover}
+  .galeria figcaption{padding:10px 12px 13px;font-size:.85rem;color:var(--tinta2)}
+
+  .unidades{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));
+            gap:14px;margin-top:22px}
+  .un{border:1px solid var(--linha);padding:15px 17px}
+  .un.matriz{border:2px solid var(--vermelho)}
+  .un b{display:block;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+        color:var(--tinta2)}
+  .un.matriz b{color:var(--vermelho)}
+  .un a{display:inline-block;margin-top:5px;font-size:1.08rem;font-weight:800;text-decoration:none;
+        overflow-wrap:anywhere}
+  .un a:hover{color:var(--vermelho)}
+  .un p{font-size:.86rem;color:var(--tinta2);margin-top:7px;overflow-wrap:anywhere}
+
+  .orcamento{background:var(--grafite);color:#eceaea;border-top:none}
+  .orcamento h2{color:#fff}
+  .orcamento .rotulo{color:#ff9aa4}
+  .orcamento .apoio{color:#c0bcbc}
+  .orcamento .caixa{background:var(--grafite2);border-color:#4c484c}
+  .orcamento .caixa h3{color:#ff9aa4}
+  .orcamento .caixa li,.orcamento .caixa p{color:#e4e1e1}
+  .orcamento .acoes{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
+
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;
+       background:var(--vermelho);color:#fff;padding:13px 24px}
+  .btn:hover{background:var(--vermelho2)}
+  .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+  .btn.claro{background:#fff;color:var(--grafite)}
+  .btn.vazio{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #8c868c}
+  .btn.vazio:hover{box-shadow:inset 0 0 0 1.5px #fff}
+
+  .contato-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,236px),1fr));
+                 gap:22px;margin-top:24px}
+  .ct b{display:block;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+        color:var(--tinta2);margin-bottom:6px}
+  .ct a,.ct p{font-size:1rem;overflow-wrap:anywhere;text-decoration:none;display:block}
+  .ct a:hover{color:var(--vermelho)}
+  .ct .peq{font-size:.88rem;color:var(--tinta2);margin-top:4px}
+
+  footer{border-top:1px solid var(--linha);padding-block:26px 34px;font-size:.83rem;color:var(--tinta2)}
+  footer .env{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between}
+  footer .marca{display:flex;align-items:center;gap:12px}
+  footer .marca .tile{background:var(--vermelho);padding:7px 10px;display:flex}
+  footer .marca img{width:92px;height:50px;object-fit:contain}
+  footer a{color:var(--tinta2)}
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  Proposta de redesenho não solicitada, feita por <b>Refeito</b>. Não é o site oficial da GM Tendas Galpões.
+  O site oficial é <a href="https://gmtendas.com.br/" rel="nofollow noopener" target="_blank">gmtendas.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<header class="barra">
+  <div class="env">
+    <a href="#inicio" aria-label="GM Tendas Galpões"><img src="logo.webp" alt="GM Tendas Galpões" width="430" height="233"></a>
+    <nav class="nav">
+      <a href="#modelos">Modelos e medidas</a>
+      <a href="#usos">Para que serve</a>
+      <a href="#locacao">Locação e compra</a>
+      <a href="#unidades">Unidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="fone-topo" href="tel:40034875"><span>Atendimento nacional</span>4003-4875</a>
+  </div>
+</header>
+
+<div class="env heroi" id="inicio">
+  <p class="eyebrow">Indústria de galpões de lona GM Log®</p>
+  <h1>Galpão de lona alugado pela medida que você precisa e pelo tempo que precisar</h1>
+  <p class="linha-fina">Venda e locação de galpões de lona GM Log para armazéns logísticos, indústrias,
+    comércios, obras e eventos. De 10 a 40 metros de largura, com comprimento e altura personalizados.</p>
+  <figure>
+    <img src="galpao-evento-agro.webp" alt="Galpão de lona GM Log montado em área de evento do agronegócio, visto de cima" width="1100" height="625">
+    <figcaption>Galpão de lona GM Log em operação. Foto publicada pela GM Tendas Galpões.</figcaption>
+  </figure>
+  <ul class="numeros">
+    <li><b>+1 mi</b><span>Metros quadrados de galpões instalados</span></li>
+    <li><b>+3 mil</b><span>Clientes atendidos em todo o Brasil</span></li>
+    <li><b>+15 anos</b><span>De experiência e muitas parcerias</span></li>
+    <li><b>Brasil</b><span>Atendimento nacional</span></li>
+  </ul>
+</div>
+
+<section id="modelos">
+  <div class="env">
+    <p class="rotulo">Linha GM Log®</p>
+    <h2>Escolha pela largura. O comprimento é seu.</h2>
+    <p class="apoio txt">Os galpões lonados da GM Tendas Galpões são compostos pela linha de Galpões de
+      Lona GM Log® nas versões de 10 m a 40 m de largura, com comprimento personalizado e ilimitado.
+      As medidas abaixo são exemplos publicados pela empresa — a altura e a extensão são definidas por projeto.</p>
+
+    <ul class="medidas">
+      <li class="cab"><span>Modelo</span><span>Largura</span><span>Exemplos de medida</span></li>
+      <li><span class="modelo">GM Log-10</span><span class="larg">10 m</span><span class="ex">10x10x6 m · 10x50x6 m · 10x100x6 m</span></li>
+      <li><span class="modelo">GM Log-15</span><span class="larg">15 m</span><span class="ex">15x30x6 m · 15x50x6 m · 15x100x6 m</span></li>
+      <li><span class="modelo">GM Log-20</span><span class="larg">20 m</span><span class="ex">20x50x6 m · 20x80x6 m · 20x100x6 m</span></li>
+      <li><span class="modelo">GM Log-25</span><span class="larg">25 m</span><span class="ex">25x50x6 m · 25x80x6 m · 25x100x6 m</span></li>
+      <li><span class="modelo">GM Log-30</span><span class="larg">30 m</span><span class="ex">30x40x6 m · 30x60x6 m · 30x100x6 m</span></li>
+      <li><span class="modelo">GM Log-35</span><span class="larg">35 m</span><span class="ex">35x50x6 m · 35x100x6 m · 35x200x6 m</span></li>
+      <li><span class="modelo">GM Log-40</span><span class="larg">40 m</span><span class="ex">40x80x6 m · 40x120x6 m · 40x200x6 m</span>
+        <span class="nota">Produzido para alcançar grandes vãos livres e cobrir áreas de 3.000 m², 4.000 m², 8.000 m² ou superiores.</span></li>
+      <li><span class="modelo">GM Log Sob Medida</span><span class="larg">sob medida</span><span class="ex">Largura e comprimento definidos pelo projeto</span></li>
+      <li><span class="modelo">Tenda piramidal</span><span class="larg">até 10 m</span><span class="ex">Tenda 10x10, comprimento modular</span></li>
+    </ul>
+
+    <p class="rotulo" style="margin-top:34px">O que vem em qualquer um deles</p>
+    <ul class="ficha">
+      <li>Estrutura metálica galvanizada</li>
+      <li>Lona vinílica branca ou cinza</li>
+      <li>Iluminação, climatização e SPDA</li>
+      <li>Projetos técnicos, laudos e ARTs</li>
+      <li>Portas deslizantes frontais e laterais</li>
+      <li>Não precisa de fundação nem habite-se</li>
+    </ul>
+
+    <div class="galeria">
+      <figure>
+        <div class="capa"><img src="galpao-lona-gm.webp" alt="Galpão de lona cinza com a marca GM Tendas Galpões impressa na lona" width="900" height="562" loading="lazy"></div>
+        <figcaption>Galpão lonado com lona vinílica cinza</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="galpao-interior.webp" alt="Interior de galpão de lona vazio, com estrutura metálica e iluminação" width="900" height="524" loading="lazy"></div>
+        <figcaption>Vão livre e sistema de iluminação</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="tenda-piramidal.webp" alt="Duas tendas piramidais de lona branca montadas em área gramada" width="610" height="365" loading="lazy"></div>
+        <figcaption>Tendas piramidais de lona</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="usos">
+  <div class="env">
+    <p class="rotulo">Para que serve</p>
+    <h2>Três clientes bem diferentes usam a mesma estrutura</h2>
+    <p class="apoio txt">A GM Tendas Galpões atua com fabricação, venda e locação de galpões de lona para
+      armazenagens logísticas e industriais, para obras e construção civil, e para eventos, festivais e
+      exposições. O que muda entre eles é o prazo do contrato e o que vai instalado dentro.</p>
+
+    <div class="usos">
+      <article class="uso">
+        <div class="capa"><img src="galpao-armazem.webp" alt="Galpão de lona branco de grande extensão instalado em pátio de terra" width="552" height="325" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Armazenagem logística e industrial</h3>
+          <p>Espaço para armazenar, carregar e descarregar mercadorias e produtos em trânsito, com
+            proteção contra chuva, sol intenso e temperaturas extremas.</p>
+          <ul class="lista">
+            <li>Matérias-primas e materiais de embalagem</li>
+            <li>Peças de reposição e componentes</li>
+            <li>Produtos acabados</li>
+          </ul>
+        </div>
+      </article>
+      <article class="uso">
+        <div class="capa"><img src="galpao-obra.webp" alt="Galpão de lona cinza montado em pátio, com portas frontais fechadas" width="749" height="431" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Obras e construção civil</h3>
+          <p>Estrutura móvel que dispensa fundações, não precisa de habite-se e é isenta de IPTU por ser
+            classificada como estrutura móvel — montada e desmontada conforme a obra avança.</p>
+          <ul class="lista">
+            <li>Obras, engenharia e construção civil</li>
+            <li>Portos, aeroportos e mineradoras</li>
+            <li>Coberturas em geral</li>
+          </ul>
+        </div>
+      </article>
+      <article class="uso">
+        <div class="capa"><img src="galpao-eventos-aereo.webp" alt="Conjunto de galpões e tendas de lona montados à beira-mar, visto de cima" width="860" height="484" loading="lazy"></div>
+        <div class="corpo">
+          <h3>Eventos, festivais e exposições</h3>
+          <p>Aluguel de galpões lonados de 10 a 40 metros de largura e extensão ilimitada, para eventos
+            corporativos, públicos e de grande porte.</p>
+          <ul class="lista">
+            <li>Feiras, exposições e eventos corporativos</li>
+            <li>Festivais, conferências e eventos internacionais</li>
+            <li>Eventos do agronegócio, feiras agrícolas e congressos</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <figure class="faixa-foto">
+      <img src="estrutura-evento.webp" alt="Cobertura de galpão de lona vista por dentro, com treliças metálicas e lona branca" width="1100" height="302" loading="lazy">
+      <figcaption>Cobertura de um galpão GM Log montado para feira. Foto publicada pela GM Tendas Galpões, recortada para esta proposta.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="segmentos">
+  <div class="env">
+    <p class="rotulo">Segmentos atendidos</p>
+    <h2>Onde os galpões GM Log já estão</h2>
+    <ul class="chips">
+      <li>Alimentos e bebidas</li>
+      <li>Obras e construção civil</li>
+      <li>Varejo e atacado</li>
+      <li>Papel e celulose</li>
+      <li>Transporte e logística</li>
+      <li>Veículos e autopeças</li>
+      <li>Portos e aeroportos</li>
+      <li>Indústrias</li>
+      <li>Agronegócio</li>
+      <li>Eventos e exposições</li>
+    </ul>
+    <div class="galeria">
+      <figure>
+        <div class="capa"><img src="galpao-agronegocio.webp" alt="Galpão de lona cinza de grande porte montado ao lado de via, com palmeiras" width="760" height="360" loading="lazy"></div>
+        <figcaption>Galpão lonado para armazenagem</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="galpao-cobertura.webp" alt="Cobertura de lona apoiada em estrutura metálica sobre pátio murado" width="880" height="495" loading="lazy"></div>
+        <figcaption>Cobertura de pátio operacional</figcaption>
+      </figure>
+      <figure>
+        <div class="capa"><img src="galpao-montagem.webp" alt="Interior de galpão de lona durante a montagem, com plataforma elevatória" width="820" height="482" loading="lazy"></div>
+        <figcaption>Montagem em andamento</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="locacao">
+  <div class="env">
+    <p class="rotulo">Locação e compra</p>
+    <h2>Alugar por prazo fechado ou comprar como ativo</h2>
+    <div class="duo">
+      <div>
+        <p class="apoio txt">A GM Tendas Galpões fabrica e vende os galpões de lona GM Log e também atua
+          com contratos de locação de 6, 12, 24, 36 ou 48 meses, ou ainda para eventos corporativos,
+          festivais e exposições. Os planos de pagamento das locações e vendas são personalizados conforme
+          a característica de cada cliente.</p>
+
+        <div class="caixa" style="margin-top:22px">
+          <h3>Locação</h3>
+          <ul>
+            <li>Contratos de 6, 12, 24, 36 ou 48 meses</li>
+            <li>Aluguel mensal do galpão</li>
+            <li>Também para eventos corporativos, festivais e exposições</li>
+          </ul>
+        </div>
+        <div class="caixa">
+          <h3>Compra</h3>
+          <ul>
+            <li>Aquisição com pagamento facilitado</li>
+            <li>Transferências, boletos, cartões, parcelamentos e BNDES</li>
+            <li>Pagamentos planejados conforme o cronograma de produção e montagem</li>
+          </ul>
+        </div>
+        <div class="caixa">
+          <h3>Opcionais técnicos</h3>
+          <p>Iluminação, climatização, ar-condicionado, exaustão, SPDA, segurança, pisos especiais,
+            tablados modulares, portas deslizantes e portas antipânico.</p>
+        </div>
+      </div>
+      <div>
+        <div class="caixa">
+          <h3>Normas técnicas citadas pela empresa</h3>
+          <ul>
+            <li><b>ABNT NBR 6123</b> — cargas de vento</li>
+            <li><b>ABNT NBR 6323</b> — galvanização a quente</li>
+            <li><b>ABNT NBR 9442</b> e instruções do Corpo de Bombeiros</li>
+            <li>Lonas vinílicas auto extinguíveis, em membranas técnicas com laudo do ITEN — Instituto Tecnológico de Ensaios</li>
+          </ul>
+        </div>
+        <div class="caixa">
+          <h3>Garantia declarada</h3>
+          <p>Os galpões GM Log possuem alta durabilidade com garantia total contra defeitos de fabricação
+            de até 5 anos.</p>
+        </div>
+        <div class="caixa">
+          <h3>Equipe de montagem</h3>
+          <p>Engenheiros, técnicos, supervisores, encarregados e montadores treinados, certificados e
+            habilitados para a operação.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="montagem">
+  <div class="env">
+    <p class="rotulo">Do contrato ao acabamento</p>
+    <h2>Como o galpão sai do projeto e vira área coberta</h2>
+    <p class="apoio txt">A GM Tendas Galpões descreve assim as etapas comuns do processo. Segundo a
+      empresa, é possível cobrir, por exemplo, uma área de 5.000 m² em até 10 dias.</p>
+    <ol class="etapas">
+      <li><b>Contrato</b><span>Proposta comercial fechada</span></li>
+      <li><b>Projeto</b><span>Projetos técnicos, laudos e ARTs</span></li>
+      <li><b>Produção</b><span>Fabricação da estrutura e da lona</span></li>
+      <li><b>Preparação do local</b><span>Terreno pronto para receber a estrutura</span></li>
+      <li><b>Montagem</b><span>Equipe própria de montagem</span></li>
+      <li><b>Acabamento</b><span>Portas, piso e sistemas opcionais</span></li>
+    </ol>
+    <div class="caixa" style="margin-top:26px">
+      <h3>Tipos de terreno que a empresa pergunta no orçamento</h3>
+      <p>Concreto · Asfalto · Brita · Intertravado · Terra · Grama · Outros</p>
+    </div>
+  </div>
+</section>
+
+<section id="unidades">
+  <div class="env">
+    <p class="rotulo">Onde a GM Tendas Galpões está</p>
+    <h2>Matriz em Campinas, atendimento em todo o Brasil</h2>
+    <p class="apoio txt">A sede está localizada em Campinas/SP, nas proximidades das principais rodovias
+      estaduais, para favorecer o rápido atendimento à capital, ao interior e ao litoral do estado de São
+      Paulo. A empresa publica ainda quatro telefones de filiais.</p>
+    <div class="unidades">
+      <div class="un matriz">
+        <b>Matriz · Campinas/SP</b>
+        <a href="tel:+551932913756">(19) 3291-3756</a>
+        <p>Sara Helena Mantello, 410 — Terminal Intermodal de Cargas (TIC), Campinas/SP — CEP 13069-133</p>
+      </div>
+      <div class="un"><b>Filial · Santos</b><a href="tel:+551320280861">(13) 2028-0861</a></div>
+      <div class="un"><b>Filial · Curitiba</b><a href="tel:+554120180305">(41) 2018-0305</a></div>
+      <div class="un"><b>Filial · Rio de Janeiro</b><a href="tel:+552120381027">(21) 2038-1027</a></div>
+      <div class="un"><b>Filial · Belo Horizonte</b><a href="tel:+553121801252">(31) 2180-1252</a></div>
+      <div class="un"><b>Atendimento nacional</b><a href="tel:40034875">4003-4875</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="orcamento" class="orcamento">
+  <div class="env">
+    <p class="rotulo">Proposta comercial</p>
+    <h2>Quatro respostas e a proposta sai personalizada</h2>
+    <p class="apoio txt">É o que a GM Tendas Galpões pergunta no formulário de orçamento. Tenha isso à mão
+      quando ligar ou escrever.</p>
+    <div class="duo">
+      <div class="caixa">
+        <h3>1 · Venda ou locação</h3>
+        <p>Comprar o galpão como ativo ou alugar por 6, 12, 24, 36 ou 48 meses — ou para um evento.</p>
+      </div>
+      <div class="caixa">
+        <h3>2 · Área do galpão</h3>
+        <p>Até 1.000 m², até 5.000 m² ou acima de 5.000 m².</p>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="caixa">
+        <h3>3 · Sistemas técnicos opcionais</h3>
+        <p>Climatização, iluminação e SPDA.</p>
+      </div>
+      <div class="caixa">
+        <h3>4 · Tipo de terreno</h3>
+        <p>Concreto, asfalto, brita, intertravado, terra, grama ou outro.</p>
+      </div>
+    </div>
+    <div class="acoes">
+      <a class="btn claro" href="tel:40034875">Ligar 4003-4875</a>
+      <a class="btn vazio" href="mailto:atendimento@gmtendas.com.br?subject=Or%C3%A7amento%20de%20galp%C3%A3o%20de%20lona%20GM%20Log">Pedir por e-mail</a>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Fale com a GM Tendas Galpões</h2>
+    <div class="contato-grade">
+      <div class="ct">
+        <b>Atendimento nacional</b>
+        <a href="tel:40034875">4003-4875</a>
+        <p class="peq">Telefone publicado no topo do site da empresa.</p>
+      </div>
+      <div class="ct">
+        <b>Matriz · Campinas/SP</b>
+        <a href="tel:+551932913756">(19) 3291-3756</a>
+        <p class="peq">Sara Helena Mantello, 410 — Terminal Intermodal de Cargas (TIC) — CEP 13069-133</p>
+      </div>
+      <div class="ct">
+        <b>E-mail</b>
+        <a href="mailto:atendimento@gmtendas.com.br">atendimento@gmtendas.com.br</a>
+        <p class="peq">Solicite uma proposta comercial para compra ou locação.</p>
+      </div>
+      <div class="ct">
+        <b>Filiais</b>
+        <a href="tel:+551320280861">Santos (13) 2028-0861</a>
+        <a href="tel:+554120180305">Curitiba (41) 2018-0305</a>
+        <a href="tel:+552120381027">Rio de Janeiro (21) 2038-1027</a>
+        <a href="tel:+553121801252">Belo Horizonte (31) 2180-1252</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <div class="marca">
+      <span class="tile"><img src="logo.webp" alt="GM Tendas Galpões" width="430" height="233" loading="lazy"></span>
+      <span>Indústria de galpões de lona GM Log®</span>
+    </div>
+    <span>Conteúdo, fotos e marca são da GM Tendas Galpões.
+      Site oficial: <a href="https://gmtendas.com.br/" rel="nofollow noopener" target="_blank">gmtendas.com.br</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
