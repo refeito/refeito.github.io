@@ -63,55 +63,54 @@
   .btn-branco{background:#fff; color:var(--terra); border-color:#fff;}
   .btn-branco:hover{background:var(--amarelo); border-color:var(--amarelo);}
 
-  /* ---------- abertura ---------- */
-  .abertura{padding-top:18px; padding-bottom:24px;}
+  /* ---------- abertura com painel de reserva ---------- */
+  .abertura{padding-top:18px; padding-bottom:6px;}
+  .abertura-grade{display:grid; gap:26px; grid-template-columns:minmax(0,1fr); align-items:start;}
   .abertura h1{font-size:clamp(2.05rem,6vw,3.4rem); font-weight:800;}
   .abertura h1 em{font-style:normal; color:var(--laranja-esc);}
   .abertura .linha{margin-top:16px; font-size:1.08rem; color:var(--tinta2);}
-  .acoes{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
   .selos{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
   .selos li{font-size:.83rem; font-weight:700; font-family:var(--titulo);
             padding:6px 13px; border-radius:999px; background:var(--creme); border:1px solid var(--linha);}
   .selos li:nth-child(2){background:#fdeef8; border-color:#f7cbe6;}
   .selos li:nth-child(3){background:#f4ecfd; border-color:#e0cdf6;}
 
-  /* ---------- mosaico ---------- */
-  .mosaico{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr));}
-  .mosaico figure{position:relative; border-radius:14px; overflow:hidden;
-                  background:var(--creme); aspect-ratio:3/2;}
-  .mosaico img{width:100%; height:100%; object-fit:cover;}
-  .mosaico .grande{grid-column:1/-1; aspect-ratio:16/10;}
-  .tag{position:absolute; left:10px; bottom:10px;
-       font-family:var(--titulo); font-weight:700; font-size:.72rem; letter-spacing:.06em;
-       text-transform:uppercase; color:#2b1900; background:var(--amarelo);
-       padding:5px 11px; border-radius:999px;}
-  .tag.rosa{background:var(--rosa); color:#fff;}
-  .tag.roxo{background:var(--roxo); color:#fff;}
-  .tag.laranja{background:var(--laranja); color:#2b1900;}
+  .reserva{background:var(--creme); border:2px solid var(--laranja); border-radius:18px;
+           padding:22px 20px;}
+  .reserva .chamada{font-family:var(--titulo); font-weight:800; font-size:1.18rem;
+                    line-height:1.2; color:var(--terra);}
+  .reserva .cond{margin-top:12px; font-size:.96rem; color:var(--tinta2);}
+  .reserva .acoes{display:grid; gap:9px; margin-top:18px;}
+  .reserva .btn{width:100%;}
+  .reserva small{display:block; margin-top:14px; font-size:.82rem; color:var(--tinta2);}
 
   /* ---------- seções ---------- */
   section{padding-block:46px;}
-  .cabeca{max-width:64ch; margin-bottom:26px;}
+  .titulo-secao{max-width:64ch; margin-bottom:26px;}
   .rotulo{display:inline-block; font-family:var(--titulo); font-weight:700; font-size:.75rem;
           letter-spacing:.14em; text-transform:uppercase; color:var(--laranja-esc); margin-bottom:9px;}
-  .cabeca h2{font-size:clamp(1.55rem,4.2vw,2.3rem); font-weight:700;}
-  .cabeca p{margin-top:11px; color:var(--tinta2);}
+  .titulo-secao h2{font-size:clamp(1.55rem,4.2vw,2.3rem); font-weight:700;}
+  .titulo-secao p{margin-top:11px; color:var(--tinta2);}
 
-  /* ---------- quartos ---------- */
-  .quarto{display:grid; gap:20px; grid-template-columns:minmax(0,1fr);
-          align-items:center; padding-block:24px; border-top:1px solid var(--linha);}
-  .quarto:first-of-type{border-top:none; padding-top:0;}
-  .quarto img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:14px;}
-  .quarto h3{font-size:1.5rem; font-weight:700;}
+  /* ---------- quartos: o produto ---------- */
+  .quartos{display:grid; gap:18px; grid-template-columns:minmax(0,1fr);}
+  .quarto{border:1px solid var(--linha); border-radius:18px; overflow:hidden; background:#fff;
+          display:flex; flex-direction:column;}
+  .quarto img{width:100%; aspect-ratio:3/2; object-fit:cover;}
+  .quarto .corpo{padding:20px 19px 22px; display:flex; flex-direction:column; flex:1;}
+  .quarto h3{font-size:1.4rem; font-weight:700;}
   .quarto p{margin-top:9px; color:var(--tinta2);}
   .itens{display:flex; flex-wrap:wrap; gap:8px; margin-top:15px;}
   .itens li{font-size:.88rem; font-weight:700; font-family:var(--titulo);
             background:var(--creme); border:1px solid var(--linha);
             padding:6px 13px; border-radius:8px;}
-  .quarto .btn{margin-top:18px;}
+  .quarto .btn{margin-top:20px; align-self:flex-start;}
+  .nota-diaria{margin-top:20px; font-size:.93rem; color:var(--tinta2); max-width:70ch;}
+
+  .acoes{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
 
   /* ---------- experiências e café ---------- */
-  .faixa-exp{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:30px;}
+  .faixa-exp{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:26px;}
   .faixa-exp li{padding:16px 15px; border-radius:13px; color:#fff; font-family:var(--titulo);
                 font-weight:700; font-size:1.02rem; line-height:1.25;}
   .faixa-exp li:nth-child(1){background:var(--laranja); color:#2b1900;}
@@ -119,11 +118,15 @@
   .faixa-exp li:nth-child(3){background:var(--roxo);}
   .faixa-exp li:nth-child(4){background:var(--terra);}
 
-  .tira{display:grid; gap:14px; grid-template-columns:minmax(0,1fr);}
-  .tira img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:12px;}
-  .tira figcaption{margin-top:8px; font-size:.88rem; color:var(--tinta2);}
-  .tira .larga{grid-column:1/-1;}
-  .tira .larga img{aspect-ratio:500/147;}
+  .fotos-cafe{display:grid; gap:12px; grid-template-columns:minmax(0,1fr);}
+  .fotos-cafe img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:12px;}
+  .fotos-cafe .larga{grid-column:1/-1;}
+  .fotos-cafe .larga img{aspect-ratio:500/147;}
+
+  /* ---------- tematização ---------- */
+  .tema{background:#fffaf2; border-block:1px solid var(--linha);}
+  .galeria-tema{display:grid; gap:12px; grid-template-columns:repeat(2,minmax(0,1fr));}
+  .galeria-tema img{width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:14px;}
 
   /* ---------- benefícios ---------- */
   .beneficios{background:var(--creme); border-block:1px solid var(--linha);}
@@ -149,8 +152,7 @@
 
   /* ---------- localização ---------- */
   .mapa-grade{display:grid; gap:22px; grid-template-columns:minmax(0,1fr); align-items:start;}
-  .par-fotos{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr));}
-  .par-fotos img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:13px;}
+  .mapa-grade figure img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:14px;}
   .perto{display:grid; gap:10px;}
   .perto li{display:grid; grid-template-columns:auto minmax(0,1fr); gap:11px; align-items:baseline; font-size:.99rem;}
   .perto b{font-family:var(--titulo); font-weight:700; color:var(--laranja-esc); font-size:1.02rem;}
@@ -167,14 +169,16 @@
   .reservar p{margin-top:13px; font-size:1.05rem; max-width:52ch;}
   .reservar small{display:block; margin-top:18px; font-size:.84rem; color:#6b4508;}
 
-  /* ---------- contato ---------- */
-  .grade-contato{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));}
-  .cartao{border:1px solid var(--linha); border-radius:14px; padding:18px 17px; background:#fff;}
-  .cartao .titulo{display:block; font-family:var(--titulo); font-weight:700; font-size:.75rem;
-                  letter-spacing:.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:8px;}
-  .cartao a, .cartao .valor{font-size:1.01rem; font-weight:700; text-decoration:none; display:block;}
-  .cartao a:hover{color:var(--laranja-esc);}
-  .cartao small{display:block; margin-top:6px; font-size:.86rem; font-weight:400; color:var(--tinta2);}
+  /* ---------- recepção ---------- */
+  .recepcao{display:grid; gap:24px; grid-template-columns:minmax(0,1fr); align-items:start;
+            border-top:3px solid var(--laranja); padding-top:26px;}
+  .recepcao dl{margin:0; display:grid; gap:16px;}
+  .recepcao dt{font-family:var(--titulo); font-weight:700; font-size:.75rem; letter-spacing:.12em;
+               text-transform:uppercase; color:var(--tinta2);}
+  .recepcao dd{margin:0; margin-top:3px; font-size:1.06rem; font-weight:700;}
+  .recepcao dd a{text-decoration:none;}
+  .recepcao dd a:hover{color:var(--laranja-esc);}
+  .recepcao dd .obs{display:block; margin-top:3px; font-size:.88rem; font-weight:400; color:var(--tinta2);}
 
   footer{background:var(--terra); color:#ffe3c8; padding-block:26px; font-size:.86rem;}
   footer .env{display:grid; gap:9px;}
@@ -182,15 +186,15 @@
 
   @media (min-width:700px){
     section{padding-block:60px;}
-    .mosaico{grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px;}
-    .mosaico .grande{grid-column:span 2; grid-row:span 2; aspect-ratio:auto;}
+    .abertura-grade{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:40px;}
     .faixa-exp{grid-template-columns:repeat(4,minmax(0,1fr));}
-    .tira{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .fotos-cafe{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .galeria-tema{grid-template-columns:repeat(4,minmax(0,1fr));}
     .grade-ben{grid-template-columns:repeat(3,minmax(0,1fr));}
     .ben:nth-child(5){grid-column:span 2;}
-    .quarto{grid-template-columns:1.05fr 1fr; gap:34px; padding-block:36px;}
-    .quarto.invertido .foto{order:2;}
+    .quartos{grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px;}
     .mapa-grade{grid-template-columns:1fr 1fr; gap:34px;}
+    .recepcao{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:40px;}
   }
   @media (min-width:920px){
     .menu{display:flex;}
@@ -209,14 +213,15 @@
 
 <header class="env">
   <div class="topo">
-    <a class="marca" href="#lugar">
+    <a class="marca" href="#quartos">
       <img src="img/logo.webp" width="360" height="337" alt="Logo da Pousada das Galinhas">
       <b>Pousada das Galinhas<span>Porto de Galinhas · PE</span></b>
     </a>
     <nav class="menu">
-      <a href="#lugar">A pousada</a>
       <a href="#quartos">Acomodações</a>
-      <a href="#estrutura">Estrutura</a>
+      <a href="#estadia">A estadia</a>
+      <a href="#tematizacao">Tematização</a>
+      <a href="#beneficios">Benefícios</a>
       <a href="#localizacao">Localização</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -228,102 +233,82 @@
 </header>
 
 <div class="env abertura">
-  <div class="col">
-    <h1>A pousada temática no <em>coração de Porto de Galinhas</em></h1>
-    <p class="linha">Localização privilegiada que te deixa a poucos minutos das piscinas naturais.
-      Cada detalhe projetado para o seu conforto — com a decoração temática que só a Pousada
-      das Galinhas tem.</p>
-    <div class="acoes">
-      <a class="btn btn-laranja" href="https://reservas.pousadadasgalinhas.com.br/">Reservar agora</a>
-      <a class="btn btn-zap" href="https://wa.me/558130798091">Falar no WhatsApp</a>
+  <div class="abertura-grade">
+    <div>
+      <h1>A pousada temática no <em>coração de Porto de Galinhas</em></h1>
+      <p class="linha">Localização privilegiada que te deixa a poucos minutos das piscinas naturais.
+        Cada detalhe projetado para o seu conforto — com a decoração temática que só a Pousada
+        das Galinhas tem.</p>
+      <ul class="selos">
+        <li>5 minutos da vila</li>
+        <li>10 minutos das piscinas naturais</li>
+        <li>Pagamento em 8x no cartão sem juros</li>
+      </ul>
     </div>
-    <ul class="selos">
-      <li>5 minutos da vila</li>
-      <li>10 minutos das piscinas naturais</li>
-      <li>Pagamento em 8x no cartão sem juros</li>
-    </ul>
+
+    <div class="reserva">
+      <p class="chamada">Faça sua reserva com o melhor preço aqui</p>
+      <p class="cond">Datas, disponibilidade e diárias no motor de reservas da própria pousada.
+        Pagamento em até 8x no cartão sem juros.</p>
+      <div class="acoes">
+        <a class="btn btn-laranja" href="https://reservas.pousadadasgalinhas.com.br/">Reservar agora</a>
+        <a class="btn btn-zap" href="https://wa.me/558130798091">Falar no WhatsApp</a>
+      </div>
+      <small>O botão abre reservas.pousadadasgalinhas.com.br.</small>
+    </div>
   </div>
 </div>
 
-<section id="lugar" class="env" style="padding-top:8px;">
-  <div class="mosaico">
-    <figure class="grande">
-      <span class="tag laranja">Piscina / Lazer</span>
-      <img src="img/piscina-arquitetura.webp" width="1000" height="669"
-           alt="Piscina da pousada cercada pelo prédio colorido e por esculturas">
-    </figure>
-    <figure>
-      <span class="tag rosa">Tematização</span>
-      <img src="img/piscina-sereia.webp" width="1000" height="669"
-           alt="Escultura de sereia ao lado da piscina, entre palmeiras">
-    </figure>
-    <figure>
-      <span class="tag roxo">Tematização</span>
-      <img src="img/tematizacao-mascara.webp" width="1000" height="669" loading="lazy"
-           alt="Escultura de rosto e pranchas de surfe coloridas na área comum">
-    </figure>
-    <figure>
-      <span class="tag laranja">Piscina / Lazer</span>
-      <img src="img/piscina-fachada.webp" width="1000" height="667" loading="lazy"
-           alt="Vista da piscina com a fachada de retalhos coloridos ao fundo">
-    </figure>
-    <figure>
-      <span class="tag roxo">Tematização</span>
-      <img src="img/jardim-escultura.webp" width="1000" height="669" loading="lazy"
-           alt="Escultura pintada jorrando água no jardim, entre folhagens">
-    </figure>
-  </div>
-</section>
-
 <section id="quartos" class="env">
-  <div class="cabeca">
+  <div class="titulo-secao">
     <span class="rotulo">Acomodações</span>
     <h2>Quartos pensados para cada viagem</h2>
     <p>Cada detalhe projetado para o seu conforto — com a decoração temática que só a
       Pousada das Galinhas tem.</p>
   </div>
 
-  <article class="quarto">
-    <figure class="foto">
-      <img src="img/quarto-duplo.webp" width="1000" height="669" loading="lazy"
+  <div class="quartos">
+    <article class="quarto">
+      <img src="img/quarto-duplo.webp" width="1000" height="669"
            alt="Quarto duplo com cama de casal e parede decorada com retalhos coloridos">
-    </figure>
-    <div>
-      <h3>Quarto duplo</h3>
-      <p>Ideal para casais ou amigos — aconchegante, confortável e com a decoração temática
-        da pousada.</p>
-      <ul class="itens">
-        <li>Ar-condicionado</li>
-        <li>Cama Queen Size confortável</li>
-        <li>Decoração temática exclusiva</li>
-      </ul>
-      <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver datas e valores</a>
-    </div>
-  </article>
+      <div class="corpo">
+        <h3>Quarto duplo</h3>
+        <p>Ideal para casais ou amigos — aconchegante, confortável e com a decoração temática
+          da pousada.</p>
+        <ul class="itens">
+          <li>Ar-condicionado</li>
+          <li>Cama Queen Size confortável</li>
+          <li>Decoração temática exclusiva</li>
+        </ul>
+        <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver datas e valores</a>
+      </div>
+    </article>
 
-  <article class="quarto invertido">
-    <figure class="foto">
+    <article class="quarto">
       <img src="img/quarto-triplo.webp" width="1000" height="669" loading="lazy"
            alt="Quarto triplo com duas camas, janelas redondas e decoração temática">
-    </figure>
-    <div>
-      <h3>Quarto triplo</h3>
-      <p>Amplo e acolhedor, o quarto perfeito para pequenas famílias e grupos de amigos que
-        querem aproveitar juntos.</p>
-      <ul class="itens">
-        <li>Cama de casal</li>
-        <li>Ar-condicionado</li>
-        <li>Amplo guarda-roupa</li>
-      </ul>
-      <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver datas e valores</a>
-    </div>
-  </article>
+      <div class="corpo">
+        <h3>Quarto triplo</h3>
+        <p>Amplo e acolhedor, o quarto perfeito para pequenas famílias e grupos de amigos que
+          querem aproveitar juntos.</p>
+        <ul class="itens">
+          <li>Cama de casal</li>
+          <li>Ar-condicionado</li>
+          <li>Amplo guarda-roupa</li>
+        </ul>
+        <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver datas e valores</a>
+      </div>
+    </article>
+  </div>
+
+  <p class="nota-diaria">A diária, a disponibilidade por data e o número de hóspedes ficam no
+    motor de reservas da pousada. Viajante solo tem desconto de até 30% a partir de 4 diárias.</p>
 </section>
 
-<section id="estrutura" class="env">
-  <div class="cabeca">
+<section id="estadia" class="env">
+  <div class="titulo-secao">
     <span class="rotulo">Uma pousada, infinitas experiências</span>
-    <h2>Café da manhã, piscina e o que mais a casa preparou</h2>
+    <h2>O que espera por você entre uma diária e outra</h2>
     <p>Relaxe, explore e aproveite tudo que preparamos para tornar sua estadia inesquecível.</p>
   </div>
 
@@ -334,28 +319,52 @@
     <li>Passeios</li>
   </ul>
 
-  <div class="tira">
+  <div class="fotos-cafe">
     <figure>
       <img src="img/cafe-buffet.webp" width="1000" height="668" loading="lazy"
-           alt="Bancada do café da manhã com bolos, pães e frutas">
-      <figcaption>O buffet servido na área temática da pousada.</figcaption>
+           alt="Bancada do café da manhã com bolos, pães, frutas e garrafas térmicas, sob painéis coloridos">
     </figure>
     <figure>
-      <img src="img/cafe-prato.webp" width="1000" height="668" loading="lazy"
-           alt="Prato servido com pães, frutas e café sobre mesa colorida">
-      <figcaption>Para comer do lado de fora, embaixo do telhado de madeira.</figcaption>
+      <img src="img/cafe-prato.webp" width="1000" height="538" loading="lazy"
+           alt="Mesa com pães, prato de frutas, café e suco, numa varanda de madeira">
     </figure>
     <figure class="larga">
       <img src="img/cafe-frigideiras.webp" width="1000" height="294" loading="lazy"
-           alt="Frigideiras sobre a chapa com tapioca e omelete sendo preparados">
-      <figcaption>A chapa quente do café: tapioca e omelete saem na hora.</figcaption>
+           alt="Duas frigideiras sobre a chapa, com massa dourada sendo preparada">
     </figure>
   </div>
 </section>
 
-<section class="beneficios">
+<section id="tematizacao" class="tema">
   <div class="env">
-    <div class="cabeca">
+    <div class="titulo-secao">
+      <span class="rotulo">Tematização</span>
+      <h2>A decoração temática que só a Pousada das Galinhas tem</h2>
+    </div>
+    <div class="galeria-tema">
+      <figure>
+        <img src="img/tematizacao-sereia.webp" width="520" height="669" loading="lazy"
+             alt="Escultura de sereia sobre uma cascata de pedras, ao lado da piscina">
+      </figure>
+      <figure>
+        <img src="img/tematizacao-mascara.webp" width="1000" height="669" loading="lazy"
+             alt="Escultura de máscara e prancha de surfe coloridas, vistas através de um vidro">
+      </figure>
+      <figure>
+        <img src="img/jardim-escultura.webp" width="1000" height="669" loading="lazy"
+             alt="Escultura pintada jorrando água no jardim, entre folhagens">
+      </figure>
+      <figure>
+        <img src="img/galinha-mastro.webp" width="1000" height="669" loading="lazy"
+             alt="Galinha esculpida no mastro de um barco decorativo">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios" class="beneficios">
+  <div class="env">
+    <div class="titulo-secao">
       <span class="rotulo">Benefícios e parcerias</span>
       <h2>O melhor para o seu bolso e a sua viagem</h2>
     </div>
@@ -399,22 +408,16 @@
 </section>
 
 <section id="localizacao" class="env">
-  <div class="cabeca">
+  <div class="titulo-secao">
     <span class="rotulo">Localização</span>
     <h2>No coração de Porto de Galinhas</h2>
     <p>Localização privilegiada que te deixa a poucos minutos das piscinas naturais.</p>
   </div>
   <div class="mapa-grade">
-    <div class="par-fotos">
-      <figure>
-        <img src="img/placa-entrada.webp" width="1000" height="667" loading="lazy"
-             alt="Placa de madeira com o nome da pousada, na entrada">
-      </figure>
-      <figure>
-        <img src="img/galinha-mastro.webp" width="1000" height="669" loading="lazy"
-             alt="Galinha esculpida no mastro de um barco decorativo">
-      </figure>
-    </div>
+    <figure>
+      <img src="img/placa-entrada.webp" width="1000" height="667" loading="lazy"
+           alt="Placa de madeira entalhada com o nome da pousada, na entrada, entre folhagens">
+    </figure>
     <div>
       <ul class="perto">
         <li><b>5 min</b><span>da vila de Porto de Galinhas</span></li>
@@ -445,28 +448,37 @@
 </section>
 
 <section id="contato" class="env">
-  <div class="cabeca">
+  <div class="titulo-secao">
     <span class="rotulo">Contato</span>
     <h2>Fale com a recepção</h2>
   </div>
-  <div class="grade-contato">
-    <div class="cartao">
-      <span class="titulo">Telefone</span>
-      <a href="tel:+558132021660">(81) 3202-1660</a>
-    </div>
-    <div class="cartao">
-      <span class="titulo">WhatsApp</span>
-      <a href="https://wa.me/558130798091">+55 81 3079-8091</a>
-    </div>
-    <div class="cartao">
-      <span class="titulo">Reservas</span>
-      <a class="quebra" href="mailto:reservas@pousadadasgalinhas.com.br">reservas@pousadadasgalinhas.com.br</a>
-    </div>
-    <div class="cartao">
-      <span class="titulo">Endereço</span>
-      <span class="valor quebra">Praça Dezenove, s/n - Lote 5</span>
-      <small class="quebra">Porto de Galinhas, Ipojuca - PE, 55595-057</small>
-    </div>
+  <div class="recepcao">
+    <dl>
+      <div>
+        <dt>Telefone</dt>
+        <dd><a href="tel:+558132021660">(81) 3202-1660</a></dd>
+      </div>
+      <div>
+        <dt>WhatsApp</dt>
+        <dd><a href="https://wa.me/558130798091">+55 81 3079-8091</a></dd>
+      </div>
+      <div>
+        <dt>Reservas</dt>
+        <dd><a class="quebra" href="mailto:reservas@pousadadasgalinhas.com.br">reservas@pousadadasgalinhas.com.br</a></dd>
+      </div>
+    </dl>
+    <dl>
+      <div>
+        <dt>Endereço</dt>
+        <dd class="quebra">Praça Dezenove, s/n - Lote 5
+          <span class="obs">Porto de Galinhas, Ipojuca - PE, 55595-057</span></dd>
+      </div>
+      <div>
+        <dt>Reserva online</dt>
+        <dd><a class="quebra" href="https://reservas.pousadadasgalinhas.com.br/">reservas.pousadadasgalinhas.com.br</a>
+          <span class="obs">Datas, diárias e pagamento em até 8x sem juros.</span></dd>
+      </div>
+    </dl>
   </div>
 </section>
 

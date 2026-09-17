@@ -92,12 +92,6 @@
   .olho { font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;
           color:var(--verde); margin-bottom:10px; }
 
-  /* ---------- mosaico de fotos ---------- */
-  .mosaico { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr)); }
-  .mosaico figure { margin:0; }
-  .mosaico img { width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:12px; }
-  .mosaico figcaption { font-size:0.85rem; color:var(--tinta2); margin-top:9px; font-weight:500; }
-
   /* ---------- lista de passeios ---------- */
   .lista { margin-top:34px; border-top:1px solid var(--linha); }
   .lista li { display:grid; gap:6px 24px; padding-block:18px;
@@ -110,10 +104,6 @@
   .preco b { font-family:var(--titulo); font-size:1.18rem; color:var(--verde-esc); font-weight:700; }
   .preco .consulta { font-family:var(--titulo); font-size:0.98rem; color:var(--verde-med); font-weight:600; }
   .rodape-lista { margin-top:18px; font-size:0.9rem; color:var(--tinta2); }
-
-  /* ---------- faixa de foto ---------- */
-  .faixa { padding-block:0; }
-  .faixa img { width:100%; height:clamp(92px,17vw,190px); object-fit:cover; border-radius:12px; }
 
   /* ---------- roteiro ---------- */
   .roteiro { background:var(--musgo); }
@@ -285,23 +275,8 @@
     <p class="olho">Bonito, Jardim e Bodoquena</p>
     <h2>Principais passeios em Bonito MS e região</h2>
     <p>Conheça os passeios mais procurados de Bonito MS com preços atualizados. Garanta sua vaga
-       com antecedência e monte seu roteiro ideal. A Bonito Way cuida da reserva, dos ingressos
-       para os atrativos e do transporte até eles.</p>
-  </div>
-
-  <div class="mosaico">
-    <figure>
-      <img src="img/gruta.webp" alt="Salão de gruta iluminado, com estalactites e uma coluna de rocha no centro" width="820" height="461" loading="lazy">
-      <figcaption>Gruta na região de Bonito MS.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/flutuacao.webp" alt="Vista submersa de um rio de água clara, com peixes e vegetação no fundo de pedra" width="820" height="461" loading="lazy">
-      <figcaption>Flutuação e mergulho nos rios de água transparente.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/serra.webp" alt="Rio largo e calmo diante de morros cobertos de mata" width="480" height="305" loading="lazy">
-      <figcaption>Rio e mata na Serra da Bodoquena.</figcaption>
-    </figure>
+       com antecedência e monte seu roteiro ideal. A Bonito Way cuida da reserva e dos ingressos
+       para os atrativos.</p>
   </div>
 
   <ul class="lista">
@@ -367,17 +342,11 @@
      <a class="link-seta" href="https://www.bonitoway.com.br/">site da Bonito Way</a>.</p>
 </section>
 
-<div class="env faixa">
-  <img src="img/cardume.webp" alt="Cardume de peixes visto de cima, na água clara e esverdeada de um rio" width="860" height="156" loading="lazy">
-</div>
-
 <section id="roteiro" class="roteiro">
   <div class="env">
     <div class="cabeca">
       <p class="olho">O trabalho da agência</p>
       <h2>Como a Bonito Way monta o seu roteiro</h2>
-      <p>Fale com os especialistas e solicite um roteiro totalmente personalizado para você
-         ou para o seu grupo.</p>
     </div>
 
     <div class="roteiro-grade">
@@ -392,9 +361,9 @@
         <li>
           <span class="num">2</span>
           <div>
-            <h3>Receba um roteiro personalizado</h3>
-            <p>Flexibilidade para ajustar os passeios ao perfil do grupo, à data e ao tempo
-               que você tem na cidade.</p>
+            <h3>Tenha flexibilidade no seu roteiro</h3>
+            <p>Fale com os especialistas e solicite um roteiro totalmente personalizado para
+               você ou para o seu grupo.</p>
           </div>
         </li>
         <li>
@@ -425,13 +394,12 @@
       <div class="painel">
         <h3>O que a Bonito Way reserva para você</h3>
         <ul>
-          <li>Passeios e ingressos para os atrativos</li>
+          <li>Passeios</li>
           <li>Hospedagem</li>
           <li>Transporte terrestre</li>
           <li>Locação de veículos</li>
           <li>Passagem aérea</li>
           <li>Logística para eventos</li>
-          <li>Destination wedding em Bonito MS</li>
         </ul>
       </div>
     </div>
@@ -558,8 +526,8 @@
 
   <div class="tira">
     <figure>
-      <img src="img/pantanal-safari.webp" alt="Veículo de safári numa estrada de terra entre campos alagados do Pantanal, visto do alto" width="820" height="461" loading="lazy">
-      <figcaption>Estrada e campos alagados no Pantanal.</figcaption>
+      <img src="img/pantanal-campos.webp" alt="Mata e campos alagados do Pantanal vistos do alto, com um curso de água ao centro" width="612" height="382" loading="lazy">
+      <figcaption>Campos alagados no Pantanal.</figcaption>
     </figure>
     <figure>
       <img src="img/salobra-portal.webp" alt="Portal de troncos com placa de madeira entalhada e um balanço pendurado por correntes" width="760" height="388" loading="lazy">
@@ -567,7 +535,7 @@
     </figure>
     <figure>
       <img src="img/salobra-carreta.webp" alt="Caminhão amarelo com bancos cobertos na carroceria, parado num descampado de areia entre palmeiras" width="760" height="388" loading="lazy">
-      <figcaption>O transporte que leva da recepção até a trilha.</figcaption>
+      <figcaption>Veículo de bancos abertos, no Projeto Salobra.</figcaption>
     </figure>
     <figure>
       <img src="img/salobra-barco.webp" alt="Barco de alumínio com bancos verdes, encostado num braço de rio cercado de aguapés" width="760" height="388" loading="lazy">
@@ -694,7 +662,7 @@
 
 <section id="agencia" class="env">
   <div class="cabeca">
-    <p class="olho">Rua General Osório, no Centro de Bonito</p>
+    <p class="olho">Sobre nós</p>
     <h2>A agência, e quem atende você nela</h2>
   </div>
   <div class="agencia-grade">
@@ -715,8 +683,8 @@
         <dd>Bonito Way Turismo e Eventos</dd>
         <dt>CNPJ</dt>
         <dd>09.235.424/0001-00</dd>
-        <dt>Endereço</dt>
-        <dd>Rua General Osório, 865 — Centro, Bonito, Mato Grosso do Sul, CEP 79290-000</dd>
+        <dt>Onde fica</dt>
+        <dd>Centro de Bonito, Mato Grosso do Sul</dd>
       </dl>
     </div>
   </div>

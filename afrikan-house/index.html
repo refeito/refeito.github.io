@@ -66,7 +66,7 @@
   .abertura h1{font-size:clamp(1.9rem,5.4vw,3.15rem); max-width:19ch; margin-inline:auto;}
   .abertura .sub{margin-top:18px; max-width:66ch; margin-inline:auto; color:var(--tinta2); font-size:1.05rem;}
   .fio{width:62px; height:1px; background:var(--ouro); margin:26px auto 0;}
-  .banda img{width:100%; aspect-ratio:3/1; object-fit:cover;}
+  .banda img{width:100%; aspect-ratio:2.2/1; object-fit:cover;}
   .banda figcaption{margin-top:9px; font-size:.83rem; color:var(--tinta2); text-align:center;}
 
   .conceito{padding-block:46px;}
@@ -96,6 +96,8 @@
   .trio img{width:100%; aspect-ratio:4/3; object-fit:cover;}
   .trio figure:nth-child(3){grid-column:1/-1;}
   .trio figure:nth-child(3) img{aspect-ratio:16/9;}
+  .dupla{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:14px;}
+  .dupla img{width:100%; aspect-ratio:4/3; object-fit:cover;}
 
   /* ---------- evento ---------- */
   .evento{padding-block:54px;}
@@ -121,6 +123,20 @@
   .escuro .sub{margin-top:14px; max-width:62ch; color:#b9b2a5;}
   .pratos{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:30px;}
   .pratos img{width:100%; aspect-ratio:3/2; object-fit:cover;}
+
+  /* ---------- prova social ---------- */
+  .prova{padding-block:54px;}
+  .prova-grade{display:grid; gap:18px; grid-template-columns:minmax(0,1fr); margin-top:26px;}
+  .prova figure{border-top:1px solid var(--ouro); padding-top:18px;}
+  .prova blockquote{margin:0; font-family:var(--titulo); font-size:1.06rem; line-height:1.5;
+                    color:var(--grafite);}
+  .prova figcaption{margin-top:12px; font-size:.78rem; letter-spacing:.16em;
+                    text-transform:uppercase; color:var(--tinta2);}
+  .premio{margin-top:34px; border:1px solid var(--linha); background:var(--creme);
+          padding:20px 22px; display:grid; gap:6px;}
+  .premio b{font-family:var(--titulo); font-weight:400; font-size:1.18rem; color:var(--grafite);}
+  .premio span{font-size:.94rem; color:var(--tinta2);}
+  .premio a{color:var(--ouro); font-weight:500;}
 
   /* ---------- visita ---------- */
   .visita{padding-block:54px;}
@@ -160,7 +176,8 @@
     .trio figure:nth-child(3){grid-column:auto;}
     .trio figure:nth-child(3) img{aspect-ratio:4/3;}
     .pratos{grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px;}
-    .banda img{aspect-ratio:4/1;}
+    .banda img{aspect-ratio:2.6/1;}
+    .prova-grade{grid-template-columns:repeat(3,minmax(0,1fr));}
   }
   @media (min-width:980px){
     .menu{display:flex;}
@@ -187,6 +204,7 @@
         <a href="#espacos">Espaços</a>
         <a href="#evento">Eventos</a>
         <a href="#gastronomia">Gastronomia</a>
+        <a href="#depoimentos">Depoimentos</a>
         <a href="#visita">Visita</a>
         <a href="#contato">Contato</a>
       </nav>
@@ -205,9 +223,9 @@
 
 <div class="env banda">
   <figure>
-    <img src="img/lanternas.webp" width="900" height="300"
-         alt="Lanternas de vela penduradas sobre o teto de tecido do salão">
-    <figcaption>Iluminação de vela sobre o salão, em uma das casas.</figcaption>
+    <img src="img/banda-cerimonia.webp" width="980" height="462"
+         alt="Corredor de cerimônia entre arranjos altos de flores brancas e lanternas de chão">
+    <figcaption>Corredor de cerimônia montado no Village.</figcaption>
   </figure>
 </div>
 
@@ -250,7 +268,7 @@
             <span class="titulo">Endereço</span>
             <span class="quebra">R. Bragança Paulista, 1.228</span>
             <span class="quebra">Chácara Santo Antonio — São Paulo - SP · 04730-000</span>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Bragan%C3%A7a+Paulista+1228+Ch%C3%A1cara+Santo+Antonio+S%C3%A3o+Paulo+SP">Ver no mapa</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=-23.638509%2C-46.719725">Ver no mapa</a>
           </div>
         </div>
         <figure class="principal">
@@ -282,22 +300,20 @@
             <span class="titulo">Endereço</span>
             <span class="quebra">Estrada Benedito Pereira Rodrigues, 2.073</span>
             <span class="quebra">Bairro da Lagoa — Itapecerica da Serra - SP · 06858-000</span>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Estrada+Benedito+Pereira+Rodrigues+2073+Bairro+da+Lagoa+Itapecerica+da+Serra+SP">Ver no mapa</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=-23.713915%2C-46.819225">Ver no mapa</a>
           </div>
         </div>
         <figure class="principal">
-          <img src="img/garden-bangalo.webp" width="1150" height="706" loading="lazy"
-               alt="Bangalô de sapé sobre o lago artificial, cercado de mata">
-          <figcaption>O bangalô sobre o lago, no meio dos jardins.</figcaption>
+          <img src="img/garden-cerimonia.webp" width="1150" height="765" loading="lazy"
+               alt="Cadeiras enfileiradas no gramado diante de um pergolado com cortinas">
+          <figcaption>Cerimônia montada no gramado do Garden.</figcaption>
         </figure>
       </div>
-      <div class="trio">
-        <figure><img src="img/garden-salao.webp" width="1150" height="740" loading="lazy"
-                     alt="Salão do Garden com pé-direito alto e árvores floridas entre as cadeiras"></figure>
-        <figure><img src="img/garden-cerimonia.webp" width="1150" height="765" loading="lazy"
-                     alt="Cadeiras enfileiradas no gramado diante de um pergolado com cortinas"></figure>
-        <figure><img src="img/garden-ponte.webp" width="1150" height="690" loading="lazy"
-                     alt="Ponte de madeira iluminada por microlâmpadas sobre o lago, à noite"></figure>
+      <div class="dupla">
+        <figure><img src="img/garden-lago.webp" width="920" height="690" loading="lazy"
+                     alt="Arco de flores secas montado num deque, diante do lago com peixes"></figure>
+        <figure><img src="img/garden-coberta.webp" width="750" height="562" loading="lazy"
+                     alt="Cerimônia sob cobertura transparente, com lustres de folhagem e arranjos brancos"></figure>
       </div>
     </article>
 
@@ -313,7 +329,7 @@
             <span class="titulo">Endereço</span>
             <span class="quebra">R. Dr. Rubens Gomes de Bueno, 577</span>
             <span class="quebra">Chácara Santo Antonio — São Paulo - SP · 04730-000</span>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Dr+Rubens+Gomes+de+Bueno+577+Ch%C3%A1cara+Santo+Antonio+S%C3%A3o+Paulo+SP">Ver no mapa</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=-23.640306%2C-46.721184">Ver no mapa</a>
           </div>
         </div>
         <figure class="principal">
@@ -403,20 +419,50 @@
   </div>
 </section>
 
+<section id="depoimentos" class="env prova">
+  <span class="rotulo">Depoimentos</span>
+  <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem);">Quem já fez o evento na casa</h2>
+  <div class="prova-grade">
+    <figure>
+      <blockquote>“O time Afrikan foi absolutamente impecável em tudo, eu não tive nenhum
+        problema e preocupação! Foi tudo perfeito no processo e no dia. Vocês merecem muito
+        sucesso”</blockquote>
+      <figcaption>Casamento Ana Carolina e Lucas</figcaption>
+    </figure>
+    <figure>
+      <blockquote>“Eu adoro o Afrikan e o atendimento da equipe! Os dois eventos que eu fiz na
+        casa foi fantástico e tivemos muita atenção.”</blockquote>
+      <figcaption>Corporativo IPEG</figcaption>
+    </figure>
+    <figure>
+      <blockquote>“Espaço excelente, profissionais atenciosos, Buffet delicioso. Parabéns
+        equipe Afrikan House Village!!!”</blockquote>
+      <figcaption>Aniversário Stella</figcaption>
+    </figure>
+  </div>
+  <div class="premio">
+    <b>ZIWA 2022</b>
+    <span>Zankyou International Wedding Awards. O selo está no rodapé do site da casa e leva
+      ao <a href="https://www.zankyou.com.br/f/afrikan-house-lounge-sao-paulo-446499" rel="nofollow">perfil
+      do Afrikan House no Zankyou</a>.</span>
+  </div>
+</section>
+
 <section id="visita" class="env visita">
   <span class="rotulo">Visita</span>
   <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem);">Como conhecer o espaço</h2>
   <ul class="passos">
-    <li><div><b>Fale com um consultor</b><span>O contato começa pelo telefone (11) 5542-8000
-      ou por e-mail.</span></div></li>
+    <li><div><b>Solicite o contato de um consultor</b><span>Pelo formulário da casa, pelo
+      telefone (11) 5542-8000 ou por e-mail.</span></div></li>
     <li><div><b>Marque o horário da visita</b><span>Consulte a agenda de visitas na fanpage
       da casa.</span></div></li>
-    <li><div><b>Receba a proposta</b><span>As propostas são personalizadas e só podem ser
-      enviadas após um breve contato telefônico através dos consultores.</span></div></li>
+    <li><div><b>Receba a proposta</b><span>Personalizada, a partir do tipo de evento, da data e
+      da faixa de investimento que você indicar.</span></div></li>
   </ul>
   <p class="aviso">Visitas somente com horário marcado.</p>
-  <p style="margin-top:26px;">
-    <a class="btn btn-cheio" href="tel:+551155428000">Ligar para (11) 5542-8000</a>
+  <p style="margin-top:26px; display:flex; flex-wrap:wrap; gap:12px;">
+    <a class="btn btn-cheio" href="https://www.afrikanhouse.com.br/contato" rel="nofollow">Solicitar contato</a>
+    <a class="btn" href="tel:+551155428000">Ligar para (11) 5542-8000</a>
   </p>
 </section>
 
@@ -425,6 +471,11 @@
     <span class="rotulo">Contato</span>
     <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem); margin-bottom:26px;">Solicite o contato de um consultor</h2>
     <div class="grade-contato">
+      <div class="cartao">
+        <span class="titulo">Solicitar contato</span>
+        <a href="https://www.afrikanhouse.com.br/contato" rel="nofollow">Formulário da casa</a>
+        <small>Tipo de evento, data e faixa de investimento.</small>
+      </div>
       <div class="cartao">
         <span class="titulo">Telefone</span>
         <a href="tel:+551155428000">(11) 5542-8000</a>
