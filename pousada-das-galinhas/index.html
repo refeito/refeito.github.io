@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pousada das Galinhas — pousada temática em Porto de Galinhas, Ipojuca - PE</title>
+<meta name="description" content="Pousada temática no coração de Porto de Galinhas: 5 minutos da vila, 10 minutos das piscinas naturais. Quarto duplo e quarto triplo, café da manhã, piscina e reserva direta.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+  :root{
+    --papel:#ffffff; --creme:#fff7ec; --linha:#f0e3d2;
+    --tinta:#241a12; --tinta2:#6a5a4c;
+    --laranja:#f59d20; --laranja-esc:#c97b05;
+    --roxo:#8d19be; --rosa:#ea188b; --amarelo:#f9cf05; --terra:#662501;
+    --zap:#25d366;
+    --titulo:"Outfit","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Nunito Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box; min-width:0;}
+  body{margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+       font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; height:auto; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{margin:0; font-family:var(--titulo); line-height:1.13; text-wrap:balance; letter-spacing:-0.015em;}
+  p{margin:0;}
+  ul{margin:0; padding:0; list-style:none;}
+  figure{margin:0;}
+
+  .env{max-width:1140px; margin:0 auto; padding-inline:18px;}
+  .col{max-width:62ch;}
+  .quebra{overflow-wrap:anywhere;}
+
+  /* ---------- tarja ---------- */
+  .tarja{background:var(--terra); color:#ffeede; font-size:.79rem; line-height:1.5;
+         text-align:center; padding:11px 16px; padding-top:calc(11px + env(safe-area-inset-top,0px));}
+  .tarja b{color:var(--amarelo);} .tarja a{color:#ffd98a;}
+
+  /* ---------- topo ---------- */
+  .topo{display:flex; align-items:center; gap:12px 22px; flex-wrap:wrap; padding-block:14px;}
+  .marca{display:flex; align-items:center; gap:11px; text-decoration:none;}
+  .marca img{width:54px;}
+  .marca b{font-family:var(--titulo); font-size:1.04rem; font-weight:700; letter-spacing:-.02em; line-height:1.15;}
+  .marca b span{display:block; font-size:.7rem; font-weight:600; color:var(--tinta2);
+                text-transform:uppercase; letter-spacing:.09em;}
+  .menu{display:none; gap:20px; margin-left:auto; font-size:.93rem; font-weight:600;}
+  .menu a{text-decoration:none; color:var(--tinta2); padding-block:4px; border-bottom:2px solid transparent;}
+  .menu a:hover{color:var(--tinta); border-bottom-color:var(--laranja);}
+  .topo-acao{display:flex; gap:9px; flex-wrap:wrap;}
+
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px;
+       font-family:var(--titulo); font-weight:700; font-size:.95rem; text-decoration:none;
+       padding:12px 20px; border-radius:999px; border:2px solid transparent; line-height:1.2;}
+  .btn-laranja{background:var(--laranja); color:#2b1900; border-color:var(--laranja);}
+  .btn-laranja:hover{background:var(--laranja-esc); border-color:var(--laranja-esc); color:#fff;}
+  .btn-contorno{border-color:var(--tinta); color:var(--tinta);}
+  .btn-contorno:hover{background:var(--tinta); color:#fff;}
+  .btn-zap{background:var(--zap); color:#04340f; border-color:var(--zap);}
+  .btn-zap:hover{filter:brightness(.93);}
+  .btn-branco{background:#fff; color:var(--terra); border-color:#fff;}
+  .btn-branco:hover{background:var(--amarelo); border-color:var(--amarelo);}
+
+  /* ---------- abertura ---------- */
+  .abertura{padding-top:18px; padding-bottom:24px;}
+  .abertura h1{font-size:clamp(2.05rem,6vw,3.4rem); font-weight:800;}
+  .abertura h1 em{font-style:normal; color:var(--laranja-esc);}
+  .abertura .linha{margin-top:16px; font-size:1.08rem; color:var(--tinta2);}
+  .acoes{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
+  .selos{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
+  .selos li{font-size:.83rem; font-weight:700; font-family:var(--titulo);
+            padding:6px 13px; border-radius:999px; background:var(--creme); border:1px solid var(--linha);}
+  .selos li:nth-child(2){background:#fdeef8; border-color:#f7cbe6;}
+  .selos li:nth-child(3){background:#f4ecfd; border-color:#e0cdf6;}
+
+  /* ---------- mosaico ---------- */
+  .mosaico{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr));}
+  .mosaico figure{position:relative; border-radius:14px; overflow:hidden;
+                  background:var(--creme); aspect-ratio:3/2;}
+  .mosaico img{width:100%; height:100%; object-fit:cover;}
+  .mosaico .grande{grid-column:1/-1; aspect-ratio:16/10;}
+  .tag{position:absolute; left:10px; bottom:10px;
+       font-family:var(--titulo); font-weight:700; font-size:.72rem; letter-spacing:.06em;
+       text-transform:uppercase; color:#2b1900; background:var(--amarelo);
+       padding:5px 11px; border-radius:999px;}
+  .tag.rosa{background:var(--rosa); color:#fff;}
+  .tag.roxo{background:var(--roxo); color:#fff;}
+  .tag.laranja{background:var(--laranja); color:#2b1900;}
+
+  /* ---------- seções ---------- */
+  section{padding-block:46px;}
+  .cabeca{max-width:64ch; margin-bottom:26px;}
+  .rotulo{display:inline-block; font-family:var(--titulo); font-weight:700; font-size:.75rem;
+          letter-spacing:.14em; text-transform:uppercase; color:var(--laranja-esc); margin-bottom:9px;}
+  .cabeca h2{font-size:clamp(1.55rem,4.2vw,2.3rem); font-weight:700;}
+  .cabeca p{margin-top:11px; color:var(--tinta2);}
+
+  /* ---------- quartos ---------- */
+  .quarto{display:grid; gap:20px; grid-template-columns:minmax(0,1fr);
+          align-items:center; padding-block:24px; border-top:1px solid var(--linha);}
+  .quarto:first-of-type{border-top:none; padding-top:0;}
+  .quarto img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:14px;}
+  .quarto h3{font-size:1.5rem; font-weight:700;}
+  .quarto p{margin-top:9px; color:var(--tinta2);}
+  .itens{display:flex; flex-wrap:wrap; gap:8px; margin-top:15px;}
+  .itens li{font-size:.88rem; font-weight:700; font-family:var(--titulo);
+            background:var(--creme); border:1px solid var(--linha);
+            padding:6px 13px; border-radius:8px;}
+  .quarto .btn{margin-top:18px;}
+
+  /* ---------- experiências e café ---------- */
+  .faixa-exp{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:30px;}
+  .faixa-exp li{padding:16px 15px; border-radius:13px; color:#fff; font-family:var(--titulo);
+                font-weight:700; font-size:1.02rem; line-height:1.25;}
+  .faixa-exp li:nth-child(1){background:var(--laranja); color:#2b1900;}
+  .faixa-exp li:nth-child(2){background:var(--rosa);}
+  .faixa-exp li:nth-child(3){background:var(--roxo);}
+  .faixa-exp li:nth-child(4){background:var(--terra);}
+
+  .tira{display:grid; gap:14px; grid-template-columns:minmax(0,1fr);}
+  .tira img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:12px;}
+  .tira figcaption{margin-top:8px; font-size:.88rem; color:var(--tinta2);}
+  .tira .larga{grid-column:1/-1;}
+  .tira .larga img{aspect-ratio:500/147;}
+
+  /* ---------- benefícios ---------- */
+  .beneficios{background:var(--creme); border-block:1px solid var(--linha);}
+  .grade-ben{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));}
+  .ben{background:#fff; border:1px solid var(--linha); border-radius:14px; padding:18px 17px;}
+  .ben h3{font-size:1.04rem; font-weight:700;}
+  .ben p{margin-top:7px; font-size:.93rem; color:var(--tinta2);}
+  .ben::before{content:""; display:block; width:34px; height:5px; border-radius:99px;
+               background:var(--laranja); margin-bottom:13px;}
+  .ben:nth-child(2)::before{background:var(--rosa);}
+  .ben:nth-child(3)::before{background:var(--roxo);}
+  .ben:nth-child(4)::before{background:var(--amarelo);}
+  .ben:nth-child(5)::before{background:var(--terra);}
+
+  .clube{margin-top:26px; background:var(--roxo); color:#fff; border-radius:18px; padding:24px 20px;}
+  .clube h3{font-size:1.32rem; font-weight:700;}
+  .clube p{margin-top:9px; color:#f0dcfb;}
+  .clube ul{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .clube li{font-size:.86rem; font-weight:700; font-family:var(--titulo);
+            background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.3);
+            padding:6px 12px; border-radius:8px;}
+  .clube .btn{margin-top:18px;}
+
+  /* ---------- localização ---------- */
+  .mapa-grade{display:grid; gap:22px; grid-template-columns:minmax(0,1fr); align-items:start;}
+  .par-fotos{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr));}
+  .par-fotos img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:13px;}
+  .perto{display:grid; gap:10px;}
+  .perto li{display:grid; grid-template-columns:auto minmax(0,1fr); gap:11px; align-items:baseline; font-size:.99rem;}
+  .perto b{font-family:var(--titulo); font-weight:700; color:var(--laranja-esc); font-size:1.02rem;}
+  .endereco{margin-top:20px; padding:16px; background:var(--creme);
+            border:1px solid var(--linha); border-radius:13px;}
+  .endereco span{display:block; font-size:.97rem;}
+  .endereco .titulo{font-family:var(--titulo); font-weight:700; font-size:.76rem;
+                    letter-spacing:.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:6px;}
+  .endereco a{margin-top:11px; display:inline-block; font-weight:700; color:var(--laranja-esc);}
+
+  /* ---------- reservar ---------- */
+  .reservar{background:var(--laranja); color:#2b1900;}
+  .reservar h2{font-size:clamp(1.7rem,4.8vw,2.6rem); font-weight:800; max-width:20ch;}
+  .reservar p{margin-top:13px; font-size:1.05rem; max-width:52ch;}
+  .reservar small{display:block; margin-top:18px; font-size:.84rem; color:#6b4508;}
+
+  /* ---------- contato ---------- */
+  .grade-contato{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));}
+  .cartao{border:1px solid var(--linha); border-radius:14px; padding:18px 17px; background:#fff;}
+  .cartao .titulo{display:block; font-family:var(--titulo); font-weight:700; font-size:.75rem;
+                  letter-spacing:.12em; text-transform:uppercase; color:var(--tinta2); margin-bottom:8px;}
+  .cartao a, .cartao .valor{font-size:1.01rem; font-weight:700; text-decoration:none; display:block;}
+  .cartao a:hover{color:var(--laranja-esc);}
+  .cartao small{display:block; margin-top:6px; font-size:.86rem; font-weight:400; color:var(--tinta2);}
+
+  footer{background:var(--terra); color:#ffe3c8; padding-block:26px; font-size:.86rem;}
+  footer .env{display:grid; gap:9px;}
+  footer a{color:var(--amarelo);}
+
+  @media (min-width:700px){
+    section{padding-block:60px;}
+    .mosaico{grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px;}
+    .mosaico .grande{grid-column:span 2; grid-row:span 2; aspect-ratio:auto;}
+    .faixa-exp{grid-template-columns:repeat(4,minmax(0,1fr));}
+    .tira{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .grade-ben{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .ben:nth-child(5){grid-column:span 2;}
+    .quarto{grid-template-columns:1.05fr 1fr; gap:34px; padding-block:36px;}
+    .quarto.invertido .foto{order:2;}
+    .mapa-grade{grid-template-columns:1fr 1fr; gap:34px;}
+  }
+  @media (min-width:920px){
+    .menu{display:flex;}
+    .topo-acao{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada, feita por Refeito.</b>
+  Não é o site oficial da Pousada das Galinhas.
+  O site oficial é <a href="https://pousadadasgalinhas.com.br/">pousadadasgalinhas.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<header class="env">
+  <div class="topo">
+    <a class="marca" href="#lugar">
+      <img src="img/logo.webp" width="360" height="337" alt="Logo da Pousada das Galinhas">
+      <b>Pousada das Galinhas<span>Porto de Galinhas · PE</span></b>
+    </a>
+    <nav class="menu">
+      <a href="#lugar">A pousada</a>
+      <a href="#quartos">Acomodações</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#localizacao">Localização</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="topo-acao">
+      <a class="btn btn-contorno" href="tel:+558132021660">(81) 3202-1660</a>
+      <a class="btn btn-laranja" href="https://reservas.pousadadasgalinhas.com.br/">Reservar</a>
+    </div>
+  </div>
+</header>
+
+<div class="env abertura">
+  <div class="col">
+    <h1>A pousada temática no <em>coração de Porto de Galinhas</em></h1>
+    <p class="linha">Localização privilegiada que te deixa a poucos minutos das piscinas naturais.
+      Cada detalhe projetado para o seu conforto — com a decoração temática que só a Pousada
+      das Galinhas tem.</p>
+    <div class="acoes">
+      <a class="btn btn-laranja" href="https://reservas.pousadadasgalinhas.com.br/">Reservar agora</a>
+      <a class="btn btn-zap" href="https://wa.me/558130798091">Falar no WhatsApp</a>
+    </div>
+    <ul class="selos">
+      <li>5 minutos da vila</li>
+      <li>10 minutos das piscinas naturais</li>
+      <li>Pagamento em 8x no cartão sem juros</li>
+    </ul>
+  </div>
+</div>
+
+<section id="lugar" class="env" style="padding-top:8px;">
+  <div class="mosaico">
+    <figure class="grande">
+      <span class="tag laranja">Piscina / Lazer</span>
+      <img src="img/piscina-arquitetura.webp" width="1000" height="669"
+           alt="Piscina da pousada cercada pelo prédio colorido e por esculturas">
+    </figure>
+    <figure>
+      <span class="tag rosa">Tematização</span>
+      <img src="img/piscina-sereia.webp" width="1000" height="669"
+           alt="Escultura de sereia ao lado da piscina, entre palmeiras">
+    </figure>
+    <figure>
+      <span class="tag roxo">Tematização</span>
+      <img src="img/tematizacao-mascara.webp" width="1000" height="669" loading="lazy"
+           alt="Escultura de rosto e pranchas de surfe coloridas na área comum">
+    </figure>
+    <figure>
+      <span class="tag laranja">Piscina / Lazer</span>
+      <img src="img/piscina-fachada.webp" width="1000" height="667" loading="lazy"
+           alt="Vista da piscina com a fachada de retalhos coloridos ao fundo">
+    </figure>
+    <figure>
+      <span class="tag roxo">Tematização</span>
+      <img src="img/jardim-escultura.webp" width="1000" height="669" loading="lazy"
+           alt="Escultura pintada jorrando água no jardim, entre folhagens">
+    </figure>
+  </div>
+</section>
+
+<section id="quartos" class="env">
+  <div class="cabeca">
+    <span class="rotulo">Acomodações</span>
+    <h2>Quartos pensados para cada viagem</h2>
+    <p>Cada detalhe projetado para o seu conforto — com a decoração temática que só a
+      Pousada das Galinhas tem.</p>
+  </div>
+
+  <article class="quarto">
+    <figure class="foto">
+      <img src="img/quarto-duplo.webp" width="1000" height="669" loading="lazy"
+           alt="Quarto duplo com cama de casal e parede decorada com retalhos coloridos">
+    </figure>
+    <div>
+      <h3>Quarto duplo</h3>
+      <p>Ideal para casais ou amigos — aconchegante, confortável e com a decoração temática
+        da pousada.</p>
+      <ul class="itens">
+        <li>Ar-condicionado</li>
+        <li>Cama Queen Size confortável</li>
+        <li>Decoração temática exclusiva</li>
+      </ul>
+      <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver datas e valores</a>
+    </div>
+  </article>
+
+  <article class="quarto invertido">
+    <figure class="foto">
+      <img src="img/quarto-triplo.webp" width="1000" height="669" loading="lazy"
+           alt="Quarto triplo com duas camas, janelas redondas e decoração temática">
+    </figure>
+    <div>
+      <h3>Quarto triplo</h3>
+      <p>Amplo e acolhedor, o quarto perfeito para pequenas famílias e grupos de amigos que
+        querem aproveitar juntos.</p>
+      <ul class="itens">
+        <li>Cama de casal</li>
+        <li>Ar-condicionado</li>
+        <li>Amplo guarda-roupa</li>
+      </ul>
+      <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver datas e valores</a>
+    </div>
+  </article>
+</section>
+
+<section id="estrutura" class="env">
+  <div class="cabeca">
+    <span class="rotulo">Uma pousada, infinitas experiências</span>
+    <h2>Café da manhã, piscina e o que mais a casa preparou</h2>
+    <p>Relaxe, explore e aproveite tudo que preparamos para tornar sua estadia inesquecível.</p>
+  </div>
+
+  <ul class="faixa-exp">
+    <li>Piscina / Lazer</li>
+    <li>Café da Manhã</li>
+    <li>Spa/massagens</li>
+    <li>Passeios</li>
+  </ul>
+
+  <div class="tira">
+    <figure>
+      <img src="img/cafe-buffet.webp" width="1000" height="668" loading="lazy"
+           alt="Bancada do café da manhã com bolos, pães e frutas">
+      <figcaption>O buffet servido na área temática da pousada.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/cafe-prato.webp" width="1000" height="668" loading="lazy"
+           alt="Prato servido com pães, frutas e café sobre mesa colorida">
+      <figcaption>Para comer do lado de fora, embaixo do telhado de madeira.</figcaption>
+    </figure>
+    <figure class="larga">
+      <img src="img/cafe-frigideiras.webp" width="1000" height="294" loading="lazy"
+           alt="Frigideiras sobre a chapa com tapioca e omelete sendo preparados">
+      <figcaption>A chapa quente do café: tapioca e omelete saem na hora.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="beneficios">
+  <div class="env">
+    <div class="cabeca">
+      <span class="rotulo">Benefícios e parcerias</span>
+      <h2>O melhor para o seu bolso e a sua viagem</h2>
+    </div>
+    <div class="grade-ben">
+      <article class="ben">
+        <h3>Desconto para viajante solo</h3>
+        <p>Viajante SOLO com desconto de até 30% para no mínimo 4 diárias.</p>
+      </article>
+      <article class="ben">
+        <h3>Área HomeTrampo</h3>
+        <p>Para quem precisa trabalhar em home office, com sinal potente de wi-fi gratuito.</p>
+      </article>
+      <article class="ben">
+        <h3>Área SPAZen</h3>
+        <p>10% de desconto para serviços de massagem corporal, fisioterapia, hidratação de
+          cabelos e manicure.</p>
+      </article>
+      <article class="ben">
+        <h3>Pagamento em 8x no cartão sem juros</h3>
+        <p>O melhor para o seu bolso e a sua viagem!</p>
+      </article>
+      <article class="ben">
+        <h3>Parceiros com 10% de desconto</h3>
+        <p>Passeios de buggy, quadriciclos, praias de Maragogi, Carneiros, Muro Alto, Cupe,
+          Maracaípe, ilha de Santo Aleixo, etc.</p>
+      </article>
+    </div>
+
+    <div class="clube">
+      <h3>Faça parte do Clube das Galinhas</h3>
+      <p>Cadastre-se e receba ofertas antes de todo mundo, benefícios especiais e muito mais.</p>
+      <ul>
+        <li>Desconto em hospedagem</li>
+        <li>Acesso a promoções exclusivas</li>
+        <li>Mimo especial de boas-vindas</li>
+        <li>Pagamento em até 8x sem juros</li>
+      </ul>
+      <a class="btn btn-branco" href="https://wa.me/558130798091?text=Ol%C3%A1%20vim%20pelo%20site%20e%20gostaria%20de%20entrar%20no%20Clube%20das%20Galinhas">Entrar no clube pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="localizacao" class="env">
+  <div class="cabeca">
+    <span class="rotulo">Localização</span>
+    <h2>No coração de Porto de Galinhas</h2>
+    <p>Localização privilegiada que te deixa a poucos minutos das piscinas naturais.</p>
+  </div>
+  <div class="mapa-grade">
+    <div class="par-fotos">
+      <figure>
+        <img src="img/placa-entrada.webp" width="1000" height="667" loading="lazy"
+             alt="Placa de madeira com o nome da pousada, na entrada">
+      </figure>
+      <figure>
+        <img src="img/galinha-mastro.webp" width="1000" height="669" loading="lazy"
+             alt="Galinha esculpida no mastro de um barco decorativo">
+      </figure>
+    </div>
+    <div>
+      <ul class="perto">
+        <li><b>5 min</b><span>da vila de Porto de Galinhas</span></li>
+        <li><b>10 min</b><span>das piscinas naturais</span></li>
+        <li><b>Central</b><span>localização próxima a tudo</span></li>
+      </ul>
+      <div class="endereco">
+        <span class="titulo">Endereço</span>
+        <span class="quebra">Praça Dezenove, s/n – Lote 5</span>
+        <span class="quebra">Porto de Galinhas, Ipojuca – PE · CEP 55595-057</span>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Pousada+das+Galinhas+Pra%C3%A7a+Dezenove+Porto+de+Galinhas+Ipojuca+PE">Abrir no mapa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reservar" class="reservar">
+  <div class="env">
+    <h2>Seu lugar em Porto de Galinhas começa aqui</h2>
+    <p>Reserve direto e garanta o melhor preço. A reserva é feita no site de reservas da
+      própria pousada.</p>
+    <div class="acoes">
+      <a class="btn btn-contorno" href="https://reservas.pousadadasgalinhas.com.br/">Ver disponibilidade e reservar</a>
+      <a class="btn btn-zap" href="https://wa.me/558130798091">Tirar dúvida no WhatsApp</a>
+    </div>
+    <small>O botão abre reservas.pousadadasgalinhas.com.br, o motor de reservas da pousada.</small>
+  </div>
+</section>
+
+<section id="contato" class="env">
+  <div class="cabeca">
+    <span class="rotulo">Contato</span>
+    <h2>Fale com a recepção</h2>
+  </div>
+  <div class="grade-contato">
+    <div class="cartao">
+      <span class="titulo">Telefone</span>
+      <a href="tel:+558132021660">(81) 3202-1660</a>
+    </div>
+    <div class="cartao">
+      <span class="titulo">WhatsApp</span>
+      <a href="https://wa.me/558130798091">+55 81 3079-8091</a>
+    </div>
+    <div class="cartao">
+      <span class="titulo">Reservas</span>
+      <a class="quebra" href="mailto:reservas@pousadadasgalinhas.com.br">reservas@pousadadasgalinhas.com.br</a>
+    </div>
+    <div class="cartao">
+      <span class="titulo">Endereço</span>
+      <span class="valor quebra">Praça Dezenove, s/n - Lote 5</span>
+      <small class="quebra">Porto de Galinhas, Ipojuca - PE, 55595-057</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <span class="quebra">Pousada das Galinhas · Praça Dezenove, s/n - Lote 5 — Porto de Galinhas, Ipojuca - PE</span>
+    <span>Proposta de redesenho não solicitada, feita pelo <a href="https://refeito.github.io">Refeito</a>.
+      Não afiliada à Pousada das Galinhas. Fotos, textos e informações são deles.</span>
+  </div>
+</footer>
+
+</body>
+</html>

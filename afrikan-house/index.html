@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buffet Afrikan House — Village, Garden e Lounge, espaços para eventos em SP</title>
+<meta name="description" content="Com espaços exclusivos e gastronomia diferenciada, o Afrikan House está preparado para atender os mais variados tipos de eventos. Village e Lounge em São Paulo, Garden em Itapecerica da Serra.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+  :root{
+    --papel:#ffffff; --creme:#fff8eb; --linha:#e8dfcd;
+    --preto:#0d0d0d; --grafite:#1c1a17;
+    --ouro:#997840; --ouro-claro:#b89660;
+    --tinta:#333333; --tinta2:#6f6a60;
+    --titulo:"Marcellus","Times New Roman",Georgia,serif;
+    --corpo:"Jost",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box; min-width:0;}
+  body{margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+       font-size:17px; line-height:1.68; font-weight:300; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; height:auto; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{margin:0; font-family:var(--titulo); font-weight:400; line-height:1.18; text-wrap:balance;}
+  p{margin:0;}
+  ul{margin:0; padding:0; list-style:none;}
+  figure{margin:0;}
+
+  .env{max-width:1160px; margin:0 auto; padding-inline:18px;}
+  .quebra{overflow-wrap:anywhere;}
+
+  .rotulo{display:block; font-family:var(--corpo); font-weight:500; font-size:.72rem;
+          letter-spacing:.24em; text-transform:uppercase; color:var(--ouro); margin-bottom:12px;}
+
+  /* ---------- tarja ---------- */
+  .tarja{background:var(--grafite); color:#e4ddd0; font-size:.79rem; line-height:1.5;
+         text-align:center; padding:11px 16px; padding-top:calc(11px + env(safe-area-inset-top,0px));}
+  .tarja b{color:var(--ouro-claro); font-weight:500;} .tarja a{color:#e0c48d;}
+
+  /* ---------- topo ---------- */
+  .barra{background:var(--preto); color:#f2ece1;}
+  .topo{display:flex; align-items:center; gap:12px 26px; flex-wrap:wrap; padding-block:15px;}
+  .marca{display:block; text-decoration:none;}
+  .marca img{width:132px;}
+  .menu{display:none; gap:24px; margin-left:auto; font-size:.83rem; font-weight:400;
+        letter-spacing:.16em; text-transform:uppercase;}
+  .menu a{text-decoration:none; color:#cfc7b8; padding-block:5px; border-bottom:1px solid transparent;}
+  .menu a:hover{color:#fff; border-bottom-color:var(--ouro);}
+  .tel-topo{margin-left:auto; font-family:var(--titulo); font-size:1.12rem;
+            color:#fff; text-decoration:none; letter-spacing:.02em;}
+  .tel-topo:hover{color:var(--ouro-claro);}
+
+  .btn{display:inline-flex; align-items:center; justify-content:center;
+       font-family:var(--corpo); font-weight:500; font-size:.8rem; letter-spacing:.17em;
+       text-transform:uppercase; text-decoration:none;
+       padding:14px 26px; border:1px solid var(--ouro); color:var(--ouro); line-height:1.2;}
+  .btn:hover{background:var(--ouro); color:#fff;}
+  .btn-cheio{background:var(--ouro); color:#fff;}
+  .btn-cheio:hover{background:#7d612f; border-color:#7d612f;}
+
+  /* ---------- abertura ---------- */
+  .abertura{padding-block:44px 30px; text-align:center;}
+  .abertura h1{font-size:clamp(1.9rem,5.4vw,3.15rem); max-width:19ch; margin-inline:auto;}
+  .abertura .sub{margin-top:18px; max-width:66ch; margin-inline:auto; color:var(--tinta2); font-size:1.05rem;}
+  .fio{width:62px; height:1px; background:var(--ouro); margin:26px auto 0;}
+  .banda img{width:100%; aspect-ratio:3/1; object-fit:cover;}
+  .banda figcaption{margin-top:9px; font-size:.83rem; color:var(--tinta2); text-align:center;}
+
+  .conceito{padding-block:46px;}
+  .conceito-grade{display:grid; gap:26px; grid-template-columns:minmax(0,1fr);}
+  .conceito p + p{margin-top:15px;}
+  .conceito .frase{font-family:var(--titulo); font-size:1.28rem; line-height:1.4; color:var(--grafite);}
+
+  /* ---------- espaços ---------- */
+  .espacos{background:var(--creme); border-block:1px solid var(--linha); padding-block:52px;}
+  .espaco{padding-top:46px; margin-top:46px; border-top:1px solid var(--linha);}
+  .espaco:first-of-type{padding-top:0; margin-top:34px; border-top:none;}
+  .espaco-topo{display:grid; gap:20px; grid-template-columns:minmax(0,1fr); align-items:start;}
+  .espaco .num{font-family:var(--titulo); font-size:.95rem; letter-spacing:.3em; color:var(--ouro);}
+  .espaco h3{font-size:clamp(1.8rem,5vw,2.6rem); letter-spacing:.04em; margin-top:6px;}
+  .espaco .genero{margin-top:6px; font-size:.82rem; letter-spacing:.2em; text-transform:uppercase; color:var(--tinta2);}
+  .espaco .desc{margin-top:16px; color:var(--tinta);}
+  .ficha{margin-top:18px; padding-top:16px; border-top:1px solid var(--linha);}
+  .ficha .titulo{display:block; font-size:.71rem; letter-spacing:.22em; text-transform:uppercase;
+                 color:var(--tinta2); margin-bottom:7px; font-weight:500;}
+  .ficha span{display:block; font-size:.98rem;}
+  .ficha a{display:inline-block; margin-top:10px; font-weight:500; font-size:.88rem;
+           letter-spacing:.1em; text-transform:uppercase; color:var(--ouro); text-decoration:none;
+           border-bottom:1px solid var(--ouro); padding-bottom:2px;}
+  .espaco .principal img{width:100%; aspect-ratio:16/10; object-fit:cover;}
+  .espaco .principal figcaption{margin-top:9px; font-size:.85rem; color:var(--tinta2);}
+  .trio{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:14px;}
+  .trio img{width:100%; aspect-ratio:4/3; object-fit:cover;}
+  .trio figure:nth-child(3){grid-column:1/-1;}
+  .trio figure:nth-child(3) img{aspect-ratio:16/9;}
+
+  /* ---------- evento ---------- */
+  .evento{padding-block:54px;}
+  .duas{display:grid; gap:34px; grid-template-columns:minmax(0,1fr);}
+  .tipos li{display:flex; align-items:baseline; gap:12px; padding-block:11px;
+            border-bottom:1px solid var(--linha); font-size:1.04rem;}
+  .tipos li::before{content:""; flex:0 0 auto; width:6px; height:6px; background:var(--ouro);
+                    transform:rotate(45deg);}
+  .pilares li{padding:18px 0; border-bottom:1px solid var(--linha);}
+  .pilares h3{font-size:1.12rem; letter-spacing:.03em;}
+  .pilares p{margin-top:5px; color:var(--tinta2); font-size:.97rem;}
+  .projeto{margin-top:34px; border:1px solid var(--ouro); padding:26px 22px;}
+  .projeto h3{font-size:1.3rem;}
+  .projeto p{margin-top:12px; max-width:62ch;}
+  .faixa-valor{font-family:var(--titulo); font-size:clamp(1.4rem,4.4vw,2rem);
+               color:var(--grafite); margin-top:16px; letter-spacing:.01em;}
+  .projeto small{display:block; margin-top:14px; font-size:.87rem; color:var(--tinta2); max-width:62ch;}
+
+  /* ---------- gastronomia ---------- */
+  .escuro{background:var(--preto); color:#e9e2d5; padding-block:56px;}
+  .escuro h2{color:#fff; font-size:clamp(1.65rem,4.6vw,2.4rem);}
+  .escuro .rotulo{color:var(--ouro-claro);}
+  .escuro .sub{margin-top:14px; max-width:62ch; color:#b9b2a5;}
+  .pratos{display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:30px;}
+  .pratos img{width:100%; aspect-ratio:3/2; object-fit:cover;}
+
+  /* ---------- visita ---------- */
+  .visita{padding-block:54px;}
+  .passos{counter-reset:p; margin-top:8px;}
+  .passos li{counter-increment:p; display:grid; grid-template-columns:auto minmax(0,1fr);
+             gap:16px; padding-block:16px; border-bottom:1px solid var(--linha); align-items:start;}
+  .passos li::before{content:counter(p); font-family:var(--titulo); font-size:1.1rem;
+                     color:var(--ouro); border:1px solid var(--ouro); width:34px; height:34px;
+                     display:flex; align-items:center; justify-content:center; flex:0 0 auto;}
+  .passos b{display:block; font-weight:500; color:var(--grafite);}
+  .passos span{display:block; color:var(--tinta2); font-size:.96rem;}
+  .aviso{margin-top:26px; background:var(--creme); border-left:3px solid var(--ouro);
+         padding:18px 20px; font-family:var(--titulo); font-size:1.15rem; color:var(--grafite);}
+
+  /* ---------- contato ---------- */
+  .contato{background:var(--creme); border-top:1px solid var(--linha); padding-block:54px;}
+  .grade-contato{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));}
+  .cartao{background:#fff; border:1px solid var(--linha); padding:20px 18px;}
+  .cartao .titulo{display:block; font-size:.71rem; letter-spacing:.22em; text-transform:uppercase;
+                  color:var(--tinta2); margin-bottom:9px; font-weight:500;}
+  .cartao a, .cartao .valor{display:block; font-family:var(--titulo); font-size:1.08rem;
+                            text-decoration:none; color:var(--grafite);}
+  .cartao a:hover{color:var(--ouro);}
+  .cartao small{display:block; margin-top:7px; font-size:.86rem; color:var(--tinta2);}
+
+  footer{background:var(--preto); color:#a9a196; padding-block:28px; font-size:.85rem;}
+  footer .env{display:grid; gap:9px;}
+  footer a{color:var(--ouro-claro);}
+
+  @media (min-width:760px){
+    .espaco-topo{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr); gap:40px;}
+    .espaco.direita .espaco-topo{grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);}
+    .espaco.direita .principal{order:-1;}
+    .conceito-grade{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:44px;}
+    .duas{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:52px;}
+    .trio{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .trio figure:nth-child(3){grid-column:auto;}
+    .trio figure:nth-child(3) img{aspect-ratio:4/3;}
+    .pratos{grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px;}
+    .banda img{aspect-ratio:4/1;}
+  }
+  @media (min-width:980px){
+    .menu{display:flex;}
+    .tel-topo{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada, feita por Refeito.</b>
+  Não é o site oficial do Buffet Afrikan House.
+  O site oficial é <a href="https://www.afrikanhouse.com.br/">afrikanhouse.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<div class="barra">
+  <div class="env">
+    <div class="topo">
+      <a class="marca" href="#espacos">
+        <img src="img/logo.webp" width="400" height="245" alt="Logo do Buffet Afrikan House">
+      </a>
+      <nav class="menu">
+        <a href="#espacos">Espaços</a>
+        <a href="#evento">Eventos</a>
+        <a href="#gastronomia">Gastronomia</a>
+        <a href="#visita">Visita</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="tel-topo" href="tel:+551155428000">(11) 5542-8000</a>
+    </div>
+  </div>
+</div>
+
+<div class="env abertura">
+  <span class="rotulo">Seja bem-vindo ao Afrikan House</span>
+  <h1>Três opções de espaços para realização de sonhos</h1>
+  <p class="sub">Com espaços exclusivos e gastronomia diferenciada, o Afrikan House está
+    preparado para atender os mais variados tipos de eventos.</p>
+  <div class="fio"></div>
+</div>
+
+<div class="env banda">
+  <figure>
+    <img src="img/lanternas.webp" width="900" height="300"
+         alt="Lanternas de vela penduradas sobre o teto de tecido do salão">
+    <figcaption>Iluminação de vela sobre o salão, em uma das casas.</figcaption>
+  </figure>
+</div>
+
+<div class="env conceito">
+  <div class="conceito-grade">
+    <div>
+      <span class="rotulo">Conceito</span>
+      <p class="frase">São três espaços com características distintas, peculiaridades e
+        harmonizações que os tornam únicos.</p>
+    </div>
+    <div>
+      <p>Há mais de 25 anos, o Afrikan House era apenas uma imensa casa de campo utilizada
+        para unir amigos e familiares. Depois de uma temporada na África do Sul, a família
+        trouxe consigo uma grande quantidade de itens de decoração nativos, que serviram para
+        decorar os mais de 14 mil m² do então Afrikan House Garden, em Itapecerica da Serra.
+        Anos depois vieram o Afrikan House Lounge e o Afrikan House Village.</p>
+      <p>Por trás do Garden, do Lounge e do Village está uma empresa familiar, que coloca a
+        satisfação e o bem-estar do cliente acima de tudo. Do primeiro contato às
+        congratulações pelo evento realizado, transmitimos aos nossos clientes confiança,
+        através de um atendimento transparente, consultivo e especializado.</p>
+    </div>
+  </div>
+</div>
+
+<section id="espacos" class="espacos">
+  <div class="env">
+    <span class="rotulo">Os espaços</span>
+    <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem);">Tamanho, decoração e ambientes diferenciam cada casa</h2>
+
+    <article class="espaco">
+      <div class="espaco-topo">
+        <div>
+          <span class="num">I</span>
+          <h3>Village</h3>
+          <p class="genero">Eventos na cidade · Moderno</p>
+          <p class="desc">Salão principal com pé-direito de cinco metros, pergolados em aço
+            corten, jardins verticais, painéis metálicos com iluminação decorativa e hall com
+            imponente lustre de cristal.</p>
+          <div class="ficha">
+            <span class="titulo">Endereço</span>
+            <span class="quebra">R. Bragança Paulista, 1.228</span>
+            <span class="quebra">Chácara Santo Antonio — São Paulo - SP · 04730-000</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Bragan%C3%A7a+Paulista+1228+Ch%C3%A1cara+Santo+Antonio+S%C3%A3o+Paulo+SP">Ver no mapa</a>
+          </div>
+        </div>
+        <figure class="principal">
+          <img src="img/village-salao.webp" width="959" height="600"
+               alt="Salão do Village com lustre de cristal e mesa de doces florida">
+          <figcaption>O hall e o lustre de cristal do Village.</figcaption>
+        </figure>
+      </div>
+      <div class="trio">
+        <figure><img src="img/village-redondas.webp" width="1195" height="600" loading="lazy"
+                     alt="Mesas redondas postas sob lustres, no salão do Village"></figure>
+        <figure><img src="img/village-cerimonia.webp" width="1040" height="780" loading="lazy"
+                     alt="Corredor de cerimônia com lanternas de chão e projeção ao fundo"></figure>
+        <figure><img src="img/village-mesas.webp" width="1200" height="593" loading="lazy"
+                     alt="Mesas compridas com arranjos baixos e velas acesas"></figure>
+      </div>
+    </article>
+
+    <article class="espaco direita">
+      <div class="espaco-topo">
+        <div>
+          <span class="num">II</span>
+          <h3>Garden</h3>
+          <p class="genero">Eventos no campo</p>
+          <p class="desc">Jardins paradisíacos, bangalô sobre um lago artificial com peixes
+            ornamentais, salão principal com pé-direito de dez metros. É a casa dos mais de
+            14 mil m², em Itapecerica da Serra.</p>
+          <div class="ficha">
+            <span class="titulo">Endereço</span>
+            <span class="quebra">Estrada Benedito Pereira Rodrigues, 2.073</span>
+            <span class="quebra">Bairro da Lagoa — Itapecerica da Serra - SP · 06858-000</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Estrada+Benedito+Pereira+Rodrigues+2073+Bairro+da+Lagoa+Itapecerica+da+Serra+SP">Ver no mapa</a>
+          </div>
+        </div>
+        <figure class="principal">
+          <img src="img/garden-bangalo.webp" width="1150" height="706" loading="lazy"
+               alt="Bangalô de sapé sobre o lago artificial, cercado de mata">
+          <figcaption>O bangalô sobre o lago, no meio dos jardins.</figcaption>
+        </figure>
+      </div>
+      <div class="trio">
+        <figure><img src="img/garden-salao.webp" width="1150" height="740" loading="lazy"
+                     alt="Salão do Garden com pé-direito alto e árvores floridas entre as cadeiras"></figure>
+        <figure><img src="img/garden-cerimonia.webp" width="1150" height="765" loading="lazy"
+                     alt="Cadeiras enfileiradas no gramado diante de um pergolado com cortinas"></figure>
+        <figure><img src="img/garden-ponte.webp" width="1150" height="690" loading="lazy"
+                     alt="Ponte de madeira iluminada por microlâmpadas sobre o lago, à noite"></figure>
+      </div>
+    </article>
+
+    <article class="espaco">
+      <div class="espaco-topo">
+        <div>
+          <span class="num">III</span>
+          <h3>Lounge</h3>
+          <p class="genero">Eventos na cidade · Rústico chique</p>
+          <p class="desc">Salão principal com pé-direito de sete metros, praça com jardim
+            vertical, charmosa tenda lounge e espelhos d'água.</p>
+          <div class="ficha">
+            <span class="titulo">Endereço</span>
+            <span class="quebra">R. Dr. Rubens Gomes de Bueno, 577</span>
+            <span class="quebra">Chácara Santo Antonio — São Paulo - SP · 04730-000</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Dr+Rubens+Gomes+de+Bueno+577+Ch%C3%A1cara+Santo+Antonio+S%C3%A3o+Paulo+SP">Ver no mapa</a>
+          </div>
+        </div>
+        <figure class="principal">
+          <img src="img/lounge-jardim.webp" width="800" height="435" loading="lazy"
+               alt="Teto do salão do Lounge tomado por folhagem suspensa sobre a mesa principal">
+          <figcaption>Folhagem suspensa sobre a mesa principal, no Lounge.</figcaption>
+        </figure>
+      </div>
+      <div class="trio">
+        <figure><img src="img/lounge-praca.webp" width="640" height="450" loading="lazy"
+                     alt="Praça externa com palmeiras iluminadas no fim da tarde"></figure>
+        <figure><img src="img/lounge-tenda.webp" width="600" height="450" loading="lazy"
+                     alt="Tenda do Lounge com lustres suspensos e passarela de flores"></figure>
+        <figure><img src="img/lounge-mesas.webp" width="600" height="450" loading="lazy"
+                     alt="Mesas compridas com toalha preta e castiçais altos"></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="evento" class="env evento">
+  <span class="rotulo">Eventos</span>
+  <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem);">Os mais variados tipos de evento</h2>
+  <p style="margin-top:14px; max-width:62ch; color:var(--tinta2);">E os três pontos que a
+    casa aplica a todos eles.</p>
+  <div class="duas" style="margin-top:30px;">
+    <ul class="tipos">
+      <li>Casamentos</li>
+      <li>Aniversários</li>
+      <li>Bar/bat mitzvah</li>
+      <li>Bodas</li>
+      <li>Festa de debutante</li>
+      <li>Eventos corporativos</li>
+    </ul>
+    <ul class="pilares">
+      <li>
+        <h3>Gastronomia conceituada</h3>
+        <p>Com 2 chefs renomados no comando.</p>
+      </li>
+      <li>
+        <h3>Experiência e credibilidade</h3>
+        <p>Para dar todo o suporte que um grande evento exige.</p>
+      </li>
+      <li>
+        <h3>Atendimento exclusivo</h3>
+        <p>Consultivo e especializado, do primeiro contato às congratulações pelo evento
+          realizado.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="projeto">
+    <h3>Projeto personalizado</h3>
+    <p>Desenvolvemos projetos personalizados de alto padrão, com investimento médio
+      orientativo entre:</p>
+    <p class="faixa-valor">R$ 75 mil e R$ 150 mil</p>
+    <p>Dependendo da data, da quantidade de convidados e da experiência desejada.</p>
+    <small>Nossas propostas são personalizadas e só poderão ser enviadas após breve contato
+      telefônico através de nossos consultores.</small>
+  </div>
+</section>
+
+<section id="gastronomia" class="escuro">
+  <div class="env">
+    <span class="rotulo">Gastronomia</span>
+    <h2>Gastronomia conceituada, com 2 chefs renomados no comando</h2>
+    <p class="sub">Espaços exclusivos e gastronomia diferenciada: é com os dois que a casa
+      atende cada evento.</p>
+    <div class="pratos">
+      <figure><img src="img/prato-tabua.webp" width="860" height="573" loading="lazy"
+                   alt="Tábua redonda de finger food com pães, patês e tomates"></figure>
+      <figure><img src="img/prato-camarao.webp" width="860" height="573" loading="lazy"
+                   alt="Espetinhos de camarão sobre base de purê, com hortelã"></figure>
+      <figure><img src="img/prato-penne.webp" width="860" height="573" loading="lazy"
+                   alt="Copinhos de entrada servidos sobre penne cru e tomate"></figure>
+      <figure><img src="img/prato-presunto.webp" width="860" height="573" loading="lazy"
+                   alt="Rolinhos de presunto cru espetados em vidros com sal grosso"></figure>
+      <figure><img src="img/prato-colheres.webp" width="860" height="573" loading="lazy"
+                   alt="Colheres de degustação com almôndega e creme, sobre madeira"></figure>
+      <figure><img src="img/prato-gazpacho.webp" width="860" height="573" loading="lazy"
+                   alt="Copinhos de sopa fria com espetinho, entre pimentas e melão"></figure>
+      <figure><img src="img/prato-tirinhas.webp" width="860" height="573" loading="lazy"
+                   alt="Tigela preta com batata palha crocante e cebolinha"></figure>
+      <figure><img src="img/prato-degustacao.webp" width="860" height="573" loading="lazy"
+                   alt="Travessa escura com porções variadas de entradas quentes e frias"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visita" class="env visita">
+  <span class="rotulo">Visita</span>
+  <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem);">Como conhecer o espaço</h2>
+  <ul class="passos">
+    <li><div><b>Fale com um consultor</b><span>O contato começa pelo telefone (11) 5542-8000
+      ou por e-mail.</span></div></li>
+    <li><div><b>Marque o horário da visita</b><span>Consulte a agenda de visitas na fanpage
+      da casa.</span></div></li>
+    <li><div><b>Receba a proposta</b><span>As propostas são personalizadas e só podem ser
+      enviadas após um breve contato telefônico através dos consultores.</span></div></li>
+  </ul>
+  <p class="aviso">Visitas somente com horário marcado.</p>
+  <p style="margin-top:26px;">
+    <a class="btn btn-cheio" href="tel:+551155428000">Ligar para (11) 5542-8000</a>
+  </p>
+</section>
+
+<section id="contato" class="contato">
+  <div class="env">
+    <span class="rotulo">Contato</span>
+    <h2 style="font-size:clamp(1.6rem,4.4vw,2.3rem); margin-bottom:26px;">Solicite o contato de um consultor</h2>
+    <div class="grade-contato">
+      <div class="cartao">
+        <span class="titulo">Telefone</span>
+        <a href="tel:+551155428000">(11) 5542-8000</a>
+      </div>
+      <div class="cartao">
+        <span class="titulo">E-mail</span>
+        <a class="quebra" href="mailto:afrikanhouse@afrikanhouse.com.br">afrikanhouse@afrikanhouse.com.br</a>
+      </div>
+      <div class="cartao">
+        <span class="titulo">Instagram</span>
+        <a href="https://www.instagram.com/afrikanhouse/" rel="nofollow">@afrikanhouse</a>
+        <small>Agenda de visitas e novidades da casa.</small>
+      </div>
+      <div class="cartao">
+        <span class="titulo">Facebook</span>
+        <a href="https://www.facebook.com/BuffetAfrikanHouse/" rel="nofollow">Buffet Afrikan House</a>
+        <small>Consulte a agenda de visitas na fanpage.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <span class="quebra">Buffet Afrikan House · Village e Lounge em São Paulo - SP · Garden em Itapecerica da Serra - SP</span>
+    <span>Proposta de redesenho não solicitada, feita pelo <a href="https://refeito.github.io">Refeito</a>.
+      Não afiliada ao Buffet Afrikan House. Fotos, textos e informações são deles.</span>
+  </div>
+</footer>
+
+</body>
+</html>
