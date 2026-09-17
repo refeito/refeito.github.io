@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BM BOX — Estrutura metálica, galpão e container modular · Caieiras/SP</title>
+<meta name="description" content="Fábrica de estruturas metálicas, galpões, coberturas, mezaninos, containers habitáveis e construção modular em Caieiras/SP. Aluguel e venda de containers e projetos especiais.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<style>
+  /* Paleta lida do site atual: azul rgb(51,96,163), cinza-aço rgb(166,166,166),
+     texto rgb(68,68,68). A logo deles é quase preta. */
+  :root {
+    --papel:#ffffff; --papel2:#f2f4f7; --papel3:#e4e8ee; --linha:#d6dbe3;
+    --tinta:#23282f; --tinta2:#5c6572;
+    --azul:#2f5ea3; --azul2:#214a80; --azul3:#17365f;
+    --aco:#7c848f;
+    --fonte:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--fonte);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; text-wrap:balance; line-height:1.16; letter-spacing:-0.017em; }
+  p, ul, dl, dd { margin:0; }
+  ul { padding:0; list-style:none; }
+
+  .env { max-width:1140px; margin:0 auto; padding-inline:20px; }
+  .quebra { overflow-wrap:anywhere; }
+
+  /* ---- tarja ---- */
+  .tarja { background:var(--azul3); color:#cbd8e8; font-size:0.79rem; line-height:1.5;
+           text-align:center; padding:11px 18px;
+           padding-top:calc(11px + env(safe-area-inset-top,0px)); overflow-wrap:anywhere; }
+  .tarja b { color:#fff; } .tarja a { color:#ffd9a8; }
+
+  /* ---- topo ---- */
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:14px 20px;
+          flex-wrap:wrap; padding-block:15px; }
+  .marca { display:flex; align-items:center; gap:11px; text-decoration:none; }
+  .marca img { width:46px; height:46px; }
+  .marca .nome { font-weight:800; font-size:1.06rem; letter-spacing:0.08em; }
+  .marca .sob { font-size:0.73rem; color:var(--tinta2); letter-spacing:0.02em; }
+  .canais { display:flex; align-items:center; gap:10px 16px; flex-wrap:wrap;
+            font-size:0.89rem; font-weight:600; }
+  /* `.canais a` é mais específico que `.btn`: sem esta linha o botão do
+     cabeçalho herda o azul do texto e fica azul sobre azul. */
+  .canais a { text-decoration:none; color:var(--azul2); }
+  .canais a:hover { color:var(--azul3); }
+  .canais a.btn { color:#fff; }
+
+  .btn { display:inline-block; font:inherit; font-weight:700; font-size:0.94rem; line-height:1.3;
+         text-decoration:none; text-align:center; background:var(--azul); color:#fff;
+         padding:13px 22px; border-radius:4px; border:1px solid var(--azul); }
+  .btn:hover { background:var(--azul2); border-color:var(--azul2); }
+  .btn:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
+  .btn.vazio { background:transparent; color:var(--azul2); border-color:var(--linha); }
+  .btn.vazio:hover { border-color:var(--azul); background:var(--papel2); }
+
+  /* ---- herói: faixa larga com foto de fundo à direita ---- */
+  .heroi { border-top:1px solid var(--linha); background:var(--papel2); }
+  .heroi .grade { display:grid; grid-template-columns:1fr 1fr; align-items:stretch; gap:0; }
+  .heroi .texto { padding-block:52px; padding-right:40px; align-self:center; }
+  .heroi .olho { font-size:0.73rem; font-weight:800; letter-spacing:0.15em;
+                 text-transform:uppercase; color:var(--azul); margin-bottom:13px; }
+  .heroi h1 { font-size:clamp(1.95rem,4.6vw,2.8rem); font-weight:800; color:var(--azul3); }
+  .heroi .sub { margin-top:17px; color:var(--tinta2); font-size:1.07rem; }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:25px; }
+  .heroi figure { margin:0; }
+  .heroi figure img { width:100%; height:100%; min-height:300px; object-fit:cover; }
+
+  /* ---- roteador por comprador ---- */
+  .rota { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));
+          gap:0; border:1px solid var(--linha); border-radius:6px; overflow:hidden;
+          margin-block:46px; }
+  .rota a { display:block; text-decoration:none; padding:26px 26px 24px; background:var(--papel);
+            border-right:1px solid var(--linha); }
+  .rota a:last-child { border-right:0; }
+  .rota a:hover { background:var(--papel2); }
+  .rota .q { font-size:0.72rem; font-weight:800; letter-spacing:0.13em;
+             text-transform:uppercase; color:var(--aco); }
+  .rota h2 { margin-top:8px; font-size:1.24rem; font-weight:800; color:var(--azul3); }
+  .rota p { margin-top:10px; font-size:0.95rem; color:var(--tinta2); }
+  .rota .lista { margin-top:13px; font-size:0.89rem; color:var(--azul2); font-weight:600; }
+
+  /* ---- seções ---- */
+  .secao { padding-block:54px; border-top:1px solid var(--linha); }
+  .secao.clara { background:var(--papel2); }
+  .cabeca { max-width:64ch; margin-bottom:30px; }
+  .cabeca .olho { font-size:0.72rem; font-weight:800; letter-spacing:0.14em;
+                  text-transform:uppercase; color:var(--azul); margin-bottom:10px; }
+  .cabeca h2 { font-size:clamp(1.45rem,3.4vw,2.05rem); font-weight:800; color:var(--azul3); }
+  .cabeca p { margin-top:14px; color:var(--tinta2); }
+
+  /* linhas de produto */
+  .linhas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:12px; }
+  .linhas li { background:var(--papel); padding:18px 20px;
+               border:1px solid var(--linha); border-radius:5px; }
+  .linhas b { display:block; font-size:1rem; color:var(--azul3); }
+  .linhas span { display:block; margin-top:6px; font-size:0.9rem; color:var(--tinta2); }
+
+  /* galeria por tipo — nunca misturada */
+  .obras { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(268px,100%),1fr));
+           gap:20px; margin-top:28px; }
+  .obras figure { margin:0; }
+  .obras img { width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:5px;
+               border:1px solid var(--linha); background:var(--papel3); }
+  .obras figcaption { margin-top:9px; font-size:0.85rem; color:var(--tinta2); }
+  .obras.retrato img { aspect-ratio:1/1; }
+
+  /* especificação do módulo */
+  .ficha { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));
+           gap:26px 44px; margin-top:6px; }
+  .ficha dl { display:grid; gap:15px; }
+  .ficha dt { font-size:0.72rem; font-weight:800; letter-spacing:0.11em;
+              text-transform:uppercase; color:var(--azul); }
+  .ficha dd { margin-top:4px; font-size:0.97rem; color:var(--tinta2); }
+
+  .usos { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .usos li { font-size:0.84rem; font-weight:600; color:var(--azul2); background:var(--papel3);
+             border-radius:3px; padding:6px 12px; }
+
+  /* passos do projeto */
+  .passos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(228px,100%),1fr)); gap:24px; }
+  .passos article { border-top:3px solid var(--azul); padding-top:18px; }
+  .passos .n { font-size:0.72rem; font-weight:800; letter-spacing:0.13em; color:var(--aco); }
+  .passos h3 { margin-top:7px; font-size:1.06rem; font-weight:800; color:var(--azul3); }
+  .passos p { margin-top:10px; font-size:0.95rem; color:var(--tinta2); }
+
+  /* empresa */
+  .empresa { display:grid; grid-template-columns:1.25fr 1fr; gap:40px; align-items:start; }
+  .empresa p + p { margin-top:14px; }
+  .empresa .bloco { border-left:3px solid var(--azul); padding-left:20px; }
+  .empresa .bloco + .bloco { margin-top:24px; }
+  .empresa h3 { font-size:0.95rem; font-weight:800; color:var(--azul3); }
+  .empresa .bloco p { margin-top:7px; font-size:0.95rem; color:var(--tinta2); }
+  .valores { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .valores li { font-size:0.84rem; font-weight:600; color:var(--azul2);
+                background:var(--papel3); border-radius:3px; padding:6px 12px; }
+
+  /* contato */
+  .contato { background:var(--azul3); color:#e5ecf5; padding-block:56px; }
+  .contato h2 { font-size:clamp(1.45rem,3.4vw,2rem); color:#fff; font-weight:800; }
+  .contato .intro { margin-top:14px; color:#adc0d6; max-width:62ch; }
+  .cartoes { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(252px,100%),1fr));
+             gap:14px; margin-top:28px; }
+  .cartoes > * { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.18);
+                 border-radius:6px; padding:18px 20px; display:block; text-decoration:none; }
+  .cartoes a:hover { background:rgba(255,255,255,0.14); border-color:rgba(255,255,255,0.42); }
+  .cartoes .q { display:block; font-size:0.72rem; font-weight:800; letter-spacing:0.12em;
+                text-transform:uppercase; color:#8cabd0; }
+  .cartoes .v { display:block; margin-top:6px; font-size:1.05rem; font-weight:800; color:#fff;
+                overflow-wrap:anywhere; }
+  .cartoes .v2 { display:block; margin-top:5px; font-size:0.95rem; font-weight:700; color:#dbe6f2;
+                 overflow-wrap:anywhere; }
+  .cartoes .end { display:block; margin-top:6px; font-size:0.96rem; color:#dbe6f2;
+                  overflow-wrap:anywhere; line-height:1.5; }
+
+  /* rodapé */
+  .rodape { background:var(--papel2); border-top:1px solid var(--linha); padding-block:30px;
+            font-size:0.85rem; color:var(--tinta2); }
+  .rodape .linha { display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+                   justify-content:space-between; }
+  .rodape img { width:38px; height:38px; }
+  .rodape .nota { max-width:66ch; overflow-wrap:anywhere; }
+  .rodape a { color:var(--azul2); }
+
+  @media (max-width:900px) {
+    .heroi .grade { grid-template-columns:1fr; }
+    .heroi .texto { padding-right:0; padding-block:34px 30px; }
+    .heroi figure img { min-height:220px; max-height:300px; }
+    .empresa { grid-template-columns:1fr; gap:28px; }
+    .secao { padding-block:42px; }
+    .rota { margin-block:34px; }
+    .rota a { border-right:0; border-bottom:1px solid var(--linha); }
+    .rota a:last-child { border-bottom:0; }
+  }
+  @media (max-width:420px) {
+    body { font-size:16px; }
+    .btn { display:block; width:100%; }
+    .canais { width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<p class="tarja">
+  Proposta de redesenho não solicitada, feita por <b>Refeito</b>. Não é o site oficial da
+  <b>BM BOX</b>. O site oficial é <a href="https://www.bmbox.com.br/" rel="nofollow noopener">www.bmbox.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</p>
+
+<header class="env topo">
+  <a class="marca" href="#inicio">
+    <img src="img/logo.webp" alt="BM BOX" width="46" height="46">
+    <span>
+      <span class="nome">BM BOX</span><br>
+      <span class="sob">Módulos habitáveis e armazenamentos</span>
+    </span>
+  </a>
+  <div class="canais">
+    <a href="tel:+551148391683">(11) 4839-1683</a>
+    <a href="mailto:contato@bmbox.com.br">contato@bmbox.com.br</a>
+    <a class="btn" href="#contato">Solicitar orçamento</a>
+  </div>
+</header>
+
+<main>
+
+<section class="heroi" id="inicio">
+  <div class="env grade">
+    <div class="texto">
+      <p class="olho">Fábrica em Caieiras · São Paulo</p>
+      <h1>Estrutura metálica, galpão e container modular, de fabricação própria</h1>
+      <p class="sub">
+        A BM BOX é uma empresa familiar de Caieiras dedicada à construção modular, ao aluguel e
+        venda de containers e a projetos especiais com containers e estruturas metálicas.
+      </p>
+      <div class="acoes">
+        <a class="btn" href="#contato">Solicitar orçamento</a>
+        <a class="btn vazio" href="https://api.whatsapp.com/send?phone=5519998506908">WhatsApp (19) 99850-6908</a>
+      </div>
+    </div>
+    <figure>
+      <img src="img/galpao-verde-montagem.webp" width="455" height="406" decoding="async"
+           alt="Galpão metálico de fechamento verde em montagem ao entardecer, com o vão do portão ainda aberto e material no pátio.">
+    </figure>
+  </div>
+</section>
+
+<div class="env">
+  <nav class="rota" aria-label="Linhas de produto">
+    <a href="#estruturas">
+      <p class="q">Para construtora e indústria</p>
+      <h2>Estrutura metálica e galpão</h2>
+      <p>A construção em aço: a estrutura, o galpão fechado, a cobertura e o mezanino.</p>
+      <p class="lista">Estruturas metálicas · Galpões · Coberturas · Mezaninos e escadas</p>
+    </a>
+    <a href="#modulares">
+      <p class="q">Para canteiro de obra</p>
+      <h2>Container e construção modular</h2>
+      <p>O espaço que chega pronto na obra: escritório, banheiro, almoxarifado, refeitório.</p>
+      <p class="lista">Container habitável · Banheiro · Almoxarifado · Com cobertura · Construção modular</p>
+    </a>
+  </nav>
+</div>
+
+<section class="secao" id="estruturas">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Linha 1 — estrutura metálica</p>
+      <h2>Galpões, coberturas, estruturas e mezaninos</h2>
+      <p>
+        Quatro linhas de produto que a BM BOX fabrica e monta. As fotos abaixo são de serviços
+        realizados por eles, e só desta linha.
+      </p>
+    </div>
+    <ul class="linhas">
+      <li><b>Estruturas metálicas</b><span>Estrutura em aço, de fabricação própria.</span></li>
+      <li><b>Galpões metálicos</b><span>Galpão fechado em estrutura metálica.</span></li>
+      <li><b>Coberturas metálicas</b><span>Cobertura em estrutura metálica.</span></li>
+      <li><b>Mezaninos e escadas</b><span>Piso intermediário e escada de acesso.</span></li>
+    </ul>
+    <div class="obras">
+      <figure>
+        <img src="img/galpao-interior-pronto.webp" width="495" height="406" loading="lazy" decoding="async"
+             alt="Interior de galpão concluído, com treliças de cobertura em toda a extensão e piso de concreto escuro.">
+        <figcaption>Galpão metálico entregue, vão livre sem pilar intermediário.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/cobertura-metalica.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Cobertura metálica em arco apoiada em pilares brancos sobre um pátio ocupado por paletes e caixas plásticas.">
+        <figcaption>Cobertura metálica sobre área de armazenagem.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/montagem-plataforma.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Montador de capacete azul e cinto de segurança trabalha na cobertura a partir da cesta de uma plataforma elevatória.">
+        <figcaption>Montagem da cobertura com plataforma elevatória, equipe da BM BOX.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/galpao-externo.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Galpão comprido de fechamento metálico claro visto de fora, com o oitão à esquerda e céu nublado.">
+        <figcaption>Galpão concluído, visto pela lateral.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/galpao-portao.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Fachada de galpão metálico com vão de portão grande aberto e porta de serviço menor ao lado.">
+        <figcaption>Vão de carga e porta de serviço no oitão.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/mezanino.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Mezanino de estrutura metálica com guarda-corpo e escada, construído dentro de um galpão coberto.">
+        <figcaption>Mezanino com escada, aproveitando o pé-direito do galpão.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao clara" id="modulares">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Linha 2 — container e modular</p>
+      <h2>Container habitável e construção modular</h2>
+      <p>
+        Como a BM BOX abre o assunto: um canteiro de obras adequado significa não correr riscos
+        trabalhistas e oferecer dignidade e conforto à equipe de campo.
+      </p>
+    </div>
+    <ul class="linhas">
+      <li><b>Container habitável</b><span>Escritório, centro de análises, almoxarifado, sala de reunião, cozinha e refeitório.</span></li>
+      <li><b>Container banheiro</b><span>Módulo sanitário.</span></li>
+      <li><b>Container almoxarifado</b><span>Módulo de armazenamento.</span></li>
+      <li><b>Container com cobertura</b><span>Módulo com cobertura acoplada.</span></li>
+      <li><b>Construção modular</b><span>Espaços maiores formados pela combinação de módulos.</span></li>
+      <li><b>Container lanchonete</b><span>Módulo preparado para uso comercial.</span></li>
+    </ul>
+    <div class="obras">
+      <figure>
+        <img src="img/modulos-fileira.webp" width="495" height="406" loading="lazy" decoding="async"
+             alt="Fileira de módulos habitáveis brancos com faixas verdes, janelas e porta veneziana, apoiados sobre calços no terreno.">
+        <figcaption>Módulos habitáveis alinhados, prontos para uso.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/modulo-interior.webp" width="455" height="406" loading="lazy" decoding="async"
+             alt="Interior de módulo com paredes claras, duas janelas basculantes, luminárias de tubo e aparelho de ar condicionado na parede.">
+        <figcaption>Por dentro: iluminação, janelas e ponto de ar condicionado.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/modulo-vazio.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Módulo longo e vazio visto da porta, com paredes e teto brancos e janelas estreitas ao longo da lateral.">
+        <figcaption>Módulo comprido entregue sem divisória interna.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/modulo-copa.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Canto de módulo com pia de inox instalada, esquadria amarela e janela ampla dando para um talude gramado.">
+        <figcaption>Módulo com ponto hidráulico e pia instalada.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/container-metalico.webp" width="465" height="406" loading="lazy" decoding="async"
+             alt="Container metálico de parede corrugada cinza-azulada com grande veneziana de ventilação embutida na lateral.">
+        <figcaption>Container metálico com veneziana de ventilação.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/container-porta.webp" width="485" height="406" loading="lazy" decoding="async"
+             alt="Container metálico escuro visto de canto, com porta lateral de acesso e veneziana acima dela.">
+        <figcaption>Container com porta de acesso lateral.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="porDentro">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Ficha do container habitável</p>
+      <h2>O que vem instalado, e o que dá para mudar</h2>
+      <p>
+        O acabamento que a BM BOX descreve para a linha habitável. O módulo chega pronto na obra,
+        e a empresa informa que oferece o produto em diferentes tamanhos, revestimentos, cores e
+        instalações elétricas e hidráulicas.
+      </p>
+    </div>
+    <div class="ficha">
+      <dl>
+        <div>
+          <dt>Paredes e teto</dt>
+          <dd>Isolamento térmico e acústico.</dd>
+        </div>
+        <div>
+          <dt>Piso</dt>
+          <dd>Compensado naval com revestimento.</dd>
+        </div>
+        <div>
+          <dt>Acabamentos e esquadrias</dt>
+          <dd>Em alumínio.</dd>
+        </div>
+      </dl>
+      <dl>
+        <div>
+          <dt>Forro</dt>
+          <dd>PVC.</dd>
+        </div>
+        <div>
+          <dt>Iluminação</dt>
+          <dd>Tubo LED.</dd>
+        </div>
+        <div>
+          <dt>Instalações</dt>
+          <dd>Pontos de tomada, entrada para ar condicionado e rede lógica, para funcionar como
+              um escritório normal assim que chega.</dd>
+        </div>
+      </dl>
+    </div>
+    <div style="margin-top:30px;max-width:66ch">
+      <p style="font-size:0.95rem;color:var(--tinta2)">
+        Além de escritório, a empresa lista estes usos para o mesmo equipamento:
+      </p>
+      <ul class="usos">
+        <li>Centro de análises</li><li>Almoxarifado</li><li>Sala de reunião</li>
+        <li>Cozinha</li><li>Refeitório</li>
+      </ul>
+      <p style="margin-top:18px;font-size:0.95rem;color:var(--tinta2)">
+        Também é possível criar divisórias, acoplar com tendas e expandir o espaço com aberturas
+        laterais e frontais.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="secao clara" id="comercial">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Linha 3 — uso comercial</p>
+      <h2>Container lanchonete</h2>
+      <p>
+        O mesmo módulo, com outro comprador: quem vai operar dentro dele em vez de morar o
+        expediente ali.
+      </p>
+    </div>
+    <div class="obras" style="grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))">
+      <figure>
+        <img src="img/container-lanchonete.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Container laranja convertido em lanchonete, com balcão de atendimento aberto na lateral e cobertura de madeira apoiada em pilares.">
+        <figcaption>Container lanchonete com balcão e cobertura, no pátio da fábrica.</figcaption>
+      </figure>
+      <div style="align-self:center">
+        <p style="color:var(--tinta2);font-size:0.97rem">
+          A linha lanchonete aparece junto com a de container com cobertura no catálogo da BM BOX.
+          Como as demais, sai da fábrica em Caieiras montada.
+        </p>
+        <p style="margin-top:18px">
+          <a class="btn vazio" href="#contato">Falar sobre um projeto assim</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="projeto">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Do projeto ao canteiro</p>
+      <h2>Como o módulo sai da fábrica e entra em operação</h2>
+      <p>
+        O que a BM BOX descreve sobre o caminho do produto. O terreno é a única parte que
+        depende de quem recebe.
+      </p>
+    </div>
+    <div class="passos">
+      <article>
+        <p class="n">01</p>
+        <h3>Fabricação própria</h3>
+        <p>A empresa se define pela fabricação própria de soluções transportáveis, padronizadas e
+           acopláveis, com foco em segurança, resistência e funcionalidade.</p>
+      </article>
+      <article>
+        <p class="n">02</p>
+        <h3>Chega pronto na obra</h3>
+        <p>O container já vem pronto para uso e chega à obra sem causar transtorno adicional ao
+           andamento do canteiro.</p>
+      </article>
+      <article>
+        <p class="n">03</p>
+        <h3>Isolado ou combinado</h3>
+        <p>Dá para usar um módulo sozinho ou combinar vários para formar espaços maiores.</p>
+      </article>
+      <article>
+        <p class="n">04</p>
+        <h3>O que o terreno precisa ter</h3>
+        <p>Acesso analisado, área limpa e plana, fundação apropriada e as conexões de elétrica,
+           água e esgoto quando o módulo tem pia, tanque ou vaso sanitário.</p>
+      </article>
+    </div>
+    <div class="obras" style="grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))">
+      <figure>
+        <img src="img/galpao-em-obra.webp" width="900" height="540" loading="lazy" decoding="async"
+             alt="Galpão em fase final de montagem, com telhas empilhadas no piso e dois montadores ao fundo junto ao vão aberto.">
+        <figcaption>Montagem em andamento, com o fechamento sendo instalado.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao clara" id="empresa">
+  <div class="env empresa">
+    <div>
+      <div class="cabeca" style="margin-bottom:20px">
+        <p class="olho">A empresa</p>
+        <h2>Quem é a BM BOX</h2>
+      </div>
+      <p style="color:var(--tinta2)">
+        Empresa familiar localizada em Caieiras/SP, dedicada a oferecer produtos e serviços de
+        qualidade na área de construção modular, aluguel e venda de containers e projetos
+        especiais com containers e estruturas metálicas.
+      </p>
+      <p style="color:var(--tinta2)">
+        A BM BOX se apresenta com mais de 35 anos de experiência na fabricação de estruturas
+        metálicas, desenvolvendo projetos com soluções inovadoras e alta funcionalidade. Um
+        trabalho de qualidade consistente e relações de confiança com clientes e parceiros são,
+        segundo ela, as principais prioridades.
+      </p>
+    </div>
+    <div>
+      <div class="bloco">
+        <h3>Missão</h3>
+        <p>Oferecer soluções transportáveis na criação de espaços funcionais, de maneira
+           padronizada e acoplável, com soluções diferenciadas e de fabricação própria, com foco
+           em segurança, resistência e funcionalidade.</p>
+      </div>
+      <div class="bloco">
+        <h3>Visão</h3>
+        <p>Estar presente no mercado de construção modular com uma linha de produtos
+           verdadeiramente ecológicos e inovadores, acessíveis à realidade do Brasil e com
+           impacto positivo na sociedade.</p>
+      </div>
+      <div class="bloco">
+        <h3>Valores</h3>
+        <ul class="valores">
+          <li>Sustentabilidade real</li><li>Confiança e parceria</li><li>Criatividade</li>
+          <li>Impacto social</li><li>Versatilidade</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="env">
+    <h2>Solicitar orçamento</h2>
+    <p class="intro">
+      Entre em contato com os profissionais da BM BOX escolhendo a forma que preferir: telefone,
+      WhatsApp ou e-mail.
+    </p>
+    <div class="cartoes">
+      <a href="tel:+551148391683">
+        <span class="q">Atendimento</span>
+        <span class="v">(11) 4839-1683</span>
+        <span class="v2">Segunda a sexta, das 09h00 às 17h00</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5519998506908">
+        <span class="q">WhatsApp</span>
+        <span class="v">(19) 99850-6908</span>
+      </a>
+      <a href="mailto:contato@bmbox.com.br">
+        <span class="q">E-mail</span>
+        <span class="v quebra">contato@bmbox.com.br</span>
+        <span class="v2">comercial@bmbox.com.br</span>
+      </a>
+      <div>
+        <span class="q">A fábrica</span>
+        <span class="end">
+          Av. Ádamo Zambelli, 400<br>
+          Calcário — Caieiras/SP<br>
+          CEP 07700-000
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="env linha">
+    <img src="img/logo.webp" alt="BM BOX" width="38" height="38" loading="lazy">
+    <p class="nota">
+      Proposta de redesenho não solicitada, feita por Refeito. Não é o site oficial da BM BOX.
+      O site oficial é <a href="https://www.bmbox.com.br/" rel="nofollow noopener">www.bmbox.com.br</a>.
+      Todas as fotos, textos e informações são deles.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

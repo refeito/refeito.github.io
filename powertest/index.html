@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Power Test — Calibração, ensaios NR-10 e locação de instrumentos · Ipatinga/MG</title>
+<meta name="description" content="Laboratório de metrologia acreditado ao Inmetro/RBC. Calibração de instrumentos, ensaios elétricos NR-10 em EPIs, manutenção de válvulas industriais e locação de equipamentos. Quatro unidades em Minas Gerais e três laboratórios móveis.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<style>
+  /* Paleta lida do site atual: vermelho de marca rgb(255,4,3) e o azul do raio
+     da logo sobre fundo branco. Texto rgb(58,58,58). */
+  :root {
+    --papel:#ffffff; --papel2:#f5f6f8; --papel3:#eceef2; --linha:#dde1e8;
+    --tinta:#1d2430; --tinta2:#5a6474;
+    --vermelho:#e10a12; --vermelho2:#a90007;
+    --azul:#1f5f9e; --azul2:#143f6b; --azul3:#0e2b49;
+    --fonte:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--fonte);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; text-wrap:balance; letter-spacing:-0.018em; line-height:1.15; }
+  p, ul, ol { margin:0; }
+  ul { padding:0; list-style:none; }
+
+  .env { max-width:1120px; margin:0 auto; padding-inline:20px; }
+  .fina { max-width:62ch; }
+  .quebra { overflow-wrap:anywhere; }
+
+  /* ---- tarja de proposta ---- */
+  .tarja { background:var(--azul3); color:#cfdcea; font-size:0.79rem; line-height:1.5;
+           text-align:center; padding:11px 18px;
+           padding-top:calc(11px + env(safe-area-inset-top,0px)); overflow-wrap:anywhere; }
+  .tarja b { color:#fff; } .tarja a { color:#ffc9cb; }
+
+  /* ---- topo ---- */
+  .topo { display:flex; align-items:center; justify-content:space-between;
+          gap:14px 22px; flex-wrap:wrap; padding-block:16px; border-bottom:1px solid var(--linha); }
+  .marca { display:flex; align-items:center; gap:12px; }
+  .marca img { width:56px; height:50px; }
+  .marca .nome { font-weight:800; font-size:1.02rem; letter-spacing:0.04em; }
+  .marca .sob { font-size:0.74rem; color:var(--tinta2); letter-spacing:0.03em; }
+  .topo .canais { display:flex; align-items:center; gap:10px 18px; flex-wrap:wrap;
+                  font-size:0.88rem; font-weight:600; }
+  .topo .canais a { text-decoration:none; }
+  .topo .canais .tel { color:var(--azul2); }
+  .topo .canais .tel:hover { color:var(--vermelho); }
+
+  .btn { display:inline-block; font:inherit; font-weight:700; font-size:0.94rem; line-height:1.3;
+         text-decoration:none; text-align:center; background:var(--vermelho); color:#fff;
+         padding:13px 22px; border-radius:5px; border:1px solid var(--vermelho); }
+  .btn:hover { background:var(--vermelho2); border-color:var(--vermelho2); }
+  .btn:focus-visible { outline:3px solid var(--azul); outline-offset:3px; }
+  .btn.zap { background:var(--azul2); border-color:var(--azul2); }
+  .btn.zap:hover { background:var(--azul3); border-color:var(--azul3); }
+  .btn.vazio { background:transparent; color:var(--azul2); border-color:var(--linha); }
+  .btn.vazio:hover { border-color:var(--azul2); background:var(--papel2); }
+
+  /* ---- herói ---- */
+  .heroi { display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center;
+           padding-block:44px 48px; }
+  .heroi .olho { font-size:0.74rem; font-weight:800; letter-spacing:0.14em;
+                 text-transform:uppercase; color:var(--vermelho); margin-bottom:14px; }
+  .heroi h1 { font-size:clamp(1.95rem,4.6vw,2.85rem); font-weight:800; color:var(--azul3); }
+  .heroi .sub { margin-top:18px; font-size:1.08rem; color:var(--tinta2); }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .heroi figure { margin:0; border-radius:8px; overflow:hidden; border:1px solid var(--linha); }
+  .heroi figure img { width:100%; }
+
+  /* ---- faixa de credencial ---- */
+  .credencial { background:var(--azul3); color:#e8eef5; padding-block:44px; }
+  .credencial .olho { font-size:0.73rem; font-weight:800; letter-spacing:0.14em;
+                      text-transform:uppercase; color:#ff8a8f; margin-bottom:11px; }
+  .credencial h2 { font-size:clamp(1.3rem,3vw,1.7rem); color:#fff; font-weight:800; }
+  .credencial .diz { margin-top:14px; font-size:1.02rem; color:#b9c9da; max-width:62ch; }
+  .selos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(196px,100%),1fr));
+           gap:14px; margin-top:26px; }
+  .selos li { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.16);
+              border-radius:6px; padding:15px 16px; }
+  .selos b { display:block; color:#fff; font-size:0.97rem; }
+  .selos span { display:block; margin-top:4px; font-size:0.83rem; color:#a9bcd0; }
+  .credencial .rodape-nota { margin-top:22px; font-size:0.85rem; color:#93a7bd; max-width:70ch; }
+
+  /* ---- números ---- */
+  .numeros { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(168px,100%),1fr));
+             gap:1px; background:var(--linha); border:1px solid var(--linha); border-radius:8px;
+             overflow:hidden; margin-block:46px; }
+  .numeros li { background:var(--papel); padding:20px 18px; }
+  .numeros .n { font-size:1.72rem; font-weight:800; color:var(--vermelho); line-height:1.1; }
+  .numeros .r { display:block; margin-top:6px; font-size:0.87rem; color:var(--tinta2); }
+
+  /* ---- bifurcação dos dois negócios ---- */
+  .secao { padding-block:52px; }
+  .secao.clara { background:var(--papel2); border-block:1px solid var(--linha); }
+  .cabeca { max-width:64ch; margin-bottom:30px; }
+  .cabeca .olho { font-size:0.73rem; font-weight:800; letter-spacing:0.14em;
+                  text-transform:uppercase; color:var(--vermelho); margin-bottom:10px; }
+  .cabeca h2 { font-size:clamp(1.45rem,3.4vw,2.05rem); font-weight:800; color:var(--azul3); }
+  .cabeca p { margin-top:14px; color:var(--tinta2); }
+
+  .garfo { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:20px; }
+  .garfo article { border:1px solid var(--linha); border-top:4px solid var(--vermelho);
+                   border-radius:8px; background:var(--papel); padding:26px 24px 24px;
+                   display:flex; flex-direction:column; }
+  .garfo article.b { border-top-color:var(--azul); }
+  .garfo h3 { font-size:1.22rem; font-weight:800; color:var(--azul3); }
+  .garfo .expl { margin-top:12px; color:var(--tinta2); font-size:0.97rem; }
+  .garfo ul { margin-top:16px; display:grid; gap:8px; font-size:0.94rem; }
+  .garfo ul li { padding-left:20px; position:relative; }
+  .garfo ul li::before { content:""; position:absolute; left:2px; top:0.62em;
+                         width:7px; height:7px; border-radius:50%; background:var(--vermelho); }
+  .garfo article.b ul li::before { background:var(--azul); }
+  .garfo .ir { margin-top:auto; padding-top:20px; }
+  .garfo .ir a { font-weight:700; font-size:0.93rem; color:var(--vermelho); text-decoration:none;
+                 border-bottom:2px solid currentColor; padding-bottom:2px; }
+  .garfo article.b .ir a { color:var(--azul2); }
+
+  /* ---- escopo de calibração ---- */
+  .escopo { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:1px;
+            background:var(--linha); border:1px solid var(--linha); border-radius:8px; overflow:hidden; }
+  .escopo li { background:var(--papel); padding:18px 20px; }
+  .escopo .g { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .escopo .g b { font-size:1rem; color:var(--azul3); }
+  .escopo .g em { font-style:normal; font-size:0.72rem; font-weight:800; letter-spacing:0.08em;
+                  text-transform:uppercase; color:var(--vermelho); }
+  .escopo .i { margin-top:6px; font-size:0.9rem; color:var(--tinta2); }
+
+  .dupla { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));
+           gap:24px; margin-top:34px; align-items:start; }
+  /* A coluna da foto da matriz só existe quando há largura para ela ser foto,
+     e não miniatura: abaixo disso as unidades ocupam a linha inteira. */
+  .dupla.mapa { grid-template-columns:1.45fr 1fr; }
+  @media (max-width:760px) { .dupla.mapa { grid-template-columns:1fr; } }
+  figure.foto { margin:0; }
+  figure.foto img { width:100%; border-radius:8px; border:1px solid var(--linha); }
+  figure.foto figcaption { margin-top:9px; font-size:0.85rem; color:var(--tinta2); }
+  figure.foto.alta img { aspect-ratio:3/4; object-fit:cover; object-position:center 28%; }
+
+  /* ---- laboratório móvel ---- */
+  .movel { background:var(--papel); }
+  .movel .capa { margin:0 0 30px; border-radius:10px; overflow:hidden; border:1px solid var(--linha); }
+  .movel .capa img { width:100%; }
+  .movel .capa figcaption { padding:12px 16px; background:var(--papel2); font-size:0.86rem; color:var(--tinta2); }
+  .trio { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr)); gap:20px; }
+  .trio article { border-left:3px solid var(--vermelho); padding-left:18px; }
+  .trio h3 { font-size:1.04rem; font-weight:800; color:var(--azul3); }
+  .trio p { margin-top:8px; font-size:0.95rem; color:var(--tinta2); }
+
+  /* ---- listas de serviço ---- */
+  .servicos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr)); gap:20px; }
+  .servicos article { border:1px solid var(--linha); border-radius:8px; padding:22px 22px 20px;
+                      background:var(--papel); }
+  .servicos h3 { font-size:1.06rem; font-weight:800; color:var(--azul3); }
+  .servicos p { margin-top:10px; font-size:0.94rem; color:var(--tinta2); }
+  .servicos ul { margin-top:12px; display:grid; gap:6px; font-size:0.9rem; color:var(--tinta2); }
+  .servicos ul li { padding-left:16px; position:relative; }
+  .servicos ul li::before { content:"–"; position:absolute; left:0; color:var(--vermelho); }
+
+  .fluidos { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .fluidos li { font-size:0.83rem; font-weight:600; color:var(--azul2); background:var(--papel3);
+                border-radius:4px; padding:5px 11px; }
+
+  /* ---- cotação ---- */
+  .cotacao { background:var(--azul3); color:#e8eef5; padding-block:52px; }
+  .cotacao h2 { font-size:clamp(1.45rem,3.4vw,2rem); color:#fff; font-weight:800; }
+  .cotacao p { margin-top:14px; color:#b9c9da; max-width:60ch; }
+  .canaisgrande { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(258px,100%),1fr));
+                  gap:14px; margin-top:28px; }
+  .canaisgrande a { display:block; text-decoration:none; background:rgba(255,255,255,0.07);
+                    border:1px solid rgba(255,255,255,0.18); border-radius:7px; padding:18px 20px; }
+  .canaisgrande a:hover { background:rgba(255,255,255,0.13); border-color:rgba(255,255,255,0.4); }
+  .canaisgrande .q { display:block; font-size:0.74rem; font-weight:800; letter-spacing:0.12em;
+                     text-transform:uppercase; color:#8fb4d8; }
+  .canaisgrande .v { display:block; margin-top:6px; font-size:1.1rem; font-weight:800; color:#fff;
+                     overflow-wrap:anywhere; }
+  .cotacao .urg { margin-top:24px; font-size:0.9rem; color:#a9bcd0; max-width:66ch; }
+
+  /* ---- unidades ---- */
+  .unidades { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(262px,100%),1fr)); gap:18px; }
+  .unidades li { border:1px solid var(--linha); border-radius:8px; padding:18px 20px; background:var(--papel); }
+  .unidades .tipo { font-size:0.71rem; font-weight:800; letter-spacing:0.12em;
+                    text-transform:uppercase; color:var(--vermelho); }
+  .unidades .cid { margin-top:5px; font-size:1.06rem; font-weight:800; color:var(--azul3); }
+  .unidades .end { margin-top:8px; font-size:0.9rem; color:var(--tinta2); overflow-wrap:anywhere; }
+
+  .contatolinha { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(238px,100%),1fr));
+                  gap:18px; margin-top:28px; padding-top:28px; border-top:1px solid var(--linha); }
+  .contatolinha .q { display:block; font-size:0.71rem; font-weight:800; letter-spacing:0.12em;
+                     text-transform:uppercase; color:var(--tinta2); }
+  .contatolinha .v { display:block; margin-top:6px; font-size:1.04rem; font-weight:700;
+                     color:var(--azul2); overflow-wrap:anywhere; }
+  .contatolinha a { text-decoration:none; }
+  .contatolinha a:hover .v { color:var(--vermelho); }
+
+  /* ---- rodapé ---- */
+  .rodape { background:var(--papel2); border-top:1px solid var(--linha); padding-block:30px;
+            font-size:0.85rem; color:var(--tinta2); }
+  .rodape .linha { display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+                   justify-content:space-between; }
+  .rodape img { width:44px; height:39px; }
+  .rodape .nota { max-width:66ch; overflow-wrap:anywhere; }
+  .rodape a { color:var(--azul2); }
+
+  @media (max-width:860px) {
+    .heroi { grid-template-columns:1fr; gap:28px; padding-block:30px 36px; }
+    .secao { padding-block:40px; }
+  }
+  @media (max-width:420px) {
+    body { font-size:16px; }
+    .marca img { width:48px; height:43px; }
+    .btn { display:block; width:100%; }
+    .topo .canais { width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<p class="tarja">
+  Proposta de redesenho não solicitada, feita por <b>Refeito</b>. Não é o site oficial da
+  <b>Power Test</b>. O site oficial é <a href="https://www.powertest.com.br/" rel="nofollow noopener">www.powertest.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</p>
+
+<header class="env topo">
+  <a class="marca" href="#inicio" style="text-decoration:none">
+    <img src="img/logo.webp" alt="Power Test Comissionamento" width="56" height="50">
+    <span>
+      <span class="nome">POWER TEST</span><br>
+      <span class="sob">Calibração, ensaios e locação</span>
+    </span>
+  </a>
+  <div class="canais">
+    <a class="tel" href="tel:+553138251666">(31) 3825-1666</a>
+    <a class="tel" href="mailto:comercial@powertest.com.br">comercial@powertest.com.br</a>
+    <a class="btn" href="#cotacao">Peça uma cotação</a>
+  </div>
+</header>
+
+<main>
+
+<section class="env heroi" id="inicio">
+  <div>
+    <p class="olho">Instrumentação, elétrica e locações industriais</p>
+    <h1>Laboratório de metrologia acreditado, com laboratório móvel que vai até a sua planta</h1>
+    <p class="sub">
+      A Power Test presta serviços de calibração, ensaios, manutenção e locação de instrumentos,
+      EPIs e válvulas industriais. Matriz em Ipatinga, quatro unidades em Minas Gerais.
+    </p>
+    <div class="acoes">
+      <a class="btn" href="#cotacao">Peça uma cotação</a>
+      <a class="btn zap" href="https://wa.me/5531972319115">WhatsApp (31) 97231-9115</a>
+    </div>
+  </div>
+  <figure>
+    <img src="img/calibracao-valvula.webp" width="1000" height="814" decoding="async"
+         alt="Técnico da Power Test, de capacete e luvas, opera a bancada de calibração de uma válvula de segurança.">
+  </figure>
+</section>
+
+<section class="credencial" id="credenciais">
+  <div class="env">
+    <p class="olho">Acreditação e rastreabilidade</p>
+    <h2>Um laboratório que responde a quem audita</h2>
+    <p class="diz">
+      É o que o comprador industrial confere antes de mandar o primeiro instrumento. As
+      acreditações e certificações abaixo são as que a Power Test declara no site dela.
+    </p>
+    <ul class="selos">
+      <li><b>Inmetro / CGCRE 17.025</b><span>Laboratório acreditado</span></li>
+      <li><b>RBC</b><span>Rede Brasileira de Calibração</span></li>
+      <li><b>IPEM</b><span>Laboratório acreditado</span></li>
+      <li><b>ISO 9001</b><span>Empresa certificada</span></li>
+      <li><b>CRC Petrobras</b><span>Fornecedor cadastrado</span></li>
+    </ul>
+    <p class="rodape-nota">
+      Os certificados de calibração ficam disponíveis em uma plataforma 100% online. A Power Test
+      também é assistência técnica autorizada da MSA, da Minipa e da Spirax Sarco.
+    </p>
+  </div>
+</section>
+
+<div class="env">
+  <ul class="numeros">
+    <li><span class="n">4</span><span class="r">Laboratórios de metrologia</span></li>
+    <li><span class="n">3</span><span class="r">Laboratórios móveis</span></li>
+    <li><span class="n">30.000</span><span class="r">Instrumentos e válvulas calibrados e ensaiados por ano</span></li>
+    <li><span class="n">18</span><span class="r">Estados atendidos pelo time por ano</span></li>
+    <li><span class="n">26</span><span class="r">Anos de mercado</span></li>
+  </ul>
+</div>
+
+<section class="env secao" id="negocios" style="padding-top:0">
+  <div class="cabeca">
+    <p class="olho">São dois negócios diferentes</p>
+    <h2>Calibrar o instrumento que é seu, ou alugar o instrumento que falta</h2>
+    <p>
+      Um é serviço de laboratório sobre o seu equipamento, com certificado no fim. O outro é
+      equipamento da Power Test indo para a sua obra. Escolha o caminho e o resto da página segue por ele.
+    </p>
+  </div>
+  <div class="garfo">
+    <article>
+      <h3>Serviço no seu equipamento</h3>
+      <p class="expl">
+        Calibração, ensaio e manutenção de instrumentos, EPIs, detectores de gases e válvulas
+        industriais, em laboratório fixo ou in-loco.
+      </p>
+      <ul>
+        <li>Calibração de instrumentos em 15 grandezas</li>
+        <li>Ensaios elétricos NR-10 em EPIs e ferramentas isoladas</li>
+        <li>Calibração de detectores de gás</li>
+        <li>Calibração, teste on-line e manutenção de válvulas</li>
+        <li>Teste hidrostático e alinhamento a laser</li>
+      </ul>
+      <p class="ir"><a href="#calibracao">Ver o escopo de calibração</a></p>
+    </article>
+    <article class="b">
+      <h3>Locação de instrumentos</h3>
+      <p class="expl">
+        Equipamento de teste elétrico e instrumentação alugado para quem precisa dele por um
+        período, sem imobilizar capital nem assumir a calibração do parque.
+      </p>
+      <ul>
+        <li>Testes elétricos</li>
+        <li>Instrumentação e padrões de calibração</li>
+        <li>Inspeção mecânica</li>
+        <li>Segurança do trabalho</li>
+        <li>Detectores de gás</li>
+      </ul>
+      <p class="ir"><a href="#locacao">Ver o que está disponível</a></p>
+    </article>
+  </div>
+</section>
+
+<section class="secao clara" id="calibracao">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Calibração e ensaios</p>
+      <h2>O escopo do laboratório de metrologia e ensaios</h2>
+      <p>
+        Quinze grandezas, com os instrumentos que a Power Test lista em cada uma. Se o seu
+        equipamento está numa destas linhas, ele cabe no laboratório.
+      </p>
+    </div>
+    <ul class="escopo">
+      <li><p class="g"><b>Elétrica</b></p>
+        <p class="i">Multímetros, alicates amperímetros, megômetros, terrômetros, Hi-Pot's, microhmímetros, caixas de calibração de relés, instrumentos de medidas elétricas, fontes, TTR's, entre outros.</p></li>
+      <li><p class="g"><b>Dimensional</b></p>
+        <p class="i">Paquímetros, micrômetros, trenas, esquadros, níveis, relógios comparadores, escalas, alinhadores de eixos de motores, entre outros.</p></li>
+      <li><p class="g"><b>Temperatura</b></p>
+        <p class="i">Termômetros, pirômetros, termômetros infravermelho, termopares, PT-100, controladores de temperatura, entre outros.</p></li>
+      <li><p class="g"><b>Pressão</b></p>
+        <p class="i">Manômetros, esfigmomanômetros, transmissores de pressão, pressostatos, entre outros.</p></li>
+      <li><p class="g"><b>Detectores de gases</b></p>
+        <p class="i">Detectores de CO monóxido de carbono, O2 oxigênio, LEL ou CH4 metano, H2S gás sulfídrico, entre outros.</p></li>
+      <li><p class="g"><b>Tempo e frequência</b></p>
+        <p class="i">Tacômetros, cronômetros, frequencímetros, entre outros.</p></li>
+      <li><p class="g"><b>Ensaios elétricos</b> <em>NR-10</em></p>
+        <p class="i">Ensaios de alta tensão em luvas, mangas, mantas, bastões, capacetes, detectores de tensão, entre outros.</p></li>
+      <li><p class="g"><b>Torque</b></p>
+        <p class="i">Torquímetros, células de torque, multiplicador de torque, entre outros.</p></li>
+      <li><p class="g"><b>Acústico</b></p>
+        <p class="i">Decibelímetro, dosímetro de ruído, entre outros.</p></li>
+      <li><p class="g"><b>Vibração</b></p>
+        <p class="i">Medidor de vibração, transmissor de vibração, entre outros.</p></li>
+      <li><p class="g"><b>Luminosidade</b></p>
+        <p class="i">Luxímetro, entre outros.</p></li>
+      <li><p class="g"><b>Vazão</b></p>
+        <p class="i">Medidor de vazão, transmissores de vazão, entre outros.</p></li>
+      <li><p class="g"><b>Químico</b></p>
+        <p class="i">Turbidímetros, phgâmetros, condutivímetros, entre outros.</p></li>
+      <li><p class="g"><b>Peso</b></p>
+        <p class="i">Balanças digitais, analógicas, analíticas e semianalíticas até 200 kg.</p></li>
+      <li><p class="g"><b>Nível</b></p>
+        <p class="i">Medidor de nível, transmissores de nível, entre outros.</p></li>
+    </ul>
+    <div class="dupla">
+      <figure class="foto alta">
+        <img src="img/detectores-gas.webp" width="760" height="1687" loading="lazy" decoding="async"
+             alt="Bancada do laboratório com bandeja de detectores portáteis de gás laranja e um cilindro de gás padrão ligado ao aparelho em teste.">
+        <figcaption>Calibração de detectores de gás, com a prateleira dos aparelhos que aguardam aprovação ao fundo.</figcaption>
+      </figure>
+      <figure class="foto alta">
+        <img src="img/valvula-etiqueta.webp" width="760" height="1687" loading="lazy" decoding="async"
+             alt="Profissional de uniforme e óculos de proteção fixa a etiqueta de identificação no castelo de uma válvula de segurança.">
+        <figcaption>Identificação da válvula depois do serviço, na oficina da empresa.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao movel" id="movel">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">O que o laboratório pequeno não tem</p>
+      <h2>Laboratório móvel: o laboratório vai até a planta</h2>
+      <p>
+        Instrumento que sai da planta para calibrar é instrumento parado. A Power Test informa
+        que atende in-loco com três laboratórios móveis, além das quatro unidades fixas em Minas Gerais.
+      </p>
+    </div>
+    <figure class="capa">
+      <img src="img/laboratorio-movel.webp" width="1200" height="675" loading="lazy" decoding="async"
+           alt="Van branca adesivada da Power Test com a inscrição Laboratório Móvel, estacionada ao lado de tanques e tubulação dentro de uma planta industrial.">
+      <figcaption>O laboratório móvel dentro da planta do cliente, ao lado da área de processo.</figcaption>
+    </figure>
+    <div class="trio">
+      <article>
+        <h3>Três laboratórios móveis</h3>
+        <p>Calibração, manutenção e ensaio em instrumentos, EPIs e válvulas industriais feitos no local, sem tirar o equipamento da operação.</p>
+      </article>
+      <article>
+        <h3>Quatro unidades em Minas Gerais</h3>
+        <p>Matriz em Ipatinga e filiais em Ouro Branco, Conselheiro Lafaiete e Contagem.</p>
+      </article>
+      <article>
+        <h3>Atendimento emergencial</h3>
+        <p>A empresa informa resposta emergencial em até 8 horas para demandas urgentes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="secao clara" id="valvulas">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Válvulas industriais</p>
+      <h2>Calibração, teste on-line e manutenção de válvulas</h2>
+      <p>
+        Válvulas de segurança, controle e bloqueio. A empresa informa oficina mecânica com mais
+        de 1.000 m², equipada para demandas complexas, e execução in-loco ou offshore.
+      </p>
+    </div>
+    <div class="dupla">
+      <figure class="foto">
+        <img src="img/valvulas-seguranca.webp" width="1000" height="750" loading="lazy" decoding="async"
+             alt="Cinco válvulas de segurança flangeadas, quatro laranjas e uma amarela, enfileiradas no piso da oficina.">
+        <figcaption>Válvulas de segurança na oficina, prontas para a bancada.</figcaption>
+      </figure>
+      <div>
+        <p style="color:var(--tinta2);font-size:0.96rem">Fluidos e processos atendidos, como a empresa os lista:</p>
+        <ul class="fluidos">
+          <li>Vapor</li><li>Ar comprimido</li><li>Gás</li><li>Vácuo</li>
+          <li>Caldeiras</li><li>Processos químicos</li>
+        </ul>
+        <p style="margin-top:20px;color:var(--tinta2);font-size:0.96rem">
+          Além da manutenção e da calibração, a Power Test faz teste on-line de válvulas de
+          segurança e vende válvulas de controle, bloqueio e acessórios, com engenheiros e
+          técnicos para especificar o equipamento.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="locacao">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Locação</p>
+      <h2>O que dá para alugar em vez de comprar</h2>
+      <p>
+        A Power Test se descreve como empresa especializada em locação de equipamentos, com um
+        portfólio de testes elétricos e instrumentação. São quatro famílias de equipamento.
+      </p>
+    </div>
+    <div class="dupla" style="margin-top:0">
+      <div>
+        <div class="servicos" style="grid-template-columns:1fr">
+          <article>
+            <h3>Testes elétricos</h3>
+            <p>Instrumentos de teste elétrico do portfólio de locação da empresa.</p>
+          </article>
+          <article>
+            <h3>Instrumentação e padrões de calibração</h3>
+            <p>Instrumentos de processo e os padrões usados para calibrar outros instrumentos.</p>
+          </article>
+          <article>
+            <h3>Inspeção mecânica</h3>
+            <p>Equipamento de inspeção mecânica, como o alinhador de eixos a laser.</p>
+          </article>
+          <article>
+            <h3>Segurança do trabalho</h3>
+            <p>Inclui a locação de detectores de gás, que a empresa lista como serviço próprio.</p>
+          </article>
+        </div>
+      </div>
+      <figure class="foto alta">
+        <img src="img/alinhador-laser.webp" width="760" height="1351" loading="lazy" decoding="async"
+             alt="Três maletas azuis abertas sobre uma mesa, cada uma com um alinhador de eixos a laser e seu console de tela colorida.">
+        <figcaption>Alinhadores de eixos a laser, um dos equipamentos de inspeção mecânica do portfólio.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao clara" id="tambem">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Também fazemos</p>
+      <h2>Serviços de campo, venda e treinamento</h2>
+    </div>
+    <div class="servicos">
+      <article>
+        <h3>Elétrica, instrumentação e mecânica industrial</h3>
+        <p>Serviços in-loco de comissionamento, fornecimento de mão de obra e manutenções preventivas em paradas e contratos fixos.</p>
+      </article>
+      <article>
+        <h3>Venda de equipamentos industriais</h3>
+        <p>Com engenheiros e técnicos para especificar o equipamento da sua demanda.</p>
+        <ul>
+          <li>Válvulas de controle, bloqueio e acessórios</li>
+          <li>Transmissores de pressão e temperatura, indicadores analógicos e digitais</li>
+          <li>Detectores de gases portáteis e fixos</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Power Test Educação</h3>
+        <p>Cursos corporativos desenvolvidos para a equipe da sua empresa.</p>
+        <ul>
+          <li>Segurança do trabalho</li>
+          <li>Instrumentação industrial</li>
+          <li>Elétrica industrial</li>
+          <li>Metrologia</li>
+          <li>Manutenção e calibração de válvulas industriais</li>
+        </ul>
+      </article>
+    </div>
+    <p style="margin-top:26px;font-size:0.95rem;color:var(--tinta2);max-width:70ch">
+      Sobre a reputação, a empresa se descreve como uma das maiores do setor no Brasil, com mais
+      de 70 colaboradores no quadro fixo e até 150 em picos de obras, e cita a confiança de
+      clientes como Petrobras, Vale, Gerdau e Eletrobrás.
+    </p>
+  </div>
+</section>
+
+<section class="cotacao" id="cotacao">
+  <div class="env">
+    <h2>Peça sua cotação</h2>
+    <p>
+      Diga o que precisa calibrar, ensaiar ou alugar. O contato comercial é o mesmo para as
+      quatro unidades.
+    </p>
+    <div class="canaisgrande">
+      <a href="https://wa.me/5531972319115">
+        <span class="q">WhatsApp — apenas mensagens</span>
+        <span class="v">(31) 97231-9115</span>
+      </a>
+      <a href="tel:+553138251666">
+        <span class="q">Telefone — ligações</span>
+        <span class="v">(31) 3825-1666</span>
+      </a>
+      <a href="mailto:comercial@powertest.com.br">
+        <span class="q">E-mail</span>
+        <span class="v quebra">comercial@powertest.com.br</span>
+      </a>
+    </div>
+    <p class="urg">
+      Para demanda urgente, a empresa informa atendimento emergencial em até 8 horas.
+    </p>
+  </div>
+</section>
+
+<section class="secao" id="contato">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Onde estamos</p>
+      <h2>Quatro unidades em Minas Gerais</h2>
+    </div>
+    <div class="dupla mapa" style="margin-top:0">
+      <ul class="unidades" style="grid-template-columns:repeat(auto-fit,minmax(min(238px,100%),1fr))">
+        <li>
+          <p class="tipo">Matriz</p>
+          <p class="cid">Ipatinga</p>
+          <p class="end">Rua Jacarandá, 106, Horto — Ipatinga/MG<br>CEP 35160-304</p>
+        </li>
+        <li>
+          <p class="tipo">Filial</p>
+          <p class="cid">Ouro Branco</p>
+          <p class="end">Av. Mariza de Souza Mendes, 770, Sala 3, Pioneiros — Ouro Branco/MG<br>CEP 36492-347</p>
+        </li>
+        <li>
+          <p class="tipo">Filial</p>
+          <p class="cid">Conselheiro Lafaiete</p>
+          <p class="end">Av. Ver. Mário Reis de Carvalho, 165, Ouro Verde — Conselheiro Lafaiete/MG<br>CEP 36400-295</p>
+        </li>
+        <li>
+          <p class="tipo">Filial</p>
+          <p class="cid">Contagem</p>
+          <p class="end">R. Macapá, 137, Amazonas — Contagem/MG<br>CEP 32240-030</p>
+        </li>
+      </ul>
+      <figure class="foto">
+        <img src="img/fachada-ipatinga.webp" width="820" height="820" loading="lazy" decoding="async"
+             alt="Prédio de três andares com fachada de vidro espelhado e pedra branca, com o letreiro Power Test iluminado acima da entrada.">
+        <figcaption>A matriz na Rua Jacarandá, 106, no Horto, em Ipatinga.</figcaption>
+      </figure>
+    </div>
+    <div class="contatolinha">
+      <a href="tel:+553138251666">
+        <span class="q">Telefone — ligações</span>
+        <span class="v">(31) 3825-1666</span>
+      </a>
+      <a href="https://wa.me/5531972319115">
+        <span class="q">WhatsApp — apenas mensagens</span>
+        <span class="v">(31) 97231-9115</span>
+      </a>
+      <a href="mailto:comercial@powertest.com.br">
+        <span class="q">E-mail</span>
+        <span class="v quebra">comercial@powertest.com.br</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="env linha">
+    <img src="img/logo.webp" alt="Power Test" width="44" height="39" loading="lazy">
+    <p class="nota">
+      Proposta de redesenho não solicitada, feita por Refeito. Não é o site oficial da Power Test.
+      O site oficial é <a href="https://www.powertest.com.br/" rel="nofollow noopener">www.powertest.com.br</a>.
+      Todas as fotos, textos e informações são deles.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
