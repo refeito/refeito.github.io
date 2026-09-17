@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bonito Way — Agência de turismo em Bonito MS e Pantanal Sul</title>
+<meta name="description" content="Agência de turismo em Bonito MS. Passeios, ingressos para os atrativos, pacotes, transporte e hospedagem em Bonito, Jardim, Bodoquena e Pantanal Sul.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Paleta lida do site atual: verde de marca rgb(21,86,48), verde secundario
+     rgb(46,80,56), fundo claro rgb(235,240,247), texto rgb(59,68,79) e o
+     amarelo rgb(241,215,0) que aparece como acento. Fundo branco, como o deles. */
+  :root {
+    --papel:#ffffff; --gelo:#ebf0f7; --musgo:#eef3ec; --linha:#dde5ea;
+    --tinta:#3b444f; --tinta2:#6d7784;
+    --verde:#155630; --verde-esc:#0d3a20; --verde-med:#2e5038; --amarelo:#f1d700;
+    --titulo:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --corpo:"Instrument Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--corpo);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3,h4 { margin:0; font-family:var(--titulo); font-weight:700; line-height:1.15;
+                letter-spacing:-0.015em; text-wrap:balance; color:var(--verde-esc); }
+  p { margin:0; overflow-wrap:break-word; }
+  ul,ol { margin:0; padding:0; list-style:none; }
+  figure { margin:0; }
+
+  .env { max-width:1120px; margin:0 auto; padding-inline:20px; }
+  .med { max-width:64ch; }
+
+  /* ---------- tarja ---------- */
+  .tarja { background:var(--gelo); border-bottom:1px solid #d5e0ea; color:#42526a;
+           font-size:0.78rem; line-height:1.5; text-align:center; padding:11px 18px;
+           overflow-wrap:anywhere; }
+  .tarja b { color:var(--verde-esc); }
+  .tarja a { color:var(--verde); font-weight:600; }
+
+  /* ---------- topo ---------- */
+  .topo { display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px;
+          padding-block:18px 14px; }
+  .topo .marca img { width:168px; }
+  .nav { display:flex; flex-wrap:wrap; gap:6px 20px; font-size:0.9rem; font-weight:600;
+         margin-inline-start:auto; }
+  .nav a { text-decoration:none; color:var(--tinta2); white-space:nowrap; }
+  .nav a:hover { color:var(--verde); }
+  .topo-zap { display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+              font-weight:600; font-size:0.88rem; color:var(--verde-esc);
+              border:1.5px solid var(--verde); border-radius:99px; padding:8px 16px;
+              white-space:nowrap; }
+  .topo-zap:hover { background:var(--verde); color:#fff; }
+
+  /* ---------- botoes ---------- */
+  .btn { display:inline-block; font-family:var(--titulo); font-weight:700; font-size:0.95rem;
+         text-decoration:none; background:var(--verde); color:#fff; padding:14px 26px;
+         border-radius:8px; border:0; }
+  .btn:hover { background:var(--verde-esc); }
+  .btn:focus-visible, a:focus-visible { outline:3px solid var(--amarelo); outline-offset:3px; }
+  .btn-claro { background:var(--amarelo); color:var(--verde-esc); }
+  .btn-claro:hover { background:#ffe93a; }
+  .link-seta { font-weight:600; color:var(--verde); text-decoration:none;
+               border-bottom:2px solid var(--amarelo); padding-bottom:2px; }
+
+  /* ---------- abertura ---------- */
+  .abre { display:grid; gap:30px; padding-block:14px 46px; }
+  .abre h1 { font-size:clamp(2rem,6.2vw,3.2rem); font-weight:800; }
+  .abre .sub { font-size:clamp(1.05rem,2.4vw,1.28rem); color:var(--verde-med);
+               margin-top:16px; font-weight:500; }
+  .abre .exp { margin-top:14px; color:var(--tinta2); font-size:0.98rem; }
+  .abre .foto img { border-radius:14px; width:100%; aspect-ratio:16/11; object-fit:cover; }
+  .abre .foto figcaption { font-size:0.8rem; color:var(--tinta2); margin-top:8px; }
+  .destinos { margin-top:26px; }
+  .destinos .rot { font-size:0.74rem; letter-spacing:0.09em; text-transform:uppercase;
+                   font-weight:600; color:var(--tinta2); margin-bottom:10px; }
+  .destinos ul { display:flex; flex-wrap:wrap; gap:8px; }
+  .destinos li { font-size:0.85rem; font-weight:600; color:var(--verde-esc);
+                 background:var(--musgo); border-radius:99px; padding:6px 14px; }
+  .abre .acao { margin-top:26px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+
+  /* ---------- secoes ---------- */
+  section { padding-block:52px; }
+  .cabeca { margin-bottom:30px; }
+  .cabeca h2 { font-size:clamp(1.55rem,4vw,2.2rem); }
+  .cabeca p { margin-top:12px; color:var(--tinta2); max-width:64ch; }
+  .olho { font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;
+          color:var(--verde); margin-bottom:10px; }
+
+  /* ---------- mosaico de fotos ---------- */
+  .mosaico { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr)); }
+  .mosaico figure { margin:0; }
+  .mosaico img { width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:12px; }
+  .mosaico figcaption { font-size:0.85rem; color:var(--tinta2); margin-top:9px; font-weight:500; }
+
+  /* ---------- lista de passeios ---------- */
+  .lista { margin-top:34px; border-top:1px solid var(--linha); }
+  .lista li { display:grid; gap:6px 24px; padding-block:18px;
+              border-bottom:1px solid var(--linha); align-items:center; }
+  .lista h3 { font-size:1.05rem; font-weight:600; letter-spacing:-0.005em; }
+  .lista .tag { display:block; font-size:0.74rem; letter-spacing:0.06em; text-transform:uppercase;
+                font-weight:600; color:var(--tinta2); margin-bottom:4px; }
+  .preco { display:block; }
+  .preco .de { display:block; font-size:0.72rem; color:var(--tinta2); line-height:1.35; }
+  .preco b { font-family:var(--titulo); font-size:1.18rem; color:var(--verde-esc); font-weight:700; }
+  .preco .consulta { font-family:var(--titulo); font-size:0.98rem; color:var(--verde-med); font-weight:600; }
+  .rodape-lista { margin-top:18px; font-size:0.9rem; color:var(--tinta2); }
+
+  /* ---------- faixa de foto ---------- */
+  .faixa { padding-block:0; }
+  .faixa img { width:100%; height:clamp(92px,17vw,190px); object-fit:cover; border-radius:12px; }
+
+  /* ---------- roteiro ---------- */
+  .roteiro { background:var(--musgo); }
+  .roteiro-grade { display:grid; gap:34px; }
+  .passos li { display:flex; gap:16px; padding-block:16px; border-bottom:1px solid #dde6dc; }
+  .passos li:last-child { border-bottom:0; }
+  .passos .num { flex:0 0 34px; height:34px; border-radius:50%; background:var(--verde);
+                 color:#fff; font-family:var(--titulo); font-weight:700; font-size:0.95rem;
+                 display:flex; align-items:center; justify-content:center; }
+  .passos h3 { font-size:1.02rem; font-weight:700; }
+  .passos p { margin-top:5px; font-size:0.95rem; color:var(--tinta2); }
+  .painel { background:#fff; border:1px solid #dde6dc; border-radius:14px; padding:26px 24px;
+            align-self:start; }
+  .painel h3 { font-size:1.05rem; }
+  .painel ul { margin-top:16px; }
+  .painel li { padding:9px 0 9px 24px; font-size:0.95rem; border-bottom:1px solid #eef2ee;
+               position:relative; }
+  .painel li:last-child { border-bottom:0; }
+  .painel li::before { content:""; position:absolute; left:2px; top:17px; width:9px; height:9px;
+                       border-radius:2px; background:var(--amarelo); }
+
+  /* ---------- pacotes ---------- */
+  .pacotes { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(min(288px,100%),1fr)); }
+  .pacote { border:1px solid var(--linha); border-radius:14px; padding:24px 22px;
+            display:flex; flex-direction:column; border-top:4px solid var(--verde); }
+  .pacote h3 { font-size:1.15rem; }
+  .pacote .dur { margin-top:8px; font-size:0.86rem; font-weight:600; color:var(--verde);
+                 letter-spacing:0.02em; }
+  .pacote .itens { margin-top:16px; flex:1; }
+  .pacote .itens li { font-size:0.92rem; color:var(--tinta2); padding:4px 0 4px 18px; position:relative; }
+  .pacote .itens li::before { content:""; position:absolute; left:0; top:13px; width:8px; height:2px;
+                              background:var(--verde); }
+  .pacote .preco { margin-top:18px; padding-top:16px; border-top:1px solid var(--linha); }
+  .pacote .parcela { display:block; font-size:0.74rem; color:var(--tinta2); margin-top:2px; }
+  .nota-card { background:var(--gelo); border:1px solid #d7e2ec; border-radius:14px; padding:24px 22px; }
+  .nota-card h3 { font-size:1.08rem; }
+  .nota-card p { margin-top:10px; font-size:0.93rem; color:var(--tinta2); }
+
+  /* ---------- pantanal ---------- */
+  .tira { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));
+          margin-bottom:34px; }
+  .tira figure { margin:0; }
+  .tira img { width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:11px; }
+  .tira figcaption { font-size:0.8rem; color:var(--tinta2); margin-top:8px; }
+  .duas { display:grid; gap:30px; }
+  .exemplo { background:var(--verde-esc); color:#e7f0e8; border-radius:14px; padding:28px 24px;
+             align-self:start; }
+  .exemplo h3 { color:#fff; font-size:1.1rem; }
+  .exemplo .meta { margin-top:6px; font-size:0.82rem; color:#a9c7b2; font-weight:600;
+                   letter-spacing:0.04em; text-transform:uppercase; }
+  .exemplo p { margin-top:14px; font-size:0.93rem; color:#cfe0d3; }
+  .exemplo dl { margin:18px 0 0; display:grid; gap:12px; }
+  .exemplo dt { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+                color:var(--amarelo); font-weight:600; }
+  .exemplo dd { margin:3px 0 0; font-size:0.93rem; color:#e7f0e8; }
+
+  /* ---------- conduta ---------- */
+  .conduta { background:var(--musgo); }
+  .regras { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr)); }
+  .regras li { background:#fff; border-radius:12px; padding:22px 20px; border:1px solid #dde6dc; }
+  .regras h3 { font-size:1rem; }
+  .regras p { margin-top:8px; font-size:0.92rem; color:var(--tinta2); }
+
+  /* ---------- agencia ---------- */
+  .agencia-grade { display:grid; gap:34px; align-items:start; }
+  .agencia-foto img { width:100%; border-radius:14px; }
+  .agencia-foto figcaption { font-size:0.82rem; color:var(--tinta2); margin-top:9px; }
+  .agencia-texto p + p { margin-top:14px; }
+  .lema { font-family:var(--titulo); font-size:1.12rem; font-weight:600; color:var(--verde-esc);
+          border-left:4px solid var(--amarelo); padding-left:16px; }
+  .ficha { margin-top:24px; border:1px solid var(--linha); border-radius:12px; padding:20px;
+           font-size:0.92rem; }
+  .ficha dt { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+              color:var(--tinta2); font-weight:600; }
+  .ficha dd { margin:3px 0 14px; overflow-wrap:anywhere; }
+  .ficha dd:last-child { margin-bottom:0; }
+
+  /* ---------- orcamento ---------- */
+  .orcamento { background:var(--verde); color:#fff; }
+  .orcamento h2 { color:#fff; font-size:clamp(1.5rem,4vw,2.1rem); }
+  .orcamento p { margin-top:14px; color:#d5e6da; max-width:56ch; }
+  .orcamento .acao { margin-top:26px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .orcamento .alt { font-size:0.9rem; color:#cfe2d5; text-decoration:none; font-weight:600;
+                    border-bottom:2px solid rgba(255,255,255,0.4); padding-bottom:2px; }
+
+  /* ---------- contato ---------- */
+  .contatos { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(min(228px,100%),1fr)); }
+  .cartao { border:1px solid var(--linha); border-radius:12px; padding:22px 20px; }
+  .cartao .rot { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+                 color:var(--tinta2); font-weight:600; }
+  .cartao .val { display:block; margin-top:8px; font-family:var(--titulo); font-weight:700;
+                 font-size:1.04rem; color:var(--verde-esc); text-decoration:none;
+                 overflow-wrap:anywhere; }
+  .cartao .val-mail { font-size:0.9rem; letter-spacing:-0.005em; }
+  .cartao .val:hover { color:var(--verde); }
+  .cartao .obs { margin-top:8px; font-size:0.85rem; color:var(--tinta2); overflow-wrap:anywhere; }
+
+  /* ---------- rodape ---------- */
+  .rodape { border-top:1px solid var(--linha); padding-block:30px 40px; font-size:0.85rem;
+            color:var(--tinta2); }
+  .rodape img { width:150px; margin-bottom:14px; }
+  .rodape p { overflow-wrap:anywhere; }
+  .rodape p + p { margin-top:8px; }
+  .rodape a { color:var(--verde); }
+
+  @media (min-width:700px) {
+    .roteiro-grade { grid-template-columns:1.15fr 0.85fr; gap:40px; }
+    .agencia-grade { grid-template-columns:1.05fr 0.95fr; gap:40px; }
+    .lista li { grid-template-columns:minmax(0,1fr) minmax(0,190px); }
+    .preco { text-align:right; }
+  }
+  @media (min-width:900px) {
+    body { font-size:17.5px; }
+    .abre { grid-template-columns:1.05fr 0.95fr; align-items:center; gap:46px;
+            padding-block:26px 64px; }
+    section { padding-block:64px; }
+    .duas { grid-template-columns:1.12fr 0.88fr; gap:40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tarja">
+  <b>Proposta de redesenho não solicitada</b>, feita por Refeito. Não é o site oficial da Bonito Way.
+  O site oficial é <a href="https://www.bonitoway.com.br/">bonitoway.com.br</a>.
+  Todas as fotos, textos e informações são deles.
+</div>
+
+<header class="env topo">
+  <div class="marca">
+    <img src="img/logo.webp" alt="Bonito Way — Agência de Turismo" width="168" height="48">
+  </div>
+  <nav class="nav">
+    <a href="#passeios">Passeios</a>
+    <a href="#roteiro">Roteiro</a>
+    <a href="#pacotes">Pacotes</a>
+    <a href="#pantanal">Pantanal</a>
+    <a href="#agencia">A agência</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="topo-zap" href="https://wa.me/5567984691184">Vendas: (67) 98469-1184</a>
+</header>
+
+<div class="env abre">
+  <div>
+    <h1>Descubra Bonito MS e Pantanal com a Bonito Way</h1>
+    <p class="sub">Passeios imperdíveis, transporte, ingressos para os atrativos e mais.</p>
+    <p class="exp">Agência de turismo com mais de 18 anos de experiência em Bonito MS e Pantanal Sul.</p>
+    <div class="destinos">
+      <p class="rot">Serra da Bodoquena e outros destinos de Mato Grosso do Sul</p>
+      <ul>
+        <li>Bonito</li><li>Jardim</li><li>Bodoquena</li><li>Porto Murtinho</li>
+        <li>Aquidauana</li><li>Miranda</li><li>Corumbá</li><li>Campo Grande</li>
+      </ul>
+    </div>
+    <div class="acao">
+      <a class="btn" href="#passeios">Ver os passeios</a>
+      <a class="link-seta" href="https://orcamento.bonitoway.com.br/">Pedir um orçamento</a>
+    </div>
+  </div>
+  <figure class="foto">
+    <img src="img/cachoeira.webp" alt="Quedas largas de uma cachoeira caindo num poço de água esverdeada, com deque de madeira à esquerda" width="1000" height="562">
+    <figcaption>Cachoeira na região de Bonito, Mato Grosso do Sul.</figcaption>
+  </figure>
+</div>
+
+<section id="passeios" class="env">
+  <div class="cabeca">
+    <p class="olho">Bonito, Jardim e Bodoquena</p>
+    <h2>Principais passeios em Bonito MS e região</h2>
+    <p>Conheça os passeios mais procurados de Bonito MS com preços atualizados. Garanta sua vaga
+       com antecedência e monte seu roteiro ideal. A Bonito Way cuida da reserva, dos ingressos
+       para os atrativos e do transporte até eles.</p>
+  </div>
+
+  <div class="mosaico">
+    <figure>
+      <img src="img/gruta.webp" alt="Salão de gruta iluminado, com estalactites e uma coluna de rocha no centro" width="820" height="461" loading="lazy">
+      <figcaption>Gruta na região de Bonito MS.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/flutuacao.webp" alt="Vista submersa de um rio de água clara, com peixes e vegetação no fundo de pedra" width="820" height="461" loading="lazy">
+      <figcaption>Flutuação e mergulho nos rios de água transparente.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/serra.webp" alt="Rio largo e calmo diante de morros cobertos de mata" width="480" height="305" loading="lazy">
+      <figcaption>Rio e mata na Serra da Bodoquena.</figcaption>
+    </figure>
+  </div>
+
+  <ul class="lista">
+    <li>
+      <div>
+        <span class="tag">Bonito · Aventura</span>
+        <h3>Passeio de Quadriciclo Rotta Zagaia</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 235,00</b></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Jardim · Mergulho</span>
+        <h3>Mergulho com cilindro no Rio da Prata</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 410,00</b></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Bonito · Flutuação</span>
+        <h3>Flutuação Barra do Sucuri</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 269,00</b></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Bodoquena · Trilhas e cachoeiras</span>
+        <h3>Trilha Discovery — trilha e cachoeiras na Boca da Onça</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 665,00</b></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Bonito · Flutuação</span>
+        <h3>Flutuação no Rio Formoso — Praia da Figueira</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 250,00</b></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Bonito · Aventura</span>
+        <h3>Boia Cross Parque Ecológico Rio Formoso</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 210,00</b></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Bonito · Mergulho</span>
+        <h3>Abismo Anhumas — rapel e mergulho de batismo</h3>
+      </div>
+      <p class="preco"><span class="consulta">Sob consulta</span></p>
+    </li>
+    <li>
+      <div>
+        <span class="tag">Bonito · Grutas</span>
+        <h3>Gruta Catedral</h3>
+      </div>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 103,00</b></p>
+    </li>
+  </ul>
+  <p class="rodape-lista">Bonito MS é um dos principais destinos de ecoturismo do Brasil.
+     A lista completa de passeios, com disponibilidade por data, fica no
+     <a class="link-seta" href="https://www.bonitoway.com.br/">site da Bonito Way</a>.</p>
+</section>
+
+<div class="env faixa">
+  <img src="img/cardume.webp" alt="Cardume de peixes visto de cima, na água clara e esverdeada de um rio" width="860" height="156" loading="lazy">
+</div>
+
+<section id="roteiro" class="roteiro">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">O trabalho da agência</p>
+      <h2>Como a Bonito Way monta o seu roteiro</h2>
+      <p>Fale com os especialistas e solicite um roteiro totalmente personalizado para você
+         ou para o seu grupo.</p>
+    </div>
+
+    <div class="roteiro-grade">
+      <ol class="passos">
+        <li>
+          <span class="num">1</span>
+          <div>
+            <h3>Chame no WhatsApp</h3>
+            <p>Tire suas dúvidas com um agente de turismo e comece a montar o roteiro.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div>
+            <h3>Receba um roteiro personalizado</h3>
+            <p>Flexibilidade para ajustar os passeios ao perfil do grupo, à data e ao tempo
+               que você tem na cidade.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div>
+            <h3>Parcele em até 10x sem juros</h3>
+            <p>Pagamento em até dez vezes sem juros no cartão de crédito.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">4</span>
+          <div>
+            <h3>Seja recebido na chegada</h3>
+            <p>Única empresa com receptivo no aeroporto de Campo Grande, com infraestrutura e
+               suporte desde o momento da sua chegada ao Mato Grosso do Sul.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">5</span>
+          <div>
+            <h3>Tenha atendimento no destino</h3>
+            <p>Atendimento a passageiros já em viagem, por telefone fixo e WhatsApp, no
+               <a href="tel:+556732551046">(67) 3255-1046</a>.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="painel">
+        <h3>O que a Bonito Way reserva para você</h3>
+        <ul>
+          <li>Passeios e ingressos para os atrativos</li>
+          <li>Hospedagem</li>
+          <li>Transporte terrestre</li>
+          <li>Locação de veículos</li>
+          <li>Passagem aérea</li>
+          <li>Logística para eventos</li>
+          <li>Destination wedding em Bonito MS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pacotes" class="env">
+  <div class="cabeca">
+    <p class="olho">Roteiros prontos</p>
+    <h2>Pacotes selecionados para sua viagem a Bonito MS</h2>
+    <p>Opções prontas para quem busca praticidade, economia e com os passeios mais procurados.
+       Pacotes pensados para diferentes perfis de viajantes.</p>
+  </div>
+
+  <div class="pacotes">
+    <article class="pacote">
+      <h3>Pacote Econômico</h3>
+      <p class="dur">3 dias · 4 passeios</p>
+      <ul class="itens">
+        <li>2 balneários</li>
+        <li>1 flutuação</li>
+        <li>1 gruta</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 787,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <article class="pacote">
+      <h3>Pacote Casal</h3>
+      <p class="dur">4 dias · 7 passeios</p>
+      <ul class="itens">
+        <li>2 flutuações</li>
+        <li>1 balneário e 1 gruta</li>
+        <li>1 passeio de boia cross</li>
+        <li>1 contemplação</li>
+        <li>1 trilha com cachoeiras</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 1.567,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <article class="pacote">
+      <h3>Pacote Viajando Sozinho</h3>
+      <p class="dur">4 dias · 5 passeios</p>
+      <ul class="itens">
+        <li>2 flutuações</li>
+        <li>1 trilha com cachoeiras</li>
+        <li>1 balneário e 1 gruta</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 1.601,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <article class="pacote">
+      <h3>Pacote Família</h3>
+      <p class="dur">5 dias · 6 passeios</p>
+      <ul class="itens">
+        <li>1 flutuação</li>
+        <li>1 arvorismo</li>
+        <li>1 trilha com cachoeiras</li>
+        <li>1 day use no Pantanal</li>
+        <li>2 balneários e outras aventuras</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 1.557,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <article class="pacote">
+      <h3>Pacote Bonito com Crianças</h3>
+      <p class="dur">5 dias · 6 passeios</p>
+      <ul class="itens">
+        <li>2 balneários</li>
+        <li>1 flutuação</li>
+        <li>1 trilha com cachoeira e 1 arvorismo</li>
+        <li>1 day use no Pantanal</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 1.557,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <article class="pacote">
+      <h3>Pacote Especial Grupo de Amigos</h3>
+      <p class="dur">5 dias · 6 passeios</p>
+      <ul class="itens">
+        <li>2 flutuações</li>
+        <li>2 trilhas com cachoeiras</li>
+        <li>1 balneário</li>
+        <li>1 contemplação</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 1.794,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <article class="pacote">
+      <h3>Pacote Bonito + Pantanal</h3>
+      <p class="dur">5 dias · 7 passeios</p>
+      <ul class="itens">
+        <li>2 flutuações</li>
+        <li>2 trilhas com cachoeiras</li>
+        <li>1 gruta e 1 contemplação</li>
+        <li>1 day use no Pantanal</li>
+      </ul>
+      <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 2.366,00</b>
+        <span class="parcela">em até 10x sem juros</span></p>
+    </article>
+
+    <div class="nota-card">
+      <h3>Baixa temporada</h3>
+      <p>Aproveite os melhores pacotes promocionais para Bonito MS e região. Tudo personalizado
+         para você.</p>
+      <p>Os pacotes de baixa temporada de agosto e setembro vão de 3 a 7 dias, em Bonito MS,
+         região e Pantanal, e saem sob consulta.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pantanal" class="env">
+  <div class="cabeca">
+    <p class="olho">Duas viagens numa só</p>
+    <h2>Quer aproveitar Bonito MS e Pantanal na mesma viagem?</h2>
+    <p>Com nossos roteiros personalizados, você vive duas experiências incríveis em uma só viagem.
+       Nós cuidamos de tudo para você aproveitar cada momento.</p>
+  </div>
+
+  <div class="tira">
+    <figure>
+      <img src="img/pantanal-safari.webp" alt="Veículo de safári numa estrada de terra entre campos alagados do Pantanal, visto do alto" width="820" height="461" loading="lazy">
+      <figcaption>Estrada e campos alagados no Pantanal.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/salobra-portal.webp" alt="Portal de troncos com placa de madeira entalhada e um balanço pendurado por correntes" width="760" height="388" loading="lazy">
+      <figcaption>Entrada do Projeto Salobra, no Pantanal de Miranda.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/salobra-carreta.webp" alt="Caminhão amarelo com bancos cobertos na carroceria, parado num descampado de areia entre palmeiras" width="760" height="388" loading="lazy">
+      <figcaption>O transporte que leva da recepção até a trilha.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/salobra-barco.webp" alt="Barco de alumínio com bancos verdes, encostado num braço de rio cercado de aguapés" width="760" height="388" loading="lazy">
+      <figcaption>Barco do passeio no rio, no Projeto Salobra.</figcaption>
+    </figure>
+  </div>
+
+  <div class="duas">
+    <div>
+      <ul class="lista" style="margin-top:0">
+        <li>
+          <div>
+            <span class="tag">Pantanal · Day use</span>
+            <h3>Fazenda San Francisco — day use no Pantanal com almoço</h3>
+          </div>
+          <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 438,00</b></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Pantanal · Noturno</span>
+            <h3>Focagem noturna na Fazenda San Francisco, sem jantar</h3>
+          </div>
+          <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 346,00</b></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Pantanal · Barco</span>
+            <h3>Passeio de chalana na Fazenda San Francisco</h3>
+          </div>
+          <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 318,00</b></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Pantanal · Day use</span>
+            <h3>Projeto Salobra — passeio Encontro das Águas, com almoço pantaneiro</h3>
+          </div>
+          <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 395,00</b></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Pantanal · Day use</span>
+            <h3>Pantanal Experiência — Vida de Comitiva 100% Peão, com almoço</h3>
+          </div>
+          <p class="preco"><span class="de">Preço por pessoa a partir de</span><b>R$ 645,00</b></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Pantanal · Day use</span>
+            <h3>Pantanal Experiência — Cheiros e Sabores do Pantanal, com almoço</h3>
+          </div>
+          <p class="preco"><span class="consulta">Sob consulta</span></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Pantanal · Pacote</span>
+            <h3>Pantanal de Miranda — 5 dias e 4 noites</h3>
+          </div>
+          <p class="preco"><span class="consulta">Sob consulta</span></p>
+        </li>
+        <li>
+          <div>
+            <span class="tag">Bonito e Pantanal · Pacote</span>
+            <h3>Bonito e Pantanal — 6 dias e 5 noites</h3>
+          </div>
+          <p class="preco"><span class="consulta">Sob consulta</span></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="exemplo">
+      <h3>Como é um day use, por dentro</h3>
+      <p class="meta">Projeto Salobra · 4 horas · manhã</p>
+      <p>Você navega até o encontro das águas, onde as águas barrentas do Rio Miranda e as
+         águas transparentes do Rio Salobra se tornam uma só. A recepção é com café fresco e
+         chipa paraguaia, seguida de passeio de carreta numa trilha de 3 km até o porto, trilha
+         plana de cerca de 1 km por mata ciliar, banho de rio e passeio de barco. Na volta,
+         mirante para observação de aves e redário.</p>
+      <dl>
+        <dt>O preço inclui</dt>
+        <dd>Guia pantaneiro em português e almoço, sem bebidas.</dd>
+        <dt>O preço não inclui</dt>
+        <dd>Transporte até o local.</dd>
+        <dt>Indicado para</dt>
+        <dd>Crianças de qualquer idade. Trilha plana.</dd>
+        <dt>O que levar</dt>
+        <dd>Tênis, repelente e protetor solar. O colete salva-vidas é fornecido.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="conduta" class="conduta">
+  <div class="env">
+    <div class="cabeca">
+      <p class="olho">Recomendações importantes durante os passeios</p>
+      <h2>A fauna daqui não se toca</h2>
+      <p>A Bonito Way repudia qualquer prática que envolva maus-tratos, exploração ou contato
+         inadequado com animais.</p>
+    </div>
+    <ul class="regras">
+      <li>
+        <h3>Contato com animais silvestres</h3>
+        <p>O contato físico com animais silvestres é estritamente proibido. A interação inadequada
+           causa estresse aos animais e oferece risco à sua saúde e segurança.</p>
+      </li>
+      <li>
+        <h3>Observação responsável</h3>
+        <p>Mantenha distância segura, evite barulhos excessivos que possam perturbar os animais e
+           jamais tente alimentá-los.</p>
+      </li>
+      <li>
+        <h3>Fotografia consciente</h3>
+        <p>Registre a fauna sem interferir no habitat dela: sem flash, sem movimentos bruscos e
+           sem forçar a aproximação para obter a foto perfeita.</p>
+      </li>
+      <li>
+        <h3>Preservação ambiental</h3>
+        <p>Não jogue lixo nas trilhas, recolha o seu e descarte em local apropriado. Respeite a
+           sinalização e as instruções dos guias.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="agencia" class="env">
+  <div class="cabeca">
+    <p class="olho">Rua General Osório, no Centro de Bonito</p>
+    <h2>A agência, e quem atende você nela</h2>
+  </div>
+  <div class="agencia-grade">
+    <figure class="agencia-foto">
+      <img src="img/agencia-equipe.webp" alt="Prédio de esquina com faixas verdes e a placa Agência de Turismo, com um grupo de funcionários enfileirado na calçada" width="600" height="400" loading="lazy">
+      <figcaption>A equipe da Bonito Way na porta da agência, em Bonito MS.</figcaption>
+    </figure>
+    <div class="agencia-texto">
+      <p>A Bonito Way é uma agência de turismo localizada em Bonito MS. Nosso atendimento não se
+         limita a Bonito e ao Pantanal Sul: somos especialistas em proporcionar experiências de
+         viagem em toda a região da Serra da Bodoquena e em outros destinos de Mato Grosso do
+         Sul.</p>
+      <p>Colocamos à disposição uma equipe de especialistas em turismo regional, garantindo um
+         atendimento dinâmico e eficiente na venda dos nossos destinos.</p>
+      <p class="lema">Inspirar, emocionar e surpreender são os diferenciais da Bonito Way.</p>
+      <dl class="ficha">
+        <dt>Razão social</dt>
+        <dd>Bonito Way Turismo e Eventos</dd>
+        <dt>CNPJ</dt>
+        <dd>09.235.424/0001-00</dd>
+        <dt>Endereço</dt>
+        <dd>Rua General Osório, 865 — Centro, Bonito, Mato Grosso do Sul, CEP 79290-000</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="orcamento">
+  <div class="env">
+    <h2>Monte o roteiro e peça o orçamento</h2>
+    <p>O pedido de orçamento vai para o sistema da própria Bonito Way, onde um agente de turismo
+       responde com o roteiro montado. Parcelamento em até 10x sem juros no cartão de crédito.</p>
+    <div class="acao">
+      <a class="btn btn-claro" href="https://orcamento.bonitoway.com.br/">Pedir orçamento</a>
+      <a class="alt" href="https://wa.me/5567984691184">Ou falar com vendas no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="env">
+  <div class="cabeca">
+    <h2>Contato</h2>
+  </div>
+  <div class="contatos">
+    <div class="cartao">
+      <p class="rot">Vendas</p>
+      <a class="val" href="https://wa.me/5567984691184">(67) 98469-1184</a>
+      <p class="obs">Telefone e WhatsApp.</p>
+    </div>
+    <div class="cartao">
+      <p class="rot">Passageiros no destino</p>
+      <a class="val" href="tel:+556732551046">(67) 3255-1046</a>
+      <p class="obs">Telefone fixo e WhatsApp, para quem já está em viagem.</p>
+    </div>
+    <div class="cartao">
+      <p class="rot">E-mail</p>
+      <a class="val val-mail" href="mailto:contato@bonitoway.com.br">contato@bonitoway.com.br</a>
+    </div>
+    <div class="cartao">
+      <p class="rot">Endereço</p>
+      <span class="val">Rua General Osório, 865</span>
+      <p class="obs">Centro, Bonito — Mato Grosso do Sul, CEP 79290-000</p>
+    </div>
+  </div>
+</section>
+
+<footer class="env rodape">
+  <img src="img/logo.webp" alt="Bonito Way" width="150" height="43" loading="lazy">
+  <p>Bonito Way Turismo e Eventos — CNPJ 09.235.424/0001-00 — Rua General Osório, 865, Centro,
+     Bonito, Mato Grosso do Sul, CEP 79290-000.</p>
+  <p>Esta página é uma proposta de redesenho feita por Refeito e não é o site oficial da
+     Bonito Way. O site oficial é
+     <a href="https://www.bonitoway.com.br/">bonitoway.com.br</a>, e as fotos, os textos, os
+     preços e os dados aqui vieram de lá.</p>
+</footer>
+
+</body>
+</html>
