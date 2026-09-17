@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nevoar Ar-Condicionado — PMOC, instalação e limpeza em Taguatinga, Brasília/DF</title>
+<meta name="description" content="Elaboração de PMOC, instalação, limpeza e revenda de ar-condicionado. A Nevoar instala qualquer marca comercializada no Brasil, com garantia de 12 meses no serviço. Taguatinga Sul, Brasília – DF.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<style>
+  /* Paleta lida do site atual: o azul-petróleo rgb(0,56,85) das faixas, o
+     cinza-azulado rgb(240,241,248) das áreas claras e o âmbar rgb(228,161,0). */
+  :root {
+    --papel:#ffffff; --papel2:#f0f1f8; --linha:#dde0ec;
+    --tinta:#10243a; --tinta2:#55647c;
+    --petroleo:#003855; --petroleo2:#00293e; --petroleoclaro:#b6ccd8;
+    --ambar:#e4a100; --ambar2:#c48a00;
+    --fonte:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--fonte);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; line-height:1.18; letter-spacing:-0.012em; text-wrap:balance; }
+  p, ul, ol { margin:0; padding:0; }
+  li { list-style:none; }
+
+  .env { max-width:1120px; margin:0 auto; padding-inline:20px; }
+
+  .tarja { background:var(--petroleo2); color:var(--petroleoclaro); border-bottom:2px solid var(--ambar);
+           font-size:0.79rem; line-height:1.5; text-align:center; overflow-wrap:anywhere;
+           padding:10px 18px; padding-top:calc(10px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:#fff; font-weight:600; }
+  .tarja a { color:#fff; }
+
+  /* A logo que eles publicam é branca e sem fundo, então o topo e a abertura
+     do PMOC ficam na faixa azul-petróleo do site atual. */
+  .azul { background:var(--petroleo); color:#fff; }
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:12px 22px;
+          flex-wrap:wrap; padding-block:16px; }
+  .topo .marca img { height:40px; width:auto; }
+  .topo .fones { display:flex; gap:8px 22px; flex-wrap:wrap; align-items:center; }
+  .topo .fones a { text-decoration:none; font-weight:700; white-space:nowrap; }
+
+  .btn { display:inline-block; text-decoration:none; font-weight:700; font-size:0.93rem;
+         padding:13px 22px; border-radius:30px; border:2px solid var(--ambar);
+         background:var(--ambar); color:#16202b; }
+  .btn:hover { background:var(--ambar2); border-color:var(--ambar2); }
+  .btn:focus-visible { outline:3px solid #fff; outline-offset:2px; }
+  .btn.linha { background:transparent; color:#fff; border-color:rgba(255,255,255,0.45); }
+  .btn.linha:hover { border-color:#fff; }
+  .btn.azulada { background:var(--petroleo); border-color:var(--petroleo); color:#fff; }
+  .btn.azulada:hover { background:var(--petroleo2); border-color:var(--petroleo2); }
+
+  /* PMOC é o que traz contrato recorrente, então abre a página. */
+  .abertura { display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px;
+              align-items:start; padding-block:38px 50px; }
+  .abertura > * { min-width:0; }
+  .abertura h1 { font-size:clamp(1.85rem,4.6vw,2.75rem); font-weight:800; }
+  .abertura .fala { margin-top:18px; color:#dbe6ec; font-size:1.03rem; max-width:52ch; }
+  .abertura .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .abertura .local { margin-top:24px; font-size:0.88rem; color:var(--petroleoclaro); }
+
+  .cartao-pmoc { background:#ffffff; color:var(--tinta); border-radius:14px; padding:28px 26px;
+                 border-top:6px solid var(--ambar); }
+  .cartao-pmoc .sigla { font-size:0.68rem; font-weight:800; letter-spacing:0.2em;
+                        text-transform:uppercase; color:var(--ambar2); }
+  .cartao-pmoc h2 { font-size:1.28rem; font-weight:800; margin-top:8px; }
+  .cartao-pmoc blockquote { margin:16px 0 0; padding-left:16px; border-left:3px solid var(--linha);
+                            font-size:1.02rem; }
+  .cartao-pmoc cite { display:block; font-style:normal; font-size:0.82rem; color:var(--tinta2); margin-top:10px; }
+
+  section { padding-block:56px; }
+  .rotulo { font-size:0.69rem; font-weight:800; letter-spacing:0.17em; text-transform:uppercase;
+            color:var(--ambar2); margin-bottom:11px; }
+  h2 { font-size:clamp(1.5rem,3.6vw,2.05rem); font-weight:800; }
+  .linha-apoio { margin-top:12px; max-width:64ch; color:var(--tinta2); font-size:1.01rem; }
+  .claro { background:var(--papel2); }
+
+  /* Licitação: é o que separa quem vende para prédio e órgão de quem vende
+     para apartamento. */
+  .licitar { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));
+             gap:30px 46px; margin-top:24px; }
+  .licitar > div { min-width:0; }
+  .licitar p + p { margin-top:14px; }
+  .licitar p { color:var(--tinta2); }
+  .licitar .pergunta { font-size:1.12rem; font-weight:700; color:var(--tinta); }
+  .clientes { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .clientes li { border:1px solid var(--linha); background:var(--papel); border-radius:20px;
+                 padding:6px 14px; font-size:0.85rem; font-weight:600; }
+  .clientes-titulo { font-size:0.9rem; font-weight:700; }
+
+  .servicos { margin-top:28px; border-top:2px solid var(--tinta); }
+  .servicos > li { display:grid; grid-template-columns:1fr; gap:6px 28px; padding-block:22px;
+                   border-bottom:1px solid var(--linha); }
+  .servicos > li > * { min-width:0; }
+  .servicos h3 { font-size:1.15rem; font-weight:800; }
+  .servicos p { color:var(--tinta2); font-size:0.99rem; }
+  @media (min-width:720px) { .servicos > li { grid-template-columns:230px 1fr; } }
+
+  .promessas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));
+               gap:26px 36px; margin-top:26px; }
+  .promessas > div { min-width:0; }
+  .promessas h3 { font-size:1.02rem; font-weight:800; color:var(--petroleo); }
+  .promessas p { margin-top:7px; color:var(--tinta2); font-size:0.97rem; }
+
+  .galeria { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));
+             gap:12px; margin-top:26px; }
+  .galeria figure { margin:0; min-width:0; }
+  .galeria img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px; background:var(--papel2); }
+  @media (min-width:840px) {
+    .galeria { grid-template-columns:repeat(4,1fr); }
+    .galeria figure:first-child { grid-column:span 2; grid-row:span 2; }
+    .galeria figure:first-child img { aspect-ratio:auto; height:100%; }
+  }
+
+  .depoimentos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));
+                 gap:20px; margin-top:26px; }
+  .depoimentos figure { margin:0; min-width:0; background:var(--papel); border:1px solid var(--linha);
+                        border-radius:12px; padding:24px 22px; }
+  .depoimentos blockquote { margin:0; font-size:0.99rem; }
+  .depoimentos figcaption { margin-top:14px; font-size:0.85rem; font-weight:700; color:var(--petroleo); }
+
+  .chamada { background:var(--petroleo); color:#fff; }
+  .chamada .env { padding-block:44px; }
+  .chamada h2 { max-width:22ch; }
+  .chamada p { margin-top:12px; max-width:56ch; color:#dbe6ec; font-size:1.03rem; }
+  .chamada .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+
+  .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));
+              gap:24px 28px; margin-top:26px; }
+  .contatos > * { min-width:0; text-decoration:none; }
+  .contatos b { display:block; font-size:0.65rem; font-weight:800; letter-spacing:0.14em;
+                text-transform:uppercase; color:var(--tinta2); margin-bottom:5px; }
+  .contatos span { display:block; font-weight:700; font-size:1.05rem; line-height:1.36;
+                   overflow-wrap:anywhere; }
+  .contatos em { display:block; font-style:normal; font-size:0.8rem; font-weight:500;
+                 color:var(--tinta2); margin-top:3px; }
+  .pagamento { margin-top:30px; padding-top:20px; border-top:1px solid var(--linha); }
+  .pagamento b { font-size:0.65rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase;
+                 color:var(--tinta2); }
+  .pagamento p { margin-top:6px; color:var(--tinta2); font-size:0.94rem; }
+
+  footer { background:var(--petroleo2); color:var(--petroleoclaro); }
+  footer .env { padding-block:36px; }
+  footer p { max-width:74ch; font-size:0.93rem; }
+  footer p + p { margin-top:12px; }
+  footer .fim { margin-top:22px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.13);
+                font-size:0.79rem; }
+
+  @media (max-width:760px) {
+    section { padding-block:42px; }
+    .abertura { grid-template-columns:1fr; gap:30px; padding-block:30px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<p class="tarja">Proposta de redesenho não solicitada, feita por Refeito. <b>Não é o site oficial da Nevoar Ar-Condicionado.</b> O site oficial é <a href="https://nevoar.com.br/">nevoar.com.br</a>. Todas as fotos, textos e informações são deles.</p>
+
+<div class="azul">
+  <div class="env">
+    <div class="topo">
+      <span class="marca"><img src="img/logo-nevoar.webp" width="460" height="104" alt="Nevoar Ar-Condicionado"></span>
+      <span class="fones">
+        <a href="tel:+556130461240">(61) 3046-1240</a>
+        <a href="https://wa.me/5561984591417">WhatsApp (61) 98459-1417</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="env">
+    <div class="abertura">
+      <div>
+        <h1>PMOC, instalação e limpeza de ar-condicionado.</h1>
+        <p class="fala">A Nevoar é uma empresa que oferece serviços de Instalação e Manutenção de Ar-condicionado. Trabalhamos com Qualidade, Segurança, Praticidade e Transparência em todos os serviços prestados.</p>
+        <div class="acoes">
+          <a class="btn" href="https://wa.me/5561984591417">Pedir orçamento no WhatsApp</a>
+          <a class="btn linha" href="#servicos">Ver os serviços</a>
+        </div>
+        <p class="local">Taguatinga Sul, Brasília – DF · A Nevoar instala qualquer marca de ar-condicionado comercializada no Brasil.</p>
+      </div>
+
+      <div class="cartao-pmoc">
+        <p class="sigla">PMOC</p>
+        <h2>Plano de Manutenção, Operação e Controle</h2>
+        <blockquote>“Elaboração de Plano de Manutenção Operação e Controle de acordo com portaria estabelecida pelo Ministério da Saúde.”</blockquote>
+        <cite>Como a Nevoar descreve o serviço no site dela.</cite>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="claro" id="licitar">
+  <div class="env">
+    <p class="rotulo">Para prédio, empresa e órgão público</p>
+    <h2>Aptos para Licitar</h2>
+    <div class="licitar">
+      <div>
+        <p class="pergunta">Você sabia que somente uma empresa com tempo de mercado, em dia com seus impostos e em situação legal pode licitar?</p>
+        <p>Trabalhamos com notas fiscais e estamos em dia com nossos impostos. Somos uma empresa consolidada em que você confia seus serviços.</p>
+      </div>
+      <div>
+        <p class="clientes-titulo">Alguns de nossos clientes:</p>
+        <ul class="clientes">
+          <li>Câmara Legislativa do Distrito Federal</li>
+          <li>Seara</li>
+          <li>Sicoob Empresarial</li>
+          <li>TIVIT</li>
+          <li>Cascol Combustíveis</li>
+          <li>Emplavi</li>
+          <li>SAGA</li>
+          <li>KIHAP</li>
+          <li>lew’lara\TBWA</li>
+          <li>Advocacia Dias de Souza</li>
+          <li>Ministry of Foreign Affairs — Singapore</li>
+          <li>Instituto de Proctologia e Cirurgia Geral (IPCG)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="env">
+    <p class="rotulo">Serviços</p>
+    <h2>O que a Nevoar faz</h2>
+    <ul class="servicos">
+      <li>
+        <h3>Instalação</h3>
+        <p>Com a Nevoar - Ar-Condicionado você tem a solução completa para instalar seu aparelho com comodidade, seriedade, qualidade e segurança.</p>
+      </li>
+      <li>
+        <h3>Limpeza</h3>
+        <p>Em um ambiente climatizado há grande concentração e circulação de pessoas. A limpeza periódica do seu condicionador é muito importante.</p>
+      </li>
+      <li>
+        <h3>PMOC</h3>
+        <p>Elaboração de Plano de Manutenção Operação e Controle de acordo com portaria estabelecida pelo Ministério da Saúde.</p>
+      </li>
+      <li>
+        <h3>Revenda de Produtos</h3>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="claro">
+  <div class="env">
+    <p class="rotulo">Marca, garantia e equipe</p>
+    <h2>O que a Nevoar garante por escrito</h2>
+    <div class="promessas">
+      <div>
+        <h3>Qualquer marca</h3>
+        <p>A Nevoar instala qualquer marca de ar-condicionado comercializada no Brasil.</p>
+      </div>
+      <div>
+        <h3>Garantia de 12 meses</h3>
+        <p>Garantia de 12 (doze) meses no serviço, desde que seja totalmente realizada pela Nevoar.</p>
+      </div>
+      <div>
+        <h3>Técnicos capacitados</h3>
+        <p>Nossos Técnicos são capacitados e especializados, além de passarem constantes treinamentos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="env">
+    <p class="rotulo">Galeria</p>
+    <h2>Fotos dos serviços</h2>
+    <p class="linha-apoio">As mesmas fotos que a Nevoar publica na galeria do site dela.</p>
+    <div class="galeria">
+      <figure><img src="img/fachada-predio.webp" width="680" height="510" alt="Fachada de prédio com condensadoras instaladas em duas unidades"></figure>
+      <figure><img src="img/forro-comercial.webp" width="760" height="570" alt="Sala comercial com forro rebaixado, difusores e escada de trabalho"></figure>
+      <figure><img src="img/cassete-teto.webp" width="760" height="570" alt="Unidade cassete embutida no forro de um ambiente comercial"></figure>
+      <figure><img src="img/area-tecnica.webp" width="760" height="570" loading="lazy" alt="Condensadora ao lado dos quadros vermelhos na área técnica do prédio"></figure>
+      <figure><img src="img/condensadora-externa.webp" width="760" height="570" loading="lazy" alt="Condensadora fixada em suporte sob o beiral, do lado de fora"></figure>
+      <figure><img src="img/corredor-piso-teto.webp" width="760" height="570" loading="lazy" alt="Aparelho piso-teto instalado no corredor, com duto aparente no alto"></figure>
+      <figure><img src="img/split-forro.webp" width="760" height="570" loading="lazy" alt="Split de parede com a passagem de tubulação aberta no forro"></figure>
+      <figure><img src="img/split-em-execucao.webp" width="760" height="570" loading="lazy" alt="Split recém-instalado e escada de trabalho ainda no ambiente"></figure>
+      <figure><img src="img/split-sala-vista.webp" width="760" height="570" loading="lazy" alt="Split em sala com janela ampla e aparelho de janela antigo ao lado"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="claro" id="depoimentos">
+  <div class="env">
+    <p class="rotulo">Depoimentos</p>
+    <h2>O que nossos clientes dizem</h2>
+    <div class="depoimentos">
+      <figure>
+        <blockquote>“Ter a empresa Nevoar como parceiros, prestadores de serviços no Instituto de Proctologia e Cirurgia Geral (IPCG), a cada atendimento temos mais certeza que a Nevoar é única em Brasília que oferece uma equipe técnica profissional altamente qualificada. Eles são pontuais, identificam e resolvem o problema, de uma presteza total.”</blockquote>
+        <figcaption>IPCG Instituto</figcaption>
+      </figure>
+      <figure>
+        <blockquote>“Gostei bastante do trabalho realizado que foi desde de avaliação de um ar condicionado já instalado, retirada dos antigos equipamentos até a instalação dos novos. Todos esses serviços foram prestados pelos profissionais na Neovar que comparecem uniformizados e usando máscaras e protetores para os pés. Além da excelente capacidade técnica, sabem trabalhar em equipe e são muito respeitosos.”</blockquote>
+        <figcaption>Marcia Costa</figcaption>
+      </figure>
+      <figure>
+        <blockquote>“Poucas empresas preservam a qualidade do trabalho ofertado. A Nevoar sempre atendeu a mim e minha família com muito profissionalismo. Profissionais preocupados em atender e satisfazer as demandas. Muito boa no que faz. Recomendo de pronto.”</blockquote>
+        <figcaption>Ninon Rose</figcaption>
+      </figure>
+      <figure>
+        <blockquote>“Muito bem recomendados e correspondem às expectativas! Fiquei muito satisfeito.”</blockquote>
+        <figcaption>Fernando Faria Felix</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="chamada" id="orcamento">
+  <div class="env">
+    <p class="rotulo" style="color:rgba(255,255,255,0.78)">Orçamento</p>
+    <h2>Peça um orçamento por WhatsApp</h2>
+    <p>Encontre a melhor solução para o seu ambiente!</p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5561984591417">WhatsApp (61) 98459-1417</a>
+      <a class="btn linha" href="tel:+556130461240">Ligar (61) 3046-1240</a>
+      <a class="btn linha" href="mailto:contato@nevoar.com.br">contato@nevoar.com.br</a>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Fale com a Nevoar</h2>
+    <div class="contatos">
+      <a href="tel:+556130461240"><b>Telefone</b><span>(61) 3046-1240</span></a>
+      <a href="https://wa.me/5561984591417"><b>WhatsApp</b><span>(61) 98459-1417</span></a>
+      <a href="mailto:contato@nevoar.com.br"><b>E-mail</b><span>contato@nevoar.com.br</span></a>
+      <div><b>Endereço</b><span>CSB 06, Lotes 01/02, Loja 21</span><em>Galeria do Ed. Concorde · Taguatinga Sul, Brasília – DF · CEP 72015-565</em></div>
+    </div>
+    <div class="pagamento">
+      <b>Formas de pagamento</b>
+      <p>Visa, Mastercard, Elo, American Express, Hipercard, Cabal, Sorocred, Alelo, Ticket e VR.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <p>Proporcionar a qualidade de vida das pessoas. É por isso que trabalhamos com profissionalismo e dedicação para ser uma empresa com referência de pontualidade, qualidade e respeito ao cliente.</p>
+    <p>Contamos com uma equipe de funcionários qualificados. Temos os melhores funcionários em atendimento e execução de serviços.</p>
+    <p class="fim">Página de demonstração feita por Refeito com o conteúdo publicado em <a href="https://nevoar.com.br/">nevoar.com.br</a>. Nevoar Ar-Condicionado, Taguatinga Sul, Brasília – DF.</p>
+  </div>
+</footer>
+
+</body>
+</html>

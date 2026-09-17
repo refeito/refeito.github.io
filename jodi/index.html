@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JODI Estruturas Metálicas — Projeto, fabricação e montagem, em Caieiras/SP</title>
+<meta name="description" content="Estruturas metálicas desde 1994, com departamento próprio de engenharia. Coberturas, fachadas, escadas, mezaninos, passarelas, pergolados, marquises e estroncamentos. Fábrica em Caieiras – SP.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<style>
+  /* Paleta lida do site atual: laranja de marca rgb(253,93,20) e o azul quase
+     preto das faixas, sobre papel branco. */
+  :root {
+    --papel:#ffffff; --papel2:#f5f5f8; --linha:#e3e3ea;
+    --tinta:#16182c; --tinta2:#585b72;
+    --noite:#0d1130; --noite2:#070a22;
+    --laranja:#fd5d14; --laranja2:#d94a0a;
+    --claro:#c8cae0;
+    --fonte:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:var(--fonte);
+         font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; }
+  h1,h2,h3 { margin:0; line-height:1.15; letter-spacing:-0.015em; text-wrap:balance; }
+  p, ul, ol { margin:0; padding:0; }
+  li { list-style:none; }
+
+  .env { max-width:1140px; margin:0 auto; padding-inline:20px; }
+
+  .tarja { background:var(--noite2); color:var(--claro); border-bottom:2px solid var(--laranja);
+           font-size:0.79rem; line-height:1.5; text-align:center; overflow-wrap:anywhere;
+           padding:10px 18px; padding-top:calc(10px + env(safe-area-inset-top,0px)); }
+  .tarja b { color:#fff; font-weight:600; }
+  .tarja a { color:#fff; }
+
+  /* Topo e herói dividem a mesma faixa escura: é assim que a logo publicada
+     por eles, branca e sem fundo, aparece sem ser redesenhada. */
+  .escuro { background:var(--noite); color:#fff; }
+  .topo { display:flex; align-items:center; justify-content:space-between; gap:14px 20px;
+          flex-wrap:wrap; padding-block:14px; }
+  .topo .marca { display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .topo .marca img { height:66px; width:auto; }
+  .topo .direita { display:flex; align-items:center; gap:10px 18px; flex-wrap:wrap; }
+  .fone-topo { text-decoration:none; font-weight:700; font-size:1.02rem; color:#fff; white-space:nowrap; }
+  .fone-topo small { display:block; font-size:0.64rem; font-weight:600; letter-spacing:0.12em;
+                     text-transform:uppercase; color:var(--laranja); line-height:1.5; }
+
+  .btn { display:inline-block; text-decoration:none; font-weight:700; font-size:0.93rem;
+         padding:13px 22px; border-radius:4px; border:2px solid var(--laranja);
+         background:var(--laranja); color:#fff; }
+  .btn:hover { background:var(--laranja2); border-color:var(--laranja2); }
+  .btn:focus-visible { outline:3px solid #fff; outline-offset:2px; }
+  .btn.linha { background:transparent; color:#fff; border-color:rgba(255,255,255,0.4); }
+  .btn.linha:hover { border-color:#fff; }
+  .btn.escura { background:var(--noite); border-color:var(--noite); }
+  .btn.escura:hover { background:var(--noite2); border-color:var(--noite2); }
+
+  .heroi { padding-block:34px 44px; border-top:1px solid rgba(255,255,255,0.1); }
+  .heroi .selo { font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+                 color:var(--laranja); margin-bottom:14px; }
+  .heroi h1 { font-size:clamp(1.95rem,5.1vw,3.05rem); font-weight:800; max-width:16ch; }
+  .heroi .fala { margin-top:18px; max-width:62ch; color:var(--claro); font-size:1.03rem; }
+  .heroi .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+  .heroi .pe { display:flex; gap:8px 26px; flex-wrap:wrap; margin-top:28px; padding-top:18px;
+               border-top:1px solid rgba(255,255,255,0.13); font-size:0.87rem; color:var(--claro); }
+  .heroi .pe b { color:#fff; font-weight:600; }
+
+  section { padding-block:56px; }
+  .rotulo { font-size:0.7rem; font-weight:700; letter-spacing:0.17em; text-transform:uppercase;
+            color:var(--laranja); margin-bottom:11px; }
+  h2 { font-size:clamp(1.55rem,3.7vw,2.15rem); font-weight:800; }
+  .linha-apoio { margin-top:12px; max-width:66ch; color:var(--tinta2); font-size:1.01rem; }
+
+  /* Obras executadas: cada tipo é um bloco com cabeça própria, porque quem
+     compra passarela não compra mezanino. */
+  .tipo { margin-top:44px; }
+  .tipo:first-of-type { margin-top:30px; }
+  .tipo-cabeca { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+                 padding-bottom:10px; border-bottom:2px solid var(--tinta); }
+  .tipo-cabeca h3 { font-size:1.3rem; font-weight:800; }
+  .tipo-cabeca span { font-size:0.8rem; color:var(--tinta2); font-weight:600; }
+  .obras { display:grid; grid-template-columns:repeat(2,1fr); gap:22px 14px; margin-top:20px; }
+  @media (min-width:620px) { .obras { grid-template-columns:repeat(3,1fr); gap:22px 16px; } }
+  @media (min-width:920px) { .obras { grid-template-columns:repeat(4,1fr); } }
+  .obras figure { margin:0; min-width:0; }
+  .obras img { width:100%; aspect-ratio:500/370; object-fit:cover; background:var(--papel2); border-radius:3px; }
+  .obras figcaption { margin-top:9px; font-size:0.83rem; font-weight:700; line-height:1.35;
+                      color:var(--tinta); overflow-wrap:anywhere; }
+
+  /* O que fabricam: índice de tipos, não grade de cartões. As descrições no
+     site deles ainda são texto de rascunho, então só o nome entra. */
+  .indice { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr));
+            gap:0 26px; margin-top:26px; }
+  .indice li { display:flex; align-items:baseline; gap:12px; padding-block:13px;
+               border-top:1px solid var(--linha); font-weight:600; min-width:0; }
+  .indice li i { font-style:normal; font-size:0.72rem; font-weight:700; color:var(--laranja);
+                 font-variant-numeric:tabular-nums; }
+
+  .cinza { background:var(--papel2); }
+
+  .etapas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));
+            gap:26px; margin-top:28px; }
+  .etapas > div { min-width:0; border-top:3px solid var(--laranja); padding-top:16px; }
+  .etapas h3 { font-size:1.06rem; font-weight:700; }
+  .etapas p { margin-top:8px; color:var(--tinta2); font-size:0.96rem; }
+
+  .passos { margin-top:36px; counter-reset:passo; border-top:1px solid var(--linha); }
+  .passos li { display:grid; grid-template-columns:44px 1fr; gap:16px; padding-block:20px;
+               border-bottom:1px solid var(--linha); }
+  .passos li > * { min-width:0; }
+  .passos li::before { content:counter(passo,decimal-leading-zero); counter-increment:passo;
+                       font-weight:800; font-size:0.9rem; color:var(--laranja); padding-top:4px; }
+  .passos h3 { font-size:1.02rem; font-weight:700; }
+  .passos p { margin-top:5px; color:var(--tinta2); font-size:0.96rem; }
+
+  .onde { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));
+          gap:28px 40px; margin-top:26px; }
+  .onde > div { min-width:0; }
+  .onde p { color:var(--tinta2); }
+  .onde b { color:var(--tinta); font-weight:600; }
+  .endereco { font-style:normal; margin-top:10px; overflow-wrap:anywhere; }
+
+  .chamada { background:var(--laranja); color:#fff; }
+  .chamada .env { padding-block:42px; }
+  .chamada h2 { max-width:20ch; }
+  .chamada p { margin-top:12px; max-width:60ch; font-size:1.03rem; }
+  .chamada .acoes { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+  .chamada .btn.escura { border-color:#fff; }
+  .chamada .btn.linha { border-color:rgba(255,255,255,0.55); }
+
+  .contatos { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));
+              gap:24px 28px; margin-top:28px; }
+  .contatos > * { min-width:0; text-decoration:none; }
+  .contatos b { display:block; font-size:0.65rem; font-weight:700; letter-spacing:0.14em;
+                text-transform:uppercase; color:var(--tinta2); margin-bottom:5px; }
+  .contatos span { display:block; font-weight:700; font-size:1.05rem; line-height:1.35;
+                   overflow-wrap:anywhere; }
+  .contatos em { display:block; font-style:normal; font-size:0.8rem; font-weight:500;
+                 color:var(--tinta2); margin-top:3px; }
+  .redes { display:flex; gap:10px 20px; flex-wrap:wrap; margin-top:30px; padding-top:20px;
+           border-top:1px solid var(--linha); font-size:0.9rem; font-weight:600; }
+  .redes a { color:var(--tinta2); }
+  .redes a:hover { color:var(--laranja); }
+
+  footer { background:var(--noite2); color:var(--claro); }
+  footer .env { padding-block:36px; }
+  footer p { max-width:76ch; font-size:0.92rem; }
+  footer .fim { margin-top:22px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.12);
+                font-size:0.79rem; }
+
+  @media (max-width:600px) {
+    section { padding-block:42px; }
+    .topo .marca img { height:54px; }
+    .obras { gap:18px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<p class="tarja">Proposta de redesenho não solicitada, feita por Refeito. <b>Não é o site oficial da JODI Estruturas Metálicas.</b> O site oficial é <a href="https://www.jodi.com.br/">www.jodi.com.br</a>. Todas as fotos, textos e informações são deles.</p>
+
+<div class="escuro">
+  <div class="env">
+    <div class="topo">
+      <a class="marca" href="#obras">
+        <img src="img/logo-jodi.webp" width="195" height="260" alt="JODI Estruturas Metálicas">
+      </a>
+      <div class="direita">
+        <a class="fone-topo" href="tel:+551139910110"><small>Seg a Sex, 8:30h – 18:00h</small>(11) 3991-0110</a>
+        <a class="btn" href="#orcamento">Pedir orçamento</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="env">
+    <div class="heroi">
+      <p class="selo">Desde 1994 · Caieiras – SP</p>
+      <h1>Projeto, fabricação e montagem de estruturas metálicas.</h1>
+      <p class="fala">Atuamos no segmento de Estruturas Metálicas desde 1994 e com departamento próprio de engenharia, executamos obras de médio e grande porte em todo o território nacional, prestando serviços desde particulares a grandes construtoras nas áreas comerciais, industriais e residenciais.</p>
+      <div class="acoes">
+        <a class="btn" href="#orcamento">Pedir orçamento</a>
+        <a class="btn linha" href="https://wa.me/5511970582103">WhatsApp (11) 97058-2103</a>
+      </div>
+      <p class="pe"><span><b>Cobertura, fachada, escada, mezanino, passarela,</b> pergolado, marquise e estroncamento</span></p>
+    </div>
+  </div>
+</div>
+
+<section id="obras">
+  <div class="env">
+    <p class="rotulo">Obras executadas</p>
+    <h2>A obra já entregue, separada por tipo</h2>
+    <p class="linha-apoio">Cada obra abaixo está publicada pela Jodi na página de obras executadas dela, sob o tipo em que ela mesma a classifica.</p>
+
+    <div class="tipo">
+      <div class="tipo-cabeca"><h3>Coberturas</h3></div>
+      <div class="obras">
+        <figure><img src="img/cob-br-tecnologia.webp" width="460" height="340" alt="Estrutura metálica de cobertura vista por baixo, com telhas e treliças aparentes"><figcaption>BR Tecnologia</figcaption></figure>
+        <figure><img src="img/cob-monte-libano.webp" width="460" height="340" alt="Treliças metálicas montadas sobre laje, com a cidade ao fundo"><figcaption>Clube Monte Líbano</figcaption></figure>
+        <figure><img src="img/cob-pascoal-vita.webp" width="460" height="340" alt="Vigas metálicas apoiadas em estrutura de concreto"><figcaption>Pascoal Vita</figcaption></figure>
+        <figure><img src="img/cob-goodstorage-marginal.webp" width="460" height="340" loading="lazy" alt="Edifício em obra com painéis verdes e laranja atrás do tapume"><figcaption>Goodstorage Marginal</figcaption></figure>
+        <figure><img src="img/cob-goodstorage-vila-olimpia.webp" width="460" height="340" loading="lazy" alt="Peça metálica içada por guindaste sobre a obra"><figcaption>Goodstorage – Vila Olímpia</figcaption></figure>
+        <figure><img src="img/cob-hy-pinheiros.webp" width="460" height="340" loading="lazy" alt="Detalhe de estrutura metálica e concreto na entrada do edifício"><figcaption>HY Pinheiros</figcaption></figure>
+        <figure><img src="img/cob-lessence-sorocaba.webp" width="460" height="340" loading="lazy" alt="Treliças metálicas entre torres residenciais"><figcaption>L’Essence Sorocaba</figcaption></figure>
+        <figure><img src="img/cob-the-square.webp" width="460" height="340" loading="lazy" alt="Telhado de vidro apoiado em perfis metálicos brancos"><figcaption>The Square</figcaption></figure>
+        <figure><img src="img/cob-vila-nova-leopoldina.webp" width="460" height="340" loading="lazy" alt="Cobertura curva de grande vão sobre área de lazer em obra"><figcaption>Vila Nova Leopoldina I e II</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tipo">
+      <div class="tipo-cabeca"><h3>Fachadas</h3></div>
+      <div class="obras">
+        <figure><img src="img/fac-agia-faria-lima.webp" width="460" height="340" loading="lazy" alt="Viga metálica sob a laje, com a cidade ao fundo"><figcaption>Edifício Agia – Faria Lima</figcaption></figure>
+        <figure><img src="img/fac-alameda-jardins.webp" width="460" height="340" loading="lazy" alt="Guarda-corpo metálico no pavimento em obra, torres ao fundo"><figcaption>Edifício Alameda Jardins</figcaption></figure>
+        <figure><img src="img/fac-esther-tower.webp" width="460" height="340" loading="lazy" alt="Fachada em obra com painéis laranja entre os pavimentos"><figcaption>Esther Tower</figcaption></figure>
+        <figure><img src="img/fac-goodstorage-vila-olimpia.webp" width="460" height="340" loading="lazy" alt="Fachada com painéis verdes e laranja já instalados"><figcaption>Goodstorage – Vila Olímpia</figcaption></figure>
+        <figure><img src="img/fac-o-parque.webp" width="460" height="340" loading="lazy" alt="Torre vista de baixo, com cobertura de vidro no térreo"><figcaption>O Parque</figcaption></figure>
+        <figure><img src="img/fac-wpp-vila-leopoldina.webp" width="460" height="340" loading="lazy" alt="Fachada com brises metálicos ao longo dos pavimentos"><figcaption>WPP – Vila Leopoldina</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tipo">
+      <div class="tipo-cabeca"><h3>Escadas</h3></div>
+      <div class="obras">
+        <figure><img src="img/esc-alameda-jardins.webp" width="460" height="340" loading="lazy" alt="Escada com degraus metálicos e guarda-corpo de vidro"><figcaption>Edifício Alameda Jardins</figcaption></figure>
+        <figure><img src="img/esc-edificio-arua.webp" width="460" height="340" loading="lazy" alt="Escada metálica branca instalada em área externa"><figcaption>Edifício Aruá</figcaption></figure>
+        <figure><img src="img/esc-jazz-perdizes.webp" width="460" height="340" loading="lazy" alt="Detalhe de chapa metálica lisa sob a luminária"><figcaption>Edifício Jazz Perdizes</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tipo">
+      <div class="tipo-cabeca"><h3>Estroncamentos</h3></div>
+      <div class="obras">
+        <figure><img src="img/est-hospital-sao-paulo.webp" width="460" height="340" loading="lazy" alt="Perfis metálicos de escoramento dentro da vala de obra"><figcaption>Hospital São Paulo</figcaption></figure>
+        <figure><img src="img/est-estacao-sao-joaquim.webp" width="460" height="340" loading="lazy" alt="Vigas metálicas travando as paredes da escavação"><figcaption>Estação – São Joaquim</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cinza">
+  <div class="env">
+    <p class="rotulo">O que a Jodi fabrica</p>
+    <h2>Onze tipos de estrutura metálica</h2>
+    <p class="linha-apoio">A Jodi publica obra executada em cada um destes tipos. As fotos acima cobrem quatro deles.</p>
+    <ul class="indice">
+      <li><i>01</i><span>Prédios Metálicos</span></li>
+      <li><i>02</i><span>Residências Metálicas</span></li>
+      <li><i>03</i><span>Pergolados Metálicos</span></li>
+      <li><i>04</i><span>Mezaninos</span></li>
+      <li><i>05</i><span>Coberturas</span></li>
+      <li><i>06</i><span>Passarelas</span></li>
+      <li><i>07</i><span>Escadas</span></li>
+      <li><i>08</i><span>Marquises</span></li>
+      <li><i>09</i><span>Obras Especiais</span></li>
+      <li><i>10</i><span>Estroncamentos</span></li>
+      <li><i>11</i><span>Fachadas</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="env">
+    <p class="rotulo">Do projeto à montagem</p>
+    <h2>As três etapas, e o que acontece em cada uma</h2>
+
+    <div class="etapas">
+      <div>
+        <h3>Departamento de engenharia e projetos</h3>
+        <p>Estamos ao seu lado em todas as etapas, garantindo que cada detalhe seja cuidadosamente planejado e executado.</p>
+      </div>
+      <div>
+        <h3>Fabricação de estruturas metálicas</h3>
+        <p>Contamos com estrutura própria e processos rigorosos de fabricação para garantir qualidade, durabilidade e eficiência em cada projeto entregue.</p>
+      </div>
+      <div>
+        <h3>Montagem de estruturas metálicas</h3>
+        <p>A montagem é a etapa final que transforma projeto em realidade. Nossa equipe especializada garante precisão, agilidade e segurança em cada instalação.</p>
+      </div>
+    </div>
+
+    <ol class="passos">
+      <li><div><h3>Consulta inicial</h3><p>Entre em contato conosco para discutir suas ideias e necessidades. Nossa equipe estará disponível para esclarecer dúvidas e orientar sobre as melhores soluções.</p></div></li>
+      <li><div><h3>Orçamento personalizado</h3><p>Após entender seu projeto, elaboramos um orçamento detalhado, considerando todos os aspectos do trabalho, desde a fabricação até a instalação.</p></div></li>
+      <li><div><h3>Desenvolvimento do projeto</h3><p>Nossa equipe de engenheiros e arquitetos desenvolve o projeto estrutural, garantindo que ele atenda às normas técnicas e às suas expectativas.</p></div></li>
+      <li><div><h3>Fabricação e montagem</h3><p>As peças são fabricadas em nossa fábrica com total precisão e, em seguida, transportadas para o local da obra. A montagem é realizada por nossa equipe especializada, garantindo segurança e qualidade.</p></div></li>
+      <li><div><h3>Entrega final</h3><p>Após a conclusão do projeto, realizamos inspeções rigorosas para garantir que tudo esteja conforme o planejado.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="cinza">
+  <div class="env">
+    <p class="rotulo">Onde a Jodi entrega</p>
+    <h2>Obra em todo o território nacional, fábrica em Caieiras</h2>
+    <div class="onde">
+      <div>
+        <p><b>Território de atuação.</b> Obras de médio e grande porte em todo o território nacional, com centenas de obras entregues em todo o Brasil, principalmente em São Paulo.</p>
+      </div>
+      <div>
+        <p><b>Fábrica e escritório.</b> É de Caieiras que saem as peças e para onde vai o contato técnico.</p>
+        <address class="endereco">R. David Casitzky, 10 — Vila Rosina<br>Caieiras – SP</address>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chamada" id="orcamento">
+  <div class="env">
+    <p class="rotulo" style="color:rgba(255,255,255,0.75)">Orçamento</p>
+    <h2>Entre em contato com nosso departamento técnico de projetos e vendas.</h2>
+    <p>Mande o que você precisa construir. O orçamento detalhado considera todos os aspectos do trabalho, desde a fabricação até a instalação.</p>
+    <div class="acoes">
+      <a class="btn escura" href="https://wa.me/5511970582103">WhatsApp (11) 97058-2103</a>
+      <a class="btn linha" href="tel:+551139910110">Ligar (11) 3991-0110</a>
+      <a class="btn linha" href="mailto:jodi@jodi.com.br">jodi@jodi.com.br</a>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="env">
+    <p class="rotulo">Contato</p>
+    <h2>Fale com a Jodi</h2>
+    <div class="contatos">
+      <a href="tel:+551139910110"><b>Telefone</b><span>(11) 3991-0110</span><em>Seg a Sex, 8:30h – 18:00h</em></a>
+      <a href="https://wa.me/5511970582103"><b>WhatsApp</b><span>(11) 97058-2103</span></a>
+      <a href="mailto:jodi@jodi.com.br"><b>E-mail</b><span>jodi@jodi.com.br</span></a>
+      <div><b>Endereço</b><span>R. David Casitzky, 10</span><em>Vila Rosina · Caieiras – SP</em></div>
+    </div>
+    <p class="redes">
+      <a href="https://www.instagram.com/jodimetalica/">Instagram</a>
+      <a href="https://www.linkedin.com/organization-guest/company/jodi-estruturas-met%C3%A1licas">LinkedIn</a>
+      <a href="https://www.youtube.com/@JodiMet%C3%A1lica">YouTube</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="env">
+    <p>Jodi é uma empresa fundada em 1994, que se destaca dia a dia no mercado das construções em aço e seus artefatos periféricos. Reconhecida pela qualidade de seu trabalho, sempre com o objetivo de fornecer produtos e serviços com um maior diferencial de qualidade e agilidade nos processos construtivos.</p>
+    <p class="fim">Página de demonstração feita por Refeito com o conteúdo publicado em <a href="https://www.jodi.com.br/">www.jodi.com.br</a>. JODI Estruturas Metálicas, Caieiras – SP.</p>
+  </div>
+</footer>
+
+</body>
+</html>
